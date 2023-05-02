@@ -1,0 +1,30 @@
+.form {
+  width: 100%;
+
+  background: $backgroundExtraLight;
+  border-radius: 2.8rem;
+  padding: 5.4rem 7.9rem 5.3rem 7.9rem;
+  margin-right: 4rem;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 13rem;
+    height: 2.9rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    background-image: $gradientMain;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 5.6rem;
+  }
+}

@@ -1,0 +1,36 @@
+@use "sass:math";
+
+$containerWidth: 1440;
+$containerPadding: 30;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+//$fontSize: 16px; // где 16(px) - размер шрифта по умолчанию из макета
+
+// Colors
+$contentMain: #201c1d; // Цвет шрифта по умолчанию
+$contentSecondary: #7c7778;
+$contentDop: #afacac;
+$backgroundExtraLight: #f7f5f5;
+$backgroundMain: #fcfcfc;
+$backgroundSecondary: #f7f7f7;
+
+// Gradients background
+$gradientMain: linear-gradient(
+    131.29deg,
+    #ff6a8f 5.12%,
+    #ff6276 52.07%,
+    #f53838 100%
+);
+
+// Burger Menu
+$burgerBreakpoint: $breakpoint768;
+$burgerActiveColor: blue;
+$burgerColor: #000;
+
+// Fonts
+$fontMain: sans-serif;
+$fontSecondary: sans-serif;

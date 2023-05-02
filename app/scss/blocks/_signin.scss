@@ -1,0 +1,20 @@
+.signin {
+    min-height: 100vh;
+    /*    background-image: url(../images/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; */
+
+    &__inner {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 74rem 58rem;
+        grid-gap: 4rem;
+    }
+    &__left,
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

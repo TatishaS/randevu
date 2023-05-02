@@ -1,0 +1,26 @@
+.formfield {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.4rem;
+
+  &__button-password {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    opacity: 1;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
