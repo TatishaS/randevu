@@ -6,13 +6,15 @@
 @import './global';
 
 // Подключение стилей компонентов
-
-@import '../components//FormField/formfield';
 @import '../components/Button/button';
-@import '../components/Form/form';
-@import '../components/Input/input';
 
-// Подключение стилей отдельных блоков
+// Подключения стилей компонентов отдельных страниц
+@import '../components/SignIn/FormField/formfield';
+@import '../components/SignIn/Form/form';
+@import '../components/SignIn/Input/input';
+@import '../components/SignIn/InputCode/input-code';
+
+// Подключение дополнительных уникальных стилей страниц
 @import 'blocks/signin';
 //@import "blocks/header";
 //@import "blocks/footer";

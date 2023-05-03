@@ -1,20 +1,311 @@
 .signin {
-    min-height: 100vh;
-    /*    background-image: url(../images/main-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover; */
+  min-height: 100vh;
+  background-color: $backgroundSecondary;
 
-    &__inner {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: 74rem 58rem;
-        grid-gap: 4rem;
+  &__container {
+    padding: 0;
+  }
+
+  &__inner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__right {
+    width: 100%;
+  }
+
+  &__left {
+    width: 100%;
+    flex: 1 1 auto;
+    /*   min-height: 30rem; */
+    background-image: url(../../images/sign-in.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &__form {
+    margin: 4rem auto 1.4rem;
+  }
+
+  &.signin--step2 {
+    .signin__left {
+      flex: 0 0 auto;
+      min-height: 30rem;
+      background-position: center center;
     }
+  }
+
+  &__form--step2 {
+    .form__title {
+      margin-bottom: 4rem;
+    }
+
+    .form__btn--google {
+      margin-bottom: 0;
+    }
+  }
+
+  &.signin--step3,
+  &.signin--step4 {
+    .signin__left {
+      /* flex: 0 0 auto;
+      min-height: 30rem; */
+      background-image: url(../../images/signin3-bg.svg);
+      background-position: center center;
+    }
+    .signin__form {
+      margin: 10rem auto 4.8rem;
+    }
+  }
+
+  &.signin--step5 {
+    .signin__container {
+      padding: 0 1.5rem;
+    }
+    .signin__inner {
+      flex-direction: column-reverse;
+    }
+    .signin__left {
+      flex: 0 1 auto;
+      min-height: 44.5rem;
+      background-image: url(../../images/signin5-bg.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .signin__right {
+      flex: 1 1 auto;
+    }
+
+    .form__logo {
+      margin-bottom: 4rem;
+    }
+
+    .form__title {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__form--step3,
+  &__form--step4 {
+    .form__title {
+      margin-bottom: 2rem;
+    }
+
+    .form__fields {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form--step3 {
+    .form__field {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__form--step4 {
+    .form__title {
+      margin-bottom: 4rem;
+    }
+
+    .form__row:last-of-type {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &.signin--step6 {
+    .form__code-block {
+      margin-bottom: 2.8rem;
+    }
+    .form__code {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .signin__left {
+      background-image: url(../../images/signin6-bg.svg);
+      background-position: center center;
+      background-size: 90%;
+    }
+
+    .signin__form {
+      margin: 10rem auto 4.8rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .signin {
+    &__inner {
+      background-image: url(../../images/signin1-bg-tablet.svg);
+      background-repeat: no-repeat;
+      background-position: right bottom 8rem;
+      background-size: contain;
+    }
+
+    &--step3 {
+      .signin__inner {
+        background-image: url(../../images/signin3-bg-tablet.svg);
+        background-position: left 2rem top 2rem;
+      }
+    }
+
+    &--step4 {
+      .signin__inner {
+        background-image: url(../../images/signin3-bg-tablet.svg);
+        background-position: left 2rem top 8rem;
+      }
+    }
+
+    &.signin--step5 {
+      .signin__inner {
+        background-image: none;
+        flex-direction: column;
+      }
+      .signin__right {
+        flex: 0 1 auto;
+      }
+
+      .signin__left {
+        flex: 1 1 auto;
+        background-size: contain;
+      }
+
+      .signin__form {
+        margin-top: 7.9rem;
+      }
+
+      .form__title {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
+    }
+
+    &__container {
+      padding: 0 1.5rem;
+    }
+    &__left {
+      background: none;
+      flex: 0 0 auto;
+    }
+
+    &__form {
+      margin: 3.6rem auto 3.4rem;
+    }
+
+    &.signin--step6 {
+      .signin__inner {
+        background-image: url(../../images/signin6-bg-tablet.svg);
+        background-position: left 2rem top 8rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .signin {
+    background-color: $backgroundMain;
+    &__inner {
+      display: grid;
+      grid-template-columns: minmax(max-content, 74rem) 58rem;
+      grid-gap: 4rem;
+      background: none;
+    }
+
+    &__left {
+      height: 100%;
+      order: 0;
+      background-image: url(../../images/sign-in.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    &__right {
+      order: 1;
+    }
+
     &__left,
     &__right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    &__form {
+      margin: 0 4rem 0 0;
+    }
+
+    &__form--step2 {
+      padding: 4.4rem 7.9rem 4.3rem 7.9rem;
+    }
+
+    &.signin--step3,
+    &.signin--step4 {
+      .signin__inner {
+        background: none;
+      }
+
+      .signin__left {
+        background-size: 60%;
+      }
+    }
+
+    &.signin--step3 {
+      .signin__form {
+        margin: 0 4rem 0 0;
+        padding: 5.8rem 7.9rem 5.7rem 7.9rem;
+      }
+    }
+
+    &.signin--step4 {
+      .signin__form {
+        margin: 0 4rem 0 0;
+        padding: 4.7rem 7.9rem 4.6rem 7.9rem;
+      }
+    }
+
+    &.signin--step5 {
+      .signin__inner {
+        grid-template-columns: 62rem minmax(max-content, 72rem);
+      }
+      .signin__left {
+        order: 1;
+        background-size: 90%;
+      }
+
+      .signin__form {
+        background: $backgroundMain;
+        margin: 7.9rem 3.5rem 0 9rem;
+      }
+
+      .form__logo {
+        margin-left: 0;
+      }
+      .form__inner {
+        text-align: left;
+      }
+
+      .form__btn {
+        width: 65%;
+      }
+    }
+
+    &.signin--step6 {
+      .signin__inner {
+        background: none;
+      }
+
+      .signin__left {
+        background-size: 60%;
+      }
+    }
+  }
 }

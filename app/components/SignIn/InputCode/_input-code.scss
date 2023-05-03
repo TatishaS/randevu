@@ -1,0 +1,25 @@
+.input-code {
+  // Input pin code in signin form
+
+  width: 5.2rem;
+  height: 4.6rem;
+  background: $backgroundMain;
+
+  border: 0.1rem solid $contentMain;
+  border-radius: 1.4rem;
+  color: $contentMain;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: 1.5rem 2rem;
+
+  &::placeholder {
+    color: $contentMain;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}

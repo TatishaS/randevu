@@ -17,20 +17,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/app.min.js"></script>
   </head>
   <body>
-    <main class="signin" id="signin">
-      <div class="container">
+    <main class="signin signin--step1">
+      <div class="signin__container container">
         <div class="signin__inner">
-          <div class="signin__left">
-            <img
-              src="./images/sign-in.svg"
-              alt="Signin page image"
-              class="signin__img"
-            />
-          </div>
           <div class="signin__right">
-            <div class="form form--signin" id="signinForm">
+            <div class="signin__form form">
               <div class="form__inner form__inner--signin">
                 <img
                   src="./images/logo-form.svg"
@@ -44,7 +38,7 @@
                   <div class="form__field formfield">
                     <input
                       type="text"
-                      class="form__input input input--text"
+                      class="form__input input input--email"
                       id="email"
                       name="email"
                       placeholder="Email"
@@ -78,21 +72,43 @@
                     </button>
                   </div>
 
-                  <button
-                    type="submit"
-                    class="form__btn button button--form"
-                    id="buttonForm"
-                  >
+                  <div class="form__tick-block">
+                    <div class="form__tick-right">
+                      <input
+                        class="visually-hidden form__tick-checkbox"
+                        id="remember"
+                        type="checkbox"
+                        name="remember"
+                      />
+                      <label class="form__tick-label" for="remember">
+                        Remember me
+                      </label>
+                    </div>
+                    <div class="form__tick-left">
+                      <a class="form__forgot-password">Forgot password?</a>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="form__btn button button--form">
                     Log in
                   </button>
                 </form>
+                <div class="form__divider-block"><span>Or</span></div>
+                <button
+                  class="form__btn form__btn--google button button--google"
+                >
+                  <span class="button__text">Google</span>
+                </button>
+                <div class="form__footer">
+                  <p class="form__footer-text">Don’t have an account?</p>
+                  <a href="#" class="form__footer-link">Sign up now</a>
+                </div>
               </div>
             </div>
           </div>
+          <div class="signin__left"></div>
         </div>
       </div>
     </main>
-
-    <script src="js/app.min.js"></script>
   </body>
 </html>

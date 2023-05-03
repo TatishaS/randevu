@@ -1,9 +1,10 @@
-@use "sass:math";
+@use 'sass:math';
 
 $containerWidth: 1440;
 $containerPadding: 30;
 $containerSidePadding: math.div($containerPadding, 2);
 $breakpoint1450: 1449.98 + px;
+$breakpoint1200: 1199.98 + px;
 $breakpoint992: 991.98 + px;
 $breakpoint768: 767.98 + px;
 $breakpoint480: 479.98 + px;
@@ -14,17 +15,29 @@ $breakpoint480: 479.98 + px;
 $contentMain: #201c1d; // Цвет шрифта по умолчанию
 $contentSecondary: #7c7778;
 $contentDop: #afacac;
+$contentLight: #ede8e8;
 $backgroundExtraLight: #f7f5f5;
 $backgroundMain: #fcfcfc;
 $backgroundSecondary: #f7f7f7;
+$accentMain: #e86475;
 
 // Gradients background
 $gradientMain: linear-gradient(
-    131.29deg,
-    #ff6a8f 5.12%,
-    #ff6276 52.07%,
-    #f53838 100%
+  131.29deg,
+  #ff6a8f 5.12%,
+  #ff6276 52.07%,
+  #f53838 100%
 );
+
+$gradientLight: linear-gradient(180deg, #fcfafa 0%, #faf7f8 100%);
+
+// Gradient font
+%gradient-font {
+  background-image: $gradientMain;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 
 // Burger Menu
 $burgerBreakpoint: $breakpoint768;

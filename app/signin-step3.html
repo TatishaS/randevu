@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sign in</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/app.min.js"></script>
+  </head>
+  <body>
+    <main class="signin signin--step3">
+      <div class="signin__container container">
+        <div class="signin__inner">
+          <div class="signin__right">
+            <div class="signin__form signin__form--step3 form">
+              <div class="form__inner form__inner--signin">
+                <img
+                  src="./images/logo-form.svg"
+                  alt="Randevu logo"
+                  class="form__logo"
+                  width="130"
+                  height="29"
+                />
+                <h2 class="form__title">Reset your password</h2>
+                <p class="form__info">
+                  Please fill in the email fields below. <br />We`ll send you a
+                  link to reset your password.
+                </p>
+                <form class="form__fields">
+                  <div class="form__field formfield">
+                    <input
+                      type="text"
+                      class="input input--text input--email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                    />
+                  </div>
+
+                  <button type="submit" class="form__btn button button--form">
+                    Reset
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="signin__left"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

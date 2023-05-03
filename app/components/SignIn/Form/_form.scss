@@ -1,0 +1,229 @@
+.form {
+  width: 100%;
+  max-width: 39.7rem;
+  padding: 0 1rem;
+
+  background: $backgroundExtraLight;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 13rem;
+    height: 2.9rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    @extend %gradient-font;
+    margin-bottom: 5.6rem;
+  }
+
+  &__fields {
+    margin-bottom: 2rem;
+  }
+
+  &__tick-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__tick-label {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 3rem;
+  }
+
+  &__tick-label--bold {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    a {
+      display: inline-block;
+      @extend %gradient-font;
+      font-weight: 600;
+      line-height: 1.8rem;
+      border-bottom: 0.1rem solid #ff6a8f;
+    }
+  }
+
+  &__tick-checkbox {
+    display: none;
+  }
+
+  &__tick-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: $backgroundMain;
+    border: 0.1rem solid $contentLight;
+    border-radius: 0.5rem;
+  }
+
+  &__tick-checkbox:checked + label::before {
+    background-color: $contentMain;
+    border: none;
+  }
+
+  &__tick-checkbox:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5rem;
+    width: 1rem;
+    height: 0.8rem;
+    background-image: url('../../../images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &__forgot-password {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    @extend %gradient-font;
+    cursor: pointer;
+  }
+
+  &__divider-block {
+    margin-bottom: 2rem;
+
+    span {
+      display: inline-block;
+      position: relative;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 9.3rem;
+        height: 0.1rem;
+        background: $gradientMain;
+        top: 50%;
+      }
+      &::before {
+        right: 4rem;
+      }
+      &::after {
+        left: 4rem;
+      }
+    }
+  }
+
+  &__btn--google {
+    margin-bottom: 2.8rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  &__footer-link {
+    display: inline-block;
+    @extend %gradient-font;
+    margin-left: 0.3rem;
+  }
+
+  &__row {
+    text-align: left;
+    margin-bottom: 1.4rem;
+
+    .formfield {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row:last-child {
+    margin-bottom: 2.8rem;
+  }
+
+  &__info {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 4rem;
+  }
+
+  &__timer-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__timer-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__timer-text {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    color: #000000;
+  }
+
+  &__timer-time {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    color: #000000;
+    margin-left: 0.4rem;
+  }
+
+  &__resend-link {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    color: $accentMain;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .form {
+    max-width: 40.2rem;
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .form {
+    background: $backgroundSecondary;
+
+    max-width: 54rem;
+    padding: 5.4rem 7.9rem 5.3rem 7.9rem;
+    border-radius: 2.8rem;
+  }
+}

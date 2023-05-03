@@ -1,0 +1,55 @@
+.input {
+  // Input in signin form
+
+  width: 100%;
+  background: $backgroundMain;
+  border: 0.1rem solid $backgroundExtraLight;
+  border-radius: 1.4rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: $contentSecondary;
+  outline: none;
+
+  padding: 1.4rem 2rem 1.4rem 5.6rem;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentSecondary;
+  }
+
+  &.input--email {
+    background-image: url('../../../images/icon-email.svg');
+    background-size: 2.6rem 2.6rem;
+    background-repeat: no-repeat;
+    background-position: 2rem center;
+  }
+
+  &.input--password {
+    background-image: url('../../../images/icon-lock.svg');
+    background-size: 2.6rem 2.6rem;
+    background-repeat: no-repeat;
+    background-position: 2rem center;
+  }
+
+  &.input--withlabel {
+    background-image: none;
+    padding: 1.4rem 2rem 1.4rem 2rem;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+
+    sup {
+      display: inline-block;
+      margin-left: 0.4rem;
+      @extend %gradient-font;
+    }
+  }
+}
