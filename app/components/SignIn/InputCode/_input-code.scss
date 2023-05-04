@@ -1,6 +1,15 @@
 .input-code {
   // Input pin code in signin form
 
+  &__code-block {
+    margin-bottom: 2.8rem;
+  }
+  &__code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   width: 5.2rem;
   height: 4.6rem;
   background: $backgroundMain;
