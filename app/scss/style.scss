@@ -5,10 +5,12 @@
 @import './libs';
 @import './global';
 
-// Подключение стилей компонентов
-@import '../components/Button/button';
+// Подключение стилей общих компонентов
+//@import '../components/Button/button';
 
 // Подключения стилей компонентов отдельных страниц
+/* SignIn */
+@import '../components/SignIn/Button/button';
 @import '../components/SignIn/FormField/formfield';
 @import '../components/SignIn/Form/form';
 @import '../components/SignIn/Input/input';
@@ -18,8 +20,6 @@
 @import 'blocks/signin';
 //@import "blocks/header";
 //@import "blocks/footer";
-
-//@import "../components/StepForm//stepForm";
 
 // Libs
 //@import "./libs/swiper";

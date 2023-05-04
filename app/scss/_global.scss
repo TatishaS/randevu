@@ -27,24 +27,6 @@ body {
 }
 
 // Container
-/* .container {
-    max-width: ($containerWidth + $containerPadding) + px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
-
-    @media (max-width: $breakpoint992) {
-        max-width: 970px;
-    }
-
-    @media (max-width: $breakpoint768) {
-        max-width: 740px;
-    }
-
-    @media (max-width: $breakpoint480) {
-        max-width: none;
-    }
-} */
 
 .container {
   width: 100%;
@@ -64,9 +46,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
-  max-width: 140.2rem;
   margin: 0 auto;
+  max-width: 38.5rem;
+
+  @media (min-width: $breakpoint768) {
+    max-width: 72.8rem;
+  }
+
+  @media (min-width: $breakpoint1200) {
+    max-width: 140rem;
+  }
 }
 
 .disable-scroll {
