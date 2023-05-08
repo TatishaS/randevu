@@ -34,7 +34,8 @@ body {
   padding: 0 $containerSidePadding + px;
 
   @media (min-width: $breakpoint768) {
-    max-width: 74rem;
+    //max-width: 74rem;
+    max-width: 76.8rem;
   }
 
   @media (min-width: $breakpoint1200) {

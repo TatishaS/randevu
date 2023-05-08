@@ -16,10 +16,13 @@ $contentMain: #201c1d; // Цвет шрифта по умолчанию
 $contentSecondary: #7c7778;
 $contentDop: #afacac;
 $contentLight: #ede8e8;
+$contentFocused: #151414;
 $backgroundExtraLight: #f7f5f5;
 $backgroundMain: #fcfcfc;
 $backgroundSecondary: #f7f7f7;
 $accentMain: #e86475;
+$accentFocused: #dd4f61;
+$domLight: #f5e9ea;
 
 // Gradients background
 $gradientMain: linear-gradient(
@@ -30,6 +33,8 @@ $gradientMain: linear-gradient(
 );
 
 $gradientLight: linear-gradient(180deg, #fcfafa 0%, #faf7f8 100%);
+
+$outlineFocus: 0 0 0 0.3rem rgba(222, 79, 98, 0.5);
 
 // Gradient font
 %gradient-font {

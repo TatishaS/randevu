@@ -1,0 +1,73 @@
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  background: $backgroundMain;
+  border: none;
+  border-radius: 1.4rem;
+  opacity: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  svg {
+    width: 4rem;
+    height: 4rem;
+
+    fill: $contentMain;
+    /*   path {
+      fill: $contentMain;
+    } */
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &.active {
+    background: $gradientMain;
+    svg {
+      fill: $backgroundMain;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .sidebar-button {
+    width: 4.6rem;
+    height: 4.6rem;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+
+      fill: $contentMain;
+      /*   path {
+        fill: $contentMain;
+      } */
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .sidebar-button {
+    width: 6.4rem;
+    height: 6.4rem;
+    svg {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .sidebar-button {
+    width: 5.4rem;
+    height: 5.4rem;
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

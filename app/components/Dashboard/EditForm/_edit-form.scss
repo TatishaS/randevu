@@ -1,0 +1,193 @@
+.edit-form {
+  max-width: 30rem;
+  padding-bottom: 8.8rem;
+
+  &__select-dropdown {
+    position: relative;
+  }
+
+  &__row {
+    width: 100%;
+    margin-bottom: 3.6rem;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+  }
+  &__select {
+    width: 100%;
+    flex-basis: 30rem;
+
+    flex-shrink: 0;
+
+    color: $contentSecondary;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    padding: 1.5rem 5.6rem 1.5rem 2rem;
+    outline: 0;
+
+    /*
+        box-shadow: none;
+        border: 0 !important; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    cursor: pointer;
+  }
+
+  &__select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $accentMain;
+  }
+
+  &__input-date {
+    width: 100%;
+    flex-basis: 30rem;
+
+    flex-shrink: 0;
+
+    color: $contentSecondary;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    outline: 0;
+
+    /*    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none; */
+    cursor: pointer;
+  }
+
+  &__input-date:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $accentMain;
+  }
+
+  &__button {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 1.5rem 2rem 1.5rem 4.6rem;
+    border: none;
+    border-radius: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__button:hover {
+    opacity: 0.6;
+  }
+
+  &__button.cancel {
+    background-color: transparent;
+    color: $contentMain;
+    border: 0.1rem solid $contentMain;
+    background-image: url('../../../images/icon-close.svg');
+    background-repeat: no-repeat;
+    background-position: left 1.5rem center;
+  }
+
+  &__button.save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accentMain;
+    color: $backgroundMain;
+    border: none;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    //background-image: url('../../../images/icon-save.svg');
+    //background-repeat: no-repeat;
+    //background-position: left 1.5rem center;
+    svg {
+      display: inline-block;
+      margin-right: 1rem;
+      fill: $backgroundMain;
+    }
+  }
+
+  &__button.disabled {
+    background-color: $contentLight;
+    color: $contentDop;
+    border: none;
+
+    svg {
+      fill: $contentDop;
+    }
+  }
+  &__btn-wrapper {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .edit-form {
+    max-width: 39.6rem;
+    padding-bottom: 17rem;
+    &__btn-wrapper {
+      margin-bottom: 5.6rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .edit-form {
+    max-width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 36rem;
+    &__btn-wrapper {
+      margin-bottom: 4rem;
+    }
+
+    &__row {
+      width: 26rem;
+      margin-bottom: 0;
+      margin-right: 2.4rem;
+    }
+
+    &__button.save {
+      align-self: flex-end;
+    }
+
+    &__label {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    &__select {
+      padding: 1.6rem 5.6rem 1.6rem 2.2rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 500;
+    }
+
+    &__input-date {
+      padding: 1.6rem 2.2rem 1.6rem 2.2rem;
+    }
+  }
+}

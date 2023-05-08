@@ -1,0 +1,56 @@
+.account {
+  &__img-wrapper {
+    position: relative;
+
+    background-color: $contentMain;
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1.4rem;
+  }
+  &__img {
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    //overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__letters {
+    position: absolute;
+    content: '';
+    top: 25%;
+    left: 50%;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: $backgroundMain;
+    transform: translate(-50%);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .account {
+    &__img-wrapper {
+      width: 4.7rem;
+      height: 4.7rem;
+    }
+
+    &__img {
+      width: 4.7rem;
+      height: 4.7rem;
+    }
+  }
+}

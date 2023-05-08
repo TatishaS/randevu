@@ -1,0 +1,244 @@
+.dashboard-table {
+  padding-bottom: 18.7rem;
+
+  &__top {
+    margin-left: 0.4rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+  &__filters {
+    margin-bottom: 2rem;
+  }
+
+  &__filters-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__select-dropdown:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__table {
+    display: block;
+    overflow: hidden;
+    //table-layout: fixed;
+    /*    border-collapse: collapse; */
+    border-collapse: separate;
+    border-spacing: 0;
+
+    white-space: nowrap;
+    //width: 100em;
+    //max-width: 80%;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    table-layout: auto;
+    overflow-x: auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &.editable {
+    margin-bottom: 0;
+    padding-bottom: 0rem;
+  }
+
+  &__table.editable {
+    margin-bottom: 2rem;
+  }
+
+  &__thead {
+    color: $contentSecondary;
+  }
+
+  &__table th,
+  &__table td {
+    text-align: left;
+    padding: 1.5rem 0.6rem;
+    //background-color: $domLight;
+  }
+
+  td:first-child,
+  th:first-child {
+    padding: 1.5rem 0.6rem 1.5rem 1.4rem;
+    border-radius: 1.4rem 0 0 1.4rem;
+  }
+
+  td:last-child,
+  th:last-child {
+    padding: 1.5rem 2.4rem 1.5rem 0.6rem;
+    border-radius: 0 1.4rem 1.4rem 0;
+  }
+
+  &__table td {
+    //border-top: 0.5px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* 
+  &__table tbody tr {
+    border-radius: 1.4rem;
+  } */
+  /* 
+  &__table tbody tr:hover {
+    background-color: $backgroundMain;
+    border: 0.1rem solid $contentLight;
+
+  }
+ */
+
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .actions svg {
+    cursor: pointer;
+  }
+
+  &__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.6rem;
+    min-height: 2.6rem;
+    background: transparent;
+    border: none;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  &__action-button:hover {
+    opacity: 0.6;
+  }
+
+  &__row.new {
+    background-color: $domLight;
+    color: $accentMain;
+  }
+
+  &__row.focused {
+    //background-color: $backgroundMain;
+
+    td {
+      background-color: $backgroundMain;
+    }
+    td:not(:first-child),
+    td:not(:last-child) {
+      border-top: 0.1rem solid $contentLight;
+      border-bottom: 0.1rem solid $contentLight;
+    }
+    td:first-child {
+      border-top: 0.1rem solid $contentLight;
+      border-bottom: 0.1rem solid $contentLight;
+      border-left: 0.1rem solid $contentLight;
+    }
+
+    td:last-child {
+      border-top: 0.1rem solid $contentLight;
+      border-bottom: 0.1rem solid $contentLight;
+      border-right: 0.1rem solid $contentLight;
+    }
+  }
+
+  &__tablet-row {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .dashboard-table {
+    padding-bottom: 23rem;
+
+    &.editable {
+      padding-bottom: 0;
+    }
+    &__tablet-row {
+      display: table-row;
+    }
+    &__table {
+      margin-bottom: 2.8rem;
+    }
+
+    &__table.editable {
+      margin-bottom: 3rem;
+    }
+
+    &__table .name {
+      padding: 1.5rem 3rem 1.5rem 0.6rem;
+    }
+
+    &__top {
+      padding: 0 2rem 0 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__filters {
+      margin-bottom: 0;
+    }
+    /*   &__pagination {
+      margin-bottom: 23rem;
+    } */
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .dashboard-table {
+    padding: 4rem 1.2rem 2.8rem 4rem;
+    background: $backgroundSecondary;
+    border-radius: 1.4rem 0 0 1.4rem;
+    flex-grow: 1;
+    max-width: 100%;
+
+    &.editable {
+      padding: 0;
+    }
+
+    &__tablet-row {
+      display: none;
+    }
+
+    &__table {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+
+    &__table th,
+    &__table td {
+      text-align: left;
+      padding: 1.5rem 2rem;
+    }
+
+    &__table .name {
+      padding: 1.5rem 10rem 1.5rem 2rem;
+    }
+
+    td:first-child,
+    th:first-child {
+      padding: 1.5rem 2rem 1.5rem 2.2rem;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //position: absolute;
+
+  width: 4.6rem;
+  height: 4.6rem;
+  background: $backgroundMain;
+  color: $contentMain;
+  border: 0.1rem solid $backgroundExtraLight;
+  border-radius: 1.4rem;
+  //padding: 1.2rem 1.3rem;
+  opacity: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--bell {
+    position: relative;
+  }
+
+  &--black {
+    background-color: $contentMain;
+  }
+
+  /*   &--search {
+    position: absolute;
+  } */
+
+  &__img {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  &__quantity {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    bottom: 3rem;
+    right: -1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: $accentFocused;
+    border: none;
+    border-radius: 50%;
+    color: $backgroundMain;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    z-index: 10;
+  }
+}

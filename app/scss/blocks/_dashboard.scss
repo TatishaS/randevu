@@ -1,4 +1,108 @@
 .dashboard {
   min-height: 100vh;
   background-color: $backgroundSecondary;
+  padding-top: 2.8rem;
+
+  &__container {
+    padding: 0 0 0 2rem;
+  }
+
+  &__page-top {
+    margin-bottom: 2rem;
+  }
+
+  &__top-btn {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $contentMain;
+    color: $backgroundMain;
+    font-weight: 600;
+    padding: 1.3rem 1.4rem 1.3rem 4.6rem;
+    border: none;
+    border-radius: 1.4rem;
+    background-image: url('../../../images/icon-back.svg');
+    background-repeat: no-repeat;
+    background-position: left 1.5rem center;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+  &__top-btn:hover {
+    opacity: 0.6;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__form-title {
+    margin-right: 1rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+  }
+
+  &__title-img {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .dashboard {
+    &__container {
+      padding: 0 0 0 0.6rem;
+    }
+
+    &__form-container {
+      padding: 0 1rem;
+    }
+
+    &__page-top {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 2.8rem;
+    }
+
+    &__form-title {
+      margin-right: 1.4rem;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+
+    &__top-btn {
+      margin-bottom: 0;
+      margin-right: 3rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .dashboard {
+    padding-top: 4rem;
+    background-color: $backgroundMain;
+
+    &.dashboard--editform {
+      .sidebar__btn-logout {
+        display: none;
+      }
+    }
+
+    &__content-wrapper {
+      background-color: $backgroundSecondary;
+      padding: 3.2rem 4.3rem 1.2rem 4rem;
+      border-radius: 1.4rem 0 0 1.4rem;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 3rem;
+    }
+  }
 }

@@ -1,0 +1,125 @@
+.sidebar {
+  min-height: 7.4rem;
+  position: fixed;
+  background: $backgroundMain;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    padding: 1.3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__listitem:not(:last-child) {
+    margin-right: 2.8rem;
+  }
+
+  &__listitem--websites,
+  &__listitem--settings {
+    display: none;
+  }
+
+  &__footer {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .sidebar {
+    min-height: 9.2rem;
+    background: transparent;
+
+    &__inner {
+      padding: 0;
+    }
+
+    &__list {
+      //margin: 0 auto;
+      padding: 1.4rem 4rem;
+      background: $backgroundMain;
+      border: 0.1rem solid $contentLight;
+      border-radius: 2rem;
+    }
+
+    &__listitem--websites,
+    &__listitem--settings {
+      display: block;
+    }
+
+    &__listitem--more {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .sidebar {
+    /* bottom: 0;
+    left: 3rem;
+    right: auto;
+    top: 12.7rem; */
+    position: static;
+    margin-left: 1.4rem;
+    margin-right: 2rem;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__list {
+      //margin: 0 auto;
+      flex-direction: column;
+
+      padding: 1rem;
+      background: $backgroundSecondary;
+      border: none;
+    }
+
+    &__listitem:not(:last-child) {
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+
+    &__footer {
+      display: block;
+    }
+
+    &__btn-logout {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: transparent;
+      color: $contentFocused;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      padding: 0.9rem 0.9rem 0.9rem 2.6rem;
+      border: 0.1rem solid $contentFocused;
+      border-radius: 0.8rem;
+      background-image: url('../../../images/icon-logout.svg');
+      background-repeat: no-repeat;
+      background-position: left 0.5rem center;
+      opacity: 1;
+      transition: all 0.3s;
+      cursor: pointer;
+      margin-bottom: 2.4rem;
+    }
+    &__btn-logout:hover {
+      opacity: 0.6;
+    }
+  }
+}

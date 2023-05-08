@@ -1,0 +1,42 @@
+.language-select {
+  position: relative;
+  &__select {
+    flex-basis: 6.6rem;
+    max-width: 6.6rem;
+
+    flex-shrink: 0;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: $contentMain;
+
+    background: $backgroundSecondary;
+    border: none;
+    padding: 0.3rem 1.3rem 0.3rem 2.9rem;
+    /* outline: 0;
+    box-shadow: none;
+    border: 0 !important; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    cursor: pointer;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: url(../../../images/icon-world.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

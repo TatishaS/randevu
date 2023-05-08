@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+  &__select {
+    flex-basis: 16rem;
+    max-width: 18rem;
+
+    flex-shrink: 0;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    color: $contentMain;
+
+    background: $backgroundMain;
+    border: 0.1rem solid $contentLight;
+    border-radius: 1rem;
+    padding: 1.5rem 3rem 1.5rem 1.4rem;
+    outline: 0;
+
+    /*
+      box-shadow: none;
+      border: 0 !important; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    cursor: pointer;
+
+    span {
+      color: $accentMain;
+    }
+  }
+
+  &__select:focus {
+    outline: 0;
+    box-shadow: $outlineFocus;
+  }
+}

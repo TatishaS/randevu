@@ -9,6 +9,7 @@
 //@import '../components/Button/button';
 
 // Подключения стилей компонентов отдельных страниц
+
 /* SignIn */
 @import '../components/SignIn/Button/button';
 @import '../components/SignIn/FormField/formfield';
@@ -16,9 +17,27 @@
 @import '../components/SignIn/Input/input';
 @import '../components/SignIn/InputCode/input-code';
 
+/* Dashboard */
+@import '../components/Dashboard/Search/search';
+@import '../components/Dashboard/Account/account';
+@import '../components/Dashboard/IconButton/icon-button';
+@import '../components/Dashboard/LanguageSelect/language-select';
+@import '../components/Dashboard/Sidebar/sidebar';
+@import '../components/Dashboard/SidebarButton/sidebar-button';
+@import '../components/Dashboard/DashboardTable/dashboard-table';
+@import '../components/Dashboard/Dropdown/dropdown';
+@import '../components/Dashboard/Pagination/pagination';
+@import '../components/Dashboard/Label/label';
+@import '../components/Dashboard/RightsideMenu/rightside-menu';
+@import '../components/Dashboard/EditForm/edit-form';
+@import '../components/Dashboard/Modal/modal';
+@import '../components/Overlay/overlay';
+
 // Подключение дополнительных уникальных стилей страниц
+@import 'blocks/header';
 @import 'blocks/signin';
-//@import "blocks/header";
+@import 'blocks/dashboard';
+
 //@import "blocks/footer";
 
 // Libs

@@ -1,0 +1,61 @@
+.rightside-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 90%;
+  z-index: 60;
+  background: $backgroundMain;
+
+  border-left: 0.1rem solid $contentLight;
+  padding-bottom: 10rem;
+  transition: all 0.6s;
+
+  &.rightside-menu--close {
+    transform: translateX(500%);
+  }
+
+  &__inner {
+    padding: 2rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  &__btn-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: transparent;
+    border: none;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  &__btn-close:hover {
+    opacity: 0.6;
+  }
+
+  &__listitem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  &__listitem:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__iconbutton {
+    margin-right: 1.4rem;
+  }
+}

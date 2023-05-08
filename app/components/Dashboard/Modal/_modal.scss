@@ -1,0 +1,92 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: none;
+  border-radius: 1.4rem;
+  padding: 4.3rem 4.2rem 4.3rem 4.2rem;
+
+  max-width: 90%;
+  width: 37.7rem;
+  min-height: 29rem;
+  z-index: 150;
+
+  &.active {
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    content: '';
+    background: center no-repeat url(../../../images/icon-close.svg);
+    width: 2.6rem;
+    height: 2.6rem;
+    top: 1.8rem;
+    right: 1.8rem;
+    cursor: pointer;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 2.8rem;
+  }
+  &__img {
+    margin: 0 auto;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__msg {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $contentMain;
+    text-align: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    //width: 100%;
+    min-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 1.5rem 3.6rem;
+    border: none;
+    border-radius: 1.4rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    opacity: 0.6;
+  }
+
+  &__btn.no {
+    background-color: $contentMain;
+    color: $backgroundMain;
+    margin-right: 2.8rem;
+  }
+  &__btn.yes {
+    color: $contentMain;
+    background-color: $backgroundMain;
+    border: 0.1rem solid $contentMain;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .modal {
+    max-width: 60%;
+    width: 40rem;
+    min-height: 29rem;
+  }
+}

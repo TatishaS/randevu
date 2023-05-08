@@ -1,0 +1,41 @@
+.label {
+  border-radius: 0.8rem;
+  padding: 0.6rem 1rem;
+  color: $contentMain;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+
+  &.label-inprogress {
+    background-color: #1ed2f9;
+  }
+
+  &.label-waiting {
+    color: $backgroundMain;
+    background-color: #e8854d;
+  }
+
+  &.label-canceled {
+    color: $backgroundMain;
+    background-color: #d95050;
+  }
+
+  &.label-done {
+    color: $backgroundMain;
+    background-color: #30a62e;
+  }
+  &.label-new {
+    color: $backgroundMain;
+
+    background-color: #dd4f64;
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .label {
+    padding: 0.8rem 1.4rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
