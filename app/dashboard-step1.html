@@ -53,6 +53,7 @@
               </form>
             </div>
             <button class="header__button button">New appointment</button>
+
             <div class="header__notification">
               <a
                 class="header__notification-link icon-button icon-button--bell"
@@ -80,6 +81,17 @@
                 <option value="Turkish">Turkish</option>
               </select>
             </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
           </nav>
           <!-- end Navbar -->
         </div>
@@ -105,7 +117,7 @@
                 <li class="sidebar__listitem">
                   <a href="" class="sidebar__link sidebar-button">
                     <svg width="40" height="40">
-                      <use xlink:href="./images/sprite.svg#icon-services"></use>
+                      <use xlink:href="./images/sprite.svg#icon-service"></use>
                     </svg>
                   </a>
                 </li>
@@ -169,93 +181,87 @@
           </aside>
           <aside class="rightside-menu rightside-menu--close">
             <div class="rightside-menu__inner">
-              <div class="rightside-menu__header">
-                <div class="rightside-menu__account account">
-                  <a href="#" class="account__link">
-                    <div class="account__img-wrapper">
-                      <img
-                        class="account__img"
-                        src="./images/account-photo.jpg"
-                      />
-                      <!-- <span class="account__letters">CB</span> -->
-                    </div>
-                    <p class="account__name">Churchill Barbershop</p>
-                  </a>
-                </div>
-                <button class="rightside-menu__btn-close">
-                  <img
-                    class="rightside-menu__icon"
-                    src="./images/icon-close.svg"
-                    alt="close menu"
-                    width="12"
-                    height="12"
-                  />
-                </button>
-              </div>
-              <div class="rightside-menu__search">
-                <form class="header__search-form search search--mobile">
-                  <input
-                    type="text"
-                    class="search__input"
-                    placeholder="Search"
-                  />
-                  <button
-                    class="search__button icon-button icon-button--black icon-button--search"
-                    type="submit"
-                  >
+              <div class="rightside-menu__top">
+                <div class="rightside-menu__header">
+                  <div class="rightside-menu__account account">
+                    <a href="#" class="account__link">
+                      <div class="account__img-wrapper">
+                        <img
+                          class="account__img"
+                          src="./images/account-photo.jpg"
+                        />
+                        <!-- <span class="account__letters">CB</span> -->
+                      </div>
+                      <p class="account__name">Churchill Barbershop</p>
+                    </a>
+                  </div>
+                  <button class="rightside-menu__btn-close">
                     <img
-                      alt="Search"
-                      class="icon-button__img"
-                      src="./images/icon-search.svg"
-                      width="26"
-                      height="26"
+                      class="rightside-menu__icon"
+                      src="./images/icon-close.svg"
+                      alt="close menu"
+                      width="12"
+                      height="12"
                     />
                   </button>
-                </form>
+                </div>
+                <div class="rightside-menu__search">
+                  <form class="header__search-form search search--mobile">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="search__button icon-button icon-button--black icon-button--search"
+                      type="submit"
+                    >
+                      <img
+                        alt="Search"
+                        class="icon-button__img"
+                        src="./images/icon-search.svg"
+                        width="26"
+                        height="26"
+                      />
+                    </button>
+                  </form>
+                </div>
+
+                <ul class="rightside-menu__list">
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-websites"
+                        ></use>
+                      </svg> </a
+                    ><span>My websites</span>
+                  </li>
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-settings"
+                        ></use>
+                      </svg> </a
+                    ><span>Settings</span>
+                  </li>
+                </ul>
               </div>
 
-              <ul class="rightside-menu__list">
-                <li class="rightside-menu__listitem">
-                  <a
-                    href=""
-                    class="rightside-menu__iconbutton sidebar__link sidebar-button"
-                  >
-                    <svg width="40" height="40">
-                      <use xlink:href="./images/sprite.svg#icon-clients"></use>
-                    </svg> </a
-                  ><span> Clients</span>
-                </li>
-                <li class="rightside-menu__listitem">
-                  <a
-                    href=""
-                    class="rightside-menu__iconbutton sidebar__link sidebar-button"
-                  >
-                    <svg width="40" height="40">
-                      <use xlink:href="./images/sprite.svg#icon-services"></use>
-                    </svg> </a
-                  ><span> Appointments</span>
-                </li>
-                <li class="rightside-menu__listitem">
-                  <a
-                    href=""
-                    class="rightside-menu__iconbutton sidebar__link sidebar-button active"
-                  >
-                    <svg width="40" height="40">
-                      <use xlink:href="./images/sprite.svg#icon-websites"></use>
-                    </svg> </a
-                  ><span>My websites</span>
-                </li>
-                <li class="rightside-menu__listitem">
-                  <a
-                    href=""
-                    class="rightside-menu__iconbutton sidebar__link sidebar-button"
-                  >
-                    <svg width="40" height="40">
-                      <use xlink:href="./images/sprite.svg#icon-settings"></use>
-                    </svg> </a
-                  ><span>Settings</span>
-                </li>
-              </ul>
+              <div class="rightside-menu__bottom">
+                <button
+                  class="rightside-menu__btn-logout sidebar__btn-logout icontext-button"
+                >
+                  Logout
+                </button>
+              </div>
             </div>
           </aside>
 
@@ -298,7 +304,7 @@
               <table class="dashboard-table__table">
                 <thead class="dashboard-table__thead">
                   <tr>
-                    <th>№</th>
+                    <th class="number">№</th>
                     <th class="name">Employee's name</th>
                     <th class="name">Client's name</th>
 
@@ -313,11 +319,11 @@
                 </thead>
                 <tbody>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -342,11 +348,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -366,12 +372,12 @@
                       </span>
                     </td>
                   </tr>
-                  <tr class="dashboard-table__row">
-                    <td>15</td>
+                  <tr class="dashboard-table__row canceled">
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -392,12 +398,12 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
 
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -418,12 +424,12 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row new">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
 
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -444,12 +450,12 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
 
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -470,11 +476,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row focused">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -495,11 +501,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -520,11 +526,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -545,11 +551,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -570,11 +576,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row dashboard-table__tablet-row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -595,11 +601,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row dashboard-table__tablet-row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -620,11 +626,11 @@
                     </td>
                   </tr>
                   <tr class="dashboard-table__row dashboard-table__tablet-row">
-                    <td>15</td>
+                    <td class="number">15</td>
                     <td class="name">Laake Doooe</td>
                     <td class="name">Marry Ellis</td>
                     <td>+34842797474</td>
-                    <td>Manicure</td>
+                    <td class="service">Manicure</td>
                     <td>21/12/21</td>
                     <td>13:30</td>
                     <td>
@@ -669,7 +675,7 @@
                     <a class="pagination__list-num"> 4 </a>
                   </li>
                   <li class="pagination__list-item">
-                    <a class="pagination__list-num"> ...</a>
+                    <a class="pagination__list-num dots"> ...</a>
                   </li>
                   <li class="pagination__list-item">
                     <a class="pagination__list-num"> 7</a>

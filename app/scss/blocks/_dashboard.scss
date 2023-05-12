@@ -87,11 +87,11 @@
     padding-top: 4rem;
     background-color: $backgroundMain;
 
-    &.dashboard--editform {
+    /*  &.dashboard--editform {
       .sidebar__btn-logout {
         display: none;
       }
-    }
+    } */
 
     &__content-wrapper {
       background-color: $backgroundSecondary;
@@ -100,9 +100,10 @@
     }
 
     &__inner {
-      display: flex;
-      justify-content: flex-start;
+      //display: flex;
+      //justify-content: flex-start;
       padding-bottom: 3rem;
+      padding-left: 11rem;
     }
   }
 }

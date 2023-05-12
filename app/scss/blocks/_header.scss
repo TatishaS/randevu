@@ -22,8 +22,15 @@
     display: none;
   } */
 
-  .header__language {
+  &__language {
     display: none;
+  }
+
+  &__logout--tablet {
+    display: none;
+    .icon-button--logout {
+      display: none;
+    }
   }
 
   &__button {
@@ -48,15 +55,48 @@
     .header__language {
       display: block;
     }
+
+    &__notification {
+      margin-right: 1rem;
+    }
+
+    &__logout--tablet {
+      display: block;
+      .icon-button--logout {
+        display: flex;
+      }
+    }
   }
 }
 
 @media (min-width: $breakpoint1200) {
   .header {
     background: $backgroundSecondary;
-    /*    position: fixed;
+    /* position: fixed;
     top: 0;
     right: 0;
     left: 0; */
+
+    &__button {
+      font-size: 1.6rem;
+      line-height: 2rem;
+
+      font-weight: 600;
+    }
+
+    &__logout--tablet {
+      display: none;
+      .icon-button--logout {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    &__account {
+      margin-right: 17%;
+    }
   }
 }

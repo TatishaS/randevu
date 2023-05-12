@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 40;
+  z-index: 70;
 
   &__inner {
     display: flex;
@@ -64,11 +64,11 @@
 
 @media (min-width: $breakpoint1200) {
   .sidebar {
-    /* bottom: 0;
-    left: 3rem;
+    bottom: 0;
+    left: 0;
     right: auto;
-    top: 12.7rem; */
-    position: static;
+    top: 11.7rem;
+    position: fixed;
     margin-left: 1.4rem;
     margin-right: 2rem;
 
@@ -96,6 +96,7 @@
 
     &__footer {
       display: block;
+      margin-bottom: 3rem;
     }
 
     &__btn-logout {
@@ -113,6 +114,7 @@
       background-image: url('../../../images/icon-logout.svg');
       background-repeat: no-repeat;
       background-position: left 0.5rem center;
+      background-size: 1.8rem 1.8rem;
       opacity: 1;
       transition: all 0.3s;
       cursor: pointer;

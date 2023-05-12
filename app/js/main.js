@@ -29,6 +29,18 @@ function rightsideMenu() {
   });
 }
 
+/* Открыть инпут поиска на планшете */
+function showSearchInput() {
+  const searchInput = document.querySelector('.search__input');
+  const searchBtn = document.querySelector('.search__button');
+
+  searchBtn.addEventListener('click', e => {
+    e.preventDefault();
+    searchInput.classList.toggle('active');
+    searchBtn.classList.toggle('active');
+  });
+}
+
 /* Окно сообщения об успешной отправке */
 function openConfirmModal() {
   const modalConfirm = document.querySelector('.modal__confirm');
@@ -36,18 +48,25 @@ function openConfirmModal() {
   const cancelBtn = document.querySelector('.cancel');
   const modalConfirmCloseBtn = document.querySelector('.modal__confirm-close');
 
-  cancelBtn.addEventListener('click', e => {
-    e.preventDefault();
-    modalConfirm.classList.add('active');
-    overlay.classList.add('overlay--show');
-  });
+  const mediaQueryList = window.matchMedia(
+    'only screen and (max-width: 1199px)'
+  );
 
-  modalConfirmCloseBtn.addEventListener('click', e => {
-    e.preventDefault();
-    modalConfirm.classList.remove('active');
-    overlay.classList.remove('overlay--show');
-  });
+  if (mediaQueryList.matches) {
+    cancelBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modalConfirm.classList.add('active');
+      overlay.classList.add('overlay--show');
+    });
+
+    modalConfirmCloseBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modalConfirm.classList.remove('active');
+      overlay.classList.remove('overlay--show');
+    });
+  }
 }
 
 rightsideMenu();
-openConfirmModal();
+//openConfirmModal();
+showSearchInput();

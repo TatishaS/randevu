@@ -1,5 +1,5 @@
 .dashboard-table {
-  padding-bottom: 18.7rem;
+  padding-bottom: 10.4rem;
 
   &__top {
     margin-left: 0.4rem;
@@ -69,7 +69,6 @@
   &__table td {
     text-align: left;
     padding: 1.5rem 0.6rem;
-    //background-color: $domLight;
   }
 
   td:first-child,
@@ -85,21 +84,9 @@
   }
 
   &__table td {
-    //border-top: 0.5px solid #ddd;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* 
-  &__table tbody tr {
-    border-radius: 1.4rem;
-  } */
-  /* 
-  &__table tbody tr:hover {
-    background-color: $backgroundMain;
-    border: 0.1rem solid $contentLight;
-
-  }
- */
 
   .actions {
     display: flex;
@@ -127,14 +114,20 @@
     opacity: 0.6;
   }
 
+  &__tablet-row {
+    display: none;
+  }
+
   &__row.new {
     background-color: $domLight;
     color: $accentMain;
   }
 
-  &__row.focused {
-    //background-color: $backgroundMain;
+  &__row.canceled {
+    color: $contentDop;
+  }
 
+  &__row.focused {
     td {
       background-color: $backgroundMain;
     }
@@ -156,14 +149,24 @@
     }
   }
 
-  &__tablet-row {
-    display: none;
+  &__table .selected {
+    background-color: $backgroundMain;
+  }
+
+  td:first-child.selected,
+  th:first-child.selected {
+    border-radius: 0;
+  }
+
+  td:last-child.selected,
+  th:last-child.selected {
+    border-radius: 0;
   }
 }
 
 @media (min-width: $breakpoint768) {
   .dashboard-table {
-    padding-bottom: 23rem;
+    padding-bottom: 13rem;
 
     &.editable {
       padding-bottom: 0;
@@ -180,7 +183,11 @@
     }
 
     &__table .name {
-      padding: 1.5rem 3rem 1.5rem 0.6rem;
+      min-width: 11.2rem;
+    }
+
+    &__table .service {
+      min-width: 8.4rem;
     }
 
     &__top {
@@ -216,14 +223,55 @@
       padding: 0;
     }
 
+    &__table {
+      display: table;
+    }
+
     &__tablet-row {
       display: none;
     }
 
+    /*  &__wrapper {
+      width: min(127.4rem, 100%);
+    } */
+
+    /*  &__table {
+      max-width: auto;
+    }
+ */
+    /*    &__table {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    } */
+
+    /*   &__table th,
+    &__table td {
+      text-align: left;
+      padding: 1.5rem 2rem;
+    } */
+
+    &__table .name {
+      min-width: 21.4rem;
+    }
+
+    /*  td:first-child,
+    th:first-child {
+      padding: 1.5rem 2rem 1.5rem 2.2rem;
+    } */
+  }
+}
+
+@media (min-width: 1400px) {
+  .dashboard-table {
     &__table {
       font-weight: 600;
       font-size: 1.6rem;
       line-height: 2rem;
+    }
+
+    &__table th {
+      font-weight: 500;
     }
 
     &__table th,
@@ -232,8 +280,8 @@
       padding: 1.5rem 2rem;
     }
 
-    &__table .name {
-      padding: 1.5rem 10rem 1.5rem 2rem;
+    &__table .service {
+      min-width: 15.6rem;
     }
 
     td:first-child,
