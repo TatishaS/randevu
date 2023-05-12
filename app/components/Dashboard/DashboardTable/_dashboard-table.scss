@@ -254,16 +254,6 @@
     &__table .name {
       min-width: 21.4rem;
     }
-
-    /*  td:first-child,
-    th:first-child {
-      padding: 1.5rem 2rem 1.5rem 2.2rem;
-    } */
-  }
-}
-
-@media (min-width: 1400px) {
-  .dashboard-table {
     &__table {
       font-weight: 600;
       font-size: 1.6rem;
@@ -274,6 +264,15 @@
       font-weight: 500;
     }
 
+    /*  td:first-child,
+    th:first-child {
+      padding: 1.5rem 2rem 1.5rem 2.2rem;
+    } */
+  }
+}
+
+@media (min-width: 1400px) {
+  .dashboard-table {
     &__table th,
     &__table td {
       text-align: left;
