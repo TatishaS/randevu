@@ -18,7 +18,7 @@
   }
 
   &__inner {
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,14 @@
   }
 
   &__bottom {
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
   }
 }
+
+/* @media (min-width: 390px) {
+  .rightside-menu {
+    &__bottom {
+      margin-bottom: 9rem;
+    }
+  }
+} */

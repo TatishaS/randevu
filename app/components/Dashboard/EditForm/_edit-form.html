@@ -1,0 +1,53 @@
+<form class="edit-form">
+  <div class="edit-form__row">
+    <label for="employee" class="edit-form__label">Employee</label>
+    <div class="edit-form__select-dropdown">
+      <select class="edit-form__select" id="employee">
+        <option selected disabled>Name</option>
+        <option value="Mary Ellis">Jake Doe</option>
+        <option value="Ricardo Carvalho">Ricardo Carvalho</option>
+        <option value="Michaela Leman">Michaela Leman</option>
+      </select>
+    </div>
+  </div>
+  <div class="edit-form__row">
+    <label for="service" class="edit-form__label">Service</label>
+    <div class="edit-form__select-dropdown">
+      <select class="edit-form__select" id="service">
+        <option selected disabled>Hair colouring</option>
+        <option value="Manicure">Manicure</option>
+        <option value="Hair SPA Ritual">Hair SPA Ritual</option>
+        <option value="Face revitalizing">Face revitalizing</option>
+      </select>
+    </div>
+  </div>
+  <div class="edit-form__row">
+    <label for="date" class="edit-form__label">Date</label>
+    <div class="edit-form__select-dropdown">
+      <input
+        type="date"
+        id="date"
+        value="2021-12-21"
+        class="edit-form__input-date"
+      />
+    </div>
+  </div>
+  <div class="edit-form__row">
+    <label for="time" class="edit-form__label">Time</label>
+    <div class="edit-form__select-dropdown">
+      <input
+        type="date"
+        id="time"
+        value="2021-12-21"
+        class="edit-form__input-date"
+      />
+    </div>
+  </div>
+
+  <button class="edit-form__button save disabled">
+    <svg width="26" height="26">
+      <use xlink:href="./images/sprite.svg#icon-save"></use>
+    </svg>
+    Save
+  </button>
+</form>

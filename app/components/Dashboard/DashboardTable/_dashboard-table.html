@@ -1,0 +1,171 @@
+<!-- Dashboard table -->
+
+<section class="dashboard-table">
+  <div class="dashboard-table__wrapper">
+    <div class="dashboard-table__top">
+      <h1 class="dashboard-table__title page-title">Dashboard</h1>
+      <div class="dashboard-table__filters">
+        <form class="dashboard-table__filters-form">
+          <div class="dashboard-table__select-dropdown dropdown">
+            <label for="status" class="dropdown__select-label visually-hidden"
+              >Choose status</label
+            >
+            <select class="dropdown__select" id="status">
+              <option selected disabled>Status: All</option>
+              <option value="In progress">In progress</option>
+              <option value="Waiting">Waiting</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div class="dashboard-table__select-dropdown dropdown">
+            <label for="display" class="dropdown__select-label visually-hidden"
+              >Choose display</label
+            >
+            <select class="dropdown__select" id="status">
+              <option selected disabled>Display: today</option>
+              <option value="today">today</option>
+              <option value="tomorrow">tomorrow</option>
+              <option value="next week">next week</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <table class="dashboard-table__table">
+      <thead class="dashboard-table__thead">
+        <tr>
+          <th class="number">№</th>
+          <th class="name">Employee's name</th>
+          <th class="name">Client's name</th>
+
+          <th>Phone</th>
+          <th>Service</th>
+          <th>Date</th>
+          <th>Time</th>
+
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
+          <td class="name">Enrique Iglesias Junior</td>
+          <td class="name">Anna Kournikova</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-waiting"> Waiting</span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="dashboard-table__pagination pagination">
+      <a class="pagination__arrow pagination__arrow disabled">
+        <img
+          class="pagination__icon-arrow pagination__icon-arrow--left"
+          src="./images/icon-arrow-right.svg"
+          alt="arrow icon"
+        />
+      </a>
+
+      <ul class="pagination__list">
+        <li class="pagination__list-item">
+          <a class="pagination__list-num active"> 1 </a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 2 </a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 3 </a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 4 </a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num dots"> ...</a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 7</a>
+        </li>
+      </ul>
+
+      <a class="pagination__arrow">
+        <img
+          class="pagination__icon-arrow"
+          src="./images/icon-arrow-right.svg"
+          alt="arrow icon"
+        />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard table Editable-->
+
+<section class="dashboard-table editable">
+  <div class="dashboard-table__wrapper">
+    <table class="dashboard-table__table editable">
+      <thead class="dashboard-table__thead">
+        <tr>
+          <th class="number">№</th>
+          <th class="name">Employee's name</th>
+          <th class="name">Client's name</th>
+
+          <th>Phone</th>
+          <th>Service</th>
+          <th>Date</th>
+          <th>Time</th>
+
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dashboard-table__row focused">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td>Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="dashboard-table__label label label-inprogress">
+              In progress
+            </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

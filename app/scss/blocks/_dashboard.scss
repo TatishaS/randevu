@@ -93,9 +93,13 @@
       }
     } */
 
+    &__edit-form {
+      padding-right: 3rem;
+    }
+
     &__content-wrapper {
       background-color: $backgroundSecondary;
-      padding: 3.2rem 4.3rem 1.2rem 4rem;
+      padding: 3.2rem 0rem 1.2rem 4rem;
       border-radius: 1.4rem 0 0 1.4rem;
     }
 

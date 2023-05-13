@@ -118,37 +118,6 @@
     display: none;
   }
 
-  &__row.new {
-    background-color: $domLight;
-    color: $accentMain;
-  }
-
-  &__row.canceled {
-    color: $contentDop;
-  }
-
-  &__row.focused {
-    td {
-      background-color: $backgroundMain;
-    }
-    td:not(:first-child),
-    td:not(:last-child) {
-      border-top: 0.1rem solid $contentLight;
-      border-bottom: 0.1rem solid $contentLight;
-    }
-    td:first-child {
-      border-top: 0.1rem solid $contentLight;
-      border-bottom: 0.1rem solid $contentLight;
-      border-left: 0.1rem solid $contentLight;
-    }
-
-    td:last-child {
-      border-top: 0.1rem solid $contentLight;
-      border-bottom: 0.1rem solid $contentLight;
-      border-right: 0.1rem solid $contentLight;
-    }
-  }
-
   &__table .selected {
     background-color: $backgroundMain;
   }
