@@ -40,6 +40,7 @@ function scripts() {
     //"node_modules/jquery/dist/jquery.js",
     //"node_modules/swiper/swiper-bundle.min.js",
     //'node_modules/swiper/modules/effect-fade/effect-fade.js',
+    //'node_modules/choices.js/public/assets/scripts/choices.min.js',
     'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))

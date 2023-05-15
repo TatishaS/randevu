@@ -67,6 +67,9 @@ function openConfirmModal() {
   }
 }
 
+/* const element = document.querySelector('.js-choice-language');
+const choices = new Choices(element); */
+
 rightsideMenu();
 //openConfirmModal();
 showSearchInput();

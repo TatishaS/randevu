@@ -46,12 +46,17 @@
     cursor: pointer;
   }
 
+  &__btn-close:hover {
+    opacity: 0.6;
+  }
+
   &__list {
     margin-bottom: 4rem;
   }
 
-  &__btn-close:hover {
-    opacity: 0.6;
+  &__language {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
   }
 
   &__listitem {
