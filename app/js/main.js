@@ -46,30 +46,29 @@ function openConfirmModal() {
   const modalConfirm = document.querySelector('.modal__confirm');
   const overlay = document.querySelector('.overlay');
   const cancelBtn = document.querySelector('.cancel');
+  const sidebar = document.querySelector('.sidebar');
   const modalConfirmCloseBtn = document.querySelector('.modal__confirm-close');
 
-  const mediaQueryList = window.matchMedia(
-    'only screen and (max-width: 1199px)'
-  );
+  if (!modalConfirm) return;
 
-  if (mediaQueryList.matches) {
-    cancelBtn.addEventListener('click', e => {
-      e.preventDefault();
-      modalConfirm.classList.add('active');
-      overlay.classList.add('overlay--show');
-    });
+  cancelBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modalConfirm.classList.add('active');
+    overlay.classList.add('overlay--show');
+    sidebar.style.zIndex = '40';
+  });
 
-    modalConfirmCloseBtn.addEventListener('click', e => {
-      e.preventDefault();
-      modalConfirm.classList.remove('active');
-      overlay.classList.remove('overlay--show');
-    });
-  }
+  modalConfirmCloseBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modalConfirm.classList.remove('active');
+    overlay.classList.remove('overlay--show');
+    sidebar.style.zIndex = '70';
+  });
 }
 
 /* const element = document.querySelector('.js-choice-language');
 const choices = new Choices(element); */
 
 rightsideMenu();
-//openConfirmModal();
+openConfirmModal();
 showSearchInput();
