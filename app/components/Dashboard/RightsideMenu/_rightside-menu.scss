@@ -2,8 +2,9 @@
   position: fixed;
   right: 0;
   top: 0;
-  bottom: 0;
-  width: 100%;
+  //bottom: 0;
+  //width: 100%;
+  height: 100vh;
   max-width: 90%;
 
   z-index: 60;
@@ -19,7 +20,7 @@
 
   &__inner {
     padding: 4rem 2rem 2rem 2rem;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,6 +44,10 @@
     opacity: 1;
     transition: all 0.3s;
     cursor: pointer;
+  }
+
+  &__list {
+    margin-bottom: 4rem;
   }
 
   &__btn-close:hover {
@@ -92,10 +97,8 @@
   }
 }
 
-/* @media (min-width: 390px) {
+@media (min-width: $breakpoint768) {
   .rightside-menu {
-    &__bottom {
-      margin-bottom: 9rem;
-    }
+    display: none;
   }
-} */
+}

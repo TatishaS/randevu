@@ -12,13 +12,9 @@
           </a>
         </div>
         <button class="rightside-menu__btn-close">
-          <img
-            class="rightside-menu__icon"
-            src="./images/icon-close.svg"
-            alt="close menu"
-            width="12"
-            height="12"
-          />
+          <svg width="14" height="14" class="rightside-menu__icon">
+            <use xlink:href="./images/sprite.svg#icon-close"></use>
+          </svg>
         </button>
       </div>
       <div class="rightside-menu__search">
@@ -61,6 +57,19 @@
           ><span>Settings</span>
         </li>
       </ul>
+      <div class="rightside-menu__language language-select">
+        <label
+          for="language"
+          class="language-select__select-label visually-hidden"
+          >Choose language</label
+        >
+        <select class="language-select__select" id="language">
+          <option selected disabled>EN</option>
+          <option value="English">English</option>
+          <option value="Deutsch">Deutsch</option>
+          <option value="Turkish">Turkish</option>
+        </select>
+      </div>
     </div>
 
     <div class="rightside-menu__bottom">

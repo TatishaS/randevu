@@ -20,6 +20,11 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "vanillajs-datepicker": "^1.3.2"
+  },
+  "dependencies": {
+    "choices.js": "^10.2.0",
+    "slim-select": "^2.5.0"
   }
 }

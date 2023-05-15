@@ -84,12 +84,15 @@
       font-weight: 600;
     }
 
-    &__logout--tablet {
+    &__search {
+      margin-right: 7%;
+    }
+    /*    &__logout--tablet {
       display: none;
       .icon-button--logout {
         display: none;
       }
-    }
+    } */
   }
 }
 
