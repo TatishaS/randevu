@@ -55,8 +55,12 @@
   }
 
   &__language {
-    margin-bottom: 2rem;
     margin-left: 1rem;
+    margin-bottom: 2rem;
+
+    .language-select__list-wrapper.active {
+      margin-top: 1rem;
+    }
   }
 
   &__listitem {

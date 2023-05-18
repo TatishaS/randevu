@@ -44,18 +44,24 @@
             <span class="icon-button__quantity"> 3 </span></a
           >
         </div>
+
         <div class="header__language language-select">
-          <label
-            for="language"
-            class="language-select__select-label visually-hidden"
-            >Choose language</label
-          >
-          <select class="language-select__select" id="language">
-            <option selected disabled>EN</option>
-            <option value="English">English</option>
-            <option value="Deutsch">Deutsch</option>
-            <option value="Turkish">Turkish</option>
-          </select>
+          <button class="language-select__button">
+            <div class="language-select__button-content">
+              <img
+                class="language-select__button-img"
+                src="./images/icon-world.svg"
+              />
+              <span class="language-select__language-selected">EN</span>
+            </div>
+          </button>
+          <div class="language-select__list-wrapper">
+            <ul class="language-select__list">
+              <li class="language-select__list-item active">Germany</li>
+              <li class="language-select__list-item">Turkey</li>
+              <li class="language-select__list-item">England</li>
+            </ul>
+          </div>
         </div>
         <div class="header__logout--tablet">
           <a class="header__logout-link icon-button icon-button--logout">

@@ -69,17 +69,22 @@
               >
             </div>
             <div class="header__language language-select">
-              <label
-                for="language"
-                class="language-select__select-label visually-hidden"
-                >Choose language</label
-              >
-              <select class="language-select__select" id="language">
-                <option selected disabled>EN</option>
-                <option value="English">English</option>
-                <option value="Deutsch">Deutsch</option>
-                <option value="Turkish">Turkish</option>
-              </select>
+              <button class="language-select__button">
+                <div class="language-select__button-content">
+                  <img
+                    class="language-select__button-img"
+                    src="./images/icon-world.svg"
+                  />
+                  <span class="language-select__language-selected">EN</span>
+                </div>
+              </button>
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">Germany</li>
+                  <li class="language-select__list-item">Turkey</li>
+                  <li class="language-select__list-item">England</li>
+                </ul>
+              </div>
             </div>
             <div class="header__logout--tablet">
               <a class="header__logout-link icon-button icon-button--logout">
@@ -250,17 +255,22 @@
                   </li>
                 </ul>
                 <div class="rightside-menu__language language-select">
-                  <label
-                    for="language"
-                    class="language-select__select-label visually-hidden"
-                    >Choose language</label
-                  >
-                  <select class="language-select__select" id="language">
-                    <option selected disabled>EN</option>
-                    <option value="English">English</option>
-                    <option value="Deutsch">Deutsch</option>
-                    <option value="Turkish">Turkish</option>
-                  </select>
+                  <button class="language-select__button">
+                    <div class="language-select__button-content">
+                      <img
+                        class="language-select__button-img"
+                        src="./images/icon-world.svg"
+                      />
+                      <span class="language-select__language-selected">EN</span>
+                    </div>
+                  </button>
+                  <div class="language-select__list-wrapper active">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">Germany</li>
+                      <li class="language-select__list-item">Turkey</li>
+                      <li class="language-select__list-item">England</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -279,34 +289,42 @@
               <div class="dashboard-table__top">
                 <h1 class="dashboard-table__title page-title">Dashboard</h1>
                 <div class="dashboard-table__filters">
-                  <form class="dashboard-table__filters-form">
-                    <div class="dashboard-table__select-dropdown dropdown">
-                      <label
-                        for="status"
-                        class="dropdown__select-label visually-hidden"
-                        >Choose status</label
-                      >
-                      <select class="dropdown__select" id="status">
-                        <option selected disabled>Status: All</option>
-                        <option value="In progress">In progress</option>
-                        <option value="Waiting">Waiting</option>
-                        <option value="Cancelled">Cancelled</option>
-                      </select>
+                  <div class="dashboard-table__filters-form">
+                    <div
+                      class="dashboard-table__select-dropdown dropdown dropdown--status"
+                    >
+                      <button class="dropdown__button">
+                        <div class="dropdown__button-content">
+                          <span>Status:</span>
+                          <span class="dropdown__category-selected">All</span>
+                        </div>
+                      </button>
+                      <div class="dropdown__list-wrapper">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__list-item active">Cancelled</li>
+                          <li class="dropdown__list-item">In progress</li>
+                          <li class="dropdown__list-item">Waiting</li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="dashboard-table__select-dropdown dropdown">
-                      <label
-                        for="display"
-                        class="dropdown__select-label visually-hidden"
-                        >Choose display</label
-                      >
-                      <select class="dropdown__select" id="status">
-                        <option selected disabled>Display: today</option>
-                        <option value="today">today</option>
-                        <option value="tomorrow">tomorrow</option>
-                        <option value="next week">next week</option>
-                      </select>
+                    <div
+                      class="dashboard-table__select-dropdown dropdown dropdown--display"
+                    >
+                      <button class="dropdown__button">
+                        <div class="dropdown__button-content">
+                          <span>Display:</span>
+                          <span class="dropdown__category-selected">today</span>
+                        </div>
+                      </button>
+                      <div class="dropdown__list-wrapper">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__list-item active">tomorrow</li>
+                          <li class="dropdown__list-item">next week</li>
+                          <li class="dropdown__list-item">last month</li>
+                        </ul>
+                      </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
 

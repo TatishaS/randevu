@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Services</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/main.min.js"></script>
+  </head>
+  <body>
+  <!-- begin header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <!-- begin Navbar -->
+        <nav class="nav">
+          <div class="header__account account">
+            <a href="#" class="account__link">
+              <div class="account__img-wrapper">
+                <img class="account__img" src="./images/account-photo.jpg" />
+                <!-- <span class="account__letters">CB</span> -->
+              </div>
+              <p class="account__name">Churchill Barbershop</p>
+            </a>
+          </div>
+          <div class="header__search">
+            <form class="header__search-form search">
+              <input type="text" class="search__input" placeholder="Search" />
+              <button
+                class="search__button icon-button icon-button--black icon-button--search"
+                type="submit"
+              >
+                <img
+                  alt="Search"
+                  class="icon-button__img"
+                  src="./images/icon-search.svg"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </form>
+          </div>
+          <button class="header__button button">New appointment</button>
+
+          <div class="header__notification">
+            <a
+              class="header__notification-link icon-button icon-button--bell"
+            >
+              <img
+                class="icon-button__img"
+                src="./images/icon-bell.svg"
+                alt="Notifications"
+                width="26"
+                height="26"
+              />
+              <span class="icon-button__quantity"> 3 </span></a
+            >
+          </div>
+
+          <div class="header__language language-select">
+            <button class="language-select__button">
+              <div class="language-select__button-content">
+                <img class="language-select__button-img" src="./images/icon-world.svg"/>
+                <span class="language-select__language-selected">EN</span>
+              </div>
+            </button>
+            <div class="language-select__list-wrapper">
+              <ul class="language-select__list">
+                <li class="language-select__list-item active">Germany</li>
+                <li class="language-select__list-item">Turkey</li>
+                <li class="language-select__list-item">England</li>
+              </ul>
+
+            </div>
+            
+          </div>
+          <div class="header__logout--tablet">
+            <a class="header__logout-link icon-button icon-button--logout">
+              <img
+                class="icon-button__img"
+                src="./images/icon-logout.svg"
+                alt="Notifications"
+                width="26"
+                height="26"
+              />
+            </a>
+          </div>
+        </nav>
+        <!-- end Navbar -->
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+    <main class="services services--step3 template">
+      <div class="template__container container">
+        <div class="template__inner">
+          <aside class="sidebar">
+            <div class="sidebar__inner">
+              <ul class="sidebar__list">
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button active">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-dashboard"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-service"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-employees"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-clients"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--websites">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-websites"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--settings">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="sidebar__listitem sidebar__listitem--more">
+                  <a
+                    href=""
+                    class="sidebar__link sidebar-button sidebar-button--more"
+                  >
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-more"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="sidebar__footer">
+                <!--  <button class="sidebar__btn-logout icontext-button">
+                  Logout
+                </button> -->
+                <a href="" class="sidebar__logo-link">
+                  <img
+                    src="./images/logo-sidebar.svg"
+                    alt="Randevu logo"
+                    class="sidebar__logo-img"
+                    width="76"
+                    height="17"
+                  />
+                </a>
+              </div>
+            </div>
+          </aside>
+          <aside class="rightside-menu rightside-menu--close">
+            <div class="rightside-menu__inner">
+              <div class="rightside-menu__top">
+                <div class="rightside-menu__header">
+                  <div class="rightside-menu__account account">
+                    <a href="#" class="account__link">
+                      <div class="account__img-wrapper">
+                        <img
+                          class="account__img"
+                          src="./images/account-photo.jpg"
+                        />
+                        <!-- <span class="account__letters">CB</span> -->
+                      </div>
+                      <p class="account__name">Churchill Barbershop</p>
+                    </a>
+                  </div>
+                  <button class="rightside-menu__btn-close">
+                    <svg width="14" height="14" class="rightside-menu__icon">
+                      <use xlink:href="./images/sprite.svg#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="rightside-menu__search">
+                  <form class="header__search-form search search--mobile">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="search__button icon-button icon-button--black icon-button--search"
+                      type="submit"
+                    >
+                      <img
+                        alt="Search"
+                        class="icon-button__img"
+                        src="./images/icon-search.svg"
+                        width="26"
+                        height="26"
+                      />
+                    </button>
+                  </form>
+                </div>
+
+                <ul class="rightside-menu__list">
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-websites"
+                        ></use>
+                      </svg> </a
+                    ><span>My websites</span>
+                  </li>
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-settings"
+                        ></use>
+                      </svg> </a
+                    ><span>Settings</span>
+                  </li>
+                </ul>
+                <div class="rightside-menu__language language-select">
+                  <button class="language-select__button">
+                    <div class="language-select__button-content">
+                      <img
+                        class="language-select__button-img"
+                        src="./images/icon-world.svg"
+                      />
+                      <span class="language-select__language-selected">EN</span>
+                    </div>
+                  </button>
+                  <div class="language-select__list-wrapper">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">Germany</li>
+                      <li class="language-select__list-item">Turkey</li>
+                      <li class="language-select__list-item">England</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rightside-menu__bottom">
+                <button
+                  class="rightside-menu__btn-logout sidebar__btn-logout icontext-button"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="template__content-wrapper">
+            <div class="template__page-top">
+              <div class="template__edit-wrapper">
+<div class="template__topbtn-wrapper">
+                <button class="template__top-btn">
+                  Back
+                </button>
+              </div>
+              <div class="template__edit-inner">
+                <h2 class="template__edit-title">Editing service «Styling»</h2>
+                <img
+                  class="template__title-img"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </div>
+
+              </div>
+
+<!--               <div class="template__title-wrapper">
+                <h2 class="template__page-title">Services</h2>
+                <div class="template__select-dropdown dropdown">
+                  <button class="dropdown__button">
+                    <div class="dropdown__button-content">
+                      <span>Category:</span>
+                      <span class="dropdown__category-selected">Hair</span>
+                    </div>
+                  </button>
+                  <div class="dropdown__list-wrapper">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item active">Face care</li>
+                      <li class="dropdown__list-item">Manicure</li>
+                      <li class="dropdown__list-item">SPA Rituals</li>
+                    </ul>
+
+                  </div>
+                  
+                </div>
+
+              </div> -->
+              </div>
+
+  
+            <section class="template__service-block service-block">
+
+              <form  class="service-block__form service-form service-form--step3">
+
+
+                  <div class="service-form__row">
+                    <label for="category-photo-upload"><span class="service-form__label">Add category photo</span>
+                      <div class="service-form__file-wrapper">
+                        <div class="service-form__file-preview loaded">
+   <!-- <button class="service-form__file-add-btn">
+                            <img
+                              src="./images/icon-plus-circle.svg"
+                              alt="Upload photo"
+                            />
+                          </button>  -->
+   <button class="service-form__file-delete-btn">
+                            <img
+                              src="./images/icon-trash-white.svg"
+                              alt="Delete photo"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </label>
+                    <input
+                      class="service-form__file-input visually-hidden"
+                      type="file"
+                      name="category-photo"
+                      id="category-photo-upload"
+                    />
+                  </div>
+                  <div class="service-block__inputs-wrapper">
+                  <div class="service-form__row service-form__row--service">
+                    <div class="service-form__service-select service-select">
+                      <label
+                      for="service"
+                      class="service-form__select-label visually-hidden"
+                      >Service</label
+                    >
+                      <select class="choices-form-select" id="service">
+                        <option selected>Hair</option>
+                        <option value="Manicure">Manicure</option>
+                        <option value="Hair SPA Ritual">Hair SPA Ritual</option>
+                        <option value="Face revitalizing">Face revitalizing</option>
+                      </select>
+                      
+                    </div>
+
+              
+
+                  </div>
+                  <div class="service-form__row service-form__row--price">
+                    <input
+                    type="text"
+                    class="service-form__input service-form__input--price focused"
+                    id="price"
+                    name="price"
+                    placeholder="82"
+                  />
+                  </div>
+                  <div class="service-form__row service-form__row--gender">
+                    <div class="service-form__service-select service-select service-select--gender">
+                      <label
+                      for="gender"
+                      class="service-form__select-label visually-hidden"
+                      >Gender</label
+                    >
+                      <select class="choices-form-select" id="gender">
+                        <option selected value="man">Gender: man</option>
+                        <option value="woman">Gender: woman</option>
+
+                      </select>
+                      
+                    </div>
+
+              
+
+                  </div>
+                  <div class="service-form__row service-form__row--duration">
+                    <div class="service-form__service-select service-select">
+                      <label
+                      for="duration"
+                      class="service-form__select-label visually-hidden"
+                      >Duration</label
+                    >
+                      <select class="choices-form-select" id="duration">
+                        <option selected value="60">60</option>
+                        <option value="30">30</option>
+                        <option value="90">90</option>
+
+                      </select>
+                      
+                    </div>
+
+              
+
+                  </div>
+                </div>
+
+
+
+                  <div class="service-form__row">
+                    <div class="service-form__language-buttons">
+                      <button class="service-form__language-button active">EN</button>
+                      <button class="service-form__language-button">DE</button>
+                      <button class="service-form__language-button">TR</button>
+                    </div>
+                  </div>
+                  
+
+                  <div class="service-form__row">
+                    <input
+                    type="text"
+                    class="service-form__input"
+                    id="title"
+                    name="title"
+                    placeholder="Title"
+                  />
+                  </div>
+                  <div class="service-form__row">
+                    <textarea
+                  
+                    class="service-form__textarea"
+                    id="description"
+                    name="description"
+                    placeholder="Description" rows="8"
+                  ></textarea>
+                  </div>
+                  <div class="service-form__btns-wrapper">
+                  <button class="service-form__button delete">
+                    <svg width="26" height="26">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-trash"
+                      ></use>
+                    </svg>
+                    Delete
+                  </button>
+                  <button class="service-form__button save">
+                    <svg width="26" height="26">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-save"
+                      ></use>
+                    </svg>
+                    Save
+                  </button>
+                  </div>
+              </form>
+            </section>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <div class="overlay"></div>
+    <div class="modal modal__service">
+      <div class="modal__close modal__confirm-close"></div>
+      <div class="modal__inner">
+        <div class="modal__img-wrapper">
+          <img src="./images/icon-delete.svg" alt="delete image" class="modal__img" width="50" height="50"/>
+        </div>
+
+        <h6 class="modal__msg">Are you sure you want
+          to&nbsp;delete this appointment?</h6>
+          <div class="modal__btns">
+            <button class="modal__btn no">No</button>
+            <button class="modal__btn yes">Yes</button>
+          </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>

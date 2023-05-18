@@ -1,0 +1,38 @@
+.service-block {
+  &__dropdown {
+    margin-bottom: 2rem;
+  }
+
+  &__btn:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__top {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .service-block {
+    &__top {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__inputs-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.4rem;
+    }
+    &__dropdown,
+    &__btn:not(:last-child) {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+
+    &__top {
+      margin-bottom: 2.8rem;
+    }
+  }
+}

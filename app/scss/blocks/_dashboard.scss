@@ -54,9 +54,9 @@
 
 @media (min-width: $breakpoint768) {
   .dashboard {
-    &__container {
+    /* &__container {
       padding: 0 0 0 0.6rem;
-    }
+    } */
 
     &__form-container {
       padding: 0 1rem;
@@ -92,6 +92,10 @@
         display: none;
       }
     } */
+
+    &__container {
+      padding: 0 1.5rem;
+    }
 
     &__edit-form {
       padding-right: 3rem;

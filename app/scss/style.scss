@@ -34,10 +34,18 @@
 @import '../components/Dashboard/Modal/modal';
 @import '../components/Overlay/overlay';
 
+/* Services */
+@import '../components/Service/ServiceDropdown/service-dropdown';
+@import '../components/Service/ServiceBlock/service-block';
+@import '../components/Service/WideButton/wide-button';
+@import '../components/Service/ServiceForm/service-form';
+@import '../components/Service/ServiceSelect/service-select';
+
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
 @import 'blocks/signin';
 @import 'blocks/dashboard';
+@import 'blocks/template';
 
 //@import "blocks/footer";
 

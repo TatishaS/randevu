@@ -20,83 +20,90 @@
     <script defer src="js/main.min.js"></script>
   </head>
   <body>
-  <!-- begin header -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <!-- begin Navbar -->
-        <nav class="nav">
-          <div class="header__account account">
-            <a href="#" class="account__link">
-              <div class="account__img-wrapper">
-                <img class="account__img" src="./images/account-photo.jpg" />
-                <!-- <span class="account__letters">CB</span> -->
-              </div>
-              <p class="account__name">Churchill Barbershop</p>
-            </a>
-          </div>
-          <div class="header__search">
-            <form class="header__search-form search">
-              <input type="text" class="search__input" placeholder="Search" />
-              <button
-                class="search__button icon-button icon-button--black icon-button--search"
-                type="submit"
+
+    <!-- begin header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- begin Navbar -->
+          <nav class="nav">
+            <div class="header__account account">
+              <a href="#" class="account__link">
+                <div class="account__img-wrapper">
+                  <img class="account__img" src="./images/account-photo.jpg" />
+                  <!-- <span class="account__letters">CB</span> -->
+                </div>
+                <p class="account__name">Churchill Barbershop</p>
+              </a>
+            </div>
+            <div class="header__search">
+              <form class="header__search-form search">
+                <input type="text" class="search__input" placeholder="Search" />
+                <button
+                  class="search__button icon-button icon-button--black icon-button--search"
+                  type="submit"
+                >
+                  <img
+                    alt="Search"
+                    class="icon-button__img"
+                    src="./images/icon-search.svg"
+                    width="26"
+                    height="26"
+                  />
+                </button>
+              </form>
+            </div>
+            <button class="header__button button">New appointment</button>
+  
+            <div class="header__notification">
+              <a
+                class="header__notification-link icon-button icon-button--bell"
               >
                 <img
-                  alt="Search"
                   class="icon-button__img"
-                  src="./images/icon-search.svg"
+                  src="./images/icon-bell.svg"
+                  alt="Notifications"
                   width="26"
                   height="26"
                 />
+                <span class="icon-button__quantity"> 3 </span></a
+              >
+            </div>
+  
+            <div class="header__language language-select">
+              <button class="language-select__button">
+                <div class="language-select__button-content">
+                  <img class="language-select__button-img" src="./images/icon-world.svg"/>
+                  <span class="language-select__language-selected">EN</span>
+                </div>
               </button>
-            </form>
-          </div>
-          <button class="header__button button">New appointment</button>
-
-          <div class="header__notification">
-            <a
-              class="header__notification-link icon-button icon-button--bell"
-            >
-              <img
-                class="icon-button__img"
-                src="./images/icon-bell.svg"
-                alt="Notifications"
-                width="26"
-                height="26"
-              />
-              <span class="icon-button__quantity"> 3 </span></a
-            >
-          </div>
-          <div class="header__language language-select">
-            <label
-              for="language"
-              class="language-select__select-label visually-hidden"
-              >Choose language</label
-            >
-            <select class="language-select__select" id="language">
-              <option selected disabled>EN</option>
-              <option value="English">English</option>
-              <option value="Deutsch">Deutsch</option>
-              <option value="Turkish">Turkish</option>
-            </select>
-          </div>
-          <div class="header__logout--tablet">
-            <a class="header__logout-link icon-button icon-button--logout">
-              <img
-                class="icon-button__img"
-                src="./images/icon-logout.svg"
-                alt="Notifications"
-                width="26"
-                height="26"
-              />
-            </a>
-          </div>
-        </nav>
-        <!-- end Navbar -->
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">Germany</li>
+                  <li class="language-select__list-item">Turkey</li>
+                  <li class="language-select__list-item">England</li>
+                </ul>
+  
+              </div>
+              
+            </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
+          </nav>
+          <!-- end Navbar -->
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+   
   <!-- end header -->
 
     <main class="dashboard dashboard--editform">
@@ -250,17 +257,22 @@
                   </li>
                 </ul>
                 <div class="rightside-menu__language language-select">
-                  <label
-                    for="language"
-                    class="language-select__select-label visually-hidden"
-                    >Choose language</label
-                  >
-                  <select class="language-select__select js-choice-language" id="language">
-                    <option selected disabled>EN</option>
-                    <option value="English">English</option>
-                    <option value="Deutsch">Deutsch</option>
-                    <option value="Turkish">Turkish</option>
-                  </select>
+                  <button class="language-select__button">
+                    <div class="language-select__button-content">
+                      <img
+                        class="language-select__button-img"
+                        src="./images/icon-world.svg"
+                      />
+                      <span class="language-select__language-selected">EN</span>
+                    </div>
+                  </button>
+                  <div class="language-select__list-wrapper active">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">Germany</li>
+                      <li class="language-select__list-item">Turkey</li>
+                      <li class="language-select__list-item">England</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -303,7 +315,7 @@
                       <th class="name">Client's name</th>
   
                       <th>Phone</th>
-                      <th>Service</th>
+                      <th class="service">Service</th>
                       <th>Date</th>
                       <th>Time</th>
   
@@ -312,12 +324,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="dashboard-table__row focused">
+                    <tr class="dashboard-table__row table-row focused">
                       <td class="number">15</td>
                       <td class="name">Laake Doooe</td>
                       <td class="name">Marry Ellis</td>
                       <td>+34842797474</td>
-                      <td>Manicure</td>
+                      <td class="service">Manicure</td>
                       <td>21/12/21</td>
                       <td>13:30</td>
                       <td>
@@ -393,7 +405,7 @@
                     >Date</label
                   >
                   <div class="edit-form__select-dropdown">
-                    <input type="date"  id="date"  value="2021-12-21" class="edit-form__input-date">
+                    <input type="text"  id="date" class="edit-form__input-date">
                   </div>
                 </div>
                 <div class="edit-form__row">

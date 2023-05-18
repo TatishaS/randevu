@@ -53,7 +53,7 @@
     } */
 
     .header__language {
-      display: block;
+      display: flex;
     }
 
     &__notification {
@@ -77,6 +77,10 @@
     right: 0;
     left: 0; */
 
+    &__inner {
+      padding: 1.2rem 2.6rem;
+    }
+
     &__button {
       font-size: 1.6rem;
       line-height: 2rem;
@@ -87,12 +91,6 @@
     &__search {
       margin-right: 7%;
     }
-    /*    &__logout--tablet {
-      display: none;
-      .icon-button--logout {
-        display: none;
-      }
-    } */
   }
 }
 

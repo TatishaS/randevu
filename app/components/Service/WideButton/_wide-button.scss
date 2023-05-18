@@ -1,0 +1,40 @@
+.wide-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  background: $backgroundMain;
+  color: $contentMain;
+  font-weight: 600;
+  padding: 2rem;
+  border-radius: 1.4rem;
+
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  opacity: 1;
+  transition: all 0.3s;
+  border: 0.1rem solid $contentMain;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &.active {
+    background-color: $contentMain;
+    color: $backgroundMain;
+    border: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .wide-button {
+    width: auto;
+    padding: 1.5rem 2rem;
+
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}

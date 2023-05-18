@@ -1,0 +1,263 @@
+.service-form {
+  max-width: 32rem;
+  padding-bottom: 10.8rem;
+
+  &__row {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  /* FILE UPLOAD INPUT */
+
+  &__file-input {
+    display: none;
+  }
+
+  input[type='file'] {
+    display: none;
+    //font-size: 12px;
+    //margin: 0 auto;
+  }
+
+  &__file-preview {
+    position: relative;
+    border-radius: 1rem;
+    border: 0.1rem solid $backgroundExtraLight;
+    width: 11rem;
+    height: 11rem;
+    background-color: $backgroundMain;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  &__file-preview.loaded {
+    background-image: url(../images/category-photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &::after {
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 5;
+    }
+  }
+
+  &__file-add-btn,
+  &__file-delete-btn {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+    cursor: pointer;
+
+    img {
+      width: 2.6rem;
+      height: 2.6rem;
+      margin: auto;
+    }
+  }
+
+  &__language-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__language-button {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+    border: 0.1rem solid $contentMain;
+    border-radius: 1.4rem;
+    background-color: $backgroundMain;
+
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &.active {
+      color: $backgroundMain;
+      background-color: $contentMain;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    outline: none;
+
+    padding: 1.4rem 2rem;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $contentSecondary;
+    }
+  }
+
+  &__input.focused,
+  &__textarea.focused {
+    border: 0.1rem solid $accentMain;
+  }
+
+  &__input.service-form__input--price {
+    padding: 1.4rem 5.6rem 1.4rem 2rem;
+    background-image: url('../../../images/icon-dollar.svg');
+    background-size: 2.6rem 2.6rem;
+    background-repeat: no-repeat;
+    background-position: right 2.6rem center;
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  &__button {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 1.4rem 1rem;
+    border: none;
+    border-radius: 1.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__button:hover {
+    opacity: 0.6;
+  }
+
+  &__button.disabled {
+    background-color: $contentLight;
+    color: $contentDop;
+    border: none;
+
+    svg {
+      fill: $contentDop;
+    }
+  }
+  &__btn-wrapper {
+    margin-bottom: 4rem;
+  }
+
+  &__button.red {
+    background-color: $accentMain;
+    color: $backgroundMain;
+  }
+
+  &__btns-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__button {
+    margin-right: 2rem;
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  &__button.save {
+    background-color: $contentMain;
+    color: $backgroundMain;
+    svg {
+      fill: $backgroundMain;
+    }
+    border: none;
+  }
+  &__button.delete {
+    background-color: transparent;
+
+    border: 0.1rem solid $contentMain;
+  }
+
+  /*   &__button.cancel {
+    background-color: transparent;
+    color: $contentMain;
+    border: 0.1rem solid $contentMain;
+    background-image: url('../../../images/icon-close.svg');
+    background-repeat: no-repeat;
+    background-position: left 1.5rem center;
+  }
+
+  &__button.save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accentMain;
+    color: $backgroundMain;
+    border: none;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    //background-image: url('../../../images/icon-save.svg');
+    //background-repeat: no-repeat;
+    //background-position: left 1.5rem center;
+    svg {
+      display: inline-block;
+      margin-right: 1rem;
+      fill: $backgroundMain;
+    }
+  } */
+}
+
+@media (min-width: $breakpoint768) {
+  .service-form {
+    &.service-form--step2,
+    &.service-form--step3 {
+      max-width: 54.4rem;
+
+      .service-form__input,
+      .service-form__textarea {
+        max-width: 27rem;
+      }
+
+      .service-form__row.service-form__row--price {
+        order: 2;
+      }
+      .service-form__row.service-form__row--duration {
+        order: 3;
+      }
+    }
+  }
+}

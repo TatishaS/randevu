@@ -57,7 +57,7 @@
 
     flex-shrink: 0;
 
-    color: $contentSecondary;
+    color: $contentMain;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.6rem;
@@ -137,6 +137,149 @@
   &__btn-wrapper {
     margin-bottom: 4rem;
   }
+
+  & .datepicker-dropdown {
+    width: 33rem;
+    left: 0 !important;
+  }
+
+  &
+    .datepicker.datepicker-dropdown.active.datepicker-orient-left.datepicker-orient-bottom {
+    top: 6rem !important;
+    //left: 0 !important;
+  }
+
+  & .datepicker-dropdown.active {
+    border: none;
+    background-color: $backgroundMain;
+    border-radius: 1.2rem;
+  }
+
+  & .datepicker-picker {
+    border: none;
+    background-color: $backgroundMain;
+    border-radius: 1.2rem;
+    box-shadow: none;
+    padding: 1rem;
+
+    font-weight: 600;
+  }
+
+  & .datepicker-grid {
+    margin-bottom: 1rem;
+  }
+
+  & .datepicker-controls {
+    align-items: center;
+    margin-bottom: 2.8rem;
+    button {
+      background-image: none;
+      /*  display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+    button.view-switch {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      order: -1;
+      padding-left: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  & .datepicker-view {
+    width: 100%;
+  }
+
+  & .days-of-week {
+    margin-bottom: 1rem;
+  }
+
+  & .dow {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    max-width: 4rem;
+  }
+  & .dow:not(:last-child) {
+    margin-right: 1rem;
+  }
+  & .datepicker-cell.day {
+    /*   max-width: 3.9rem;
+    height: 4rem; */
+    max-width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.6rem;
+    background-color: #e0f1d8;
+    margin-bottom: 1rem;
+  }
+  & .datepicker-cell.day:not(:nth-child(7n)) {
+    margin-right: 1rem;
+  }
+  & .datepicker-cell.day.focused {
+    background-image: $gradientMain;
+    color: $backgroundMain;
+  }
+
+  & .datepicker-cell.day.disabled {
+    background-color: #f4c6c6;
+    color: $contentMain;
+  }
+
+  & .datepicker-footer {
+    display: none;
+  }
+
+  & .legend-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 1.4rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $contentMain;
+  }
+
+  & .legend-color {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.6rem;
+    border: none;
+    margin-right: 1rem;
+  }
+
+  & .legend-color.free {
+    background-color: #e0f1d8;
+  }
+
+  & .legend-color.busy {
+    background-color: #f4c6c6;
+  }
+}
+
+@media (min-width: 390px) {
+  .edit-form {
+    & .datepicker-dropdown {
+      width: 38.8rem;
+    }
+
+    & .datepicker-picker {
+      padding: 2.4rem;
+    }
+
+    & .legend-color {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    & .datepicker-cell.day {
+      max-width: 3.9rem;
+      height: 3.9rem;
+      border-radius: 0.6rem;
+      background-color: #e0f1d8;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 @media (min-width: $breakpoint768) {
@@ -159,7 +302,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 36rem;
+    padding-bottom: 50rem;
     &__btn-wrapper {
       margin-bottom: 4rem;
     }

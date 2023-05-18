@@ -182,20 +182,24 @@
 
 @media (min-width: $breakpoint1200) {
   .dashboard-table {
-    padding: 4rem 1.2rem 2.8rem 4rem;
+    padding: 4rem 2rem 2.8rem 4rem;
     background: $backgroundSecondary;
     border-radius: 1.4rem 0 0 1.4rem;
     flex-grow: 1;
     max-width: 100%;
 
     &.editable {
-      padding: 0;
+      padding: 0 2rem 0 0;
     }
 
-    &__table {
+    &__top {
+      padding: 0 0.8rem 0 0;
+    }
+
+    /*  &__table {
       display: table;
     }
-
+ */
     &__tablet-row {
       display: none;
     }

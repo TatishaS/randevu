@@ -1,11 +1,15 @@
 <div class="dropdown">
-  <label for="status" class="dropdown__select-label visually-hidden"
-    >Choose status</label
-  >
-  <select class="dropdown__select" id="status">
-    <option selected disabled>Status: All</option>
-    <option value="In progress">In progress</option>
-    <option value="Waiting">Waiting</option>
-    <option value="Cancelled">Cancelled</option>
-  </select>
+  <button class="dropdown__button">
+    <div class="dropdown__button-content">
+      <span>Category:</span>
+      <span class="dropdown__category-selected">Hair</span>
+    </div>
+  </button>
+  <div class="dropdown__list-wrapper">
+    <ul class="dropdown__list">
+      <li class="dropdown__list-item active">Face care</li>
+      <li class="dropdown__list-item">Manicure</li>
+      <li class="dropdown__list-item">SPA Rituals</li>
+    </ul>
+  </div>
 </div>
