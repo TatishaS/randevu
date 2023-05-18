@@ -135,6 +135,7 @@ const datePicker = () => {
   const element = document.querySelector('.edit-form__input-date');
 
   const datepicker = new Datepicker(element, {
+    autohide: true,
     datesDisabled: [1684443600000, 1684875600000],
     format: 'dd/mm/yyyy',
     prevArrow: `<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
