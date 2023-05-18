@@ -257,31 +257,12 @@
   }
 }
 
-@media (min-width: 390px) {
+/* @media (min-width: 390px) {
   .edit-form {
-    & .datepicker-dropdown {
-      width: 38.8rem;
-    }
-
-    & .datepicker-picker {
-      padding: 2.4rem;
-    }
-
-    & .legend-color {
-      width: 4rem;
-      height: 4rem;
-    }
-
-    & .datepicker-cell.day {
-      max-width: 3.9rem;
-      height: 3.9rem;
-      border-radius: 0.6rem;
-      background-color: #e0f1d8;
-      margin-bottom: 1rem;
-    }
+    
   }
 }
-
+ */
 @media (min-width: $breakpoint768) {
   .edit-form {
     max-width: 39.6rem;
@@ -331,6 +312,26 @@
 
     &__input-date {
       padding: 1.6rem 2.2rem 1.6rem 2.2rem;
+    }
+    & .datepicker-dropdown {
+      width: 38.8rem;
+    }
+
+    & .datepicker-picker {
+      padding: 2.4rem;
+    }
+
+    & .legend-color {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    & .datepicker-cell.day {
+      max-width: 3.9rem;
+      height: 3.9rem;
+      border-radius: 0.6rem;
+      background-color: #e0f1d8;
+      margin-bottom: 1rem;
     }
   }
 }
