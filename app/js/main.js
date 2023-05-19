@@ -7,13 +7,14 @@ function rightsideMenu() {
   const rightsideMenuBtnClose = document.querySelector(
     '.rightside-menu__btn-close'
   );
+
   const overlay = document.querySelector('.overlay');
 
   moreButton.addEventListener('click', event => {
     event.preventDefault();
     console.log('открыть');
-    rightsideMenu.classList.remove('rightside-menu--close');
-    overlay.classList.add('overlay--show');
+    rightsideMenu.classList.toggle('rightside-menu--close');
+    overlay.classList.toggle('overlay--show');
   });
   rightsideMenuBtnClose.addEventListener('click', event => {
     event.preventDefault();
@@ -89,6 +90,19 @@ const multiServiceSelect = () => {
   });
 };
 
+const multiNameSelect = () => {
+  const elements = document.querySelectorAll('.choices-dashboardform-select');
+  console.log(elements);
+
+  elements.forEach(el => {
+    const choices = new Choices(el, {
+      allowHTML: true,
+      searchEnabled: true,
+      itemSelectText: '',
+    });
+  });
+};
+
 const multiDropdown = () => {
   const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -134,6 +148,8 @@ const multiLanguageDropdown = () => {
 const datePicker = () => {
   const element = document.querySelector('.edit-form__input-date');
 
+  if (!element) return;
+
   const datepicker = new Datepicker(element, {
     autohide: true,
     datesDisabled: [1684443600000, 1684875600000],
@@ -161,8 +177,34 @@ const datePickerLegend = () => {
   </div>
   `;
 
+  if (!calendar) return;
+
   legend.innerHTML = html;
   calendar.insertAdjacentHTML('beforeend', html);
+};
+
+const handleSelectCategory = () => {
+  document.querySelectorAll('.category').forEach(category => {
+    category.addEventListener('click', event => {
+      event.preventDefault();
+      const selectedCategory = document.querySelector('.selected-category');
+      if (selectedCategory) {
+        selectedCategory.classList.remove('selected-category');
+        selectedCategory.querySelector('.edit-icon').style.display = 'none';
+      }
+
+      const clickedCategory = event.currentTarget;
+      clickedCategory.classList.add('selected-category');
+      clickedCategory.querySelector('.edit-icon').style.display = 'flex';
+    });
+  });
+
+  document.querySelectorAll('.edit-icon').forEach(editIcon => {
+    editIcon.addEventListener('click', event => {
+      const categoryId = event.currentTarget.dataset.categoryId;
+      window.location.href = `/categories/${categoryId}/edit`;
+    });
+  });
 };
 
 rightsideMenu();
@@ -174,4 +216,6 @@ multiServiceDropdown();
 multiLanguageDropdown();
 datePicker();
 datePickerLegend();
+handleSelectCategory();
+multiNameSelect();
 //categorySelect();

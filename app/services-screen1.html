@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Services</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/main.min.js"></script>
+  </head>
+  <body>
+    <!-- begin header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- begin Navbar -->
+          <nav class="nav">
+            <div class="header__account account">
+              <a href="#" class="account__link">
+                <div class="account__img-wrapper">
+                  <img class="account__img" src="./images/account-photo.jpg" />
+                  <!-- <span class="account__letters">CB</span> -->
+                </div>
+                <p class="account__name">Churchill Barbershop</p>
+              </a>
+            </div>
+            <div class="header__search">
+              <form class="header__search-form search">
+                <input type="text" class="search__input" placeholder="Search" />
+                <button
+                  class="search__button icon-button icon-button--black icon-button--search"
+                  type="submit"
+                >
+                  <img
+                    alt="Search"
+                    class="icon-button__img"
+                    src="./images/icon-search.svg"
+                    width="26"
+                    height="26"
+                  />
+                </button>
+              </form>
+            </div>
+            <button class="header__button button">New appointment</button>
+
+            <div class="header__notification">
+              <a
+                class="header__notification-link icon-button icon-button--bell"
+              >
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-bell.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+                <span class="icon-button__quantity"> 3 </span></a
+              >
+            </div>
+
+            <div class="header__language language-select">
+              <button class="language-select__button">
+                <img
+                  class="language-select__button-img"
+                  src="./images/icon-world.svg"
+                />
+                <span class="language-select__language-selected">EN</span>
+              </button>
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">
+                    <a>Germany</a>
+                  </li>
+                  <li class="language-select__list-item"><a>Turkey</a></li>
+                  <li class="language-select__list-item">England<a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
+          </nav>
+          <!-- end Navbar -->
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <main class="services services--screen1 template">
+      <div class="template__container container">
+        <div class="template__inner">
+          <aside class="sidebar">
+            <div class="sidebar__inner">
+              <ul class="sidebar__list">
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button active">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-dashboard"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-service"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-employees"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-clients"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--websites">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-websites"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--settings">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="sidebar__listitem sidebar__listitem--more">
+                  <a class="sidebar__link sidebar-button sidebar-button--more">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-more"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="sidebar__footer">
+                <!--  <button class="sidebar__btn-logout icontext-button">
+                  Logout
+                </button> -->
+                <a href="" class="sidebar__logo-link">
+                  <img
+                    src="./images/logo-sidebar.svg"
+                    alt="Randevu logo"
+                    class="sidebar__logo-img"
+                    width="76"
+                    height="17"
+                  />
+                </a>
+              </div>
+            </div>
+          </aside>
+          <aside class="rightside-menu rightside-menu--close">
+            <div class="rightside-menu__inner">
+              <div class="rightside-menu__top">
+                <div class="rightside-menu__header">
+                  <div class="rightside-menu__account account">
+                    <a href="#" class="account__link">
+                      <div class="account__img-wrapper">
+                        <img
+                          class="account__img"
+                          src="./images/account-photo.jpg"
+                        />
+                        <!-- <span class="account__letters">CB</span> -->
+                      </div>
+                      <p class="account__name">Churchill Barbershop</p>
+                    </a>
+                  </div>
+                  <button class="rightside-menu__btn-close">
+                    <svg width="14" height="14" class="rightside-menu__icon">
+                      <use xlink:href="./images/sprite.svg#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="rightside-menu__search">
+                  <form class="header__search-form search search--mobile">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="search__button icon-button icon-button--black icon-button--search"
+                      type="submit"
+                    >
+                      <img
+                        alt="Search"
+                        class="icon-button__img"
+                        src="./images/icon-search.svg"
+                        width="26"
+                        height="26"
+                      />
+                    </button>
+                  </form>
+                </div>
+
+                <ul class="rightside-menu__list">
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-websites"
+                        ></use>
+                      </svg> </a
+                    ><span>My websites</span>
+                  </li>
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-settings"
+                        ></use>
+                      </svg> </a
+                    ><span>Settings</span>
+                  </li>
+                </ul>
+                <div class="rightside-menu__language language-select">
+                  <img
+                    class="language-select__button-img"
+                    src="./images/icon-world.svg"
+                  />
+                  <span class="language-select__language-selected">EN</span>
+
+                  <div class="language-select__list-wrapper">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">
+                        <a>Germany</a>
+                      </li>
+                      <li class="language-select__list-item"><a>Turkey</a></li>
+                      <li class="language-select__list-item">England<a></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rightside-menu__bottom">
+                <button
+                  class="rightside-menu__btn-logout sidebar__btn-logout icontext-button"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="template__content-wrapper">
+            <div class="template__page-top">
+              <!--               <div class="template__btn-wrapper">
+                <button class="template__top-btn">
+                  Back
+                </button>
+              </div> -->
+              <div class="template__title-wrapper">
+                <h2 class="template__page-title">Services</h2>
+              </div>
+            </div>
+
+            <section
+              class="template__service-block service-block service-block--category"
+            >
+              <div class="service-block__top">
+                <button class="service-block__btn wide-button wide-button--red">
+                  List of categories
+                </button>
+                <button class="service-block__btn wide-button">
+                  Add category
+                </button>
+                <button class="service-block__btn wide-button">
+                  Add service
+                </button>
+              </div>
+              <div class="template__categories categories">
+                <div class="categories__inner">
+                  <ul class="categories__list" id="category-list">
+                    <li class="categories__list-item category">
+                      <a href="" class="category__link">
+                        <div class="category__inner">
+                          <div class="category__img-wrapper">
+                            <img
+                              src="./images/category-haircut.jpg"
+                              alt="category photo"
+                              class="category__img"
+                            />
+                          </div>
+
+                          <div class="category__text-block">
+                            <h6 class="category__title">A haircut</h6>
+                            <span class="category__more">
+                              <svg width="26" height="26">
+                                <use
+                                  xlink:href="./images/sprite.svg#icon-more"
+                                ></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="edit-icon" data-category-id="52">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon mobile" data-category-id="52">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon tablet">
+                        <svg width="26" height="26">
+                          <use xlink:href="./images/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </div>
+                    </li>
+                    <li
+                      class="categories__list-item category selected-category"
+                    >
+                      <a href="" class="category__link">
+                        <div class="category__inner">
+                          <div class="category__img-wrapper">
+                            <img
+                              src="./images/category-beard.jpg"
+                              alt="category photo"
+                              class="category__img"
+                            />
+                          </div>
+
+                          <div class="category__text-block">
+                            <h6 class="category__title">Beard trim</h6>
+                            <span class="category__more">
+                              <svg width="26" height="26">
+                                <use
+                                  xlink:href="./images/sprite.svg#icon-more"
+                                ></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="edit-icon mobile" data-category-id="53">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon tablet" data-category-id="53">
+                        <svg width="26" height="26">
+                          <use xlink:href="./images/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </div>
+                    </li>
+                    <li class="categories__list-item category">
+                      <a href="" class="category__link">
+                        <div class="category__inner">
+                          <div class="category__img-wrapper">
+                            <img
+                              src="./images/category-styling.jpg"
+                              alt="category photo"
+                              class="category__img"
+                            />
+                          </div>
+
+                          <div class="category__text-block">
+                            <h6 class="category__title">Styling</h6>
+                            <span class="category__more">
+                              <svg width="26" height="26">
+                                <use
+                                  xlink:href="./images/sprite.svg#icon-more"
+                                ></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="edit-icon mobile" data-category-id="54">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon tablet" data-category-id="54">
+                        <svg width="26" height="26">
+                          <use xlink:href="./images/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </div>
+                    </li>
+                    <li class="categories__list-item category">
+                      <a href="" class="category__link">
+                        <div class="category__inner">
+                          <div class="category__img-wrapper">
+                            <img
+                              src="./images/category-haircut.jpg"
+                              alt="category photo"
+                              class="category__img"
+                            />
+                          </div>
+
+                          <div class="category__text-block">
+                            <h6 class="category__title">A haircut</h6>
+                            <span class="category__more">
+                              <svg width="26" height="26">
+                                <use
+                                  xlink:href="./images/sprite.svg#icon-more"
+                                ></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="edit-icon mobile" data-category-id="55">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon tablet" data-category-id="55">
+                        <svg width="26" height="26">
+                          <use xlink:href="./images/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </div>
+                    </li>
+                    <li class="categories__list-item category">
+                      <a href="" class="category__link">
+                        <div class="category__inner">
+                          <div class="category__img-wrapper">
+                            <img
+                              src="./images/category-beard.jpg"
+                              alt="category photo"
+                              class="category__img"
+                            />
+                          </div>
+
+                          <div class="category__text-block">
+                            <h6 class="category__title">Beard trim</h6>
+                            <span class="category__more">
+                              <svg width="26" height="26">
+                                <use
+                                  xlink:href="./images/sprite.svg#icon-more"
+                                ></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="edit-icon mobile" data-category-id="56">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon tablet" data-category-id="56">
+                        <svg width="26" height="26">
+                          <use xlink:href="./images/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </div>
+                    </li>
+                    <li class="categories__list-item category">
+                      <a href="" class="category__link">
+                        <div class="category__inner">
+                          <div class="category__img-wrapper">
+                            <img
+                              src="./images/category-styling.jpg"
+                              alt="category photo"
+                              class="category__img"
+                            />
+                          </div>
+
+                          <div class="category__text-block">
+                            <h6 class="category__title">Styling</h6>
+                            <span class="category__more">
+                              <svg width="26" height="26">
+                                <use
+                                  xlink:href="./images/sprite.svg#icon-more"
+                                ></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="edit-icon mobile" data-category-id="57">
+                        <img
+                          class="edit-icon__img"
+                          src="./images/icon-edit.svg"
+                          alt="edit row"
+                          width="26"
+                          height="26"
+                        />
+                        Edit
+                      </div>
+                      <div class="edit-icon tablet" data-category-id="57">
+                        <svg width="26" height="26">
+                          <use xlink:href="./images/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay"></div>
+    <div class="modal modal__service">
+      <div class="modal__close modal__confirm-close"></div>
+      <div class="modal__inner">
+        <div class="modal__img-wrapper">
+          <img
+            src="./images/icon-delete.svg"
+            alt="delete image"
+            class="modal__img"
+            width="50"
+            height="50"
+          />
+        </div>
+
+        <h6 class="modal__msg">
+          Are you sure you want to&nbsp;delete this appointment?
+        </h6>
+        <div class="modal__btns">
+          <button class="modal__btn no">No</button>
+          <button class="modal__btn yes">Yes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -39,11 +39,11 @@
     border: 0.1rem solid $accentFocused;
   }
 
-  &__button-content {
+  /*   &__button-content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  }
+  } */
 
   &__button-img {
     width: 2.6rem;
@@ -67,7 +67,7 @@
     overflow: hidden;
     padding: 0.5rem 0;
     min-width: 9.7rem;
-    width: max-content;
+    //width: max-content;
     z-index: 5;
     border-radius: 0.8rem;
     border: 0.1rem solid $backgroundExtraLight;
@@ -102,6 +102,11 @@
     &.active {
       color: $accentMain;
       font-weight: 600;
+
+      a {
+        color: $accentMain;
+        font-weight: 600;
+      }
     }
 
     &:hover {

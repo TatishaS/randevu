@@ -71,16 +71,18 @@
 
           <div class="header__language language-select">
             <button class="language-select__button">
-              <div class="language-select__button-content">
+             
                 <img class="language-select__button-img" src="./images/icon-world.svg"/>
                 <span class="language-select__language-selected">EN</span>
-              </div>
+              
             </button>
             <div class="language-select__list-wrapper">
               <ul class="language-select__list">
-                <li class="language-select__list-item active">Germany</li>
-                <li class="language-select__list-item">Turkey</li>
-                <li class="language-select__list-item">England</li>
+                <li class="language-select__list-item active">
+                  <a>Germany</a>
+                </li>
+                <li class="language-select__list-item"><a>Turkey</a></li>
+                <li class="language-select__list-item">England<a></a></li>
               </ul>
 
             </div>
@@ -256,19 +258,21 @@
                 </ul>
                 <div class="rightside-menu__language language-select">
                   <button class="language-select__button">
-                    <div class="language-select__button-content">
+                    
                       <img
                         class="language-select__button-img"
                         src="./images/icon-world.svg"
                       />
                       <span class="language-select__language-selected">EN</span>
-                    </div>
+                   
                   </button>
                   <div class="language-select__list-wrapper">
                     <ul class="language-select__list">
-                      <li class="language-select__list-item active">Germany</li>
-                      <li class="language-select__list-item">Turkey</li>
-                      <li class="language-select__list-item">England</li>
+                      <li class="language-select__list-item active">
+                        <a>Germany</a>
+                      </li>
+                      <li class="language-select__list-item"><a>Turkey</a></li>
+                      <li class="language-select__list-item">England<a></a></li>
                     </ul>
                   </div>
                 </div>
@@ -317,24 +321,16 @@
   
             <section class="template__service-block service-block">
               <div class="service-block__top">
-                <div class="service-block__dropdown service-dropdown">
-                  <button class="service-dropdown__button">
-                    <div class="service-dropdown__button-content">
-                      <span>List of services</span>
-                    </div>
-                  </button>
-                  <div class="service-dropdown__list-wrapper">
-                    <ul class="service-dropdown__list">
-                      <li class="service-dropdown__list-item active">Face care</li>
-                      <li class="service-dropdown__list-item">Manicure</li>
-                      <li class="service-dropdown__list-item">SPA Rituals</li>
-                      <li class="service-dropdown__list-item">Beard care</li>
-                      <li class="service-dropdown__list-item">Hair styling</li>
-                    </ul>
-
-                  </div>
-                  
+                <div class="service-block__select listservices-select">
+                  <select class="choices-form-select" id="list-services">
+                    <option value="" selected disabled>List of services</option>
+                    
+                    <option value="Face care">Face care</option>
+                    <option value="Beard care">Beard care</option>
+                    <option value="Hair styling">Hair styling</option>
+                  </select>
                 </div>
+
                 <button class="service-block__btn wide-button">
                   Add category
                 </button>
@@ -409,8 +405,8 @@
                       >Gender</label
                     >
                       <select class="choices-form-select" id="gender">
-                        <option selected value="man">Gender: man</option>
-                        <option value="woman">Gender: woman</option>
+                        <option selected value="man">man</option>
+                        <option value="woman">woman</option>
 
                       </select>
                       

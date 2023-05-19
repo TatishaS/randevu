@@ -8,7 +8,7 @@
   }
 
   &__page-top {
-    margin-bottom: 1.4rem;
+    margin-bottom: 2.8rem;
   }
 
   /*   &__top-btn {
@@ -125,6 +125,12 @@
     &__top-btn {
       font-size: 1.4rem;
       line-height: 1.6rem;
+    }
+
+    &.services--screen1 {
+      .template__content-wrapper {
+        min-height: 80vh;
+      }
     }
   }
 }

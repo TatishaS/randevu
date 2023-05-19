@@ -19,6 +19,18 @@
     color: $contentSecondary;
   }
 
+  &.service-select--gender .choices::before {
+    position: absolute;
+    border: none;
+    content: 'Gender:';
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+  }
+
   & .choices::after {
     position: absolute;
     border: none;
@@ -57,9 +69,14 @@
     padding: 0.8rem 3rem 0.8rem 1.3rem;
   }
 
+  &.service-select--gender .choices__list.choices__list--single {
+    padding: 0.8rem 3rem 0.8rem 8rem;
+    color: $accentMain;
+  }
+
   & .choices__list {
     min-width: 100%;
-    width: max-content;
+    //width: max-content;
     //max-width: 15rem;
     //min-width: 9.7rem;
     //width: auto;
@@ -105,6 +122,11 @@
       width: 2.6rem;
       height: 2.6rem;
     }
+  }
+
+  &.service-select--gender
+    .choices__item.choices__item--choice.is-highlighted.is-selected {
+    color: $accentMain;
   }
 
   & .choices__list--dropdown .choices__item--selectable {

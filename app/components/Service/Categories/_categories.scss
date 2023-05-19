@@ -1,0 +1,27 @@
+.categories {
+  padding-bottom: 11.4rem;
+}
+
+@media (min-width: $breakpoint768) {
+  .categories {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      max-width: 59.2rem;
+      overflow: visible;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .categories {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      max-width: 89.8rem;
+      overflow: visible;
+    }
+  }
+}

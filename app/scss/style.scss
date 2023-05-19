@@ -26,6 +26,7 @@
 @import '../components/Dashboard/SidebarButton/sidebar-button';
 @import '../components/Dashboard/DashboardTable/dashboard-table';
 @import '../components/Dashboard/TableRow/table-row';
+@import '../components/Dashboard/DashboardformSelect/dashboardform-select';
 @import '../components/Dashboard/Dropdown/dropdown';
 @import '../components/Dashboard/Pagination/pagination';
 @import '../components/Dashboard/Label/label';
@@ -40,6 +41,9 @@
 @import '../components/Service/WideButton/wide-button';
 @import '../components/Service/ServiceForm/service-form';
 @import '../components/Service/ServiceSelect/service-select';
+@import '../components/Service/Categories/categories';
+@import '../components/Service/Category/category';
+@import '../components/Service/ListservicesSelect/listservices-select';
 
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';

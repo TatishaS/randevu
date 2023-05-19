@@ -72,16 +72,18 @@
   
             <div class="header__language language-select">
               <button class="language-select__button">
-                <div class="language-select__button-content">
+                
                   <img class="language-select__button-img" src="./images/icon-world.svg"/>
                   <span class="language-select__language-selected">EN</span>
-                </div>
+                
               </button>
               <div class="language-select__list-wrapper">
                 <ul class="language-select__list">
-                  <li class="language-select__list-item active">Germany</li>
-                  <li class="language-select__list-item">Turkey</li>
-                  <li class="language-select__list-item">England</li>
+                  <li class="language-select__list-item active">
+                    <a>Germany</a>
+                  </li>
+                  <li class="language-select__list-item"><a>Turkey</a></li>
+                  <li class="language-select__list-item">England<a></a></li>
                 </ul>
   
               </div>
@@ -258,19 +260,21 @@
                 </ul>
                 <div class="rightside-menu__language language-select">
                   <button class="language-select__button">
-                    <div class="language-select__button-content">
+                    
                       <img
                         class="language-select__button-img"
                         src="./images/icon-world.svg"
                       />
                       <span class="language-select__language-selected">EN</span>
-                    </div>
+                  
                   </button>
-                  <div class="language-select__list-wrapper active">
+                  <div class="language-select__list-wrapper">
                     <ul class="language-select__list">
-                      <li class="language-select__list-item active">Germany</li>
-                      <li class="language-select__list-item">Turkey</li>
-                      <li class="language-select__list-item">England</li>
+                      <li class="language-select__list-item active">
+                        <a>Germany</a>
+                      </li>
+                      <li class="language-select__list-item"><a>Turkey</a></li>
+                      <li class="language-select__list-item">England<a></a></li>
                     </ul>
                   </div>
                 </div>
@@ -366,9 +370,30 @@
                 </button>
               </div>
               <form class="edit-form">
-  
-  
+
                 <div class="edit-form__row">
+                  <label
+                  for="employee"
+                  class="edit-form__label"
+                  >Employee</label
+                >
+                  <div class="edit-form__select dashboardform-select">
+<!--                     <label
+                    for="employee"
+                    class="dashboardform-select__select-label visually-hidden"
+                    >Employee</label
+                  > -->
+                    <select class="choices-dashboardform-select" id="employee">
+                      <option value="" selected disabled>Name</option>
+                      <option value="Jake Doe">Jake Doe</option>
+                      <option value="Ricardo Carvalho">Ricardo Carvalho</option>
+                      <option value="Michaela Leman">Michaela Leman</option>
+                    </select>
+                  </div>
+                </div>
+  
+  
+              <!--   <div class="edit-form__row">
                   <label
                     for="employee"
                     class="edit-form__label"
@@ -382,8 +407,28 @@
                       <option value="Michaela Leman">Michaela Leman</option>
                     </select>
                   </div>
-                </div>
+                </div> -->
                 <div class="edit-form__row">
+                  <label
+                  for="service"
+                  class="edit-form__label"
+                  >Service</label
+                >
+                  <div class="edit-form__select dashboardform-select">
+<!--                     <label
+                    for="service"
+                    class="dashboardform-select__select-label visually-hidden"
+                    >Service</label
+                  > -->
+                    <select class="choices-dashboardform-select" id="service">
+                      <option value="" selected disabled>Service</option>
+                      <option value="Hair colouring">Hair colouring</option>
+                      <option value="Hair SPA Ritual">Hair SPA Ritual</option>
+                      <option value="Face revitalizing">Face revitalizing</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- <div class="edit-form__row">
                   <label
                     for="service"
                     class="edit-form__label"
@@ -397,7 +442,7 @@
                       <option value="Face revitalizing">Face revitalizing</option>
                     </select>
                   </div>
-                </div>
+                </div> -->
                 <div class="edit-form__row">
                   <label
                     for="date"
@@ -405,7 +450,7 @@
                     >Date</label
                   >
                   <div class="edit-form__select-dropdown">
-                    <input type="text"  id="date" class="edit-form__input-date" readonly >
+                    <input type="text"  id="date" class="edit-form__input-date" readonly inputmode="none">
                   </div>
                 </div>
                 <div class="edit-form__row">

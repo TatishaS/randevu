@@ -1,0 +1,118 @@
+.dashboardform-select {
+  position: relative;
+  display: flex;
+
+  & .choices {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    color: $contentMain;
+
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+  }
+
+  & .choices::after {
+    position: absolute;
+    border: none;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3rem;
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  & .choices.is-open::after {
+    margin-top: -2.5px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  & .choices.is-open .choices__inner {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  & .choices__inner {
+    border: none;
+    min-height: 4rem;
+    //padding: 0.3rem;
+    background-color: transparent;
+  }
+
+  & .choices__list.choices__list--single {
+    padding: 0.8rem 3rem 0.8rem 1.3rem;
+  }
+
+  & .choices__list {
+    min-width: 100%;
+    //width: max-content;
+    //max-width: 15rem;
+    //min-width: 9.7rem;
+    //width: auto;
+  }
+
+  & .choices__list.choices__list--dropdown.is-active {
+    background-color: $backgroundMain;
+    border: 0.1rem solid $accentMain;
+    border-top: none;
+    border-radius: 0 0 1.4rem 1.4rem;
+    margin-top: 0;
+    //padding: 1rem 0;
+    //width: auto;
+  }
+
+  & .choices__item.choices__item--choice {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+  }
+
+  &.choices__item.choices__item--choice:not:last-child {
+    border-bottom: 0.1rem solid $contentLight;
+  }
+
+  & .choices__item.choices__item--choice.is-highlighted {
+    background-color: $domLight;
+    position: relative;
+  }
+
+  & .choices__item.choices__item--choice.is-highlighted.is-selected {
+    background-color: $domLight;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      border: none;
+      background-image: url('../../../images/icon-check-black.svg');
+      background-repeat: no-repeat;
+      top: 55%;
+      transform: translateY(-50%);
+      right: 2.5rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+
+  &.service-select--gender
+    .choices__item.choices__item--choice.is-highlighted.is-selected {
+    background-color: $accentMain;
+  }
+
+  & .choices__list--dropdown .choices__item {
+    padding: 1.5rem 4rem 1.5rem 2rem;
+    border-bottom: 0.1rem solid $contentLight;
+  }
+  & .choices__list--dropdown .choices__item--selectable:last-child {
+    border-bottom: none;
+  }
+}

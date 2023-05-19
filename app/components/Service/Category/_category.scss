@@ -1,0 +1,128 @@
+.category {
+  background-color: $backgroundMain;
+  border: 0.1rem solid $backgroundExtraLight;
+  border-radius: 1.4rem;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  & .edit-icon {
+    display: none;
+    /*   width: 20px;
+    height: 20px;
+    background-image: url('edit-icon.png');
+    background-size: cover;
+    cursor: pointer; */
+    position: absolute;
+    //display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentSecondary;
+    background-color: transparent;
+    border: 0.1rem solid $contentSecondary;
+    border-radius: 1rem;
+    top: 40%;
+    right: 1.4rem;
+    opacity: 1;
+    transition: all 0.3s;
+    z-index: 10;
+    outline: none;
+    cursor: pointer;
+
+    img {
+      width: 2.6rem;
+      height: 2.6rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &.selected-category {
+    border: 0.1rem solid #201c1d;
+
+    .edit-icon.mobile {
+      display: flex;
+    }
+    .edit-icon.tablet {
+      display: none;
+      top: -1.4rem;
+      right: -1.4rem;
+    }
+  }
+
+  &__inner {
+    padding: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__img-wrapper {
+    margin-right: 2rem;
+  }
+  &__img {
+    width: 8rem;
+    flex-shrink: 0;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 3rem 2rem 3rem 0;
+  }
+
+  &__text-block {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  &__more {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .category {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__more {
+      display: none;
+    }
+    &.selected-category {
+      border: 0.1rem solid #201c1d;
+
+      .edit-icon.tablet {
+        display: flex;
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 1.2rem;
+        background-color: $contentMain;
+        border: none;
+        svg {
+          fill: $backgroundMain;
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+      .edit-icon.mobile {
+        display: none;
+      }
+    }
+  }
+}

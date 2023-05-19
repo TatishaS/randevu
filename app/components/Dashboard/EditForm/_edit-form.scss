@@ -16,40 +16,6 @@
     font-weight: 600;
     margin-bottom: 1.4rem;
   }
-  &__select {
-    width: 100%;
-    flex-basis: 30rem;
-
-    flex-shrink: 0;
-
-    color: $contentSecondary;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-
-    background: $backgroundMain;
-    border: 0.1rem solid $backgroundExtraLight;
-    border-radius: 1.4rem;
-    padding: 1.5rem 5.6rem 1.5rem 2rem;
-    outline: 0;
-
-    /*
-        box-shadow: none;
-        border: 0 !important; */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    background-image: url('../../../images/icon-select-arrow.svg');
-    background-repeat: no-repeat;
-    background-position: right 1.5rem center;
-    cursor: pointer;
-  }
-
-  &__select:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.1rem $accentMain;
-  }
 
   &__input-date {
     width: 100%;
@@ -316,12 +282,12 @@
       line-height: 2.4rem;
     }
 
-    &__select {
+    /*     &__select {
       padding: 1.6rem 5.6rem 1.6rem 2.2rem;
       font-size: 1.6rem;
       line-height: 2rem;
       font-weight: 500;
-    }
+    } */
 
     &__input-date {
       padding: 1.6rem 2.2rem 1.6rem 2.2rem;

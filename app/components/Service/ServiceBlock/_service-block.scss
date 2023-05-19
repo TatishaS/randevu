@@ -1,5 +1,5 @@
 .service-block {
-  &__dropdown {
+  &__select {
     margin-bottom: 2rem;
   }
 
@@ -18,6 +18,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      margin-bottom: 2.8rem;
     }
 
     &__inputs-wrapper {
@@ -25,14 +26,26 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1.4rem;
     }
-    &__dropdown,
+    &__select,
     &__btn:not(:last-child) {
       margin-right: 2rem;
       margin-bottom: 0;
     }
 
-    &__top {
-      margin-bottom: 2.8rem;
+    &.service-block--category {
+      .service-block__top {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .service-block {
+    &.service-block--category {
+      .service-block__top {
+        margin-bottom: 2.8rem;
+      }
     }
   }
 }

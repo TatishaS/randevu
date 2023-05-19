@@ -27,14 +27,31 @@
     color: $backgroundMain;
     border: none;
   }
+
+  &.wide-button--red {
+    background-color: $accentMain;
+    color: $backgroundMain;
+    justify-content: flex-start;
+    border: none;
+    padding: 2rem 6.8rem 2rem 3.2rem;
+    background-image: url('../../../images/icon-dropdown-white.svg');
+    background-size: 2.4rem 2.4rem;
+    background-repeat: no-repeat;
+    background-position: right 2rem center;
+  }
 }
 
 @media (min-width: $breakpoint768) {
   .wide-button {
     width: auto;
     padding: 1.5rem 2rem;
-
     font-size: 1.4rem;
     line-height: 1.6rem;
+
+    &.wide-button--red {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      padding: 1.6rem 5.6rem 1.6rem 2rem;
+    }
   }
 }
