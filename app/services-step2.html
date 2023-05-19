@@ -293,7 +293,7 @@
               </div> -->
               <div class="template__title-wrapper">
                 <h2 class="template__page-title">Services</h2>
-                <div class="template__select-dropdown dropdown">
+               <!--  <div class="template__select-dropdown dropdown">
                   <button class="dropdown__button">
                     <div class="dropdown__button-content">
                       <span>Category:</span>
@@ -309,7 +309,7 @@
 
                   </div>
                   
-                </div>
+                </div> -->
 
               </div>
               </div>
@@ -430,26 +430,27 @@
                         <option selected value="60">60</option>
                         <option value="30">30</option>
                         <option value="90">90</option>
-
-                      </select>
-                      
+                      </select>                     
                     </div>
-
-              
-
                   </div>
                 </div>
 
-
-
                   <div class="service-form__row">
-                    <div class="service-form__language-buttons">
-                      <button class="service-form__language-button active">EN</button>
-                      <button class="service-form__language-button">DE</button>
-                      <button class="service-form__language-button">TR</button>
-                    </div>
-                  </div>
-                  
+                    <ul class="service-form__language-options">
+                      <li class="service-form__language-option">
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="English" id="English" checked />
+                        <label class="service-form__language-label" for="English">EN</label>
+                      </li>
+                      <li class="service-form__language-option">
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Deutsch" id="Deutsch" />
+                        <label class="service-form__language-label" for="Deutsch">DE</label>
+                      </li>
+                      <li class="service-form__language-option">
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Turkish" id="Turkish"/>
+                        <label class="service-form__language-label" for="Turkish">TR</label>
+                      </li>
+                    </ul>
+                  </div>               
 
                   <div class="service-form__row">
                     <input

@@ -171,9 +171,10 @@
 
   & .datepicker-controls {
     align-items: center;
-    margin-bottom: 2.8rem;
+    margin-bottom: 1rem;
     button {
       background-image: none;
+      background-color: $backgroundMain;
       /*  display: flex;
       justify-content: center;
       align-items: center; */
@@ -229,7 +230,7 @@
     display: none;
   }
 
-  & .datepicker-input.in-edit & .legend-button {
+  & .legend-button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -255,6 +256,14 @@
   & .legend-color.busy {
     background-color: #f4c6c6;
   }
+
+  & .edit-form__datepicker-arrow {
+    fill: $contentMain;
+  }
+
+  & .edit-form__datepicker-arrow.disabled {
+    fill: #afacac;
+  }
 }
 
 /* @media (min-width: 390px) {
@@ -272,6 +281,10 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+    }
+
+    & .datepicker-controls {
+      margin-bottom: 2.8rem;
     }
   }
 }

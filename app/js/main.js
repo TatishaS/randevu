@@ -138,10 +138,10 @@ const datePicker = () => {
     autohide: true,
     datesDisabled: [1684443600000, 1684875600000],
     format: 'dd/mm/yyyy',
-    prevArrow: `<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6.29294 0.292969L0.585938 5.99997L6.29294 11.707L7.70694 10.293L3.41394 5.99997L7.70694 1.70697L6.29294 0.292969Z" fill="#AFACAC"/>
+    prevArrow: `<svg width="8" class="edit-form__datepicker-arrow edit-form__datepicker-arrow--prev disabled" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.29294 0.292969L0.585938 5.99997L6.29294 11.707L7.70694 10.293L3.41394 5.99997L7.70694 1.70697L6.29294 0.292969Z"/>
     </svg>`,
-    nextArrow: `<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.70697 11.707L7.41397 5.99997L1.70697 0.292969L0.292969 1.70697L4.58597 5.99997L0.292969 10.293L1.70697 11.707Z" fill="#201C1D"/></svg>`,
+    nextArrow: `<svg class="edit-form__datepicker-arrow edit-form__datepicker-arrow--next" width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><path d="M1.70697 11.707L7.41397 5.99997L1.70697 0.292969L0.292969 1.70697L4.58597 5.99997L0.292969 10.293L1.70697 11.707Z" /></svg>`,
   });
 };
 
