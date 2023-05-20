@@ -89,7 +89,7 @@ const multiNameSelect = () => {
   elements.forEach(el => {
     const choices = new Choices(el, {
       allowHTML: true,
-      searchEnabled: true,
+      searchEnabled: false,
       itemSelectText: '',
       position: 'bottom',
     });
