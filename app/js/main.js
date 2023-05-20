@@ -67,16 +67,7 @@ function openConfirmModal() {
   });
 }
 
-/* const categorySelect = () => {
-  const element = document.querySelector('.js-single-category');
-  const choices = new Choices(element, {
-    allowHTML: true,
-    searchEnabled: false,
-    itemSelectText: '',
-    appendValue: 'Category:',
-  });
-};
- */
+/* Choices selects */
 const multiServiceSelect = () => {
   const elements = document.querySelectorAll('.choices-form-select');
   console.log(elements);
@@ -86,6 +77,7 @@ const multiServiceSelect = () => {
       allowHTML: true,
       searchEnabled: false,
       itemSelectText: '',
+      position: 'bottom',
     });
   });
 };
@@ -99,9 +91,12 @@ const multiNameSelect = () => {
       allowHTML: true,
       searchEnabled: true,
       itemSelectText: '',
+      position: 'bottom',
     });
   });
 };
+
+/* Dropdowns */
 
 const multiDropdown = () => {
   const dropdowns = document.querySelectorAll('.dropdown');
@@ -145,6 +140,7 @@ const multiLanguageDropdown = () => {
   });
 };
 
+/* Datepicker */
 const datePicker = () => {
   const element = document.querySelector('.edit-form__input-date');
 
@@ -182,6 +178,8 @@ const datePickerLegend = () => {
   legend.innerHTML = html;
   calendar.insertAdjacentHTML('beforeend', html);
 };
+
+/* Handling categories */
 
 const handleSelectCategory = () => {
   document.querySelectorAll('.category').forEach(category => {
