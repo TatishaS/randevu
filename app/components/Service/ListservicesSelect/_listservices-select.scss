@@ -102,20 +102,20 @@
   }
 
   & .choices__item.choices__item--choice.is-highlighted {
-    background-color: $backgroundSecondary;
+    background-color: $domLight;
     position: relative;
   }
 
   & .choices__item.choices__item--choice.is-highlighted.is-selected {
-    background-color: $backgroundSecondary;
+    background-color: $domLight;
     position: relative;
     &::after {
       position: absolute;
       content: '';
       border: none;
-      background-image: url('../../../images/icon-check-black.svg');
+      background-image: url('../../../images/icon-check-red.svg');
       background-repeat: no-repeat;
-      top: 55%;
+      top: 50%;
       transform: translateY(-50%);
       right: 2.5rem;
       width: 2.6rem;
@@ -124,7 +124,7 @@
   }
 
   & .choices__list--dropdown .choices__item {
-    padding: 2rem 4rem 2rem 3.2rem;
+    padding: 2rem 4rem 2rem 2.8rem;
     border-bottom: 0.1rem solid $contentLight;
   }
   & .choices__list--dropdown .choices__item--selectable:last-child {
