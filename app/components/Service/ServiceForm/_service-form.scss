@@ -13,7 +13,7 @@
     font-size: 1.6rem;
     line-height: 2rem;
     margin-bottom: 2rem;
-    cursor: pointer;
+    //cursor: pointer;
   }
 
   /* FILE UPLOAD INPUT */
@@ -37,6 +37,7 @@
     background-color: $backgroundMain;
     overflow: hidden;
     margin-bottom: 2rem;
+    cursor: pointer;
   }
 
   &__file-preview.loaded {
@@ -176,15 +177,6 @@
     opacity: 0.6;
   }
 
-  &__button.disabled {
-    background-color: $contentLight;
-    color: $contentDop;
-    border: none;
-
-    svg {
-      fill: $contentDop;
-    }
-  }
   &__btn-wrapper {
     margin-bottom: 4rem;
   }
@@ -208,17 +200,33 @@
   }
 
   &__button.save {
-    background-color: $contentMain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accentMain;
     color: $backgroundMain;
+    border: none;
+    padding: 1rem 1.4rem;
     svg {
+      display: inline-block;
       fill: $backgroundMain;
     }
     border: none;
   }
+
   &__button.delete {
     background-color: transparent;
-
+    padding: 1rem 1.4rem;
     border: 0.1rem solid $contentMain;
+  }
+  &__button.save.disabled {
+    background-color: $contentLight;
+    color: $contentDop;
+    border: none;
+
+    svg {
+      fill: $contentDop;
+    }
   }
 
   /*   &__button.cancel {
@@ -252,7 +260,7 @@
 @media (min-width: $breakpoint768) {
   .service-form {
     &.service-form--step2,
-    &.service-form--step3 {
+    &.service-form--editservice {
       max-width: 54.4rem;
 
       .service-form__input,

@@ -14,6 +14,11 @@
   min-height: 29rem;
   z-index: 150;
 
+  &.modal__service {
+    min-height: 23rem;
+    padding: 5.2rem 4.2rem 4.3rem 4.2rem;
+  }
+
   &.active {
     display: block;
   }

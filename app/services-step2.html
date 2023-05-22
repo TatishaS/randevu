@@ -296,7 +296,7 @@
                 </button>
               </div> -->
               <div class="template__title-wrapper">
-                <h2 class="template__page-title">Services</h2>
+                <h2 class="template__page-title">Add service</h2>
                <!--  <div class="template__select-dropdown dropdown">
                   <button class="dropdown__button">
                     <div class="dropdown__button-content">
@@ -323,11 +323,8 @@
               <div class="service-block__top">
                 <div class="service-block__select listservices-select">
                   <select class="choices-form-select" id="list-services">
-                    <option value="" selected disabled>List of services</option>
-                    
-                    <option value="Face care">Face care</option>
-                    <option value="Beard care">Beard care</option>
-                    <option value="Hair styling">Hair styling</option>
+                    <option value="list-services">List of services</option>
+                    <option value="list-categories">List of categories</option>  
                   </select>
                 </div>
 
@@ -343,7 +340,8 @@
 
 
                   <div class="service-form__row">
-                    <label for="category-photo-upload"><span class="service-form__label">Add category photo</span>
+                    <span class="service-form__label">Add category photo</span>
+                    <label for="category-photo-upload">
                       <div class="service-form__file-wrapper">
                         <div class="service-form__file-preview">
    <button class="service-form__file-add-btn">
@@ -416,7 +414,7 @@
 
                   </div>
                   <div class="service-form__row service-form__row--duration">
-                    <div class="service-form__service-select service-select">
+                    <div class="service-form__service-select service-select service-select--duration">
                       <label
                       for="duration"
                       class="service-form__select-label visually-hidden"
@@ -457,7 +455,7 @@
                     placeholder="Title"
                   />
                   </div>
-                  <div class="service-form__row">
+                 <!--  <div class="service-form__row">
                     <textarea
                   
                     class="service-form__textarea"
@@ -465,11 +463,17 @@
                     name="description"
                     placeholder="Description" rows="8"
                   ></textarea>
-                  </div>
+                  </div> -->
                   <div class="service-form__btns-wrapper">
-                  <button class="service-form__button red">
-                    Create
+                  <button class="service-form__button save">
+                    <svg width="26" height="26">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-save"
+                      ></use>
+                    </svg>
+                    Save
                   </button>
+                  
                   </div>
                 
                 
@@ -488,18 +492,22 @@
       <div class="modal__close modal__confirm-close"></div>
       <div class="modal__inner">
         <div class="modal__img-wrapper">
-          <img src="./images/icon-delete.svg" alt="delete image" class="modal__img" width="50" height="50"/>
+          <img
+            src="./images/icon-check-green.svg"
+            alt="delete image"
+            class="modal__img"
+            width="50"
+            height="50"
+          />
         </div>
 
-        <h6 class="modal__msg">Are you sure you want
-          to&nbsp;delete this appointment?</h6>
-          <div class="modal__btns">
-            <button class="modal__btn no">No</button>
-            <button class="modal__btn yes">Yes</button>
-          </div>
-
+        <h6 class="modal__msg">«Haircut with a clipper»
+          service successfully created!</h6>
+        <!--         <div class="modal__btns">
+          <button class="modal__btn no">No</button>
+          <button class="modal__btn yes">Yes</button>
+        </div> -->
       </div>
-
     </div>
   </body>
 </html>

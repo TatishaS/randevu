@@ -67,6 +67,31 @@ function openConfirmModal() {
   });
 }
 
+/* Modal confirm creating service */
+function handleCreateServiceModal() {
+  const modal = document.querySelector('.modal__service');
+  const overlay = document.querySelector('.overlay');
+  const saveBtn = document.querySelector('.save');
+  const sidebar = document.querySelector('.sidebar');
+  const modalConfirmCloseBtn = document.querySelector('.modal__confirm-close');
+
+  if (!modal) return;
+
+  saveBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.add('active');
+    overlay.classList.add('overlay--show');
+    sidebar.style.zIndex = '40';
+  });
+
+  modalConfirmCloseBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.remove('active');
+    overlay.classList.remove('overlay--show');
+    sidebar.style.zIndex = '70';
+  });
+}
+
 /* Choices selects */
 const multiServiceSelect = () => {
   const elements = document.querySelectorAll('.choices-form-select');
@@ -216,4 +241,5 @@ datePicker();
 datePickerLegend();
 handleSelectCategory();
 multiNameSelect();
+handleCreateServiceModal();
 //categorySelect();

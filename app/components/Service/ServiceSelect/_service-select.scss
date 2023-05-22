@@ -126,7 +126,47 @@
 
   &.service-select--gender
     .choices__item.choices__item--choice.is-highlighted.is-selected {
+    background-color: $backgroundSecondary;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      border: none;
+      background-image: url('../../../images/icon-check-black.svg');
+      background-repeat: no-repeat;
+      top: 55%;
+      transform: translateY(-50%);
+      right: 2.5rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+
+  &.service-select--gender .choices__item.choices__item--choice.is-highlighted,
+  &.service-select--duration
+    .choices__item.choices__item--choice.is-highlighted {
+    background-color: $domLight;
+  }
+
+  &.service-select--gender
+    .choices__item.choices__item--choice.is-highlighted.is-selected,
+  &.service-select--duration
+    .choices__item.choices__item--choice.is-highlighted.is-selected {
     color: $accentMain;
+    background-color: $domLight;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      border: none;
+      background-image: url('../../../images/icon-check-red.svg');
+      background-repeat: no-repeat;
+      top: 55%;
+      transform: translateY(-50%);
+      right: 2.5rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
   }
 
   & .choices__list--dropdown .choices__item--selectable {

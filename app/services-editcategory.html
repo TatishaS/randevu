@@ -106,7 +106,7 @@
   </header>
   <!-- end header -->
 
-    <main class="services services--step3 template">
+    <main class="services services--editcategory template">
       <div class="template__container container">
         <div class="template__inner">
           <aside class="sidebar">
@@ -297,7 +297,7 @@
                 </button>
               </div>
               <div class="template__edit-inner">
-                <h2 class="template__edit-title">Editing service «Styling»</h2>
+                <h2 class="template__edit-title">Editing category «Beard» </h2>
                 <img
                   class="template__title-img"
                   src="./images/icon-edit.svg"
@@ -335,11 +335,12 @@
   
             <section class="template__service-block service-block">
 
-              <form  class="service-block__form service-form service-form--step3">
+              <form  class="service-block__form service-form service-form--editcategory">
 
 
                   <div class="service-form__row">
-                    <label for="category-photo-upload"><span class="service-form__label">Add category photo</span>
+                    <span class="service-form__label">Add category photo</span>
+                    <label for="category-photo-upload">
                       <div class="service-form__file-wrapper">
                         <div class="service-form__file-preview loaded">
    <!-- <button class="service-form__file-add-btn">
@@ -364,8 +365,35 @@
                       id="category-photo-upload"
                     />
                   </div>
-                  <div class="service-block__inputs-wrapper">
-                  <div class="service-form__row service-form__row--service">
+                  <div class="service-form__row">
+                    <ul class="service-form__language-options">
+                      <li class="service-form__language-option">
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="English" id="English" checked />
+                        <label class="service-form__language-label" for="English">EN</label>
+                      </li>
+                      <li class="service-form__language-option">
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Deutsch" id="Deutsch" />
+                        <label class="service-form__language-label" for="Deutsch">DE</label>
+                      </li>
+                      <li class="service-form__language-option">
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Turkish" id="Turkish"/>
+                        <label class="service-form__language-label" for="Turkish">TR</label>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <div class="service-form__row">
+                    <input
+                    type="text"
+                    class="service-form__input"
+                    id="title"
+                    name="title"
+                    placeholder="Title"
+                  />
+                  </div>
+                  
+              <!--     <div class="service-form__row service-form__row--service">
                     <div class="service-form__service-select service-select">
                       <label
                       for="service"
@@ -399,8 +427,8 @@
                       >Gender</label
                     >
                       <select class="choices-form-select" id="gender" inputmode="none">
-                        <option selected value="man">Gender: man</option>
-                        <option value="woman">Gender: woman</option>
+                        <option selected value="man">man</option>
+                        <option value="woman">woman</option>
 
                       </select>
                       
@@ -410,7 +438,7 @@
 
                   </div>
                   <div class="service-form__row service-form__row--duration">
-                    <div class="service-form__service-select service-select">
+                    <div class="service-form__service-select service-select service-select--duration">
                       <label
                       for="duration"
                       class="service-form__select-label visually-hidden"
@@ -428,7 +456,7 @@
               
 
                   </div>
-                </div>
+              
 
                   <div class="service-form__row">
                     <ul class="service-form__language-options">
@@ -466,7 +494,7 @@
                     name="description"
                     placeholder="Description" rows="8"
                   ></textarea>
-                  </div>
+                  </div> -->
                   <div class="service-form__btns-wrapper">
                   <button class="service-form__button delete">
                     <svg width="26" height="26">
