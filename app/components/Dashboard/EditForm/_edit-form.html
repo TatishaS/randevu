@@ -1,17 +1,37 @@
 <form class="edit-form">
   <div class="edit-form__row">
     <label for="employee" class="edit-form__label">Employee</label>
-    <div class="edit-form__select-dropdown">
-      <select class="edit-form__select" id="employee">
-        <option selected disabled>Name</option>
-        <option value="Mary Ellis">Jake Doe</option>
+    <div class="edit-form__select dashboardform-select">
+      <select class="choices-dashboardform-select" id="employee">
+        <option value="Jake Doe">Jake Doe</option>
         <option value="Ricardo Carvalho">Ricardo Carvalho</option>
         <option value="Michaela Leman">Michaela Leman</option>
       </select>
     </div>
   </div>
+
   <div class="edit-form__row">
     <label for="service" class="edit-form__label">Service</label>
+    <div class="edit-form__select dashboardform-select">
+      <!--                     <label
+      for="service"
+      class="dashboardform-select__select-label visually-hidden"
+      >Service</label
+    > -->
+      <select class="choices-dashboardform-select" id="service">
+        <option value="">Service name</option>
+        <option value="Hair colouring">Hair colouring</option>
+        <option value="Hair SPA Ritual">Hair SPA Ritual</option>
+        <option value="Face revitalizing">Face revitalizing</option>
+      </select>
+    </div>
+  </div>
+  <!-- <div class="edit-form__row">
+    <label
+      for="service"
+      class="edit-form__label"
+      >Service</label
+    >
     <div class="edit-form__select-dropdown">
       <select class="edit-form__select" id="service">
         <option selected disabled>Hair colouring</option>
@@ -20,15 +40,16 @@
         <option value="Face revitalizing">Face revitalizing</option>
       </select>
     </div>
-  </div>
+  </div> -->
   <div class="edit-form__row">
     <label for="date" class="edit-form__label">Date</label>
     <div class="edit-form__select-dropdown">
       <input
-        type="date"
+        type="text"
         id="date"
-        value="2021-12-21"
         class="edit-form__input-date"
+        readonly
+        inputmode="none"
       />
     </div>
   </div>

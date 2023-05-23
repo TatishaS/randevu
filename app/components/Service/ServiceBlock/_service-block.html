@@ -1,0 +1,94 @@
+<section class="template__service-block service-block">
+  <div class="service-block__top">
+    <div class="service-block__select listservices-select">
+      <select class="choices-form-select" id="list-services">
+        <option value="list-services">List of services</option>
+        <option value="list-categories">List of categories</option>
+      </select>
+    </div>
+    <button class="service-block__btn wide-button active">Add category</button>
+    <button class="service-block__btn wide-button">Add service</button>
+  </div>
+  <form class="service-block__form service-form">
+    <div class="service-form__row">
+      <span class="service-form__label">Add category photo</span>
+      <label for="category-photo-upload">
+        <span class="service-form__file-wrapper">
+          <span class="service-form__file-preview">
+            <span class="service-form__file-add-btn">
+              <img src="./images/icon-plus-circle.svg" alt="Upload photo" />
+            </span>
+            <!--  <span class="service-form__file-delete-btn">
+                  <img
+                    src="./images/icon-trash-white.svg"
+                    alt="Delete photo"
+                  />
+</span> -->
+          </span>
+        </span>
+      </label>
+      <input
+        class="service-form__file-input visually-hidden"
+        type="file"
+        name="category-photo"
+        id="category-photo-upload"
+      />
+    </div>
+
+    <div class="service-form__row">
+      <ul class="service-form__language-options">
+        <li class="service-form__language-option">
+          <input
+            class="visually-hidden service-form__language-input"
+            type="radio"
+            name="language"
+            value="English"
+            id="English"
+            checked
+          />
+          <label class="service-form__language-label" for="English">EN</label>
+        </li>
+        <li class="service-form__language-option">
+          <input
+            class="visually-hidden service-form__language-input"
+            type="radio"
+            name="language"
+            value="Deutsch"
+            id="Deutsch"
+          />
+          <label class="service-form__language-label" for="Deutsch">DE</label>
+        </li>
+        <li class="service-form__language-option">
+          <input
+            class="visually-hidden service-form__language-input"
+            type="radio"
+            name="language"
+            value="Turkish"
+            id="Turkish"
+            disabled
+          />
+          <label class="service-form__language-label" for="Turkish">TR</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="service-form__row">
+      <input
+        type="text"
+        class="service-form__input"
+        id="title"
+        name="title"
+        placeholder="Title"
+        autocomplete="off"
+      />
+    </div>
+    <div class="service-form__btns-wrapper">
+      <button class="service-form__button save disabled">
+        <svg width="26" height="26">
+          <use xlink:href="./images/sprite.svg#icon-save"></use>
+        </svg>
+        Save
+      </button>
+    </div>
+  </form>
+</section>

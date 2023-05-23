@@ -6,27 +6,50 @@
       <h1 class="dashboard-table__title page-title">Dashboard</h1>
       <div class="dashboard-table__filters">
         <form class="dashboard-table__filters-form">
-          <div class="dashboard-table__select-dropdown dropdown">
-            <label for="status" class="dropdown__select-label visually-hidden"
-              >Choose status</label
+          <div
+            class="dashboard-table__select-dropdown table-select table-select--status"
+          >
+            <label
+              for="status"
+              class="dashboard-table__select-label visually-hidden"
+              >Status</label
             >
-            <select class="dropdown__select" id="status" inputmode="none">
-              <option selected disabled>Status: All</option>
-              <option value="In progress">In progress</option>
-              <option value="Waiting">Waiting</option>
-              <option value="Cancelled">Cancelled</option>
+            <select class="choices-form-select" id="status" inputmode="none">
+              <option selected value="all">All</option>
+              <option value="cancelled">Cancelled</option>
+              <option value="waiting">Waiting</option>
+              <option value="in-progress">In progress</option>
+              <option value="unread">Unread</option>
+              <option value="done">Done</option>
             </select>
           </div>
-          <div class="dashboard-table__select-dropdown dropdown">
-            <label for="display" class="dropdown__select-label visually-hidden"
-              >Choose display</label
+          <div
+            class="dashboard-table__select-dropdown table-select table-select--display"
+          >
+            <label
+              for="display"
+              class="dashboard-table__select-label visually-hidden"
+              >Display</label
             >
-            <select class="dropdown__select" id="status" inputmode="none">
-              <option selected disabled>Display: today</option>
-              <option value="today">today</option>
-              <option value="tomorrow">tomorrow</option>
-              <option value="next week">next week</option>
+            <select class="choices-form-select" id="display" inputmode="none">
+              <option selected value="today">Today</option>
+              <option value="all">All</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
             </select>
+            <!--                       <button class="dropdown__button">
+              <div class="dropdown__button-content">
+                <span>Display:</span>
+                <span class="dropdown__category-selected">today</span>
+              </div>
+            </button>
+            <div class="dropdown__list-wrapper">
+              <ul class="dropdown__list">
+                <li class="dropdown__list-item active">tomorrow</li>
+                <li class="dropdown__list-item">next week</li>
+                <li class="dropdown__list-item">last month</li>
+              </ul>
+            </div> -->
           </div>
         </form>
       </div>
@@ -51,6 +74,33 @@
       <tbody>
         <tr class="dashboard-table__row table-row">
           <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="dashboard-table__label label label-inprogress">
+              In progress
+            </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
           <td class="name">Enrique Iglesias Junior</td>
           <td class="name">Anna Kournikova</td>
           <td>+34842797474</td>
@@ -59,6 +109,284 @@
           <td>13:30</td>
           <td>
             <span class="label label-waiting"> Waiting</span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row canceled table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-canceled"> Cancelled </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done">Done</span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row new table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-new"> New </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done"> Done </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row focused table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done"> Done </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done"> Done </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-canceled"> Cancelled </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done"> Done </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row dashboard-table__tablet-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-waiting"> Waiting </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row dashboard-table__tablet-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done"> Done </span>
+          </td>
+          <td class="fit">
+            <span class="actions">
+              <button class="dashboard-table__action-button">
+                <img
+                  class="dashboard__table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="dashboard-table__row table-row dashboard-table__tablet-row">
+          <td class="number">15</td>
+          <td class="name">Laake Doooe</td>
+          <td class="name">Marry Ellis</td>
+          <td>+34842797474</td>
+          <td class="service">Manicure</td>
+          <td>21/12/21</td>
+          <td>13:30</td>
+          <td>
+            <span class="label label-done"> Done </span>
           </td>
           <td class="fit">
             <span class="actions">
@@ -129,7 +457,7 @@
           <th class="name">Client's name</th>
 
           <th>Phone</th>
-          <th>Service</th>
+          <th class="service">Service</th>
           <th>Date</th>
           <th>Time</th>
 
@@ -138,12 +466,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="dashboard-table__row focused">
+        <tr class="dashboard-table__row table-row focused">
           <td class="number">15</td>
           <td class="name">Laake Doooe</td>
           <td class="name">Marry Ellis</td>
           <td>+34842797474</td>
-          <td>Manicure</td>
+          <td class="service">Manicure</td>
           <td>21/12/21</td>
           <td>13:30</td>
           <td>
