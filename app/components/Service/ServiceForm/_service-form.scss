@@ -38,6 +38,9 @@
     overflow: hidden;
     margin-bottom: 2rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__file-preview.loaded {
@@ -59,7 +62,7 @@
 
   &__file-add-btn,
   &__file-delete-btn {
-    position: absolute;
+    /*     position: absolute;
     display: block;
     top: 50%;
     right: 50%;
@@ -72,13 +75,29 @@
     cursor: pointer;
     z-index: 10;
     background-color: transparent;
+    cursor: pointer; */
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    outline: none;
     cursor: pointer;
+    background-color: transparent;
 
     img {
       width: 2.6rem;
       height: 2.6rem;
       margin: auto;
     }
+  }
+
+  &__file-delete-btn {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 0;
+    z-index: 10;
   }
 
   &__language-options {
@@ -104,6 +123,7 @@
     padding: 1rem 2rem;
     border: 0.1rem solid $contentMain;
     border-radius: 1.4rem;
+    color: $contentMain;
     background-color: $backgroundMain;
 
     opacity: 1;
@@ -118,6 +138,23 @@
   &__language-input:checked + label {
     color: $backgroundMain;
     background-color: $contentMain;
+  }
+
+  &__language-input:disabled + label {
+    color: $contentMain;
+    background-color: $backgroundMain;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: $accentMain;
+      top: -0.2rem;
+      right: -0.2rem;
+      z-index: 5;
+    }
   }
 
   &__input,
@@ -164,6 +201,7 @@
     display: flex;
     align-items: center;
     font-weight: 600;
+    color: $contentMain;
     padding: 1.4rem 1rem;
     border: none;
     border-radius: 1.4rem;

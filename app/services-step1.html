@@ -37,7 +37,7 @@
           </div>
           <div class="header__search">
             <form class="header__search-form search">
-              <input type="text" class="search__input" placeholder="Search" />
+              <input type="text" class="search__input" placeholder="Search"  autocomplete="off"/>
               <button
                 class="search__button icon-button icon-button--black icon-button--search"
                 type="submit"
@@ -214,7 +214,7 @@
                     <input
                       type="text"
                       class="search__input"
-                      placeholder="Search"
+                      placeholder="Search"  autocomplete="off"
                     />
                     <button
                       class="search__button icon-button icon-button--black icon-button--search"
@@ -342,22 +342,22 @@
                   <div class="service-form__row">
                     <span class="service-form__label">Add category photo</span>
                     <label for="category-photo-upload">
-                      <div class="service-form__file-wrapper">
-                        <div class="service-form__file-preview">
-   <button class="service-form__file-add-btn">
+                      <span class="service-form__file-wrapper">
+                        <span class="service-form__file-preview">
+   <span class="service-form__file-add-btn">
                             <img
                               src="./images/icon-plus-circle.svg"
                               alt="Upload photo"
                             />
-                          </button> 
-  <!--  <button class="service-form__file-delete-btn">
+   </span> 
+  <!--  <span class="service-form__file-delete-btn">
                             <img
                               src="./images/icon-trash-white.svg"
                               alt="Delete photo"
                             />
-                          </button> -->
-                        </div>
-                      </div>
+  </span> -->
+                        </span>
+                      </span>
                     </label>
                     <input
                       class="service-form__file-input visually-hidden"
@@ -378,7 +378,7 @@
                         <label class="service-form__language-label" for="Deutsch">DE</label>
                       </li>
                       <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Turkish" id="Turkish"/>
+                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Turkish" id="Turkish" disabled/>
                         <label class="service-form__language-label" for="Turkish">TR</label>
                       </li>
 
@@ -391,7 +391,7 @@
                     class="service-form__input"
                     id="title"
                     name="title"
-                    placeholder="Title"
+                    placeholder="Title" autocomplete="off"
                   />
                   </div>
                  <!--  <div class="service-form__row">

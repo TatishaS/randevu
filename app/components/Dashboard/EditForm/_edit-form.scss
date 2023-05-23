@@ -30,15 +30,16 @@
 
     background: $backgroundMain;
     border: 0.1rem solid $backgroundExtraLight;
-    border-radius: 1.4rem;
+
     -webkit-border-radius: 1.4rem;
+    border-radius: 1.4rem;
     padding: 1.5rem 2rem 1.5rem 2rem;
     outline: 0;
 
-    /*    -webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    appearance: none; */
+    appearance: none;
     cursor: pointer;
   }
 
@@ -106,8 +107,8 @@
   }
 
   & .datepicker-input {
-    border-radius: 1.4rem;
     -webkit-border-radius: 1.4rem;
+    border-radius: 1.4rem;
   }
 
   & .datepicker-dropdown {

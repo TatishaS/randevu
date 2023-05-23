@@ -9,7 +9,10 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -289,28 +292,47 @@
               <div class="dashboard-table__top">
                 <h1 class="dashboard-table__title page-title">Dashboard</h1>
                 <div class="dashboard-table__filters">
-                  <div class="dashboard-table__filters-form">
+                  <form class="dashboard-table__filters-form">
                     <div
-                      class="dashboard-table__select-dropdown dropdown dropdown--status"
+                      class="dashboard-table__select-dropdown table-select table-select--status"
                     >
-                      <button class="dropdown__button">
-                        <div class="dropdown__button-content">
-                          <span>Status:</span>
-                          <span class="dropdown__category-selected">All</span>
-                        </div>
-                      </button>
-                      <div class="dropdown__list-wrapper">
-                        <ul class="dropdown__list">
-                          <li class="dropdown__list-item active">Cancelled</li>
-                          <li class="dropdown__list-item">In progress</li>
-                          <li class="dropdown__list-item">Waiting</li>
-                        </ul>
-                      </div>
+                      <label
+                        for="status"
+                        class="dashboard-table__select-label visually-hidden"
+                        >Status</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="status"
+                        inputmode="none"
+                      >
+                        <option selected value="all">All</option>
+                        <option value="cancelled">Cancelled</option>
+                        <option value="waiting">Waiting</option>
+                        <option value="in-progress">In progress</option>
+                        <option value="unread">Unread</option>
+                        <option value="done">Done</option>
+                      </select>
                     </div>
                     <div
-                      class="dashboard-table__select-dropdown dropdown dropdown--display"
+                      class="dashboard-table__select-dropdown table-select table-select--display"
                     >
-                      <button class="dropdown__button">
+                      <label
+                        for="display"
+                        class="dashboard-table__select-label visually-hidden"
+                        >Display</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="display"
+                        inputmode="none"
+                      >
+                        <option selected value="today">Today</option>
+                        <option value="all">All</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                      </select>
+                      <!--                       <button class="dropdown__button">
                         <div class="dropdown__button-content">
                           <span>Display:</span>
                           <span class="dropdown__category-selected">today</span>
@@ -322,9 +344,9 @@
                           <li class="dropdown__list-item">next week</li>
                           <li class="dropdown__list-item">last month</li>
                         </ul>
-                      </div>
+                      </div> -->
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
 

@@ -9,7 +9,10 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,91 +23,90 @@
     <script defer src="js/main.min.js"></script>
   </head>
   <body>
-  <!-- begin header -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <!-- begin Navbar -->
-        <nav class="nav">
-          <div class="header__account account">
-            <a href="#" class="account__link">
-              <div class="account__img-wrapper">
-                <img class="account__img" src="./images/account-photo.jpg" />
-                <!-- <span class="account__letters">CB</span> -->
-              </div>
-              <p class="account__name">Churchill Barbershop</p>
-            </a>
-          </div>
-          <div class="header__search">
-            <form class="header__search-form search">
-              <input type="text" class="search__input" placeholder="Search" />
-              <button
-                class="search__button icon-button icon-button--black icon-button--search"
-                type="submit"
+    <!-- begin header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- begin Navbar -->
+          <nav class="nav">
+            <div class="header__account account">
+              <a href="#" class="account__link">
+                <div class="account__img-wrapper">
+                  <img class="account__img" src="./images/account-photo.jpg" />
+                  <!-- <span class="account__letters">CB</span> -->
+                </div>
+                <p class="account__name">Churchill Barbershop</p>
+              </a>
+            </div>
+            <div class="header__search">
+              <form class="header__search-form search">
+                <input type="text" class="search__input" placeholder="Search" />
+                <button
+                  class="search__button icon-button icon-button--black icon-button--search"
+                  type="submit"
+                >
+                  <img
+                    alt="Search"
+                    class="icon-button__img"
+                    src="./images/icon-search.svg"
+                    width="26"
+                    height="26"
+                  />
+                </button>
+              </form>
+            </div>
+            <button class="header__button button">New appointment</button>
+
+            <div class="header__notification">
+              <a
+                class="header__notification-link icon-button icon-button--bell"
               >
                 <img
-                  alt="Search"
                   class="icon-button__img"
-                  src="./images/icon-search.svg"
+                  src="./images/icon-bell.svg"
+                  alt="Notifications"
                   width="26"
                   height="26"
                 />
-              </button>
-            </form>
-          </div>
-          <button class="header__button button">New appointment</button>
-
-          <div class="header__notification">
-            <a
-              class="header__notification-link icon-button icon-button--bell"
-            >
-              <img
-                class="icon-button__img"
-                src="./images/icon-bell.svg"
-                alt="Notifications"
-                width="26"
-                height="26"
-              />
-              <span class="icon-button__quantity"> 3 </span></a
-            >
-          </div>
-
-          <div class="header__language language-select">
-            <button class="language-select__button">
-             
-                <img class="language-select__button-img" src="./images/icon-world.svg"/>
-                <span class="language-select__language-selected">EN</span>
-              
-            </button>
-            <div class="language-select__list-wrapper">
-              <ul class="language-select__list">
-                <li class="language-select__list-item active">
-                  <a>Germany</a>
-                </li>
-                <li class="language-select__list-item"><a>Turkey</a></li>
-                <li class="language-select__list-item">England<a></a></li>
-              </ul>
-
+                <span class="icon-button__quantity"> 3 </span></a
+              >
             </div>
-            
-          </div>
-          <div class="header__logout--tablet">
-            <a class="header__logout-link icon-button icon-button--logout">
-              <img
-                class="icon-button__img"
-                src="./images/icon-logout.svg"
-                alt="Notifications"
-                width="26"
-                height="26"
-              />
-            </a>
-          </div>
-        </nav>
-        <!-- end Navbar -->
+
+            <div class="header__language language-select">
+              <button class="language-select__button">
+                <img
+                  class="language-select__button-img"
+                  src="./images/icon-world.svg"
+                />
+                <span class="language-select__language-selected">EN</span>
+              </button>
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">
+                    <a>Germany</a>
+                  </li>
+                  <li class="language-select__list-item"><a>Turkey</a></li>
+                  <li class="language-select__list-item">England<a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
+          </nav>
+          <!-- end Navbar -->
+        </div>
       </div>
-    </div>
-  </header>
-  <!-- end header -->
+    </header>
+    <!-- end header -->
 
     <main class="services services--step2 template">
       <div class="template__container container">
@@ -203,7 +205,7 @@
                     </a>
                   </div>
                   <button class="rightside-menu__btn-close">
-<!--                     <svg width="14" height="14" class="rightside-menu__icon">
+                    <!--                     <svg width="14" height="14" class="rightside-menu__icon">
                       <use xlink:href="./images/sprite.svg#icon-close"></use>
                     </svg> -->
                   </button>
@@ -214,6 +216,7 @@
                       type="text"
                       class="search__input"
                       placeholder="Search"
+                      autocomplete="off"
                     />
                     <button
                       class="search__button icon-button icon-button--black icon-button--search"
@@ -258,13 +261,11 @@
                 </ul>
                 <div class="rightside-menu__language language-select">
                   <button class="language-select__button">
-                    
-                      <img
-                        class="language-select__button-img"
-                        src="./images/icon-world.svg"
-                      />
-                      <span class="language-select__language-selected">EN</span>
-                   
+                    <img
+                      class="language-select__button-img"
+                      src="./images/icon-world.svg"
+                    />
+                    <span class="language-select__language-selected">EN</span>
                   </button>
                   <div class="language-select__list-wrapper">
                     <ul class="language-select__list">
@@ -290,14 +291,14 @@
 
           <div class="template__content-wrapper">
             <div class="template__page-top">
-<!--               <div class="template__btn-wrapper">
+              <!--               <div class="template__btn-wrapper">
                 <button class="template__top-btn">
                   Back
                 </button>
               </div> -->
               <div class="template__title-wrapper">
                 <h2 class="template__page-title">Add service</h2>
-               <!--  <div class="template__select-dropdown dropdown">
+                <!--  <div class="template__select-dropdown dropdown">
                   <button class="dropdown__button">
                     <div class="dropdown__button-content">
                       <span>Category:</span>
@@ -314,17 +315,15 @@
                   </div>
                   
                 </div> -->
-
               </div>
-              </div>
+            </div>
 
-  
             <section class="template__service-block service-block">
               <div class="service-block__top">
                 <div class="service-block__select listservices-select">
                   <select class="choices-form-select" id="list-services">
                     <option value="list-services">List of services</option>
-                    <option value="list-categories">List of categories</option>  
+                    <option value="list-categories">List of categories</option>
                   </select>
                 </div>
 
@@ -334,128 +333,164 @@
                 <button class="service-block__btn wide-button active">
                   Add service
                 </button>
-
               </div>
-              <form  class="service-block__form service-form service-form--step2">
-
-
-                  <div class="service-form__row">
-                    <span class="service-form__label">Add category photo</span>
-                    <label for="category-photo-upload">
-                      <div class="service-form__file-wrapper">
-                        <div class="service-form__file-preview">
-   <button class="service-form__file-add-btn">
-                            <img
-                              src="./images/icon-plus-circle.svg"
-                              alt="Upload photo"
-                            />
-                          </button> 
-  <!--  <button class="service-form__file-delete-btn">
+              <form
+                class="service-block__form service-form service-form--step2"
+              >
+                <div class="service-form__row">
+                  <span class="service-form__label">Add service photo</span>
+                  <label for="category-photo-upload">
+                    <span class="service-form__file-wrapper">
+                      <span class="service-form__file-preview">
+                        <span class="service-form__file-add-btn">
+                          <img
+                            src="./images/icon-plus-circle.svg"
+                            alt="Upload photo"
+                          />
+                        </span>
+                        <!--  <span class="service-form__file-delete-btn">
                             <img
                               src="./images/icon-trash-white.svg"
                               alt="Delete photo"
                             />
-                          </button> -->
-                        </div>
-                      </div>
-                    </label>
-                    <input
-                      class="service-form__file-input visually-hidden"
-                      type="file"
-                      name="category-photo"
-                      id="category-photo-upload"
-                    />
-                  </div>
-                  <div class="service-block__inputs-wrapper">
+                        </span> -->
+                      </span>
+                    </span>
+                  </label>
+                  <input
+                    class="service-form__file-input visually-hidden"
+                    type="file"
+                    name="category-photo"
+                    id="category-photo-upload"
+                  />
+                </div>
+                <div class="service-block__inputs-wrapper">
                   <div class="service-form__row service-form__row--service">
                     <div class="service-form__service-select service-select">
                       <label
-                      for="service"
-                      class="service-form__select-label visually-hidden"
-                      >Service</label
-                    >
-                      <select class="choices-form-select" id="service" inputmode="none">
+                        for="service"
+                        class="service-form__select-label visually-hidden"
+                        >Service</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="service"
+                        inputmode="none"
+                      >
                         <option selected>Hair</option>
                         <option value="Manicure">Manicure</option>
                         <option value="Hair SPA Ritual">Hair SPA Ritual</option>
-                        <option value="Face revitalizing">Face revitalizing</option>
+                        <option value="Face revitalizing">
+                          Face revitalizing
+                        </option>
                       </select>
-                      
                     </div>
-
-              
-
                   </div>
                   <div class="service-form__row service-form__row--price">
                     <input
-                    type="text"
-                    class="service-form__input service-form__input--price focused"
-                    id="price"
-                    name="price"
-                    placeholder="82"
-                  />
+                      type="text"
+                      class="service-form__input service-form__input--price focused"
+                      id="price"
+                      name="price"
+                      placeholder="82"
+                      autocomplete="off"
+                    />
                   </div>
                   <div class="service-form__row service-form__row--gender">
-                    <div class="service-form__service-select service-select service-select--gender">
-                      <label
-                      for="gender"
-                      class="service-form__select-label visually-hidden"
-                      >Gender</label
+                    <div
+                      class="service-form__service-select service-select service-select--gender"
                     >
-                      <select class="choices-form-select" id="gender" inputmode="none">
+                      <label
+                        for="gender"
+                        class="service-form__select-label visually-hidden"
+                        >Gender</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="gender"
+                        inputmode="none"
+                      >
                         <option selected value="man">man</option>
                         <option value="woman">woman</option>
-
                       </select>
-                      
                     </div>
-
-              
-
                   </div>
                   <div class="service-form__row service-form__row--duration">
-                    <div class="service-form__service-select service-select service-select--duration">
-                      <label
-                      for="duration"
-                      class="service-form__select-label visually-hidden"
-                      >Duration</label
+                    <div
+                      class="service-form__service-select service-select service-select--duration"
                     >
-                      <select class="choices-form-select" id="duration" inputmode="none">
+                      <label
+                        for="duration"
+                        class="service-form__select-label visually-hidden"
+                        >Duration</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="duration"
+                        inputmode="none"
+                      >
                         <option selected value="60">60</option>
                         <option value="30">30</option>
                         <option value="90">90</option>
-                      </select>                     
+                      </select>
                     </div>
                   </div>
                 </div>
 
-                  <div class="service-form__row">
-                    <ul class="service-form__language-options">
-                      <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="English" id="English" checked />
-                        <label class="service-form__language-label" for="English">EN</label>
-                      </li>
-                      <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Deutsch" id="Deutsch" />
-                        <label class="service-form__language-label" for="Deutsch">DE</label>
-                      </li>
-                      <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Turkish" id="Turkish"/>
-                        <label class="service-form__language-label" for="Turkish">TR</label>
-                      </li>
-                    </ul>
-                  </div>               
+                <div class="service-form__row">
+                  <ul class="service-form__language-options">
+                    <li class="service-form__language-option">
+                      <input
+                        class="visually-hidden service-form__language-input"
+                        type="radio"
+                        name="language"
+                        value="English"
+                        id="English"
+                        checked
+                      />
+                      <label class="service-form__language-label" for="English"
+                        >EN</label
+                      >
+                    </li>
+                    <li class="service-form__language-option">
+                      <input
+                        class="visually-hidden service-form__language-input"
+                        type="radio"
+                        name="language"
+                        value="Deutsch"
+                        id="Deutsch"
+                      />
+                      <label class="service-form__language-label" for="Deutsch"
+                        >DE</label
+                      >
+                    </li>
+                    <li class="service-form__language-option">
+                      <input
+                        class="visually-hidden service-form__language-input"
+                        type="radio"
+                        name="language"
+                        value="Turkish"
+                        id="Turkish"
+                        disabled
+                      />
+                      <label class="service-form__language-label" for="Turkish"
+                        >TR</label
+                      >
+                    </li>
+                  </ul>
+                </div>
 
-                  <div class="service-form__row">
-                    <input
+                <div class="service-form__row">
+                  <input
                     type="text"
                     class="service-form__input"
                     id="title"
                     name="title"
                     placeholder="Title"
+                    autocomplete="off"
                   />
-                  </div>
-                 <!--  <div class="service-form__row">
+                </div>
+                <!--  <div class="service-form__row">
                     <textarea
                   
                     class="service-form__textarea"
@@ -464,26 +499,17 @@
                     placeholder="Description" rows="8"
                   ></textarea>
                   </div> -->
-                  <div class="service-form__btns-wrapper">
+                <div class="service-form__btns-wrapper">
                   <button class="service-form__button save">
                     <svg width="26" height="26">
-                      <use
-                        xlink:href="./images/sprite.svg#icon-save"
-                      ></use>
+                      <use xlink:href="./images/sprite.svg#icon-save"></use>
                     </svg>
                     Save
                   </button>
-                  
-                  </div>
-                
-                
+                </div>
               </form>
-
-  
             </section>
           </div>
-          </div>
-
         </div>
       </div>
     </main>
@@ -501,8 +527,9 @@
           />
         </div>
 
-        <h6 class="modal__msg">«Haircut with a clipper»
-          service successfully created!</h6>
+        <h6 class="modal__msg">
+          «Haircut with a clipper» service successfully created!
+        </h6>
         <!--         <div class="modal__btns">
           <button class="modal__btn no">No</button>
           <button class="modal__btn yes">Yes</button>
