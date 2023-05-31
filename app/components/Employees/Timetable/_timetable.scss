@@ -1,0 +1,222 @@
+.timetable {
+  &__wrapper {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+
+    color: $contentMain;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: $contentMain;
+    margin-bottom: 2.8rem;
+  }
+
+  /* for small screens */
+
+  &__table {
+    width: 100%;
+    border: 0;
+    background-color: $backgroundSecondary;
+  }
+
+  &__table thead {
+    display: none;
+  }
+
+  & tr {
+    margin-bottom: 2rem;
+    display: block;
+    border-radius: 2rem;
+    border: 0.1rem solid $contentLight;
+    padding: 1.5rem;
+  }
+
+  & td {
+    display: block;
+    text-align: right;
+    font-size: 1.4rem;
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  & td.working-days {
+    padding: 1.5rem 0;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table td:before {
+    //position: absolute;
+    content: attr(data-label);
+    float: left;
+    //text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: $contentSecondary;
+    background-color: transparent;
+  }
+
+  table td:not(:first-of-type):before {
+    margin-top: 1.4rem;
+  }
+
+  &__select-group {
+    display: block;
+  }
+
+  &__select-group:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 13rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $accentMain;
+    background-color: transparent;
+    padding: 1rem;
+    margin-left: auto;
+
+    border: none;
+    outline: none;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__btn--deletebreak {
+    color: $contentSecondary;
+  }
+
+  &__btn-img {
+    width: 2.6rem;
+    height: 2.6rem;
+    fill: $accentMain;
+    margin-right: 1rem;
+  }
+
+  &__btn-img--delete {
+    fill: $contentSecondary;
+  }
+
+  &__btn.disabled {
+    color: $contentDop;
+    svg {
+      fill: $contentDop;
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .timetable {
+    margin-bottom: 2.8rem;
+    table {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: auto;
+      overflow-x: auto;
+      border: none;
+      /*       width: 100%;
+      max-width: 100%;
+      margin: auto;
+      table-layout: auto;
+      overflow-x: auto; */
+    }
+
+    &__select-group {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    table thead {
+      display: table-header-group;
+      border: none;
+      border-bottom: 0.1rem solid $contentLight;
+      letter-spacing: initial;
+    }
+
+    & tr {
+      display: table-row;
+      border: none;
+      border-bottom: 1px solid $contentLight;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    table td {
+      min-width: 16.6rem;
+      display: table-cell;
+      vertical-align: top;
+      padding: 1rem;
+    }
+    table th,
+    table td {
+      text-align: left;
+      border: none;
+    }
+
+    table th {
+      color: $contentSecondary;
+      background-color: $backgroundSecondary;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      padding: 1.5rem 1rem 2.5rem 1rem;
+    }
+
+    table th.breaks,
+    table td.breaks {
+      min-width: 47.3rem;
+    }
+
+    & td.working-days {
+      text-align: left;
+      min-width: 13.4rem;
+      padding: 1rem;
+    }
+
+    table td:before {
+      content: '';
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .timetable {
+    margin-bottom: 4rem;
+    table th {
+      color: $contentSecondary;
+      background-color: $backgroundSecondary;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      padding: 1.5rem 2rem 2.5rem 2rem;
+    }
+  }
+}

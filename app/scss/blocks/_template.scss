@@ -87,6 +87,10 @@
     font-weight: 600;
   }
 
+  &__edit-name {
+    display: block;
+  }
+
   &__title-img {
     width: 2.6rem;
     height: 2.6rem;
@@ -99,6 +103,10 @@
 
     &__page-top {
       margin-bottom: 2.8rem;
+    }
+
+    &__edit-name {
+      display: inline-block;
     }
 
     &__page-title {

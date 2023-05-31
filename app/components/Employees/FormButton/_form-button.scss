@@ -1,0 +1,36 @@
+.form-button {
+  margin-right: 2rem;
+  svg {
+    margin-right: 1rem;
+  }
+
+  &.save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accentMain;
+    color: $backgroundMain;
+    border: none;
+    padding: 1rem 1.4rem;
+    svg {
+      display: inline-block;
+      fill: $backgroundMain;
+    }
+    border: none;
+  }
+
+  &.delete {
+    background-color: transparent;
+    padding: 1rem 1.4rem;
+    border: 0.1rem solid $contentMain;
+  }
+  &.save.disabled {
+    background-color: $contentLight;
+    color: $contentDop;
+    border: none;
+
+    svg {
+      fill: $contentDop;
+    }
+  }
+}

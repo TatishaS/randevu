@@ -41,6 +41,7 @@ function scripts() {
     //"node_modules/swiper/swiper-bundle.min.js",
     //'node_modules/swiper/modules/effect-fade/effect-fade.js',
     'node_modules/choices.js/public/assets/scripts/choices.min.js',
+    'node_modules/cropperjs/dist/cropper.min.js',
     './app/js/libs/datepicker.min.js',
     'app/js/main.js',
   ])

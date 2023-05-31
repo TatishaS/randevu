@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: $backgroundMain;
   border: none;
   border-radius: 1.4rem;
   padding: 4.3rem 4.2rem 4.3rem 4.2rem;
@@ -17,6 +17,10 @@
   &.modal__service {
     min-height: 23rem;
     padding: 5.2rem 4.2rem 4.3rem 4.2rem;
+  }
+  &.modal__crop {
+    //width: 53.2rem;
+    padding: 2.4rem 2.4rem;
   }
 
   &.active {
@@ -41,6 +45,16 @@
     margin: 0 auto;
     width: 5rem;
     height: 5rem;
+  }
+
+  &__crop-wrapper {
+    padding: 2.4rem;
+    background-color: #140d0a;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.8rem;
   }
 
   &__msg {
@@ -86,6 +100,58 @@
     background-color: $backgroundMain;
     border: 0.1rem solid $contentMain;
   }
+
+  &__btn.cancel {
+    width: 50%;
+    color: $contentMain;
+    background-color: $backgroundMain;
+    border: 0.1rem solid $contentMain;
+    margin-right: 2.8rem;
+  }
+
+  &__btn.ok {
+    width: 50%;
+    background-color: $contentMain;
+    color: $backgroundMain;
+    border: 0.1rem solid $contentMain;
+  }
+
+  &__crop-img {
+    max-width: 100%;
+    width: 23.4rem;
+    //height: 23.4rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  /*  & .cropper-crop-box {
+    width: 100%;
+    height: 100%;
+  } */
+
+  & .cropper-view-box,
+  & .cropper-face {
+    border-radius: 50%;
+  }
+
+  /*   & .cropper-canvas {
+    img {
+      overflow: hidden;
+      object-fit: cover;
+      width: 234px;
+      height: 234px;
+    }
+  } */
+
+  /* The css styles for `outline` do not follow `border-radius` on iOS/Safari (#979). */
+  & .cropper-view-box {
+    outline: 0;
+    box-shadow: 0 0 0 1px #39f;
+  }
+
+  & .cropper-drag-box {
+    opacity: 0.75;
+  }
 }
 
 @media (min-width: $breakpoint768) {
@@ -93,5 +159,14 @@
     max-width: 60%;
     width: 40rem;
     min-height: 29rem;
+
+    &.modal__crop {
+      width: 53.2rem;
+      padding: 4.1rem 4.5rem;
+    }
+
+    &__crop-wrapper {
+      padding: 8.8rem;
+    }
   }
 }

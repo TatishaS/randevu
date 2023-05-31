@@ -47,17 +47,29 @@ function openConfirmModal() {
   const modalConfirm = document.querySelector('.modal__confirm');
   const overlay = document.querySelector('.overlay');
   const cancelBtn = document.querySelector('.cancel');
+  const deleteBtn = document.querySelector('.delete');
   const sidebar = document.querySelector('.sidebar');
   const modalConfirmCloseBtn = document.querySelector('.modal__confirm-close');
 
   if (!modalConfirm) return;
 
-  cancelBtn.addEventListener('click', e => {
-    e.preventDefault();
-    modalConfirm.classList.add('active');
-    overlay.classList.add('overlay--show');
-    sidebar.style.zIndex = '40';
-  });
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modalConfirm.classList.add('active');
+      overlay.classList.add('overlay--show');
+      sidebar.style.zIndex = '40';
+    });
+  }
+
+  if (deleteBtn) {
+    deleteBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modalConfirm.classList.add('active');
+      overlay.classList.add('overlay--show');
+      sidebar.style.zIndex = '40';
+    });
+  }
 
   modalConfirmCloseBtn.addEventListener('click', e => {
     e.preventDefault();
@@ -65,6 +77,42 @@ function openConfirmModal() {
     overlay.classList.remove('overlay--show');
     sidebar.style.zIndex = '70';
   });
+}
+function openCropPhotoModal() {
+  const modalCrop = document.querySelector('.modal__crop');
+  const overlay = document.querySelector('.overlay');
+  const save = document.querySelector('.save');
+  const sidebar = document.querySelector('.sidebar');
+  const modalConfirmCloseBtns = document.querySelectorAll(
+    '.modal__confirm-close'
+  );
+
+  if (!modalCrop) return;
+
+  if (save) {
+    save.addEventListener('click', e => {
+      e.preventDefault();
+      modalCrop.classList.add('active');
+      overlay.classList.add('overlay--show');
+      sidebar.style.zIndex = '40';
+    });
+  }
+
+  modalConfirmCloseBtns.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      modalCrop.classList.remove('active');
+      overlay.classList.remove('overlay--show');
+      sidebar.style.zIndex = '70';
+    });
+  });
+
+  /*   el.addEventListener('click', e => {
+    e.preventDefault();
+    modalCrop.classList.remove('active');
+    overlay.classList.remove('overlay--show');
+    sidebar.style.zIndex = '70';
+  }); */
 }
 
 /* Modal confirm creating service */
@@ -95,7 +143,6 @@ function handleCreateServiceModal() {
 /* Choices selects */
 const multiServiceSelect = () => {
   const elements = document.querySelectorAll('.choices-form-select');
-  console.log(elements);
 
   elements.forEach(el => {
     const choices = new Choices(el, {
@@ -107,9 +154,22 @@ const multiServiceSelect = () => {
   });
 };
 
+const multiChoicesSelect = () => {
+  const elements = document.querySelectorAll('.choices-form-multipleselect');
+
+  elements.forEach(el => {
+    const choices = new Choices(el, {
+      allowHTML: true,
+      searchEnabled: false,
+      itemSelectText: '',
+      position: 'bottom',
+      //removeItemButton: true,
+    });
+  });
+};
+
 const multiNameSelect = () => {
   const elements = document.querySelectorAll('.choices-dashboardform-select');
-  console.log(elements);
 
   elements.forEach(el => {
     const choices = new Choices(el, {
@@ -230,10 +290,80 @@ const handleSelectCategory = () => {
   });
 };
 
+/* Cropperjs for photo */
+
+function getRoundedCanvas(sourceCanvas) {
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  const width = sourceCanvas.width;
+  const height = sourceCanvas.height;
+
+  canvas.width = width;
+  canvas.height = height;
+  context.imageSmoothingEnabled = true;
+  context.drawImage(sourceCanvas, 0, 0, width, height);
+  context.globalCompositeOperation = 'destination-in';
+  context.beginPath();
+  context.arc(
+    width / 2,
+    height / 2,
+    Math.min(width, height) / 2,
+    0,
+    2 * Math.PI,
+    true
+  );
+  context.fill();
+  return canvas;
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  const image = document.getElementById('avatar');
+  const button = document.getElementById('crop-button');
+  //const result = document.getElementById('result');
+  let croppable = false;
+  const cropper = new Cropper(image, {
+    aspectRatio: 1,
+    viewMode: 1,
+    autoCropArea: 1,
+    minContainerWidth: 234,
+    movable: false,
+    zoomable: false,
+    rotatable: false,
+    scalable: false,
+    ready: function () {
+      croppable = true;
+    },
+  });
+
+  button.onclick = function () {
+    let croppedCanvas;
+    let roundedCanvas;
+    let roundedImage;
+
+    if (!croppable) {
+      return;
+    }
+
+    // Crop
+    croppedCanvas = cropper.getCroppedCanvas();
+
+    // Round
+    roundedCanvas = getRoundedCanvas(croppedCanvas);
+
+    // Show
+    //roundedImage = document.createElement('img');
+    //roundedImage.src = roundedCanvas.toDataURL();
+    //result.innerHTML = '';
+    //result.appendChild(roundedImage);
+  };
+});
+
 rightsideMenu();
 openConfirmModal();
+openCropPhotoModal();
 showSearchInput();
 multiServiceSelect();
+multiChoicesSelect();
 multiDropdown();
 multiServiceDropdown();
 multiLanguageDropdown();

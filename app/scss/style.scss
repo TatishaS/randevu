@@ -48,6 +48,15 @@
 @import '../components/Service/ServicetableRow/servicetable-row';
 @import '../components/Service/ListservicesSelect/listservices-select';
 
+/* Employees */
+@import '../components/Employees/EmployeesTable/employees-table';
+@import '../components/Employees/EmployeestableRow/employeestable-row';
+@import '../components/Employees/EmployeeForm/employee-form';
+@import '../components/Employees/Timetable/timetable';
+@import '../components/Employees/TimeSelect/time-select';
+@import '../components/Employees/Switch/switch';
+@import '../components/Employees/FormButton/form-button';
+
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
 @import 'blocks/signin';

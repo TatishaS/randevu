@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Employees</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/main.min.js"></script>
+  </head>
+  <body>
+    <!-- begin header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- begin Navbar -->
+          <nav class="nav">
+            <div class="header__account account">
+              <a href="#" class="account__link">
+                <div class="account__img-wrapper">
+                  <img class="account__img" src="./images/account-photo.jpg" />
+                  <!-- <span class="account__letters">CB</span> -->
+                </div>
+                <p class="account__name">Churchill Barbershop</p>
+              </a>
+            </div>
+            <div class="header__search">
+              <form class="header__search-form search">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search"
+                  autocomplete="off"
+                />
+                <button
+                  class="search__button icon-button icon-button--black icon-button--search"
+                  type="submit"
+                >
+                  <img
+                    alt="Search"
+                    class="icon-button__img"
+                    src="./images/icon-search.svg"
+                    width="26"
+                    height="26"
+                  />
+                </button>
+              </form>
+            </div>
+            <button class="header__button button">New appointment</button>
+
+            <div class="header__notification">
+              <a
+                class="header__notification-link icon-button icon-button--bell"
+              >
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-bell.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+                <span class="icon-button__quantity"> 3 </span></a
+              >
+            </div>
+
+            <div class="header__language language-select">
+              <button class="language-select__button">
+                <img
+                  class="language-select__button-img"
+                  src="./images/icon-world.svg"
+                />
+                <span class="language-select__language-selected">EN</span>
+              </button>
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">
+                    <a>Germany</a>
+                  </li>
+                  <li class="language-select__list-item"><a>Turkey</a></li>
+                  <li class="language-select__list-item">England<a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
+          </nav>
+          <!-- end Navbar -->
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <main class="employees employees--screen2 template">
+      <div class="template__container container">
+        <div class="template__inner">
+          <aside class="sidebar">
+            <div class="sidebar__inner">
+              <ul class="sidebar__list">
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button active">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-dashboard"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-service"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-employees"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-clients"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--websites">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-websites"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--settings">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="sidebar__listitem sidebar__listitem--more">
+                  <a class="sidebar__link sidebar-button sidebar-button--more">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-more"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="sidebar__footer">
+                <!--  <button class="sidebar__btn-logout icontext-button">
+                  Logout
+                </button> -->
+                <a href="" class="sidebar__logo-link">
+                  <img
+                    src="./images/logo-sidebar.svg"
+                    alt="Randevu logo"
+                    class="sidebar__logo-img"
+                    width="76"
+                    height="17"
+                  />
+                </a>
+              </div>
+            </div>
+          </aside>
+          <aside class="rightside-menu rightside-menu--close">
+            <div class="rightside-menu__inner">
+              <div class="rightside-menu__top">
+                <div class="rightside-menu__header">
+                  <div class="rightside-menu__account account">
+                    <a href="#" class="account__link">
+                      <div class="account__img-wrapper">
+                        <img
+                          class="account__img"
+                          src="./images/account-photo.jpg"
+                        />
+                        <!-- <span class="account__letters">CB</span> -->
+                      </div>
+                      <p class="account__name">Churchill Barbershop</p>
+                    </a>
+                  </div>
+                  <button class="rightside-menu__btn-close">
+                    <!--                     <svg width="14" height="14" class="rightside-menu__icon">
+                      <use xlink:href="./images/sprite.svg#icon-close"></use>
+                    </svg> -->
+                  </button>
+                </div>
+                <div class="rightside-menu__search">
+                  <form class="header__search-form search search--mobile">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="search__button icon-button icon-button--black icon-button--search"
+                      type="submit"
+                    >
+                      <img
+                        alt="Search"
+                        class="icon-button__img"
+                        src="./images/icon-search.svg"
+                        width="26"
+                        height="26"
+                      />
+                    </button>
+                  </form>
+                </div>
+
+                <ul class="rightside-menu__list">
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-websites"
+                        ></use>
+                      </svg> </a
+                    ><span>My websites</span>
+                  </li>
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-settings"
+                        ></use>
+                      </svg> </a
+                    ><span>Settings</span>
+                  </li>
+                </ul>
+                <div class="rightside-menu__language language-select">
+                  <button class="language-select__button">
+                    <img
+                      class="language-select__button-img"
+                      src="./images/icon-world.svg"
+                    />
+                    <span class="language-select__language-selected">EN</span>
+                  </button>
+
+                  <div class="language-select__list-wrapper">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">
+                        <a>Germany</a>
+                      </li>
+                      <li class="language-select__list-item"><a>Turkey</a></li>
+                      <li class="language-select__list-item">England<a></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rightside-menu__bottom">
+                <button
+                  class="rightside-menu__btn-logout sidebar__btn-logout icontext-button"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="template__content-wrapper">
+            <div class="template__page-top">
+              <div class="template__edit-wrapper">
+                <div class="template__topbtn-wrapper">
+                  <button class="template__top-btn">Back</button>
+                </div>
+                <div class="template__edit-inner">
+                  <h2 class="template__edit-title">
+                    Editing employee<span class="template__edit-name"
+                      >«Mario Cantorella»</span
+                    >
+                  </h2>
+                  <img
+                    class="template__title-img"
+                    src="./images/icon-edit.svg"
+                    alt="edit row"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <section
+              class="template__service-block service-block service-block--employee"
+            >
+              <!--               <div class="service-block__top">
+                <button
+                  class="service-block__btn wide-button wide-button--redborder"
+                >
+                  A list of employees
+                </button>
+                <button class="service-block__btn wide-button active">
+                  Add employee
+                </button>
+              </div> -->
+              <form class="service-block__form employee-form">
+                <div class="employee-form__row">
+                  <span class="employee-form__label">Edit employee photo</span>
+                  <label
+                    for="employee-photo-upload"
+                    class="employee-form__photo-label"
+                  >
+                    <span class="employee-form__file-wrapper">
+                      <span class="employee-form__file-preview loaded">
+                        <!--                         <span class="employee-form__file-add-btn">
+                          <img
+                            src="./images/icon-plus-circle.svg"
+                            alt="Upload photo"
+                          />
+                        </span> -->
+                        <span class="employee-form__file-delete-btn">
+                          <img
+                            src="./images/icon-trash-white.svg"
+                            alt="Delete photo"
+                          />
+                        </span>
+                      </span>
+                    </span>
+                  </label>
+                  <input
+                    class="employee-form__file-input visually-hidden"
+                    type="file"
+                    name="employee-photo"
+                    id="employee-photo-upload"
+                  />
+                </div>
+                <div class="employee-form__inputs-wrapper">
+                  <div class="employee-form__row">
+                    <input
+                      type="text"
+                      class="employee-form__input employee-form__input--name"
+                      id="name"
+                      name="name"
+                      placeholder="Name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="employee-form__row">
+                    <input
+                      type="text"
+                      class="employee-form__input employee-form__input--surname"
+                      id="surname"
+                      name="surname"
+                      placeholder="Surname"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="employee-form__row">
+                    <input
+                      type="text"
+                      class="employee-form__input employee-form__input--email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="employee-form__row">
+                    <input
+                      type="text"
+                      class="employee-form__input employee-form__input--phone"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="employee-form__row">
+                    <div class="employee-form__select service-select">
+                      <label
+                        for="position"
+                        class="employee-form__select-label visually-hidden"
+                        >Position</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="position"
+                        inputmode="none"
+                      >
+                        <option value="" selected disabled>Position</option>
+                        <option value="admin">Admin</option>
+                        <option value="owner">Owner</option>
+                        <option value="worker">Worker</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="employee-form__row">
+                    <div class="employee-form__select service-select">
+                      <label
+                        for="status"
+                        class="employee-form__select-label visually-hidden"
+                        >Status</label
+                      >
+                      <select
+                        class="choices-form-select"
+                        id="status"
+                        inputmode="none"
+                      >
+                        <option value="" selected disabled>Status</option>
+                        <option value="working">Working</option>
+                        <option value="removed">Removed</option>
+                        <option value="day-off">Day off</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="employee-form__row employee-form__row--services">
+                    <div
+                      class="employee-form__select service-select service-select--multiple"
+                    >
+                      <label
+                        for="services"
+                        class="employee-form__select-label visually-hidden"
+                        >Services</label
+                      >
+                      <select
+                        class="choices-form-multipleselect"
+                        id="services"
+                        inputmode="none"
+                        multiple
+                      >
+                        <option value="">Services</option>
+                        <option value="haircut">Haircut</option>
+                        <option value="childrens-haircut">
+                          Children's haircut
+                        </option>
+                        <option value="haircut-with-clipper">
+                          Haircut with clipper
+                        </option>
+                        <option value="manicure">Manicure</option>
+                        <option value="styling">Styling</option>
+                        <option value="spa-ritual">SPA ritual</option>
+                        <option value="face-revitalizing">
+                          Face revitalizing
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!--  <div class="employee-form__row">
+                  <textarea
+                
+                  class="employee-form__textarea"
+                  id="description"
+                  name="description"
+                  placeholder="Description" rows="8"
+                ></textarea>
+                </div> -->
+                <div class="employee-form__timetable timetable">
+                  <h2 class="timetable__title">Timetable</h2>
+                  <div class="timetable__wrapper">
+                    <table class="timetable__table">
+                      <thead>
+                        <tr>
+                          <th>Working days</th>
+                          <th>Start time</th>
+                          <th>End time</th>
+                          <th class="breaks">Break time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="monday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="monday-switch"
+                                    checked
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Mon</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-mon"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-mon"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break2-start-mon"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break2-end-mon"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--deletebreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img timetable__btn-img--delete"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-trash-clear"
+                                  ></use>
+                                </svg>
+                                <span>Delete</span>
+                              </button>
+                            </span>
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break3-start-mon"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break3-end-mon"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--deletebreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img timetable__btn-img--delete"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-trash-clear"
+                                  ></use>
+                                </svg>
+                                <span>Delete</span>
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="tuesday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="tuesday-switch"
+                                    checked
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Tue</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time-tue"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time-tue"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-tue"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-tue"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="wednesday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="wednesday-switch"
+                                    checked
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Wed</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time-wed"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time-wed"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-wed"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-wed"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="thursday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="thursday-switch"
+                                    checked
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Thu</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time-thu"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time-thu"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-thu"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-thu"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="friday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="friday-switch"
+                                    checked
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Fri</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time-fri"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time-fri"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-fri"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-fri"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="saturday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="saturday-switch"
+                                    checked
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Sat</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time-sat"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time-sat"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-sat"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-sat"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Working days" class="working-days">
+                            <span class="timetable__day-switch switch">
+                              <span class="switch__element">
+                                <label
+                                  for="sunday-switch"
+                                  class="switch__label"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    class="switch__input visually-hidden"
+                                    id="sunday-switch"
+                                  />
+                                  <span class="switch__slider"></span>
+                                </label>
+                              </span>
+                              <span class="switch__name">Sun</span>
+                            </span>
+                          </td>
+                          <td data-label="Start time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="start-time-sun"
+                                inputmode="none"
+                              >
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                                <option value="02:00pm">02:00 PM</option>
+                                <option value="03:00pm">03:00 PM</option>
+                                <option value="04:00pm">04:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="End time">
+                            <span class="timetable__timeselect time-select">
+                              <select
+                                class="choices-form-select"
+                                id="end-time-sun"
+                                inputmode="none"
+                              >
+                                <option value="7:00am">7:00 AM</option>
+                                <option value="8:00am">8:00 AM</option>
+                                <option value="9:00am">9:00 AM</option>
+                                <option value="10:00am">10:00 AM</option>
+                                <option value="11:00am">11:00 AM</option>
+                                <option value="12:00am">12:00 AM</option>
+                                <option value="01:00pm">01:00 PM</option>
+                              </select>
+                            </span>
+                          </td>
+                          <td data-label="Break time" class="breaks">
+                            <span class="timetable__select-group">
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-start-sun"
+                                  inputmode="none"
+                                >
+                                  <option value="10:00am">10:00 AM</option>
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="12:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <span class="timetable__timeselect time-select">
+                                <select
+                                  class="choices-form-select"
+                                  id="break1-end-sun"
+                                  inputmode="none"
+                                >
+                                  <option value="11:00am">11:00 AM</option>
+                                  <option value="11:00am">12:00 AM</option>
+                                  <option value="01:00pm">01:00 PM</option>
+                                  <option value="02:00pm">02:00 PM</option>
+                                  <option value="03:00pm">03:00 PM</option>
+                                  <option value="04:00pm">04:00 PM</option>
+                                </select>
+                              </span>
+                              <button
+                                class="timetable__btn timetable__btn--addbreak disabled"
+                              >
+                                <svg
+                                  class="timetable__btn-img"
+                                  width="26"
+                                  height="26"
+                                >
+                                  <use
+                                    xlink:href="./images/sprite.svg#icon-plus"
+                                  ></use>
+                                </svg>
+                                Add break
+                              </button>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="employee-form__btns-wrapper">
+                  <button class="employee-form__button form-button delete">
+                    <svg width="26" height="26">
+                      <use xlink:href="./images/sprite.svg#icon-trash"></use>
+                    </svg>
+                    Delete
+                  </button>
+                  <button class="employee-form__button form-button save">
+                    <svg width="26" height="26">
+                      <use xlink:href="./images/sprite.svg#icon-save"></use>
+                    </svg>
+                    Save
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay"></div>
+    <div class="modal modal__confirm">
+      <div class="modal__close modal__confirm-close"></div>
+      <div class="modal__inner">
+        <div class="modal__img-wrapper">
+          <img
+            src="./images/icon-delete.svg"
+            alt="delete image"
+            class="modal__img"
+            width="50"
+            height="50"
+          />
+        </div>
+
+        <h6 class="modal__msg">
+          Are you sure you want to&nbsp;delete this employee?
+        </h6>
+        <div class="modal__btns">
+          <button class="modal__btn no">No</button>
+          <button class="modal__btn yes">Yes</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal__crop">
+      <div class="modal__close modal__confirm-close"></div>
+      <div class="modal__inner">
+        <h6 class="modal__msg">Crop photo</h6>
+        <div class="modal__crop-wrapper">
+          <div class="modal__cropimg-wrapper">
+            <img
+              class="modal__crop-img"
+              id="avatar"
+              src="./images/avatar-1.jpg"
+              alt="Employee photo"
+            />
+          </div>
+        </div>
+        <div class="modal__btns">
+          <button class="modal__btn cancel">Cancel</button>
+          <button class="modal__btn ok" id="crop-button">Ok</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

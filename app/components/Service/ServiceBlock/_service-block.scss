@@ -32,7 +32,8 @@
       margin-bottom: 0;
     }
 
-    &.service-block--category {
+    &.service-block--category,
+    &.service-block--employee {
       .service-block__top {
         margin-bottom: 2rem;
       }
@@ -42,7 +43,8 @@
 
 @media (min-width: $breakpoint1200) {
   .service-block {
-    &.service-block--category {
+    &.service-block--category,
+    &.service-block--employee {
       .service-block__top {
         margin-bottom: 2.8rem;
       }

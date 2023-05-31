@@ -1,43 +1,33 @@
-.service-select {
+.time-select {
   position: relative;
   display: flex;
 
+  width: 14.6rem;
+  margin-left: auto;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
   & .choices {
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.6rem;
-
-    color: $contentMain;
-
+    color: $contentSecondary;
+    text-transform: uppercase;
     background: $backgroundMain;
     border: 0.1rem solid $backgroundExtraLight;
     border-radius: 1.4rem;
-  }
-
-  &.service-select--gender .choices {
-    color: $contentSecondary;
-  }
-
-  &.service-select--gender .choices::before {
-    position: absolute;
-    border: none;
-    content: 'Gender:';
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 2rem;
   }
 
   & .choices::after {
     position: absolute;
     border: none;
     content: '';
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
-    right: 3rem;
+    right: 2.6rem;
     background-image: url('../../../images/icon-select-arrow.svg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -67,66 +57,12 @@
     min-height: 4rem;
     //padding: 0.3rem;
     background-color: transparent;
+    //padding: 0.8rem 3rem 0.8rem 2rem;
   }
 
   & .choices__list.choices__list--single {
-    padding: 0.8rem 3rem 0.8rem 1.3rem;
-
-    .choices__placeholder {
-      font-weight: 400;
-      opacity: 1;
-      background-color: $backgroundMain;
-      color: $contentSecondary;
-    }
-  }
-
-  &.service-select--multiple {
-    .choices__inner {
-      padding: 1.1rem 4.5rem 1.1rem 1.3rem;
-    }
-
-    .choices__input {
-      background-color: transparent;
-      margin-bottom: 0;
-    }
-
-    .choices__input.choices__input--cloned {
-      font-weight: 400;
-    }
-
-    .choices__placeholder {
-      background-color: $backgroundMain;
-      color: $contentSecondary;
-      font-weight: 400;
-    }
-
-    .choices__list.choices__list--multiple {
-      .choices__item {
-        padding: 0.8rem 2rem 0.8rem 0.9rem;
-        color: $backgroundMain;
-        background-color: $contentMain;
-        font-weight: 500;
-        font-size: 1.4rem;
-        line-height: 1.6rem;
-        margin-right: 0.6rem;
-        margin-bottom: 1rem;
-        border-radius: 1rem;
-        border: none;
-      }
-    }
-
-    .choices__button {
-      padding: 0;
-      margin: 0 0 0 2.5rem;
-      border: none;
-      opacity: 1;
-      background-size: 0.9rem;
-    }
-  }
-
-  &.service-select--gender .choices__list.choices__list--single {
-    padding: 0.8rem 3rem 0.8rem 8rem;
-    color: $accentMain;
+    padding: 0.8rem 4rem 0.8rem 1.3rem;
+    text-align: left;
   }
 
   & .choices__list {
@@ -212,10 +148,19 @@
   }
 
   & .choices__list--dropdown .choices__item--selectable {
-    padding: 1.5rem 4rem 1.5rem 2rem;
+    padding: 1rem 4rem 1rem 2rem;
+    text-align: left;
     border-bottom: 0.1rem solid $contentLight;
   }
   & .choices__list--dropdown .choices__item--selectable:last-child {
     border-bottom: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .time-select {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

@@ -1,4 +1,4 @@
-.service-table {
+.employees-table {
   padding-bottom: 10.4rem;
 
   &__wrapper {
@@ -27,15 +27,6 @@
     margin-bottom: 2.8rem;
   }
 
-  /*   &.editable {
-    margin-bottom: 0;
-    padding-bottom: 0rem;
-  } */
-
-  /*  &__table.editable {
-    margin-bottom: 2rem;
-  } */
-
   &__thead {
     color: $contentSecondary;
   }
@@ -53,7 +44,8 @@
   }
 
   &__table td.services {
-    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
   }
 
   td:first-child,
@@ -74,19 +66,20 @@
   }
 
   &__table .name {
-    min-width: 6rem;
+    min-width: 27rem;
+  }
+  &__table .phone {
+    min-width: 18rem;
+  }
+
+  &__table .role {
+    min-width: 13.6rem;
   }
 
   &__table .services {
-    min-width: 38rem;
-  }
-  &__table .duration {
-    min-width: 14rem;
-  }
-
-  &__table .price,
-  &__table .gender {
-    min-width: 12rem;
+    white-space: normal;
+    min-width: 30rem;
+    max-width: 34.2rem;
   }
 
   &__table .action {
@@ -157,18 +150,10 @@
 }
 
 @media (min-width: $breakpoint768) {
-  .service-table {
-    /*   &.editable {
-      padding-bottom: 0;
-    } */
-
+  .employees-table {
     &__table {
       margin-bottom: 2.8rem;
     }
-
-    /*   &__table.editable {
-      margin-bottom: 3rem;
-    } */
 
     &__top {
       padding: 0 2rem 0 1.4rem;
@@ -196,10 +181,6 @@
     flex-grow: 1;
     max-width: 100%;
 
-    /*   &.editable {
-      padding: 0 2rem 0 0;
-    }
- */
     &__top {
       padding: 0 0.8rem 0 0;
     }
@@ -221,8 +202,23 @@
     }
 
     /*  td:first-child,
-      th:first-child {
-        padding: 1.5rem 2rem 1.5rem 2.2rem;
-      } */
+        th:first-child {
+          padding: 1.5rem 2rem 1.5rem 2.2rem;
+        } */
+  }
+}
+
+@media (min-width: 1400px) {
+  .employees-table {
+    &__table th,
+    &__table td {
+      text-align: left;
+      padding: 1.5rem 2rem;
+    }
+
+    td:first-child,
+    th:first-child {
+      padding: 1.5rem 2rem 1.5rem 2.2rem;
+    }
   }
 }
