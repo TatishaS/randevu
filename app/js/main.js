@@ -163,7 +163,7 @@ const multiChoicesSelect = () => {
       searchEnabled: false,
       itemSelectText: '',
       position: 'bottom',
-      //removeItemButton: true,
+      removeItemButton: true,
     });
   });
 };
@@ -263,6 +263,18 @@ const datePickerLegend = () => {
   legend.innerHTML = html;
   calendar.insertAdjacentHTML('beforeend', html);
 };
+
+/* Time picker */
+
+const picker = new AppointmentPicker(document.getElementById('time'), {
+  interval: 30,
+  mode: '24h',
+  minTime: 10,
+  maxTime: 21,
+  startTime: 8,
+  endTime: 23,
+  disabled: ['8:00', '12:30', '14:30'],
+});
 
 /* Handling categories */
 

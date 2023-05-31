@@ -43,6 +43,7 @@ function scripts() {
     'node_modules/choices.js/public/assets/scripts/choices.min.js',
     'node_modules/cropperjs/dist/cropper.min.js',
     './app/js/libs/datepicker.min.js',
+    'node_modules/appointment-picker/dist/appointment-picker.min.js',
     'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))

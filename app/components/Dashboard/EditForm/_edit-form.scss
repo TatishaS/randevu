@@ -237,6 +237,64 @@
   & .edit-form__datepicker-arrow.disabled {
     fill: #afacac;
   }
+
+  /* Time appointment picker*/
+
+  & .appo-picker.is-open {
+    width: 37.4rem;
+    top: 6rem;
+    max-width: 37.4rem;
+    padding: 2.4rem 1.4rem 1.4rem 2.4rem;
+    border-radius: 1.2rem;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+  }
+
+  & .appo-picker-title {
+    display: none;
+  }
+
+  & .appo-picker-list {
+    max-width: initial;
+  }
+
+  & .appo-picker-list-item {
+    height: 4rem;
+    border-radius: 0.6rem;
+    //margin: 0 0.9rem 0.9rem 0;
+    margin-bottom: 1rem;
+
+    input[type='button'] {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      font-weight: 500;
+      color: $contentMain;
+      padding: 0.7rem 1rem;
+      margin: 0 0.9rem 0.1rem 0;
+
+      background-color: #e0f1d8;
+    }
+
+    input[type='button'].is-selected {
+      box-shadow: none;
+      color: $backgroundMain;
+      background: $gradientMain;
+    }
+  }
+
+  & .appo-picker-list-item.disabled {
+    input[type='button'] {
+      background-color: $accentLight;
+    }
+  }
+
+  /*  & .appo-picker-list-item:nth-of-type(4n) {
+    margin: 0;
+  } */
 }
 
 /* @media (min-width: 390px) {
