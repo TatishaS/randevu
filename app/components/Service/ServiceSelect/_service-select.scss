@@ -51,6 +51,7 @@
     margin-top: -2.5px;
     transform: translateY(-50%) rotate(180deg);
   }
+
   & .choices.is-open.is-focused {
     border: none;
     border-radius: 1.4rem 1.4rem 0 0;
@@ -82,7 +83,7 @@
 
   &.service-select--multiple {
     .choices__inner {
-      padding: 1.1rem 4.5rem 1.1rem 1.3rem;
+      padding: 1.1rem 4.5rem 1.1rem 1.6rem;
     }
 
     .choices__input {
@@ -92,12 +93,26 @@
 
     .choices__input.choices__input--cloned {
       font-weight: 400;
+      background-color: $backgroundMain;
+      color: $contentSecondary;
+      opacity: 1;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+
+    .choices.is-open {
+      .choices__input.choices__input--cloned {
+        width: 100%;
+      }
     }
 
     .choices__placeholder {
       background-color: $backgroundMain;
       color: $contentSecondary;
       font-weight: 400;
+      opacity: 1;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
     }
 
     .choices__list.choices__list--multiple {

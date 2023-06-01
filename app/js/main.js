@@ -42,6 +42,67 @@ function showSearchInput() {
   });
 }
 
+/* Cropperjs for photo */
+
+let cropper;
+
+function getRoundedCanvas(sourceCanvas) {
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  const width = sourceCanvas.width;
+  const height = sourceCanvas.height;
+
+  canvas.width = width;
+  canvas.height = height;
+  context.imageSmoothingEnabled = true;
+  context.drawImage(sourceCanvas, 0, 0, width, height);
+  context.globalCompositeOperation = 'destination-in';
+  context.beginPath();
+  context.arc(
+    width / 2,
+    height / 2,
+    Math.min(width, height) / 2,
+    0,
+    2 * Math.PI,
+    true
+  );
+  context.fill();
+  return canvas;
+}
+
+function applyCropToImg() {
+  const image = document.getElementById('avatar');
+  const button = document.getElementById('crop-button');
+  let croppable = false;
+  cropper = new Cropper(image, {
+    aspectRatio: 1,
+    viewMode: 1,
+    autoCropArea: 1,
+    minConteinerWidth: 234,
+    scalable: false,
+    ready: function () {
+      croppable = true;
+    },
+  });
+  console.log('Cropper instance created');
+
+  button.addEventListener('click', () => {
+    let croppedCanvas;
+    let roundedCanvas;
+    console.log('Crop click');
+
+    if (!croppable) {
+      return;
+    }
+
+    // Crop
+    croppedCanvas = cropper.getCroppedCanvas();
+
+    // Round
+    roundedCanvas = getRoundedCanvas(croppedCanvas);
+  });
+}
+
 /* Окно сообщения об успешной отправке */
 function openConfirmModal() {
   const modalConfirm = document.querySelector('.modal__confirm');
@@ -92,9 +153,11 @@ function openCropPhotoModal() {
   if (save) {
     save.addEventListener('click', e => {
       e.preventDefault();
+
       modalCrop.classList.add('active');
       overlay.classList.add('overlay--show');
       sidebar.style.zIndex = '40';
+      applyCropToImg();
     });
   }
 
@@ -104,6 +167,10 @@ function openCropPhotoModal() {
       modalCrop.classList.remove('active');
       overlay.classList.remove('overlay--show');
       sidebar.style.zIndex = '70';
+      if (!cropper) return;
+
+      cropper.destroy();
+      console.log('Cropper instance destroyed');
     });
   });
 
@@ -165,6 +232,14 @@ const multiChoicesSelect = () => {
       position: 'bottom',
       removeItemButton: true,
     });
+
+    el.addEventListener(
+      'choice',
+      function (event) {
+        choices.hideDropdown();
+      },
+      false
+    );
   });
 };
 
@@ -302,74 +377,6 @@ const handleSelectCategory = () => {
   });
 };
 
-/* Cropperjs for photo */
-
-function getRoundedCanvas(sourceCanvas) {
-  const canvas = document.createElement('canvas');
-  const context = canvas.getContext('2d');
-  const width = sourceCanvas.width;
-  const height = sourceCanvas.height;
-
-  canvas.width = width;
-  canvas.height = height;
-  context.imageSmoothingEnabled = true;
-  context.drawImage(sourceCanvas, 0, 0, width, height);
-  context.globalCompositeOperation = 'destination-in';
-  context.beginPath();
-  context.arc(
-    width / 2,
-    height / 2,
-    Math.min(width, height) / 2,
-    0,
-    2 * Math.PI,
-    true
-  );
-  context.fill();
-  return canvas;
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-  const image = document.getElementById('avatar');
-  const button = document.getElementById('crop-button');
-  //const result = document.getElementById('result');
-  let croppable = false;
-  const cropper = new Cropper(image, {
-    aspectRatio: 1,
-    viewMode: 1,
-    autoCropArea: 1,
-    minContainerWidth: 234,
-    movable: false,
-    zoomable: false,
-    rotatable: false,
-    scalable: false,
-    ready: function () {
-      croppable = true;
-    },
-  });
-
-  button.onclick = function () {
-    let croppedCanvas;
-    let roundedCanvas;
-    let roundedImage;
-
-    if (!croppable) {
-      return;
-    }
-
-    // Crop
-    croppedCanvas = cropper.getCroppedCanvas();
-
-    // Round
-    roundedCanvas = getRoundedCanvas(croppedCanvas);
-
-    // Show
-    //roundedImage = document.createElement('img');
-    //roundedImage.src = roundedCanvas.toDataURL();
-    //result.innerHTML = '';
-    //result.appendChild(roundedImage);
-  };
-});
-
 rightsideMenu();
 openConfirmModal();
 openCropPhotoModal();
@@ -384,4 +391,5 @@ datePickerLegend();
 handleSelectCategory();
 multiNameSelect();
 handleCreateServiceModal();
+//applyCropToImg();
 //categorySelect();
