@@ -207,6 +207,38 @@ function handleCreateServiceModal() {
   });
 }
 
+/* Popup with full services list */
+
+function handleServicesPopup() {
+  const popup = document.querySelector('.popup');
+  const overlay = document.querySelector('.overlay');
+  const moreBtns = document.querySelectorAll('.services__more-btn');
+  const sidebar = document.querySelector('.sidebar');
+  const popupConfirmCloseBtns = document.querySelectorAll(
+    '.popup__confirm-close'
+  );
+
+  if (!popup) return;
+
+  moreBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      popup.classList.add('active');
+      overlay.classList.add('overlay--show');
+      sidebar.style.zIndex = '40';
+    });
+  });
+
+  popupConfirmCloseBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      popup.classList.remove('active');
+      overlay.classList.remove('overlay--show');
+      sidebar.style.zIndex = '70';
+    });
+  });
+}
+
 /* Choices selects */
 const multiServiceSelect = () => {
   const elements = document.querySelectorAll('.choices-form-select');
@@ -234,7 +266,7 @@ const multiChoicesSelect = () => {
     });
 
     el.addEventListener(
-      'choice',
+      'change',
       function (event) {
         choices.hideDropdown();
       },
@@ -391,5 +423,6 @@ datePickerLegend();
 handleSelectCategory();
 multiNameSelect();
 handleCreateServiceModal();
+handleServicesPopup();
 //applyCropToImg();
 //categorySelect();

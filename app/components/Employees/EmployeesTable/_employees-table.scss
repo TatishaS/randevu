@@ -66,6 +66,22 @@
   &__table td.services {
     font-size: 1.4rem;
     line-height: 1.6rem;
+    overflow: visible;
+
+    /*   .services__morebtn-wrapper {
+      position: relative;
+    } */
+
+    .services__more-btn {
+      display: inline-block;
+      padding: 0 0.2rem;
+      width: 2.5rem;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      text-indent: 10%;
+    }
   }
 
   td:first-child,
