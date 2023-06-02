@@ -82,16 +82,40 @@
   }
 
   &.service-select--multiple {
+    .choices::after {
+      position: absolute;
+      border: none;
+      content: '...';
+      font-size: 2rem;
+      line-height: 1.6rem;
+      top: 45%;
+      transform: translateY(-50%);
+      right: 3rem;
+      background-image: none;
+      /*       background-image: url('../../../images/icon-select-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain; */
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+    }
     .choices__inner {
       padding: 1.1rem 4.5rem 1.1rem 1.6rem;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
     }
 
     .choices__input {
       background-color: transparent;
       margin-bottom: 0;
+      padding: 0.8rem 0.8rem 0.2rem;
+      margin-bottom: 0.8rem;
     }
 
     .choices__input.choices__input--cloned {
+      order: -1;
       font-weight: 400;
       background-color: $backgroundMain;
       color: $contentSecondary;

@@ -253,6 +253,22 @@ const multiServiceSelect = () => {
   });
 };
 
+const multiTimeSelect = () => {
+  const elements = document.querySelectorAll('.choices-time-select');
+  console.log(elements);
+
+  elements.forEach(el => {
+    const choices = new Choices(el, {
+      allowHTML: true,
+      searchEnabled: true,
+      itemSelectText: '',
+      position: 'bottom',
+      renderChoiceLimit: 3,
+      searchResultLimit: 3,
+    });
+  });
+};
+
 const multiChoicesSelect = () => {
   const elements = document.querySelectorAll('.choices-form-multipleselect');
 
@@ -414,6 +430,7 @@ openConfirmModal();
 openCropPhotoModal();
 showSearchInput();
 multiServiceSelect();
+multiTimeSelect();
 multiChoicesSelect();
 multiDropdown();
 multiServiceDropdown();

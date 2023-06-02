@@ -16,9 +16,9 @@
   max-width: 80vw;
   min-width: 20rem;
   min-height: 29rem;
-  max-height: 75vh;
+  //max-height: 75vh;
   z-index: 150;
-  overflow: scroll;
+  //overflow: scroll;
 
   &.active {
     display: block;
@@ -101,11 +101,12 @@
     border: 0.1rem solid $contentMain;
   }
 }
-
+/* 
 @media (min-width: $breakpoint768) {
   .popup {
     //max-width: 60%;
     min-width: 20rem;
-    min-height: 29rem;
+  
   }
 }
+ */

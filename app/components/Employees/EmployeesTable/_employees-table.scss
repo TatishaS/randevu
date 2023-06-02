@@ -21,6 +21,7 @@
     margin: auto;
     table-layout: auto;
     overflow-x: auto;
+
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -72,16 +73,25 @@
       position: relative;
     } */
 
+    .services__inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
     .services__more-btn {
-      display: inline-block;
-      padding: 0 0.2rem;
-      width: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      //padding: 0 0.2rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 0.6rem;
       background: transparent;
-      border: none;
+      border: 0.1rem solid $contentLight;
       outline: none;
       cursor: pointer;
-      text-indent: 10%;
-      color: $contentMain;
+      margin-left: 1rem;
     }
   }
 

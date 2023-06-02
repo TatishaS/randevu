@@ -121,11 +121,15 @@
       fill: $contentDop;
     }
   }
+
+  & tr.extra {
+    display: none;
+  }
 }
 
 @media (min-width: $breakpoint768) {
   .timetable {
-    margin-bottom: 2.8rem;
+    //margin-bottom: 2.8rem;
     table {
       display: block;
       overflow: hidden;
@@ -137,12 +141,8 @@
       border-spacing: 0;
       table-layout: auto;
       overflow-x: auto;
+      overflow-y: visible;
       border: none;
-      /*       width: 100%;
-      max-width: 100%;
-      margin: auto;
-      table-layout: auto;
-      overflow-x: auto; */
     }
 
     &__select-group {
@@ -166,6 +166,12 @@
       border-bottom: 1px solid $contentLight;
       padding: 0;
       margin-bottom: 0;
+    }
+
+    & tr.extra {
+      display: table-row;
+      height: 14rem;
+      border-bottom: none;
     }
 
     table td {
@@ -209,7 +215,7 @@
 
 @media (min-width: $breakpoint1200) {
   .timetable {
-    margin-bottom: 4rem;
+    //margin-bottom: 4rem;
     table th {
       color: $contentSecondary;
       background-color: $backgroundSecondary;
