@@ -140,7 +140,7 @@
     border: 0.1rem solid $backgroundExtraLight;
     border-radius: 1.4rem;
     padding: 1.5rem 4rem;
-    z-index: 1;
+    //z-index: 1;
     text-align: center;
 
     &::placeholder {
@@ -166,7 +166,7 @@
     transform: rotate(90deg);
     border: none;
     outline: none;
-    z-index: 5;
+    z-index: 1;
     cursor: pointer;
   }
 
@@ -178,6 +178,12 @@
     right: 1.5rem;
     top: 24%;
     transform: rotate(270deg);
+  }
+
+  &__select-group.unset {
+    .time-select {
+      display: none;
+    }
   }
 }
 
@@ -263,6 +269,12 @@
     table td:before {
       content: '';
       display: none;
+    }
+
+    &__select-group.unset {
+      .timetable__btn {
+        margin-left: initial;
+      }
     }
   }
 }
