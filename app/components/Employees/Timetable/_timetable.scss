@@ -125,6 +125,37 @@
   & tr.extra {
     display: none;
   }
+
+  &__time-input {
+    position: relative;
+
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    color: $contentMain;
+
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+  }
+
+  &__time-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    /*       background-image: url('../../../images/icon-select-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain; */
+  }
+
+  &__time-btn.prev {
+    left: 0;
+  }
 }
 
 @media (min-width: $breakpoint768) {
