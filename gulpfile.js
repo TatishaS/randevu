@@ -37,13 +37,16 @@ function images() {
 
 function scripts() {
   return src([
-    //"node_modules/jquery/dist/jquery.js",
+    'node_modules/jquery/dist/jquery.min.js',
     //"node_modules/swiper/swiper-bundle.min.js",
     //'node_modules/swiper/modules/effect-fade/effect-fade.js',
+
     'node_modules/choices.js/public/assets/scripts/choices.min.js',
     'node_modules/cropperjs/dist/cropper.min.js',
     './app/js/libs/datepicker.min.js',
+
     'node_modules/appointment-picker/dist/appointment-picker.min.js',
+    './app/js/libs/select2.full.min.js',
     'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))

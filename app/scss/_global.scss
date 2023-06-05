@@ -95,6 +95,91 @@ body {
   line-height: 2.8rem;
 }
 
+/* Select2 styles */
+
+.select-dropdown {
+  position: static;
+}
+.select-dropdown .select-dropdown--above {
+  margin-top: 336px;
+}
+
+.select2-container--default .time-select__dropdown.select2-dropdown {
+  background-color: $backgroundMain;
+  border: 0.1rem solid $accentMain;
+  border-top: none;
+  border-radius: 0 0 1.4rem 1.4rem;
+  //margin-top: 0;
+  overflow: hidden;
+}
+
+.select2-container--default
+  .time-select__dropdown.select2-dropdown
+  .select2-results__option {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  padding: 1.5rem 4rem 1.5rem 2rem;
+}
+
+.select2-container--default
+  .time-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--highlighted {
+  background-color: transparent;
+  color: $contentMain;
+}
+
+.select2-container--default
+  .time-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--selected.select2-results__option--highlighted,
+.select2-container--default
+  .time-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--selected {
+  color: $accentMain;
+  background-color: $domLight;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    border: none;
+    background-image: url('../../../images/icon-check-red.svg');
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    right: 1.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+.select2-container--default
+  .time-select__dropdown.select2-dropdown
+  .select2-results
+  > .select2-results__options {
+  max-height: 13.9rem;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $contentLight;
+    border-radius: 1.4rem;
+    //margin-block: 0.5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $contentDop;
+    border-radius: 1.4rem;
+  }
+
+  @supports (scrollbar-color: grey white) {
+    scrollbar-color: $contentDop $contentLight;
+  }
+}
+
 // Animations
 // Fade
 @keyframes fade {

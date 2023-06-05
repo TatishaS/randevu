@@ -1,5 +1,13 @@
 'use strict';
 
+/* Select2 jQuery */
+window.addEventListener('DOMContentLoaded', function () {
+  $('.select2-time-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'time-select__dropdown',
+  });
+});
+
 /* Rightside menu */
 function rightsideMenu() {
   const moreButton = document.querySelector('.sidebar-button--more');
@@ -255,7 +263,6 @@ const multiServiceSelect = () => {
 
 const multiTimeSelect = () => {
   const elements = document.querySelectorAll('.choices-time-select');
-  console.log(elements);
 
   elements.forEach(el => {
     const choices = new Choices(el, {
