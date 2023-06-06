@@ -2,7 +2,97 @@
   position: relative;
   display: flex;
 
-  & .choices {
+  /* Select2 styles */
+  & .select2 {
+    width: 100% !important;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    background: $backgroundMain;
+    border-radius: 1.4rem;
+    font-weight: 500;
+  }
+
+  & .select2-selection {
+    padding: 1.5rem 3rem 1.4rem 1.2rem;
+    height: auto;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    background-color: $backgroundMain;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: $contentMain;
+    line-height: 1.6rem;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    b {
+      border: none;
+    }
+
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open
+    .select2-selection__arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open.select2-container--focus {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--below.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+  &
+    .select2.select2-container.select2-container--default.select2-container--above.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 0 0 1.4rem 1.4rem;
+    border-top: 0.1rem solid $contentLight;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
+    color: $contentSecondary;
+    font-weight: 400;
+  }
+
+  /*   & .choices {
     width: 100%;
     font-weight: 600;
     font-size: 1.4rem;
@@ -45,7 +135,6 @@
   & .choices__inner {
     border: none;
     min-height: 4rem;
-    //padding: 0.3rem;
     background-color: transparent;
   }
 
@@ -55,10 +144,7 @@
 
   & .choices__list {
     min-width: 100%;
-    //width: max-content;
-    //max-width: 15rem;
-    //min-width: 9.7rem;
-    //width: auto;
+
   }
 
   & .choices__list.choices__list--dropdown.is-active {
@@ -67,8 +153,7 @@
     border-top: none;
     border-radius: 0 0 1.4rem 1.4rem;
     margin-top: 0;
-    //padding: 1rem 0;
-    //width: auto;
+
   }
 
   & .choices__item.choices__item--choice {
@@ -129,5 +214,21 @@
   }
   & .choices__list--dropdown .choices__item--selectable:last-child {
     border-bottom: none;
+  } */
+}
+
+@media (min-width: $breakpoint768) {
+  .dashboardform-select {
+    & .select2 {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+    &
+      .select2-container--default
+      .select2-selection--single
+      .select2-selection__rendered {
+      color: $contentMain;
+      line-height: 2rem;
+    }
   }
 }

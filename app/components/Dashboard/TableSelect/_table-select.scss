@@ -1,8 +1,126 @@
 .table-select {
   position: relative;
   display: flex;
+  min-width: 16rem;
 
-  & .choices {
+  /* Select2 styles */
+  & .select2 {
+    width: 100% !important;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    background: $backgroundMain;
+    border-radius: 1.4rem;
+    font-weight: 500;
+  }
+
+  & .select2-selection {
+    //padding: 1.5rem 3rem 1.4rem 1.2rem;
+    height: auto;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    background-color: $backgroundMain;
+
+    padding: 1.5rem 1rem 1.4rem 6rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      border: none;
+
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $contentMain;
+      font-weight: 500;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1.4rem;
+    }
+  }
+
+  &.table-select--status .select2-selection {
+    &::before {
+      content: 'Status:';
+    }
+  }
+  &.table-select--display .select2-selection {
+    padding: 1.5rem 1.5rem 1.4rem 6.4rem;
+    &::before {
+      content: 'Display:';
+    }
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: $accentMain;
+    line-height: 1.6rem;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    b {
+      border: none;
+    }
+
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open
+    .select2-selection__arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open.select2-container--focus {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--below.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+  &
+    .select2.select2-container.select2-container--default.select2-container--above.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 0 0 1.4rem 1.4rem;
+    border-top: 0.1rem solid $contentLight;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
+    color: $contentSecondary;
+    font-weight: 400;
+  }
+
+  /*   & .choices {
     width: 100%;
     font-weight: 500;
     font-size: 1.4rem;
@@ -74,7 +192,7 @@
   & .choices__inner {
     border: none;
     min-height: 4rem;
-    //padding: 0.3rem;
+
     background-color: transparent;
   }
 
@@ -83,17 +201,9 @@
     color: $accentMain;
   }
 
-  /*  &.service-select--gender .choices__list.choices__list--single {
-    padding: 0.8rem 3rem 0.8rem 8rem;
-    color: $accentMain;
-  }
- */
   & .choices__list {
     min-width: 100%;
-    //width: max-content;
-    //max-width: 15rem;
-    //min-width: 9.7rem;
-    //width: auto;
+
   }
 
   & .choices__list.choices__list--dropdown.is-active {
@@ -102,8 +212,7 @@
     border-top: none;
     border-radius: 0 0 1.4rem 1.4rem;
     margin-top: 0;
-    //padding: 1rem 0;
-    //width: auto;
+
   }
 
   & .choices__item.choices__item--choice {
@@ -117,7 +226,7 @@
   }
 
   & .choices__item.choices__item--choice.is-highlighted {
-    //background-color: $backgroundSecondary;
+
     background-color: transparent;
     position: relative;
   }
@@ -166,5 +275,5 @@
   }
   & .choices__list--dropdown .choices__item--selectable:last-child {
     border-bottom: none;
-  }
+  } */
 }

@@ -2,10 +2,53 @@
 
 /* Select2 jQuery */
 window.addEventListener('DOMContentLoaded', function () {
+  /* Hide selected values from multiple dropdown */
+  function hideSelected(value) {
+    if (value && !value.selected) {
+      return $('<span>' + value.text + '</span>');
+    }
+  }
+  /* Time select (class 'time-select') */
   $('.select2-time-select').select2({
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'time-select__dropdown',
   });
+
+  /* Form select (class 'service-select') */
+
+  $('.select2-form-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'form-select__dropdown',
+  });
+  /* Form select (class 'dashboardform-select') */
+
+  $('.select2-dashboard-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'dashboard-select__dropdown',
+  });
+
+  /* Form select (class 'listservices-select') */
+
+  $('.select2-list-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'list-select__dropdown',
+  });
+
+  /* Multiple service-select */
+  $('.select2-form-multipleselect').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'form-multiselect__dropdown',
+    placeholder: 'Services',
+    //templateResult: hideSelected,
+  });
+
+  $('.select2-form-multipleselect').on(
+    'select2:opening select2:closing',
+    function (event) {
+      const $searchfield = $(this).parent().find('.select2-search__field');
+      $searchfield.prop('disabled', true);
+    }
+  );
 });
 
 /* Rightside menu */
@@ -248,7 +291,7 @@ function handleServicesPopup() {
 }
 
 /* Choices selects */
-const multiServiceSelect = () => {
+/* const multiServiceSelect = () => {
   const elements = document.querySelectorAll('.choices-form-select');
 
   elements.forEach(el => {
@@ -259,7 +302,7 @@ const multiServiceSelect = () => {
       position: 'bottom',
     });
   });
-};
+}; */
 
 const multiTimeSelect = () => {
   const elements = document.querySelectorAll('.choices-time-select');
@@ -276,7 +319,7 @@ const multiTimeSelect = () => {
   });
 };
 
-const multiChoicesSelect = () => {
+/* const multiChoicesSelect = () => {
   const elements = document.querySelectorAll('.choices-form-multipleselect');
 
   elements.forEach(el => {
@@ -296,7 +339,7 @@ const multiChoicesSelect = () => {
       false
     );
   });
-};
+}; */
 
 const multiNameSelect = () => {
   const elements = document.querySelectorAll('.choices-dashboardform-select');
@@ -436,9 +479,9 @@ rightsideMenu();
 openConfirmModal();
 openCropPhotoModal();
 showSearchInput();
-multiServiceSelect();
+//multiServiceSelect();
 multiTimeSelect();
-multiChoicesSelect();
+//multiChoicesSelect();
 multiDropdown();
 multiServiceDropdown();
 multiLanguageDropdown();

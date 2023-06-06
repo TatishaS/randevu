@@ -215,6 +215,11 @@
     border-radius: 1.4rem 1.4rem 0 0;
     border-bottom: none;
   }
+  &
+    .select2.select2-container.select2-container--default.select2-container--open
+    .select2-selection__arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
 
   &
     .select2.select2-container.select2-container--default.select2-container--open.select2-container--focus {
@@ -233,7 +238,7 @@
     .select2.select2-container.select2-container--default.select2-container--above.select2-container--open {
     border: 0.1rem solid $accentMain;
     border-radius: 0 0 1.4rem 1.4rem;
-    border-top: none;
+    border-top: 0.1rem solid $contentLight;
   }
 }
 

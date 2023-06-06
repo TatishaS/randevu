@@ -2,6 +2,199 @@
   position: relative;
   display: flex;
 
+  /* Select2 styles */
+  & .select2 {
+    width: 100% !important;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    background: $backgroundMain;
+    border-radius: 1.4rem;
+    font-weight: 500;
+  }
+
+  & .select2-selection {
+    padding: 1.5rem 3rem 1.4rem 1.2rem;
+    height: auto;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    background-color: $backgroundMain;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: $contentMain;
+    line-height: 1.6rem;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    b {
+      border: none;
+    }
+
+    background-image: url('../../../images/icon-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open
+    .select2-selection__arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--open.select2-container--focus {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+
+  &
+    .select2.select2-container.select2-container--default.select2-container--below.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 1.4rem 1.4rem 0 0;
+    border-bottom: none;
+  }
+  &
+    .select2.select2-container.select2-container--default.select2-container--above.select2-container--open {
+    border: 0.1rem solid $accentMain;
+    border-radius: 0 0 1.4rem 1.4rem;
+    border-top: 0.1rem solid $contentLight;
+  }
+
+  &
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
+    color: $contentSecondary;
+    font-weight: 400;
+  }
+
+  /* Select2 multiple */
+
+  &.service-select--multiple {
+    .select2-selection.select2-selection--multiple {
+      padding: 0.6rem 5rem 0.6rem 0.6rem;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        position: absolute;
+        border: none;
+        content: '...';
+        font-size: 2rem;
+        line-height: 1.6rem;
+        top: 45%;
+        transform: translateY(-50%);
+        right: 3rem;
+        background-image: none;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .select2.select2-container.select2-container--default.select2-container--focus {
+      border: 0.1rem solid $accentMain;
+      .select2-selection.select2-selection--multiple {
+        border: none;
+      }
+    }
+
+    .select2.select2-container.select2-container--default.select2-container--focus.select2-container--open {
+      border-bottom: none;
+    }
+    .select2-container--default .select2-search--inline .select2-search__field {
+      padding: 1rem;
+      color: $contentSecondary;
+      font-family: 'Montserrat', 'Arial', sans-serif;
+      margin: 0;
+      vertical-align: middle;
+      height: auto;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .select2-search.select2-search--inline {
+      display: inline-block;
+      height: 0;
+    }
+    .select2-container--default
+      .select2-selection--multiple
+      .select2-selection__choice {
+      padding: 0.8rem 2rem 0.8rem 0.9rem;
+      color: $backgroundMain;
+      background-color: $contentMain;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin: 0;
+      margin-right: 0.6rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 1rem;
+      border: none;
+      display: inline-flex;
+      flex-direction: row-reverse;
+    }
+    .select2-selection__choice__remove {
+      position: static;
+      border: none;
+      color: $backgroundMain;
+      padding: 0;
+      margin: 0 0 0 2rem;
+      font-weight: 500;
+      font-size: 2rem;
+    }
+  }
+
+  /* Gender select2 select */
+  &.service-select--gender .select2-selection {
+    padding: 1.5rem 3rem 1.4rem 7.4rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      border: none;
+      content: 'Gender:';
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $contentSecondary;
+      font-weight: 400;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 2rem;
+    }
+  }
+
+  &.service-select--gender
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: $accentMain;
+  }
+
+  /* Choices styles */
+  /* 
   & .choices {
     width: 100%;
     font-weight: 600;
@@ -92,10 +285,6 @@
       transform: translateY(-50%);
       right: 3rem;
       background-image: none;
-      /*       background-image: url('../../../images/icon-select-arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain; */
       cursor: pointer;
       width: 2rem;
       height: 2rem;
@@ -171,10 +360,6 @@
 
   & .choices__list {
     min-width: 100%;
-    //width: max-content;
-    //max-width: 15rem;
-    //min-width: 9.7rem;
-    //width: auto;
   }
 
   & .choices__list.choices__list--dropdown.is-active {
@@ -184,8 +369,6 @@
     border-radius: 0 0 1.4rem 1.4rem;
     margin-top: 0;
     z-index: 5;
-    //padding: 1rem 0;
-    //width: auto;
   }
 
   & .choices__item.choices__item--choice {
@@ -199,7 +382,6 @@
   }
 
   & .choices__item.choices__item--choice.is-highlighted {
-    //background-color: $backgroundSecondary;
     background-color: transparent;
     position: relative;
   }
@@ -258,5 +440,5 @@
   }
   & .choices__list--dropdown .choices__item--selectable:last-child {
     border-bottom: none;
-  }
+  } */
 }
