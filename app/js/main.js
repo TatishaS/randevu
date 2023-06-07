@@ -62,6 +62,19 @@ window.addEventListener('DOMContentLoaded', function () {
 
     evt.params.originalEvent.stopPropagation();
   });
+
+  /* Disable opening virtual keyboard on iOS*/
+  $('.select2-form-multipleselect').on('select2:open', () =>
+    $('.select2-search__field').attr('readonly', true)
+  );
+
+  $('.select2-form-multipleselect').on(
+    'select2:opening select2:closing',
+    function (event) {
+      var $searchfield = $(this).parent().find('.select2-search__field');
+      $searchfield.prop('disabled', true);
+    }
+  );
 });
 
 /* Rightside menu */
