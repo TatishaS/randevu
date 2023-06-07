@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', function () {
     //templateResult: hideSelected,
   });
 
+  /* Disable search field inside multiple select input */
   $('.select2-form-multipleselect').on(
     'select2:opening select2:closing',
     function (event) {
@@ -49,6 +50,18 @@ window.addEventListener('DOMContentLoaded', function () {
       $searchfield.prop('disabled', true);
     }
   );
+
+  /* Prevent dropdown opening after removing option */
+
+  $('.select2-form-multipleselect').on('select2:unselect', function (evt) {
+    if (!evt.params.originalEvent) {
+      return;
+    }
+
+    console.log('remove choice');
+
+    evt.params.originalEvent.stopPropagation();
+  });
 });
 
 /* Rightside menu */
