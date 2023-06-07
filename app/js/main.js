@@ -67,6 +67,9 @@ window.addEventListener('DOMContentLoaded', function () {
   $('.select2-form-multipleselect').on('select2:open', () =>
     $('.select2-search__field').attr('readonly', true)
   );
+  $('.select2-form-multipleselect').on('select2:opening', () =>
+    $('.select2-search__field').attr('readonly', true)
+  );
 
   $('.select2-form-multipleselect').on(
     'select2:opening select2:closing',
