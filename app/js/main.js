@@ -64,12 +64,20 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   /* Disable opening virtual keyboard on iOS*/
-  $('.select2-form-multipleselect').on('select2:open', () =>
-    $('.select2-search__field').attr('readonly', true)
-  );
-  $('.select2-form-multipleselect').on('select2:opening', () =>
-    $('.select2-search__field').attr('readonly', true)
-  );
+
+  $('.select2-form-multipleselect').on('select2:open', () => {
+    $('.select2-search__field').attr('readonly', true);
+    $('.select2-search__field').attr('inputmode', 'none');
+    $('.select2-search__field').prop('readonly', true);
+    $('.select2-search__field').prop('inputmode', 'none');
+  });
+
+  $('.select2-form-multipleselect').on('select2:opening', () => {
+    $('.select2-search__field').attr('readonly', true);
+    $('.select2-search__field').attr('inputmode', 'none');
+    $('.select2-search__field').prop('readonly', true);
+    $('.select2-search__field').prop('inputmode', 'none');
+  });
 
   $('.select2-form-multipleselect').on(
     'select2:opening select2:closing',
