@@ -107,7 +107,7 @@
         line-height: 1.6rem;
         top: 45%;
         transform: translateY(-50%);
-        right: 3rem;
+        right: 1.8rem;
         background-image: none;
         cursor: pointer;
         width: 2rem;
@@ -132,13 +132,14 @@
       border-bottom: none;
     }
     .select2-container--default .select2-search--inline .select2-search__field {
-      padding: 1rem;
+      padding: 1rem 0.8rem 1rem 1.2rem;
       color: $contentSecondary;
       font-family: 'Montserrat', 'Arial', sans-serif;
       margin: 0;
       vertical-align: middle;
       height: auto;
       font-weight: 400;
+      opacity: 1;
       cursor: pointer;
     }
     .select2-search.select2-search--inline {
