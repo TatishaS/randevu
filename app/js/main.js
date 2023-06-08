@@ -65,12 +65,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
   /* Disable opening virtual keyboard on iOS*/
 
-  /*   $('.select2-form-multipleselect').on('select2:open', () => {
-    $('.select2-search__field').attr('readonly', true);
-    $('.select2-search__field').attr('inputmode', 'none');
- 
-  }); */
-
   $('.select2-form-multipleselect').on('select2:opening', () => {
     $('.select2-search__field').attr('readonly', true);
     $('.select2-search__field').attr('inputmode', 'none');
@@ -124,6 +118,33 @@ function showSearchInput() {
     e.preventDefault();
     searchInput.classList.toggle('active');
     searchBtn.classList.toggle('active');
+  });
+}
+
+/* Make red border for input date while choosing date */
+function highlightDateInput() {
+  const inputDate = document.querySelector('.edit-form__input-date');
+  //let dropdown;
+  let dropdownIsActive = false;
+
+  if (!inputDate) return;
+
+  inputDate.addEventListener('click', () => {
+    let dropdownIsActive = true;
+
+    if (dropdownIsActive) {
+      inputDate.classList.add('active');
+      const dropdown = document.querySelector(
+        '.datepicker.datepicker-dropdown'
+      );
+
+      const datePicker = dropdown.querySelector('.datepicker-grid');
+
+      datePicker.addEventListener('click', () => {
+        console.log('Клик');
+        inputDate.classList.remove('active');
+      });
+    }
   });
 }
 
@@ -513,6 +534,7 @@ rightsideMenu();
 openConfirmModal();
 openCropPhotoModal();
 showSearchInput();
+highlightDateInput();
 //multiServiceSelect();
 multiTimeSelect();
 //multiChoicesSelect();
@@ -525,5 +547,6 @@ handleSelectCategory();
 multiNameSelect();
 handleCreateServiceModal();
 handleServicesPopup();
+
 //applyCropToImg();
 //categorySelect();

@@ -307,9 +307,15 @@
               class="template__service-block service-block service-block--category"
             >
               <div class="service-block__top">
-                <button class="service-block__btn wide-button wide-button--red">
+                <!--                 <button class="service-block__btn wide-button wide-button--red">
                   List of services
-                </button>
+                </button> -->
+                <div class="service-block__select listservices-select active">
+                  <select class="select2-list-select" id="list-services">
+                    <option value="list-services">List of services</option>
+                    <option value="list-categories">List of categories</option>
+                  </select>
+                </div>
                 <button class="service-block__btn wide-button">
                   Add category
                 </button>

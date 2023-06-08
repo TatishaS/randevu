@@ -17,10 +17,15 @@
   & .select2-selection {
     padding: 2rem 3rem 2rem 2rem;
     height: auto;
-    border: 0.1rem solid $backgroundExtraLight;
+    //border: 0.1rem solid $accentMain;
+    border: none;
     border-radius: 1.4rem;
     overflow: hidden;
     background-color: $backgroundMain;
+  }
+
+  &.active .select2-selection {
+    background-color: $accentMain;
   }
 
   &
@@ -29,6 +34,13 @@
     .select2-selection__rendered {
     color: $accentMain;
     line-height: 2.4rem;
+  }
+
+  &.active
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: $backgroundMain;
   }
 
   &
@@ -52,6 +64,16 @@
     right: 2rem;
   }
 
+  &.active
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    background-image: url('../../../images/icon-dropdown-white.svg');
+  }
+
+  & .select2.select2-container.select2-container--default {
+    border: 0.1rem solid $accentMain;
+  }
   &
     .select2.select2-container.select2-container--default.select2-container--open {
     border: 0.1rem solid $accentMain;

@@ -2,7 +2,7 @@
   max-width: 30rem;
   padding-bottom: 35rem;
 
-  &__select-dropdown {
+  &__select-wrapper {
     position: relative;
     margin: -0.13rem; // experiment to fix red box-shadow artefacts
   }
@@ -18,7 +18,8 @@
     margin-bottom: 1.4rem;
   }
 
-  &__input-date {
+  &__input-date,
+  &__input-time {
     width: 100%;
     flex-basis: 30rem;
 
@@ -44,9 +45,12 @@
     cursor: pointer;
   }
 
-  &__input-date:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.1rem $accentMain;
+  &__input-date.active {
+    border: 0.1rem solid $accentMain;
+  }
+
+  &__input-time.is-expanded {
+    border: 0.1rem solid $accentMain;
   }
 
   &__button {
@@ -371,7 +375,8 @@
       font-weight: 500;
     } */
 
-    &__input-date {
+    &__input-date,
+    &__input-time {
       padding: 1.6rem 2.2rem 1.6rem 2.2rem;
     }
     & .datepicker-dropdown {
