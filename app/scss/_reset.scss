@@ -69,3 +69,13 @@ input::-webkit-credentials-auto-fill-button {
   position: absolute;
   right: 0;
 }
+
+input,
+textarea,
+button,
+select,
+label,
+div,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -166,5 +166,11 @@
       padding-bottom: 3rem;
       padding-left: 11rem;
     }
+
+    &.newappointment {
+      .template__content-wrapper {
+        border-radius: 1.4rem;
+      }
+    }
   }
 }

@@ -47,4 +47,7 @@
     <symbol id="icon-plus" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.5827 11.917H14.0827V5.41699H11.916V11.917H5.41602V14.0837H11.916V20.5837H14.0827V14.0837H20.5827V11.917Z" />
     </symbol>
+    <symbol id="icon-chevron" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0727 12.6454L10.7755 8.34824L11.6002 7.52351L17.0757 12.999L11.6002 18.4745L10.7755 17.6497L15.0727 13.3525L15.4262 12.999L15.0727 12.6454Z"/>
+</symbol>
 </svg>

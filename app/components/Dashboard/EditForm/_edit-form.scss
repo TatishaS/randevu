@@ -208,6 +208,10 @@
     display: none;
   }
 
+  & .legend-wrapper {
+    display: flex;
+  }
+
   & .legend-button {
     display: flex;
     justify-content: flex-start;
@@ -294,12 +298,9 @@
   & .appo-picker-list-item.disabled {
     input[type='button'] {
       background-color: $accentLight;
+      opacity: 1;
     }
   }
-
-  /*  & .appo-picker-list-item:nth-of-type(4n) {
-    margin: 0;
-  } */
 }
 
 /* @media (min-width: 390px) {

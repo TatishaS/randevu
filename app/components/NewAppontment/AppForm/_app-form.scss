@@ -1,0 +1,204 @@
+.app-form {
+  width: 100%;
+  background: $backgroundMain;
+  /* Content/Light */
+
+  border: 0.1rem solid $contentLight;
+  border-radius: 1.4rem;
+  padding: 2.8rem 4.6rem;
+  &__title {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 2.8rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  &__number {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $backgroundMain;
+    background-color: $contentMain;
+    margin-right: 2rem;
+  }
+  &__field-label {
+    width: 35%;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $contentMain;
+    margin-right: 1rem;
+  }
+
+  &__input-wrapper {
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__field-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $contentMain;
+    outline: none;
+    //padding: 1.4rem 2rem 1.4rem 5.6rem;
+  }
+
+  &__price-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2.8rem;
+  }
+
+  &__price-label {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin-right: 1rem;
+  }
+
+  &__price-input {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: $contentMain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &__contact-row {
+    margin-bottom: 1.4rem;
+  }
+  &__contact-row:last-child {
+    margin-bottom: 2rem;
+  }
+
+  &__contact-input {
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    background-color: transparent;
+    padding: 1.5rem 2rem;
+
+    border: 0.1rem solid $contentMain;
+    border-radius: 1.4rem;
+    outline: none;
+    &::placeholder {
+      color: $contentSecondary;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding: 2rem;
+    color: $backgroundMain;
+    background-color: $contentMain;
+    border: none;
+    border-radius: 1.4rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__button.disabled {
+    background-color: $contentLight;
+    color: $contentDop;
+    border: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .app-form {
+    max-width: 68.3rem;
+    padding: 2.8rem;
+    &__title {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+
+    &__fields {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__filled-wrapper {
+      max-width: 31.3rem;
+      padding-right: 2.8rem;
+    }
+    &__contacts-wrapper {
+      min-width: 31.3rem;
+      padding-left: 2.8rem;
+      border-left: 0.1rem solid $contentLight;
+    }
+
+    &__price-row {
+      margin-bottom: 0;
+    }
+
+    /*  &__field-label {
+      max-width: 25%;
+    } */
+
+    &__button {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .app-form {
+    &__fields {
+      display: block;
+    }
+
+    &__filled-wrapper {
+      max-width: auto;
+      padding-right: 0;
+    }
+    &__contacts-wrapper {
+      min-width: auto;
+      padding-left: 0;
+      border-left: none;
+    }
+
+    &__price-row {
+      margin-bottom: 2.8rem;
+    }
+  }
+}

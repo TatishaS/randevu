@@ -1,0 +1,17 @@
+.appointment {
+  padding-bottom: 9rem;
+  &__left {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .appointment {
+    padding-bottom: 4.7rem;
+    &__inner {
+      display: grid;
+      grid-template-columns: 69.8rem 34.1rem;
+      grid-gap: 7.8rem;
+    }
+  }
+}

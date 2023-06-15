@@ -39,6 +39,7 @@ window.addEventListener('DOMContentLoaded', function () {
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'form-multiselect__dropdown',
     placeholder: 'Services',
+    maximumSelectionLength: 3,
     //templateResult: hideSelected,
   });
 
@@ -52,31 +53,27 @@ window.addEventListener('DOMContentLoaded', function () {
   );
 
   /* Prevent dropdown opening after removing option */
-
-  $('.select2-form-multipleselect').on('select2:unselect', function (evt) {
-    if (!evt.params.originalEvent) {
+  $('.select2-form-multipleselect').on('select2:unselect', function (event) {
+    if (!event.params.originalEvent) {
       return;
     }
-
     console.log('remove choice');
-
-    evt.params.originalEvent.stopPropagation();
+    event.params.originalEvent.stopPropagation();
   });
 
   /* Disable opening virtual keyboard on iOS*/
-
   $('.select2-form-multipleselect').on('select2:opening', () => {
     $('.select2-search__field').attr('readonly', true);
     $('.select2-search__field').attr('inputmode', 'none');
   });
 
-  $('.select2-form-multipleselect').on(
+  /*   $('.select2-form-multipleselect').on(
     'select2:opening select2:closing',
     function (event) {
       var $searchfield = $(this).parent().find('.select2-search__field');
       $searchfield.prop('disabled', true);
     }
-  );
+  ); */
 });
 
 /* Rightside menu */
@@ -109,7 +106,7 @@ function rightsideMenu() {
   });
 }
 
-/* Открыть инпут поиска на планшете */
+/* Open search input at  tablet screen */
 function showSearchInput() {
   const searchInput = document.querySelector('.search__input');
   const searchBtn = document.querySelector('.search__button');
@@ -474,7 +471,7 @@ const datePickerLegend = () => {
   const calendar = document.querySelector('.datepicker-main');
   const legend = document.createElement('div');
   const html = `
-  <div class="legend-wrapper" style="display: flex">
+  <div class="legend-wrapper">
   <div class="legend-button busy">
   <span class="legend-color busy"></span>
   Busy
@@ -485,11 +482,30 @@ const datePickerLegend = () => {
   </div>
   </div>
   `;
-
+  //console.log(calendar);
   if (!calendar) return;
 
   legend.innerHTML = html;
   calendar.insertAdjacentHTML('beforeend', html);
+};
+
+/* InlineDatepicker */
+const inlineDatePicker = () => {
+  const element = document.getElementById('inline-datepicker');
+
+  if (!element) return;
+
+  const datepicker = new Datepicker(element, {
+    autohide: true,
+    datesDisabled: [1684443600000, 1684875600000],
+    format: 'dd/mm/yyyy',
+    prevArrow: `<svg width="8" class="edit-form__datepicker-arrow edit-form__datepicker-arrow--prev disabled" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.29294 0.292969L0.585938 5.99997L6.29294 11.707L7.70694 10.293L3.41394 5.99997L7.70694 1.70697L6.29294 0.292969Z"/>
+    </svg>`,
+    nextArrow: `<svg class="edit-form__datepicker-arrow edit-form__datepicker-arrow--next" width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><path d="M1.70697 11.707L7.41397 5.99997L1.70697 0.292969L0.292969 1.70697L4.58597 5.99997L0.292969 10.293L1.70697 11.707Z" /></svg>`,
+  });
+
+  datePickerLegend();
 };
 
 /* Time picker */
@@ -503,6 +519,32 @@ const picker = new AppointmentPicker(document.getElementById('time'), {
   endTime: 23,
   disabled: ['8:00', '12:30', '14:30'],
 });
+
+/* Inline time picker */
+
+const inlinePicker = document.getElementById('inline-timepicker');
+const timePicker = new AppointmentPicker(inlinePicker, {
+  interval: 30,
+  mode: '24h',
+  minTime: 8,
+  maxTime: 21,
+  startTime: 8,
+  endTime: 16,
+  disabled: ['8:00', '12:30', '14:30'],
+});
+
+const inlineTimePicker = () => {
+  if (!timePicker) return;
+  timePicker.open();
+
+  document.body.addEventListener(
+    'close.appo.picker',
+    function (e) {
+      timePicker.open();
+    },
+    false
+  );
+};
 
 /* Handling categories */
 
@@ -530,14 +572,60 @@ const handleSelectCategory = () => {
   });
 };
 
+/* New appointment left accordion */
+function handleAccordion() {
+  /*   const items = document.querySelectorAll('.accordion__item-trigger');
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentNode;
+      if (parent.classList.contains('accordion__item-active')) {
+        parent.classList.remove('accordion__item-active');
+      } else {
+        document
+          .querySelectorAll('.accordion__item')
+          .forEach(child => child.classList.remove('accordion__item-active'));
+        parent.classList.add('accordion__item-active');
+        inlineTimePicker();
+      }
+    });
+  }); */
+  const triggers = document.querySelectorAll('.accordion__item-trigger');
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', event => {
+      // const parent = item.parentNode;
+      // if (parent.classList.contains("accordion__item-active")) {
+      //   parent.classList.remove("accordion__item-active");
+      // } else {
+      //   document
+      //     .querySelectorAll(".accordion__item")
+      //     .forEach((child) => child.classList.remove("accordion__item-active"));
+      //   parent.classList.add("accordion__item-active");
+      //   inlineTimePicker();
+      // }
+
+      const accordionItem = event.currentTarget.closest('.accordion__item');
+      if (!accordionItem) return;
+      if (accordionItem.classList.contains('accordion__item-active')) {
+        accordionItem.classList.remove('accordion__item-active');
+      } else {
+        const accordionItemActive = document.querySelector(
+          '.accordion__item-active'
+        );
+        accordionItemActive &&
+          accordionItemActive.classList.remove('accordion__item-active');
+        accordionItem.classList.add('accordion__item-active');
+        inlineTimePicker();
+      }
+    });
+  });
+}
+
 rightsideMenu();
 openConfirmModal();
 openCropPhotoModal();
 showSearchInput();
 highlightDateInput();
-//multiServiceSelect();
 multiTimeSelect();
-//multiChoicesSelect();
 multiDropdown();
 multiServiceDropdown();
 multiLanguageDropdown();
@@ -547,6 +635,10 @@ handleSelectCategory();
 multiNameSelect();
 handleCreateServiceModal();
 handleServicesPopup();
+handleAccordion();
+inlineDatePicker();
 
+//multiChoicesSelect();
+//multiServiceSelect();
 //applyCropToImg();
 //categorySelect();

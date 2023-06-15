@@ -1,0 +1,542 @@
+.accordion {
+  padding: 0 0.4rem;
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  &__item.accordion__item-active {
+    .accordion__item-trigger {
+      margin-bottom: 1rem;
+    }
+    .accordion__item-content {
+      display: block;
+    }
+
+    .trigger__inner {
+      background-color: $contentMain;
+      transition: all 0.4s ease;
+    }
+
+    .trigger__text {
+      color: $backgroundMain;
+      transition: all 0.4s ease;
+    }
+    .trigger__img {
+      svg {
+        fill: $backgroundMain;
+        stroke: $backgroundMain;
+        transform: rotate(90deg);
+        transition: 0.4s all ease;
+      }
+    }
+  }
+  &__item.accordion__item--date.accordion__item-active,
+  &__item.accordion__item--time.accordion__item-active {
+    .accordion__item-trigger {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item-trigger {
+    display: flex;
+
+    align-items: center;
+    cursor: pointer;
+
+    .trigger__num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: $backgroundMain;
+      background-color: $contentMain;
+      margin-right: 2rem;
+    }
+
+    .trigger__inner {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem 2.2rem;
+      border: 0.1rem solid $contentMain;
+      border-radius: 1.4rem;
+    }
+
+    .trigger__text {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2rem;
+
+      color: $contentMain;
+      margin-left: 1rem;
+    }
+
+    .trigger__img {
+      svg {
+        fill: $contentMain;
+        stroke: $contentMain;
+      }
+      position: relative;
+      margin-left: auto;
+    }
+  }
+
+  &__item-content {
+    width: calc(100% - 5rem);
+    margin-left: auto;
+    padding-right: 0.4rem;
+    padding-bottom: 2rem;
+    display: none;
+    animation: fade 0.3s ease;
+
+    .content__text {
+      margin-top: 25px;
+      padding-left: 35px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item.accordion__item--date,
+  &__item.accordion__item--time {
+    .accordion__item-content {
+      width: 100%;
+    }
+  }
+
+  &__input-time {
+    display: none;
+  }
+
+  & .datepicker-input {
+    -webkit-border-radius: 1.4rem;
+    border-radius: 1.4rem;
+  }
+
+  & .datepicker-inline {
+    width: 33rem;
+    left: 0 !important;
+  }
+
+  & .datepicker-inline.active {
+    border: none;
+    background-color: $backgroundMain;
+    border-radius: 1.2rem;
+  }
+
+  & .datepicker-picker {
+    border: none;
+    background-color: $backgroundMain;
+    border-radius: 1.2rem;
+    box-shadow: none;
+    padding: 1rem;
+
+    font-weight: 600;
+  }
+
+  & .datepicker-grid {
+    margin-bottom: 1rem;
+  }
+
+  & .datepicker-controls {
+    align-items: center;
+    margin-bottom: 1rem;
+    button {
+      background-image: none;
+      background-color: $backgroundMain;
+      /*  display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+    button.view-switch {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      order: -1;
+      padding-left: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  & .datepicker-view {
+    width: 100%;
+  }
+
+  & .days-of-week {
+    margin-bottom: 1rem;
+  }
+
+  & .dow {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    max-width: 4rem;
+  }
+  & .dow:not(:last-child) {
+    margin-right: 1rem;
+  }
+  & .datepicker-cell.day {
+    /*   max-width: 3.9rem;
+    height: 4rem; */
+    max-width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.6rem;
+    background-color: #e0f1d8;
+    margin-bottom: 1rem;
+  }
+  & .datepicker-cell.day:not(:nth-child(7n)) {
+    margin-right: 1rem;
+  }
+  & .datepicker-cell.day.focused {
+    background-image: $gradientMain;
+    color: $backgroundMain;
+  }
+
+  & .datepicker-cell.day.disabled {
+    background-color: #f4c6c6;
+    color: $contentMain;
+    opacity: 1;
+  }
+
+  & .datepicker-footer {
+    display: none;
+  }
+
+  & .legend-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $contentMain;
+  }
+
+  & .legend-button:last-child {
+    margin-right: 0;
+  }
+
+  & .legend-color {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.6rem;
+    border: none;
+    margin-right: 0.9rem;
+  }
+
+  & .legend-color.free {
+    background-color: #e0f1d8;
+  }
+
+  & .legend-color.busy {
+    background-color: #f4c6c6;
+  }
+
+  & .edit-form__datepicker-arrow {
+    fill: $contentMain;
+  }
+
+  & .edit-form__datepicker-arrow.disabled {
+    fill: #afacac;
+  }
+
+  &__inline-date .legend-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Time appointment picker*/
+
+  & .appo-picker.is-open {
+    position: static;
+    width: 30rem;
+    //top: 6rem;
+    max-width: 30rem;
+    margin-left: auto;
+    padding: 2.4rem 1.4rem 1.4rem 2.4rem;
+    border-radius: 1.2rem;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+  }
+
+  & .appo-picker-title {
+    display: none;
+  }
+
+  & .appo-picker-list {
+    max-width: initial;
+  }
+
+  & .appo-picker-list-item {
+    height: 4rem;
+    border-radius: 0.6rem;
+    //margin: 0 0.9rem 0.9rem 0;
+    margin-bottom: 1rem;
+
+    input[type='button'] {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+      color: $contentMain;
+      padding: 0.7rem 1rem;
+      margin: 0 0.9rem 0.1rem 0;
+
+      background-color: #e0f1d8;
+    }
+
+    input[type='button'].is-selected {
+      box-shadow: none;
+      color: $backgroundMain;
+      background: $gradientMain;
+    }
+  }
+
+  & .appo-picker-list-item.disabled {
+    input[type='button'] {
+      background-color: $accentLight;
+      opacity: 1;
+    }
+  }
+
+  /*Category radio inputs */
+
+  &__options {
+    max-height: 46.4rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      //height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(124, 119, 120, 0.2);
+      opacity: 0.2;
+      border-radius: 10rem;
+      //margin-block: 0.5em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $contentMain;
+      border-radius: 10rem;
+    }
+  }
+
+  &__option:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+
+  &__option-input {
+    display: none;
+  }
+
+  &__option-label {
+    min-height: 10.4rem; // убрать позже
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 1.2rem;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    color: $contentMain;
+    background-color: $backgroundMain;
+
+    opacity: 1;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &.accordion__option-label--category {
+      text-transform: uppercase;
+    }
+  }
+  &__label-checkimg {
+    //display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 1rem;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  &__option-input:checked + label {
+    color: $backgroundMain;
+    background-color: $contentMain;
+    .accordion__label-checkimg {
+      opacity: 1;
+    }
+  }
+
+  &__label-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__labelimg {
+    width: 8rem;
+    height: 8rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+
+  &__label-title {
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  &__label-text {
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  /* Custom scrollbar for Firefox */
+
+  @supports (scrollbar-color: black white) {
+    &__options {
+      scrollbar-color: $contentMain $contentSecondary;
+    }
+  }
+}
+
+@media (min-width: 410px) {
+  .accordion {
+    &__item.accordion__item--date,
+    &__item.accordion__item--time {
+      .accordion__item-content {
+        width: calc(100% - 5rem);
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .accordion {
+    padding: 0 3rem 0 0;
+
+    /*  &__item {
+      margin-bottom: 2.8rem;
+    } */
+
+    &__item.accordion__item-active {
+      margin-bottom: 0;
+      .accordion__item-trigger {
+        margin-bottom: 2.8rem;
+      }
+    }
+
+    &__item-trigger {
+      .trigger__num {
+        margin-right: 2.8rem;
+      }
+    }
+
+    &__item-content {
+      width: calc(100% - 5.8rem);
+      margin-left: auto;
+      padding-right: 1rem;
+      padding-bottom: 2.8rem;
+      display: none;
+      animation: fade 0.3s ease;
+    }
+
+    &__options {
+      max-height: 23rem;
+      overflow-y: scroll;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.4rem;
+    }
+
+    &__option:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    /* Date picker */
+
+    & .datepicker-controls {
+      margin-bottom: 2.8rem;
+    }
+    & .datepicker-inline {
+      width: 51.4rem;
+      margin-left: 0.8rem;
+    }
+
+    & .datepicker-main {
+      display: flex;
+      justify-content: flex-start;
+    }
+    & .datepicker-view {
+      width: 34rem;
+    }
+
+    & .datepicker-picker {
+      padding: 2.4rem 2.4rem 0.4rem 2.4rem;
+    }
+
+    &__inline-date .legend-wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      margin-left: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    & .legend-button {
+      margin-right: 0;
+      margin-bottom: 1.4rem;
+    }
+
+    & .legend-button.busy {
+      margin-bottom: 0;
+    }
+
+    & .legend-color {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    & .datepicker-cell.day {
+      max-width: 3.9rem;
+      height: 3.9rem;
+      border-radius: 0.6rem;
+      background-color: #e0f1d8;
+      margin-bottom: 1rem;
+    }
+
+    /* Time picker */
+
+    & .appo-picker.is-open {
+      width: 37.4rem;
+      max-width: 37.4rem;
+      margin-left: 0.8rem;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    & .appo-picker-list-item {
+      input[type='button'] {
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}

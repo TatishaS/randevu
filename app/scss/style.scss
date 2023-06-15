@@ -58,11 +58,17 @@
 @import '../components/Employees/FormButton/form-button';
 @import '../components/Employees/Popup/popup';
 
+/* New appointment */
+
+@import '../components/NewAppontment/Accordion/accordion';
+@import '../components/NewAppontment/AppForm/app-form';
+
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
 @import 'blocks/signin';
 @import 'blocks/dashboard';
 @import 'blocks/template';
+@import 'blocks/appointment';
 
 //@import "blocks/footer";
 
