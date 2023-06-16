@@ -458,7 +458,7 @@ const datePicker = () => {
 
   const datepicker = new Datepicker(element, {
     autohide: true,
-    datesDisabled: [1684443600000, 1684875600000],
+    datesDisabled: [1686898698000, 1686898711000, 1684875600000],
     format: 'dd/mm/yyyy',
     prevArrow: `<svg width="8" class="edit-form__datepicker-arrow edit-form__datepicker-arrow--prev disabled" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg">
     <path d="M6.29294 0.292969L0.585938 5.99997L6.29294 11.707L7.70694 10.293L3.41394 5.99997L7.70694 1.70697L6.29294 0.292969Z"/>
@@ -497,7 +497,7 @@ const inlineDatePicker = () => {
 
   const datepicker = new Datepicker(element, {
     autohide: true,
-    datesDisabled: [1684443600000, 1684875600000],
+    datesDisabled: [1686898709000, 1686898711000, 1684875600000],
     format: 'dd/mm/yyyy',
     prevArrow: `<svg width="8" class="edit-form__datepicker-arrow edit-form__datepicker-arrow--prev disabled" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg">
     <path d="M6.29294 0.292969L0.585938 5.99997L6.29294 11.707L7.70694 10.293L3.41394 5.99997L7.70694 1.70697L6.29294 0.292969Z"/>

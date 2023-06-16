@@ -5,7 +5,7 @@
 
   border: 0.1rem solid $contentLight;
   border-radius: 1.4rem;
-  padding: 2.8rem;
+  padding: 2.8rem 2rem;
   &__title {
     font-size: 2.4rem;
     line-height: 2.8rem;
@@ -158,16 +158,18 @@
     }
 
     &__fields {
-      display: flex;
-      justify-content: space-between;
+      //display: flex;
+      //justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     &__filled-wrapper {
-      max-width: 31.3rem;
+      //max-width: 31.3rem;
       padding-right: 2.8rem;
     }
     &__contacts-wrapper {
-      min-width: 31.3rem;
+      //min-width: 31.3rem;
       padding-left: 2.8rem;
       border-left: 0.1rem solid $contentLight;
     }

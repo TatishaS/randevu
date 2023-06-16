@@ -3,6 +3,10 @@
   &__left {
     margin-bottom: 4rem;
   }
+
+  &__form {
+    width: 100%;
+  }
 }
 
 @media (min-width: $breakpoint1200) {
