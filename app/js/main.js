@@ -506,6 +506,19 @@ const inlineDatePicker = () => {
   });
 
   datePickerLegend();
+  element.addEventListener(
+    'changeDate',
+    function (event) {
+      console.log(event);
+      const accordionItem = event.target.closest('.accordion__item');
+      console.log(accordionItem);
+      if (!accordionItem) return;
+      if (accordionItem.classList.contains('accordion__item-active')) {
+        accordionItem.classList.remove('accordion__item-active');
+      }
+    },
+    false
+  );
 };
 
 /* Time picker */
@@ -541,6 +554,21 @@ const inlineTimePicker = () => {
     'close.appo.picker',
     function (e) {
       timePicker.open();
+    },
+    false
+  );
+
+  /* Close accordion item after selection */
+  document.body.addEventListener(
+    'change.appo.picker',
+    function (event) {
+      console.log(event);
+      const accordionItem = event.target.closest('.accordion__item');
+      console.log(accordionItem);
+      if (!accordionItem) return;
+      if (accordionItem.classList.contains('accordion__item-active')) {
+        accordionItem.classList.remove('accordion__item-active');
+      }
     },
     false
   );
@@ -589,6 +617,7 @@ function handleAccordion() {
       }
     });
   }); */
+  const optionInputs = document.querySelectorAll('.accordion__option-input');
   const triggers = document.querySelectorAll('.accordion__item-trigger');
   triggers.forEach(trigger => {
     trigger.addEventListener('click', event => {
@@ -615,6 +644,27 @@ function handleAccordion() {
           accordionItemActive.classList.remove('accordion__item-active');
         accordionItem.classList.add('accordion__item-active');
         inlineTimePicker();
+      }
+    });
+  });
+  optionInputs.forEach(radioInput => {
+    radioInput.addEventListener('change', event => {
+      // const parent = item.parentNode;
+      // if (parent.classList.contains("accordion__item-active")) {
+      //   parent.classList.remove("accordion__item-active");
+      // } else {
+      //   document
+      //     .querySelectorAll(".accordion__item")
+      //     .forEach((child) => child.classList.remove("accordion__item-active"));
+      //   parent.classList.add("accordion__item-active");
+      //   inlineTimePicker();
+      // }
+      console.log(event);
+
+      const accordionItem = event.target.closest('.accordion__item');
+      if (!accordionItem) return;
+      if (accordionItem.classList.contains('accordion__item-active')) {
+        accordionItem.classList.remove('accordion__item-active');
       }
     });
   });
