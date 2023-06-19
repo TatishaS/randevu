@@ -12,8 +12,11 @@
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.4rem;
     //cursor: pointer;
+    &--photo {
+      margin-bottom: 2rem;
+    }
   }
 
   /* FILE UPLOAD INPUT */
@@ -318,3 +321,13 @@
     }
   }
 }
+
+/* @media (min-width: $breakpoint1200) {
+  .service-form {
+    &__label {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+ */

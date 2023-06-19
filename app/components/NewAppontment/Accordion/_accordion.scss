@@ -10,6 +10,8 @@
     }
     .accordion__item-content {
       display: block;
+      transition: all 0.6s ease;
+      animation: fade 0.3s ease;
     }
 
     .trigger__inner {
@@ -94,6 +96,7 @@
     padding-bottom: 2rem;
     display: none;
     animation: fade 0.3s ease;
+    transition: all 0.6s ease;
 
     .content__text {
       margin-top: 25px;

@@ -338,7 +338,9 @@
                 class="service-block__form service-form service-form--step2"
               >
                 <div class="service-form__row">
-                  <span class="service-form__label">Add service photo</span>
+                  <span class="service-form__label service-form__label--photo"
+                    >Add service photo</span
+                  >
                   <label
                     for="category-photo-upload"
                     class="service-form__photo-label"
@@ -369,18 +371,23 @@
                 </div>
                 <div class="service-block__inputs-wrapper">
                   <div class="service-form__row service-form__row--service">
+                    <label for="category" class="service-form__label"
+                      >Category</label
+                    >
                     <div class="service-form__service-select service-select">
-                      <label
+                      <!--                       <label
                         for="service"
                         class="service-form__select-label visually-hidden"
                         >Service</label
-                      >
+                      > -->
                       <select
                         class="select2-form-select"
-                        id="service"
+                        id="category"
                         inputmode="none"
+                        data-placeholder="Name of category"
                       >
-                        <option selected>Hair</option>
+                        <option></option>
+                        <option value="Hair">Hair</option>
                         <option value="Manicure">Manicure</option>
                         <option value="Hair SPA Ritual">Hair SPA Ritual</option>
                         <option value="Face revitalizing">
@@ -390,6 +397,7 @@
                     </div>
                   </div>
                   <div class="service-form__row service-form__row--price">
+                    <label for="price" class="service-form__label">Price</label>
                     <input
                       type="text"
                       class="service-form__input service-form__input--price focused"
@@ -400,39 +408,47 @@
                     />
                   </div>
                   <div class="service-form__row service-form__row--gender">
-                    <div
-                      class="service-form__service-select service-select service-select--gender"
+                    <label for="gender" class="service-form__label"
+                      >Gender</label
                     >
-                      <label
+                    <div class="service-form__service-select service-select">
+                      <!--                       <label
                         for="gender"
                         class="service-form__select-label visually-hidden"
                         >Gender</label
-                      >
+                      > -->
                       <select
                         class="select2-form-select"
                         id="gender"
                         inputmode="none"
+                        data-placeholder="man / woman"
                       >
-                        <option selected value="man">man</option>
+                        <option></option>
+                        <option value="man">man</option>
                         <option value="woman">woman</option>
                       </select>
                     </div>
                   </div>
                   <div class="service-form__row service-form__row--duration">
+                    <label for="duration" class="service-form__label"
+                      >Duration</label
+                    >
                     <div
                       class="service-form__service-select service-select service-select--duration"
                     >
-                      <label
+                      <!--                       <label
                         for="duration"
                         class="service-form__select-label visually-hidden"
                         >Duration</label
-                      >
+                      > -->
                       <select
                         class="select2-form-select"
                         id="duration"
                         inputmode="none"
+                        data-placeholder="minutes"
                       >
-                        <option selected value="60">60</option>
+                        <option></option>
+                        <option value="60">60</option>
                         <option value="30">30</option>
                         <option value="90">90</option>
                       </select>
@@ -484,12 +500,13 @@
                 </div>
 
                 <div class="service-form__row">
+                  <label for="title" class="service-form__label">Title</label>
                   <input
                     type="text"
                     class="service-form__input"
                     id="title"
                     name="title"
-                    placeholder="Title"
+                    placeholder="Name of service"
                     autocomplete="off"
                   />
                 </div>

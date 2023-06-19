@@ -7,7 +7,7 @@
   }
 
   &__inner {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,13 +19,11 @@
 
   &__left {
     width: 100%;
-    //flex: 1 1 auto;
-    //min-height: 33.2rem;
-    min-height: 18.2rem;
-    background-image: url(../../images/sign-in.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+
+    //min-height: 18.2rem;
+    //background-image: url(../../images/sign-in.svg);
+    //background-position: center center;
+    //background-size: contain;
   }
 
   &__form {
@@ -36,7 +34,7 @@
     .signin__left {
       //flex: 0 0 auto;
       //min-height: 33.2rem;
-      min-height: 18.2rem;
+      //min-height: 18.2rem;
       background-position: center center;
     }
   }
@@ -52,14 +50,32 @@
   }
 
   &.signin--step3 {
+    .signin__inner {
+      min-height: 85vh;
+      background-image: url(../../images/signin3-bg.svg);
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: bottom 1rem center;
+    }
     .signin__left {
       min-height: 23.2rem;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
   &.signin--step4 {
+    .signin__inner {
+      min-height: 85vh;
+      background-image: url(../../images/signin3-bg.svg);
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: bottom 1rem center;
+    }
     .signin__left {
-      min-height: 23.2rem;
+      min-height: 13rem;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
@@ -68,10 +84,10 @@
     .signin__container {
       padding: 0 1.5rem;
     }
-    .signin__left {
+    /* .signin__left {
       background-image: url(../../images/signin3-bg.svg);
       background-position: center center;
-    }
+    } */
     .signin__form {
       margin: 10rem auto 4.8rem;
     }
@@ -82,15 +98,20 @@
       padding: 0 1.5rem;
     }
     .signin__inner {
+      min-height: 80vh;
       flex-direction: column-reverse;
+      background-image: url(../../images/signin5-bg.svg);
+      background-size: 90%;
+      background-position: top 2rem center;
+      background-repeat: no-repeat;
     }
     .signin__left {
       //flex: 0 1 auto;
       margin-top: 2rem;
-      min-height: 31rem;
-      background-image: url(../../images/signin5-bg.svg);
+      min-height: 25rem;
+      /*  background-image: url(../../images/signin5-bg.svg);
       background-position: center center;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; */
     }
 
     .signin__form {
@@ -168,6 +189,7 @@
 @media (min-width: $breakpoint768) {
   .signin {
     &__inner {
+      min-height: 80vh;
       background-image: url(../../images/signin1-bg-tablet.svg);
       background-repeat: no-repeat;
       background-position: right bottom 8rem;
@@ -176,18 +198,21 @@
 
     &.signin--step1 {
       .signin__left {
+        //background-image: url(../../images/sign-in.svg);
         min-height: 42.8rem;
       }
     }
 
     &.signin--step2 {
       .signin__inner {
+        min-height: 80vh;
         background-image: url(../../images/signin2-bg-tablet.svg);
-        background-position: top 3rem center;
+        background-position: top 0rem center;
       }
 
       .signin__left {
-        min-height: 42.8rem;
+        //background-image: url(../../images/sign-in.svg);
+        min-height: 30rem;
       }
     }
 
@@ -226,6 +251,9 @@
         min-height: 43rem;
         margin-top: 2rem;
         background-size: contain;
+        background-image: url(../../images/signin5-bg.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
       }
 
       .signin__form {

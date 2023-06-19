@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
   $('.select2-form-multipleselect').select2({
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'form-multiselect__dropdown',
-    placeholder: 'Services',
+    placeholder: 'Employee Services',
     maximumSelectionLength: 3,
     //templateResult: hideSelected,
   });
@@ -509,9 +509,8 @@ const inlineDatePicker = () => {
   element.addEventListener(
     'changeDate',
     function (event) {
-      console.log(event);
       const accordionItem = event.target.closest('.accordion__item');
-      console.log(accordionItem);
+
       if (!accordionItem) return;
       if (accordionItem.classList.contains('accordion__item-active')) {
         accordionItem.classList.remove('accordion__item-active');
@@ -562,9 +561,8 @@ const inlineTimePicker = () => {
   document.body.addEventListener(
     'change.appo.picker',
     function (event) {
-      console.log(event);
       const accordionItem = event.target.closest('.accordion__item');
-      console.log(accordionItem);
+
       if (!accordionItem) return;
       if (accordionItem.classList.contains('accordion__item-active')) {
         accordionItem.classList.remove('accordion__item-active');
@@ -659,7 +657,6 @@ function handleAccordion() {
       //   parent.classList.add("accordion__item-active");
       //   inlineTimePicker();
       // }
-      console.log(event);
 
       const accordionItem = event.target.closest('.accordion__item');
       if (!accordionItem) return;

@@ -12,7 +12,11 @@
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.4rem;
+
+    &--photo {
+      margin-bottom: 2rem;
+    }
   }
 
   /* FILE UPLOAD INPUT */
@@ -262,6 +266,10 @@
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1.4rem;
     }
+    /*  &__label {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    } */
 
     &__row.employee-form__row--services {
       grid-column: 3 / 5;

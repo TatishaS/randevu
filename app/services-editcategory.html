@@ -335,7 +335,9 @@
                 class="service-block__form service-form service-form--editcategory"
               >
                 <div class="service-form__row">
-                  <span class="service-form__label">Add category photo</span>
+                  <span class="service-form__label service-form__label--photo"
+                    >Add category photo</span
+                  >
                   <label
                     for="category-photo-upload"
                     class="service-form__photo-label"
@@ -408,12 +410,13 @@
                 </div>
 
                 <div class="service-form__row">
+                  <label for="title" class="service-form__label">Title</label>
                   <input
                     type="text"
                     class="service-form__input"
                     id="title"
                     name="title"
-                    placeholder="Title"
+                    placeholder="Name of category"
                     autocomplete="off"
                   />
                 </div>

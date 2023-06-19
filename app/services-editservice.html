@@ -315,7 +315,7 @@
 
 
                   <div class="service-form__row">
-                    <span class="service-form__label">Add service photo</span>
+                    <span class="service-form__label service-form__label--photo">Add service photo</span>
                     <label for="category-photo-upload" class="service-form__photo-label">
                       <div class="service-form__file-wrapper">
                         <div class="service-form__file-preview loaded">
@@ -342,99 +342,147 @@
                     />
                   </div>
                   <div class="service-block__inputs-wrapper">
-                  <div class="service-form__row service-form__row--service">
-                    <div class="service-form__service-select service-select">
-                      <label
-                      for="service"
-                      class="service-form__select-label visually-hidden"
-                      >Service</label
-                    >
-                      <select class="select2-form-select" id="service" inputmode="none">
-                        <option selected>Hair</option>
-                        <option value="Manicure">Manicure</option>
-                        <option value="Hair SPA Ritual">Hair SPA Ritual</option>
-                        <option value="Face revitalizing">Face revitalizing</option>
-                      </select>
-                      
+                    <div class="service-form__row service-form__row--service">
+                      <label for="category" class="service-form__label"
+                        >Category</label
+                      >
+                      <div class="service-form__service-select service-select">
+                        <!--                       <label
+                          for="service"
+                          class="service-form__select-label visually-hidden"
+                          >Service</label
+                        > -->
+                        <select
+                          class="select2-form-select"
+                          id="category"
+                          inputmode="none"
+                          data-placeholder="Name of category"
+                        >
+                          <option></option>
+                          <option value="Hair">Hair</option>
+                          <option value="Manicure">Manicure</option>
+                          <option value="Hair SPA Ritual">Hair SPA Ritual</option>
+                          <option value="Face revitalizing">
+                            Face revitalizing
+                          </option>
+                        </select>
+                      </div>
                     </div>
-
-                  </div>
-                  <div class="service-form__row service-form__row--price">
-                    <input
-                    type="text"
-                    class="service-form__input service-form__input--price focused"
-                    id="price"
-                    name="price"
-                    placeholder="82"
-                  />
-                  </div>
-                  <div class="service-form__row service-form__row--gender">
-                    <div class="service-form__service-select service-select service-select--gender">
-                      <label
-                      for="gender"
-                      class="service-form__select-label visually-hidden"
-                      >Gender</label
-                    >
-                      <select class="select2-form-select" id="gender" inputmode="none">
-                        <option selected value="man">man</option>
-                        <option value="woman">woman</option>
-
-                      </select>
-                      
+                    <div class="service-form__row service-form__row--price">
+                      <label for="price" class="service-form__label">Price</label>
+                      <input
+                        type="text"
+                        class="service-form__input service-form__input--price focused"
+                        id="price"
+                        name="price"
+                        placeholder="82"
+                        autocomplete="off"
+                      />
                     </div>
-
-              
-
-                  </div>
-                  <div class="service-form__row service-form__row--duration">
-                    <div class="service-form__service-select service-select service-select--duration">
-                      <label
-                      for="duration"
-                      class="service-form__select-label visually-hidden"
-                      >Duration</label
-                    >
-                      <select class="select2-form-select" id="duration" inputmode="none">
-                        <option selected value="60">60</option>
-                        <option value="30">30</option>
-                        <option value="90">90</option>
-
-                      </select>
-                      
+                    <div class="service-form__row service-form__row--gender">
+                      <label for="gender" class="service-form__label"
+                        >Gender</label
+                      >
+                      <div class="service-form__service-select service-select">
+                        <!--                       <label
+                          for="gender"
+                          class="service-form__select-label visually-hidden"
+                          >Gender</label
+                        > -->
+                        <select
+                          class="select2-form-select"
+                          id="gender"
+                          inputmode="none"
+                          data-placeholder="man / woman"
+                        >
+                          <option></option>
+                          <option value="man">man</option>
+                          <option value="woman">woman</option>
+                        </select>
+                      </div>
                     </div>
-
-              
-
+                    <div class="service-form__row service-form__row--duration">
+                      <label for="duration" class="service-form__label"
+                        >Duration</label
+                      >
+                      <div
+                        class="service-form__service-select service-select service-select--duration"
+                      >
+                        <!--                       <label
+                          for="duration"
+                          class="service-form__select-label visually-hidden"
+                          >Duration</label
+                        > -->
+                        <select
+                          class="select2-form-select"
+                          id="duration"
+                          inputmode="none"
+                          data-placeholder="minutes"
+                        >
+                          <option></option>
+                          <option value="60">60</option>
+                          <option value="30">30</option>
+                          <option value="90">90</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
-                </div>
-
+  
                   <div class="service-form__row">
                     <ul class="service-form__language-options">
                       <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="English" id="English" checked />
-                        <label class="service-form__language-label" for="English">EN</label>
+                        <input
+                          class="visually-hidden service-form__language-input"
+                          type="radio"
+                          name="language"
+                          value="English"
+                          id="English"
+                          checked
+                        />
+                        <label class="service-form__language-label" for="English"
+                          >EN</label
+                        >
                       </li>
                       <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Deutsch" id="Deutsch" />
-                        <label class="service-form__language-label" for="Deutsch">DE</label>
+                        <input
+                          class="visually-hidden service-form__language-input"
+                          type="radio"
+                          name="language"
+                          value="Deutsch"
+                          id="Deutsch"
+                        />
+                        <label class="service-form__language-label" for="Deutsch"
+                          >DE</label
+                        >
                       </li>
                       <li class="service-form__language-option">
-                        <input class="visually-hidden service-form__language-input" type="radio" name="language" value="Turkish" id="Turkish" disabled/>
-                        <label class="service-form__language-label" for="Turkish">TR</label>
+                        <input
+                          class="visually-hidden service-form__language-input"
+                          type="radio"
+                          name="language"
+                          value="Turkish"
+                          id="Turkish"
+                          disabled
+                        />
+                        <label class="service-form__language-label" for="Turkish"
+                          >TR</label
+                        >
                       </li>
-
                     </ul>
                   </div>
-                  
-
+  
                   <div class="service-form__row">
+                    <label for="title" class="service-form__label">Title</label>
                     <input
-                    type="text"
-                    class="service-form__input"
-                    id="title"
-                    name="title"
-                    placeholder="Title"  autocomplete="off"
-                  />
+                      type="text"
+                      class="service-form__input"
+                      id="title"
+                      name="title"
+                      placeholder="Name of service"
+                      autocomplete="off"
+                    />
                   </div>
+
                   <!-- <div class="service-form__row">
                     <textarea
                   

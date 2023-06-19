@@ -22,6 +22,10 @@
     background-color: $backgroundMain;
   }
 
+  &.focused .select2-selection {
+    border: 0.1rem solid $accentMain;
+  }
+
   &
     .select2-container--default
     .select2-selection--single

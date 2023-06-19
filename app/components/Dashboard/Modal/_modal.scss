@@ -146,11 +146,35 @@
   /* The css styles for `outline` do not follow `border-radius` on iOS/Safari (#979). */
   & .cropper-view-box {
     outline: 0;
-    box-shadow: 0 0 0 1px #39f;
+    //box-shadow: 0 0 0 1px #39f;
+    //outline: 1px solid #39f;
+    outline-color: transparent;
   }
 
   & .cropper-drag-box {
     opacity: 0.75;
+  }
+
+  & .cropper-dashed {
+    border: 0 dashed transparent;
+  }
+
+  & .cropper-center::before,
+  .cropper-center::after {
+    display: none;
+  }
+
+  & .cropper-line {
+    background-color: transparent;
+    opacity: 0;
+  }
+
+  & .cropper-point {
+    background-color: transparent;
+  }
+
+  .cropper-point.point-se::before {
+    background-color: transparent;
   }
 }
 

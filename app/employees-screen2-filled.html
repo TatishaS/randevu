@@ -329,7 +329,9 @@
               </div> -->
               <form class="service-block__form employee-form">
                 <div class="employee-form__row">
-                  <span class="employee-form__label">Edit employee photo</span>
+                  <span class="employee-form__label employee-form__label--photo"
+                    >Edit employee photo</span
+                  >
                   <label
                     for="employee-photo-upload"
                     class="employee-form__photo-label"
@@ -360,98 +362,117 @@
                 </div>
                 <div class="employee-form__inputs-wrapper">
                   <div class="employee-form__row">
+                    <label for="name" class="employee-form__label">Name</label>
                     <input
                       type="text"
                       class="employee-form__input employee-form__input--name"
                       id="name"
                       name="name"
-                      placeholder="Name"
+                      placeholder="Employee name"
                       autocomplete="off"
                     />
                   </div>
                   <div class="employee-form__row">
+                    <label for="surname" class="employee-form__label"
+                      >Surname</label
+                    >
                     <input
                       type="text"
                       class="employee-form__input employee-form__input--surname"
                       id="surname"
                       name="surname"
-                      placeholder="Surname"
+                      placeholder="Employee surname"
                       autocomplete="off"
                     />
                   </div>
                   <div class="employee-form__row">
+                    <label for="email" class="employee-form__label"
+                      >Email</label
+                    >
                     <input
-                      type="text"
+                      type="email"
                       class="employee-form__input employee-form__input--email"
                       id="email"
                       name="email"
-                      placeholder="Email"
+                      placeholder="Employee email"
                       autocomplete="off"
                     />
                   </div>
                   <div class="employee-form__row">
+                    <label for="phone" class="employee-form__label"
+                      >Phone</label
+                    >
                     <input
                       type="text"
                       class="employee-form__input employee-form__input--phone"
                       id="phone"
                       name="phone"
-                      placeholder="Phone"
+                      placeholder="Employee phone number"
                       autocomplete="off"
                     />
                   </div>
                   <div class="employee-form__row">
+                    <label for="position" class="employee-form__label"
+                      >Position</label
+                    >
                     <div class="employee-form__select service-select">
-                      <label
+                      <!--                       <label
                         for="position"
                         class="employee-form__select-label visually-hidden"
                         >Position</label
-                      >
+                      > -->
                       <select
                         class="select2-form-select"
                         id="position"
                         inputmode="none"
-                        data-placeholder="Position"
+                        data-placeholder="admin / worker"
                       >
                         <!-- <option value="" selected disabled>Position</option> -->
 
                         <option></option>
 
                         <option value="admin">Admin</option>
-                        <option value="owner">Owner</option>
+                        <!--  <option value="owner">Owner</option> -->
                         <option value="worker">Worker</option>
                       </select>
                     </div>
                   </div>
                   <div class="employee-form__row">
+                    <label for="status" class="employee-form__label"
+                      >Status</label
+                    >
                     <div class="employee-form__select service-select">
-                      <label
+                      <!--                       <label
                         for="status"
                         class="employee-form__select-label visually-hidden"
                         >Status</label
-                      >
+                      > -->
                       <select
                         class="select2-form-select"
                         id="status"
                         inputmode="none"
-                        data-placeholder="Status"
+                        data-placeholder="working / removed"
                       >
                         <!-- <option value="" selected disabled>Status</option> -->
                         <option></option>
 
                         <option value="working">Working</option>
-                        <option value="not-working">Not working</option>
+                        <option value="removed">Removed</option>
                       </select>
                     </div>
                   </div>
                   <div class="employee-form__row employee-form__row--services">
+                    <label for="services" class="employee-form__label"
+                      >Services</label
+                    >
                     <div
                       class="employee-form__select service-select service-select--multiple"
                     >
-                      <label
+                      <!--                       <label
                         for="services"
                         class="employee-form__select-label visually-hidden"
                         >Services</label
-                      >
+                      > -->
                       <select
                         class="select2-form-multipleselect"
                         id="services"

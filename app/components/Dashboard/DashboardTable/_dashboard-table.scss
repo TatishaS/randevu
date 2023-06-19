@@ -51,6 +51,22 @@
     font-size: 1.2rem;
     line-height: 1.4rem;
     margin-bottom: 1.4rem;
+
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $contentLight;
+      border-radius: 2rem;
+      //margin-block: 0.5em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $contentDop;
+      border-radius: 2rem;
+    }
   }
 
   &.editable {
@@ -131,6 +147,14 @@
   td:last-child.selected,
   th:last-child.selected {
     border-radius: 0;
+  }
+
+  /* Custom scrollbar for Firefox */
+
+  @supports (scrollbar-color: grey white) {
+    &__table {
+      scrollbar-color: $contentDop $contentLight;
+    }
   }
 }
 
