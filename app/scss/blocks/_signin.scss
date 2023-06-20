@@ -51,11 +51,11 @@
 
   &.signin--step3 {
     .signin__inner {
-      min-height: 85vh;
-      background-image: url(../../images/signin3-bg.svg);
-      background-repeat: no-repeat;
-      background-size: 60%;
-      background-position: bottom 1rem center;
+      min-height: 90vh;
+      //background-image: url(../../images/signin3-bg.svg);
+      //background-repeat: no-repeat;
+      //background-size: 60%;
+      //background-position: bottom 1rem center;
     }
     .signin__left {
       min-height: 23.2rem;
@@ -66,11 +66,11 @@
 
   &.signin--step4 {
     .signin__inner {
-      min-height: 85vh;
-      background-image: url(../../images/signin3-bg.svg);
-      background-repeat: no-repeat;
-      background-size: 50%;
-      background-position: bottom 1rem center;
+      min-height: 90vh;
+      //background-image: url(../../images/signin3-bg.svg);
+      //background-repeat: no-repeat;
+      //background-size: 50%;
+      //background-position: bottom 1rem center;
     }
     .signin__left {
       min-height: 13rem;
@@ -224,6 +224,8 @@
       .signin__inner {
         background-image: url(../../images/signin3-bg-tablet.svg);
         background-position: left top 2rem;
+        background-repeat: no-repeat;
+        background-size: contain;
       }
     }
 
@@ -233,7 +235,9 @@
       }
       .signin__inner {
         background-image: url(../../images/signin3-bg-tablet.svg);
-        background-position: left top 2rem;
+        background-position: left top 4rem;
+        background-repeat: no-repeat;
+        background-size: contain;
       }
     }
 

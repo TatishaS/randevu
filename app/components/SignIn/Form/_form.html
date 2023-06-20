@@ -1,7 +1,7 @@
 <!-- Form SignIn without Fields Labels-->
 
 <div class="form">
-  <div class="form__inner">
+  <div class="form__inner form__inner--signin">
     <img
       src="./images/logo-form.svg"
       alt="Randevu logo"
@@ -13,11 +13,12 @@
     <form class="form__fields">
       <div class="form__field formfield">
         <input
-          type="text"
+          type="email"
           class="form__input input input--email"
           id="email"
           name="email"
           placeholder="Email"
+          autocomplete="off"
         />
       </div>
       <div class="form__field formfield formfield--password">

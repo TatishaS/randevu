@@ -2,10 +2,17 @@
   <div class="edit-form__row">
     <label for="employee" class="edit-form__label">Employee</label>
     <div class="edit-form__select dashboardform-select">
-      <select class="choices-dashboardform-select" id="employee">
+      <select
+        class="select2-dashboard-select"
+        id="employee"
+        data-placeholder="Name"
+      >
+        <option></option>
         <option value="Jake Doe">Jake Doe</option>
         <option value="Ricardo Carvalho">Ricardo Carvalho</option>
         <option value="Michaela Leman">Michaela Leman</option>
+        <option value="Vanessa Paradi">Vanessa Paradi</option>
+        <option value="Gloria Atkinson">Gloria Atkinson</option>
       </select>
     </div>
   </div>
@@ -18,8 +25,12 @@
       class="dashboardform-select__select-label visually-hidden"
       >Service</label
     > -->
-      <select class="choices-dashboardform-select" id="service">
-        <option value="">Service name</option>
+      <select
+        class="select2-dashboard-select"
+        id="service"
+        data-placeholder="Name of service"
+      >
+        <option></option>
         <option value="Hair colouring">Hair colouring</option>
         <option value="Hair SPA Ritual">Hair SPA Ritual</option>
         <option value="Face revitalizing">Face revitalizing</option>
@@ -43,10 +54,11 @@
   </div> -->
   <div class="edit-form__row">
     <label for="date" class="edit-form__label">Date</label>
-    <div class="edit-form__select-dropdown">
+    <div class="edit-form__select-wrapper edit-form__select-wrapper--date">
       <input
         type="text"
         id="date"
+        placeholder=" dd.mm.yyyy"
         class="edit-form__input-date"
         readonly
         inputmode="none"
@@ -55,14 +67,19 @@
   </div>
   <div class="edit-form__row">
     <label for="time" class="edit-form__label">Time</label>
-    <div class="edit-form__select-dropdown">
+    <div class="edit-form__select-wrapper edit-form__select-wrapper--date">
       <input
-        type="date"
+        class="edit-form__input-time"
         id="time"
-        value="2021-12-21"
-        class="edit-form__input-date"
+        type="text"
+        placeholder="10:00"
+        inputmode="none"
+        readonly
       />
     </div>
+    <!--                   <div class="edit-form__select-dropdown">
+      <input type="date"  id="time"  value="2021-12-21" class="edit-form__input-date">
+    </div> -->
   </div>
 
   <button class="edit-form__button save disabled">

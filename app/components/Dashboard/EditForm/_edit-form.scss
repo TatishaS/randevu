@@ -118,18 +118,18 @@
 
   & .datepicker-dropdown {
     width: 33rem;
-    //left: 0 !important;
-    position: fixed;
+    left: 0 !important;
+    //position: fixed;
     //top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%);
+    //left: 50% !important;
+    //transform: translate(-50%, -50%);
   }
 
   &
     .datepicker.datepicker-dropdown.active.datepicker-orient-left.datepicker-orient-bottom {
-    //top: 6rem !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%);
+    top: 6rem !important;
+    //top: 50% !important;
+    //transform: translate(-50%, -50%);
     //left: 0 !important;
   }
 
@@ -326,21 +326,21 @@
       align-items: center;
     }
 
-    & .datepicker-dropdown {
+    /*     & .datepicker-dropdown {
       left: 0 !important;
-      position: absolute;
+      //position: absolute;
       //top: 50%;
       //left: 50%;
       top: 6rem !important;
       transform: none;
-    }
+    } */
 
-    &
+    /*  &
       .datepicker.datepicker-dropdown.active.datepicker-orient-left.datepicker-orient-bottom {
       top: 6rem !important;
       //left: 0 !important;
       transform: none;
-    }
+    } */
 
     & .datepicker-controls {
       margin-bottom: 2.8rem;

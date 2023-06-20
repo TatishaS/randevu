@@ -1,94 +1,411 @@
-<section class="template__service-block service-block">
+<section class="template__service-block service-block service-block--category">
   <div class="service-block__top">
-    <div class="service-block__select listservices-select">
-      <select class="choices-form-select" id="list-services">
-        <option value="list-services">List of services</option>
-        <option value="list-categories">List of categories</option>
-      </select>
-    </div>
-    <button class="service-block__btn wide-button active">Add category</button>
-    <button class="service-block__btn wide-button">Add service</button>
+    <button class="service-block__btn wide-button wide-button--employees">
+      A list of employees
+    </button>
+    <button class="service-block__btn wide-button">Add employee</button>
   </div>
-  <form class="service-block__form service-form">
-    <div class="service-form__row">
-      <span class="service-form__label">Add category photo</span>
-      <label for="category-photo-upload">
-        <span class="service-form__file-wrapper">
-          <span class="service-form__file-preview">
-            <span class="service-form__file-add-btn">
-              <img src="./images/icon-plus-circle.svg" alt="Upload photo" />
+  <div class="template__table employees-table">
+    <table class="employees-table__table">
+      <thead class="employees-table__thead">
+        <tr>
+          <th class="number">№</th>
+          <th class="name">Name</th>
+          <th class="phone">Phone</th>
+          <th class="role">Role</th>
+          <th class="status">Status</th>
+          <th class="services">Services</th>
+          <th class="action">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">1</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-1.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Nick Li
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">
+            <span class="services__inner">
+              <span>Styling, Haircut</span>
+              <span class="services__morebtn-wrapper">
+                <button class="services__more-btn">
+                  ...
+                  <!--                               <img
+                  class="services__more-btnimg"
+                  src="./images/icon-more.svg"
+                  alt="show more services"
+                  width="20"
+                  height="20"
+                /> -->
+                </button>
+                <span class="services__popup popup">
+                  <span class="popup__close popup__confirm-close"></span>
+                  <span class="popup__inner">
+                    <h6 class="popup__msg">Services full list</h6>
+                    <span class="popup__list-wrapper">
+                      <ol class="popup__list">
+                        <li class="popup__list-item">Styling</li>
+                        <li class="popup__list-item">Haircut</li>
+                        <li class="popup__list-item">Manicure</li>
+                        <li class="popup__list-item">Pedicure</li>
+                        <li class="popup__list-item">Face massage</li>
+                        <li class="popup__list-item">Aroma therapy</li>
+                        <li class="popup__list-item">Children's haircut</li>
+                        <li class="popup__list-item">Manicure</li>
+                        <li class="popup__list-item">Pedicure</li>
+                        <li class="popup__list-item">Face massage</li>
+                        <li class="popup__list-item">Aroma therapy</li>
+                        <li class="popup__list-item">Children's haircut</li>
+                        <li class="popup__list-item">Styling</li>
+                        <li class="popup__list-item">Haircut</li>
+                        <li class="popup__list-item">Manicure</li>
+                        <li class="popup__list-item">Pedicure</li>
+                      </ol>
+                    </span>
+                    <span class="popup__btns">
+                      <button class="popup__btn edit">Edit</button>
+                      <button class="popup__btn ok">Ok</button>
+                    </span>
+                  </span>
+                </span>
+              </span>
             </span>
-            <!--  <span class="service-form__file-delete-btn">
-                  <img
-                    src="./images/icon-trash-white.svg"
-                    alt="Delete photo"
-                  />
-</span> -->
-          </span>
-        </span>
-      </label>
-      <input
-        class="service-form__file-input visually-hidden"
-        type="file"
-        name="category-photo"
-        id="category-photo-upload"
-      />
-    </div>
+          </td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">2</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-2.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Marry Olsen
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">
+            <span class="services__inner">
+              <span>Styling, Haircut</span>
+              <span class="services__morebtn-wrapper">
+                <button class="services__more-btn">
+                  <span>...</span>
+                  <!--                               <img
+                  class="services__more-btnimg"
+                  src="./images/icon-more.svg"
+                  alt="show more services"
+                  width="20"
+                  height="20"
+                /> -->
+                </button>
+                <span class="services__popup popup">
+                  <span class="popup__close popup__confirm-close"></span>
+                  <span class="popup__inner">
+                    <h6 class="popup__msg">Services full list</h6>
+                    <span class="popup__list-wrapper">
+                      <ol class="popup__list">
+                        <li class="popup__list-item">Styling</li>
+                        <li class="popup__list-item">Haircut</li>
+                        <li class="popup__list-item">Manicure</li>
+                        <li class="popup__list-item">Pedicure</li>
+                        <li class="popup__list-item">Face massage</li>
+                        <li class="popup__list-item">Aroma therapy</li>
+                        <li class="popup__list-item">Children's haircut</li>
+                        <li class="popup__list-item">Manicure</li>
+                        <li class="popup__list-item">Pedicure</li>
+                        <li class="popup__list-item">Face massage</li>
+                        <li class="popup__list-item">Aroma therapy</li>
+                        <li class="popup__list-item">Children's haircut</li>
+                      </ol>
+                    </span>
+                    <span class="popup__btns">
+                      <button class="popup__btn edit">Edit</button>
+                      <button class="popup__btn ok">Ok</button>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">3</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-3.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Angelina Gerasimova
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Admin</td>
+          <td class="services">Styling, Haircut</td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">4</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-4.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Kate Lao
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">
+            Styling, Haircut, Haircut with “Fade” clipper
+          </td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">5</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-5.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Lisa Olsen
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">Styling, Haircut, Children’s haircut</td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">6</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-6.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Ritta Dakota
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">Styling, Haircut</td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">7</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-7.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Carol Pitt
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">
+            Styling, Haircut, Haircut with “Fade” clipper
+          </td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+        <tr class="employees-table__row servicetable-row">
+          <td class="number">8</td>
+          <td class="name">
+            <div class="employees-table__td-wrapper">
+              <div class="employees-table__img-wrapper">
+                <img
+                  src="./images/employee-8.jpg"
+                  alt="Employee photo"
+                  class="employees-table__img"
+                />
+              </div>
+              Chloe Morren
+            </div>
+          </td>
+          <td class="phone">+34842797474</td>
+          <td class="role">Hairdresser</td>
+          <td class="status">Working</td>
+          <td class="services">Styling, Haircut</td>
+          <td class="action">
+            <span class="actions">
+              <button class="employees-table__action-button">
+                <img
+                  class="employees-table__action-icon"
+                  src="./images/icon-edit.svg"
+                  alt="edit row"
+                  width="26"
+                  height="26"
+                />
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="employees-table__pagination pagination">
+      <a class="pagination__arrow pagination__arrow disabled">
+        <img
+          class="pagination__icon-arrow pagination__icon-arrow--left"
+          src="./images/icon-arrow-right.svg"
+          alt="arrow icon"
+        />
+      </a>
 
-    <div class="service-form__row">
-      <ul class="service-form__language-options">
-        <li class="service-form__language-option">
-          <input
-            class="visually-hidden service-form__language-input"
-            type="radio"
-            name="language"
-            value="English"
-            id="English"
-            checked
-          />
-          <label class="service-form__language-label" for="English">EN</label>
+      <ul class="pagination__list">
+        <li class="pagination__list-item">
+          <a class="pagination__list-num active"> 1 </a>
         </li>
-        <li class="service-form__language-option">
-          <input
-            class="visually-hidden service-form__language-input"
-            type="radio"
-            name="language"
-            value="Deutsch"
-            id="Deutsch"
-          />
-          <label class="service-form__language-label" for="Deutsch">DE</label>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 2 </a>
         </li>
-        <li class="service-form__language-option">
-          <input
-            class="visually-hidden service-form__language-input"
-            type="radio"
-            name="language"
-            value="Turkish"
-            id="Turkish"
-            disabled
-          />
-          <label class="service-form__language-label" for="Turkish">TR</label>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 3 </a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 4 </a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num dots"> ...</a>
+        </li>
+        <li class="pagination__list-item">
+          <a class="pagination__list-num"> 7</a>
         </li>
       </ul>
-    </div>
 
-    <div class="service-form__row">
-      <input
-        type="text"
-        class="service-form__input"
-        id="title"
-        name="title"
-        placeholder="Title"
-        autocomplete="off"
-      />
+      <a class="pagination__arrow">
+        <img
+          class="pagination__icon-arrow"
+          src="./images/icon-arrow-right.svg"
+          alt="arrow icon"
+        />
+      </a>
     </div>
-    <div class="service-form__btns-wrapper">
-      <button class="service-form__button save disabled">
-        <svg width="26" height="26">
-          <use xlink:href="./images/sprite.svg#icon-save"></use>
-        </svg>
-        Save
-      </button>
-    </div>
-  </form>
+  </div>
 </section>
