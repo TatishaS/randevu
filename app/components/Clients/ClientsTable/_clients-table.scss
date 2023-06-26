@@ -151,6 +151,36 @@
     min-width: 20rem;
     max-width: 30rem;
     white-space: normal;
+    overflow: visible;
+
+    /*   .services__morebtn-wrapper {
+      position: relative;
+    } */
+
+    .notes__inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .notes__more-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      //width: 2.6rem;
+      //height: 2.6rem;
+      font-size: 1.8rem;
+      padding: 0rem 0.6rem 0.8rem 0.6rem;
+      line-height: 1.8rem;
+      border-radius: 0.6rem;
+      background: transparent;
+      color: $contentMain;
+      border: 0.1rem solid $contentLight;
+      outline: none;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
   }
 
   .actions {

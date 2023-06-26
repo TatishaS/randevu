@@ -347,7 +347,30 @@
                       <td class="phone">+34842797474</td>
                       <td class="quantity">12</td>
                       <td class="payment">150$</td>
-                      <td class="notes">This client likes cappuccino</td>
+                      <td class="notes">
+                        <span class="notes__inner">
+                          <span>This client likes cappuccino</span>
+                          <span class="notes__morebtn-wrapper">
+                            <button class="notes__more-btn">...</button>
+                            <span class="notes__popup popup">
+                              <span
+                                class="popup__close popup__confirm-close"
+                              ></span>
+                              <span class="popup__inner">
+                                <h6 class="popup__msg">Notes</h6>
+                                <span class="popup__text">
+                                  This client likes cappuccino with double
+                                  espresso
+                                </span>
+                                <span class="popup__btns">
+                                  <!--   <button class="popup__btn edit">Edit</button> -->
+                                  <button class="popup__btn ok">Ok</button>
+                                </span>
+                              </span>
+                            </span>
+                          </span>
+                        </span>
+                      </td>
                       <td class="fit">
                         <span class="actions">
                           <button class="clients-table__action-button">
@@ -470,7 +493,7 @@ This client likes cappuccino</textarea
       </div>
     </main>
     <div class="overlay"></div>
-    <div class="modal modal__confirm">
+    <!--     <div class="modal modal__confirm">
       <div class="modal__close modal__confirm-close"></div>
       <div class="modal__inner">
         <div class="modal__img-wrapper">
@@ -491,6 +514,6 @@ This client likes cappuccino</textarea
           <button class="modal__btn yes">Yes</button>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
