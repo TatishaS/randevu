@@ -1,0 +1,50 @@
+.clients {
+  &__filters {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__filters-form {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__select-dropdown:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .clients {
+    &__filters-form {
+      width: auto;
+      flex-direction: column-reverse;
+    }
+
+    .table-select--display {
+      margin-bottom: 1rem;
+    }
+
+    .table-select--status {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .clients {
+    &__filters-form {
+      width: auto;
+      flex-direction: row;
+    }
+    .table-select--display {
+      margin-bottom: 0;
+    }
+    .table-select--status {
+      margin-right: 2rem;
+    }
+  }
+}

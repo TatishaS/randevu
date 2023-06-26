@@ -1,0 +1,40 @@
+.clientstable-row {
+  &.new {
+    background-color: $domLight;
+    color: $accentMain;
+  }
+
+  &.canceled {
+    color: $contentDop;
+  }
+
+  td.card {
+    display: none;
+  }
+
+  &.focused {
+    td {
+      background-color: $backgroundMain;
+    }
+    td:not(:first-child),
+    td:not(:last-child) {
+      border-top: 0.1rem solid $contentMain;
+      border-bottom: 0.1rem solid $contentMain;
+    }
+    td:first-child {
+      border-top: 0.1rem solid $contentMain;
+      border-bottom: 0.1rem solid $contentMain;
+      border-left: 0.1rem solid $contentMain;
+    }
+
+    td:last-child {
+      border-top: 0.1rem solid $contentMain;
+      border-bottom: 0.1rem solid $contentMain;
+      border-right: 0.1rem solid $contentMain;
+    }
+
+    td.card {
+      display: table-cell;
+    }
+  }
+}

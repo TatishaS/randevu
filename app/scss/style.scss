@@ -63,12 +63,19 @@
 @import '../components/NewAppontment/Accordion/accordion';
 @import '../components/NewAppontment/AppForm/app-form';
 
+/* Clients */
+
+@import '../components/Clients/ClientsTable/clients-table';
+@import '../components/Clients/ClientstableRow/clientstable-row';
+@import '../components/Clients/ClientForm/client-form';
+
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
 @import 'blocks/signin';
 @import 'blocks/dashboard';
 @import 'blocks/template';
 @import 'blocks/appointment';
+@import 'blocks/clients';
 
 //@import "blocks/footer";
 

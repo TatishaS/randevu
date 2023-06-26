@@ -17,11 +17,14 @@
       fill: $backgroundMain;
     }
     border: none;
+    &--gradient {
+      background: $gradientMain;
+    }
   }
 
   &.delete {
     background-color: transparent;
-    padding: 1rem 1.4rem;
+    padding: 0.9rem 1.4rem;
     border: 0.1rem solid $contentMain;
   }
   &.save.disabled {

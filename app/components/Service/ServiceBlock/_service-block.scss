@@ -10,6 +10,10 @@
   &__top {
     margin-bottom: 4rem;
   }
+
+  &__container {
+    padding: 0 2rem;
+  }
 }
 
 @media (min-width: $breakpoint768) {
@@ -48,6 +52,10 @@
       .service-block__top {
         margin-bottom: 2.8rem;
       }
+    }
+
+    &__container {
+      padding: 0;
     }
   }
 }

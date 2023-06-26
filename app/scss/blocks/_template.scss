@@ -89,11 +89,41 @@
 
   &__edit-name {
     display: block;
+    &--client {
+      display: inline-block;
+    }
   }
 
   &__title-img {
     width: 2.6rem;
     height: 2.6rem;
+  }
+
+  &__header-btns {
+    margin-bottom: 2.8rem;
+  }
+
+  &__header-btn:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &.clients--screen1,
+  &.clients--screen3,
+  &.clients--screen4 {
+    .template__container {
+      padding: 0;
+    }
+
+    .template__page-top {
+      padding: 0 2rem;
+    }
+
+    .service-block__top {
+      padding: 0 2rem;
+    }
+    .template__table {
+      padding-left: 2rem;
+    }
   }
 }
 
@@ -101,8 +131,18 @@
   .template {
     padding-top: 4rem;
 
+    &__top-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
     &__page-top {
       margin-bottom: 2.8rem;
+
+      &--editable {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &__edit-name {
@@ -135,9 +175,38 @@
       line-height: 1.6rem;
     }
 
-    &.services--screen1 {
+    &__header-btns {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 2.8rem;
+    }
+
+    &__header-btn:not(:last-child) {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+
+    &.services--screen1,
+    &.services--screen3 {
       .template__content-wrapper {
         min-height: 80vh;
+      }
+    }
+
+    &.clients--screen3,
+    &.clients--screen4 {
+      .template__page-top {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+      .template__header-btns {
+        order: 2;
+      }
+      .template__edit-wrapper {
+        order: 1;
+        margin-bottom: 2.8rem;
       }
     }
   }
@@ -170,6 +239,25 @@
     &.newappointment {
       .template__content-wrapper {
         border-radius: 1.4rem;
+      }
+    }
+
+    &.clients--screen1,
+    &.clients--screen3,
+    &.clients--screen4 {
+      .template__container {
+        padding: 0 1.5rem;
+      }
+
+      .template__page-top {
+        padding: 0;
+      }
+
+      .service-block__top {
+        padding: 0;
+      }
+      .template__table {
+        padding-left: 0;
       }
     }
   }

@@ -1,0 +1,355 @@
+.clients-table {
+  padding-bottom: 10.4rem;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__table {
+    display: block;
+    overflow: hidden;
+    //table-layout: fixed;
+    /*    border-collapse: collapse; */
+    border-collapse: separate;
+    border-spacing: 0;
+
+    white-space: nowrap;
+    //width: 100em;
+    //max-width: 80%;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    table-layout: auto;
+    overflow-x: auto;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-bottom: 2.8rem;
+
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $contentLight;
+      border-radius: 2rem;
+      //margin-block: 0.5em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $contentDop;
+      border-radius: 2rem;
+    }
+  }
+
+  &.editable {
+    padding-bottom: 0;
+
+    .clientstable-row {
+      td {
+        background-color: $backgroundMain;
+      }
+      td:not(:first-child),
+      td:not(:last-child) {
+        border-top: 0.1rem solid $contentLight;
+        border-bottom: 0.1rem solid $contentLight;
+      }
+      td:first-child {
+        border-top: 0.1rem solid $contentLight;
+        border-bottom: 0.1rem solid $contentLight;
+        border-left: 0.1rem solid $contentLight;
+      }
+
+      td:last-child {
+        border-top: 0.1rem solid $contentLight;
+        border-bottom: 0.1rem solid $contentLight;
+        border-right: 0.1rem solid $contentLight;
+      }
+    }
+  }
+
+  &__thead {
+    color: $contentSecondary;
+  }
+
+  &__table th {
+    font-weight: 600;
+    //font-size: 1.6rem;
+    //line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  &__table th,
+  &__table td {
+    text-align: left;
+    padding: 1.5rem 0.6rem;
+  }
+
+  td:first-child,
+  th:first-child {
+    padding: 1.5rem 0.6rem 1.5rem 1.4rem;
+    border-radius: 1.4rem 0 0 1.4rem;
+  }
+
+  td:last-child,
+  th:last-child {
+    padding: 0.7rem 2.4rem 0.7rem 0.6rem;
+    border-radius: 0 1.4rem 1.4rem 0;
+  }
+
+  &__table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__table .name {
+    min-width: 11.2rem;
+  }
+  &__table .phone {
+    min-width: 12.2rem;
+  }
+
+  &__table .quantity {
+    min-width: 10.2rem;
+  }
+  &__table .payment {
+    min-width: 5.2rem;
+  }
+
+  &__table .card {
+    min-width: 13.5rem;
+  }
+
+  &__table .service {
+    min-width: 9rem;
+  }
+
+  &__table .employee {
+    min-width: 15.4rem;
+  }
+
+  &__table .date {
+    min-width: 8.6rem;
+  }
+
+  &__table .time {
+    min-width: 7.4rem;
+  }
+
+  &__table .action {
+    min-width: 7rem;
+  }
+
+  &__table .label {
+    display: inline-block;
+    min-width: 9rem;
+    text-align: center;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__card-button {
+    //width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $contentMain;
+    color: $backgroundMain;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 0.6rem 3rem 0.6rem 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      right: 1rem;
+      width: 0.6rem;
+      height: 0.9rem;
+      background-image: url('../../../images/icon-back.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &__card-button:hover {
+    opacity: 0.6;
+  }
+
+  &__table .selected {
+    background-color: $backgroundMain;
+  }
+
+  td:first-child.selected,
+  th:first-child.selected {
+    border-radius: 0;
+  }
+
+  td:last-child.selected,
+  th:last-child.selected {
+    border-radius: 0;
+  }
+
+  &__td-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__img-wrapper {
+    margin-right: 1rem;
+  }
+  &__img {
+    width: 4rem;
+    flex-shrink: 0;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  /* Custom scrollbar for Firefox */
+
+  @supports (scrollbar-color: grey white) {
+    &__table {
+      scrollbar-color: $contentDop $contentLight;
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .clients-table {
+    &__table {
+      margin-bottom: 2.8rem;
+    }
+
+    &__top {
+      padding: 0 2rem 0 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &.editable {
+      .clients-table__table {
+        margin-bottom: 2rem;
+      }
+      .clients-table__table th {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+
+      .clients-table__table th,
+      .clients-table__table td {
+        //text-align: left;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding: 1.5rem 2rem;
+      }
+
+      .clients-table__table .name {
+        min-width: 21.4rem;
+      }
+
+      .clients-table__table .phone {
+        min-width: 17rem;
+      }
+
+      .clients-table__table .quantity {
+        min-width: 15.6rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .clients-table {
+    padding: 0;
+    background: $backgroundSecondary;
+    border-radius: 1.4rem 0 0 1.4rem;
+    flex-grow: 1;
+    max-width: 100%;
+
+    &__top {
+      padding: 0 0.8rem 0 0;
+    }
+
+    &__table .name {
+      min-width: 21.4rem;
+    }
+    &__table .quantity {
+      min-width: 15.6rem;
+    }
+
+    &__table .service {
+      min-width: 15.6rem;
+    }
+
+    &__table .employee {
+      min-width: 22.6rem;
+    }
+
+    &__table .date {
+      min-width: 11.2rem;
+    }
+
+    &__table .time {
+      min-width: 9.2rem;
+    }
+    &__table {
+      //font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+
+    &__table th {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+    &__table th,
+    &__table td {
+      text-align: left;
+      padding: 1.5rem 2rem;
+    }
+
+    &__card-button {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      padding: 0.8rem 4.5rem 0.9rem 1.4rem;
+
+      &::after {
+        right: 2rem;
+        width: 0.8rem;
+        height: 1.3rem;
+      }
+    }
+    td:first-child,
+    th:first-child {
+      padding: 1.5rem 2rem 1.5rem 2.2rem;
+    }
+
+    td:last-child,
+    th:last-child {
+      padding: 0.7rem 2.4rem 0.7rem 2rem;
+    }
+  }
+}
