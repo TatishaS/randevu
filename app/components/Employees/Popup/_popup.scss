@@ -14,7 +14,7 @@
   padding: 4rem 2.4rem 2.4rem 4.8rem;
 
   max-width: 80vw;
-  min-width: 20rem;
+  min-width: 25rem;
   min-height: 29rem;
   //max-height: 75vh;
   z-index: 150;
@@ -25,7 +25,9 @@
   }
 
   &.notes__popup {
+    max-width: 90vw;
     min-height: 20rem;
+    padding: 2.4rem;
   }
   &__close {
     position: absolute;

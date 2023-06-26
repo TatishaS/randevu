@@ -353,7 +353,7 @@ function handleNotesPopup() {
     '.popup__confirm-close'
   );
 
-  if (!popup) return;
+  //if (!popup) return;
 
   moreBtns.forEach(btn => {
     btn.addEventListener('click', e => {
