@@ -336,6 +336,8 @@
                       <th class="phone">Phone</th>
                       <th class="quantity">All services</th>
                       <th class="payment">Payment</th>
+                      <th class="notes">Notes</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -344,8 +346,21 @@
                       <td class="name">Marry Ellis</td>
                       <td class="phone">+34842797474</td>
                       <td class="quantity">12</td>
-
                       <td class="payment">150$</td>
+                      <td class="notes">This client likes cappuccino</td>
+                      <td class="fit">
+                        <span class="actions">
+                          <button class="clients-table__action-button">
+                            <img
+                              class="clients-table__action-icon"
+                              src="./images/icon-edit.svg"
+                              alt="edit row"
+                              width="26"
+                              height="26"
+                            />
+                          </button>
+                        </span>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -381,7 +396,7 @@
                             autocomplete="off"
                             value="Marry Ellis"
                           />
-                          <button class="client-form__icon-button edit">
+                          <!--                           <button class="client-form__icon-button edit">
                             <img
                               class="client-form__edit-icon"
                               src="./images/icon-edit.svg"
@@ -389,7 +404,7 @@
                               width="26"
                               height="26"
                             />
-                          </button>
+                          </button> -->
                         </div>
                       </div>
 
@@ -407,7 +422,7 @@
                             autocomplete="off"
                             value="+34842797474"
                           />
-                          <button class="client-form__icon-button edit">
+                          <!--                           <button class="client-form__icon-button edit">
                             <img
                               class="client-form__edit-icon"
                               src="./images/icon-edit.svg"
@@ -415,8 +430,22 @@
                               width="26"
                               height="26"
                             />
-                          </button>
+                          </button> -->
                         </div>
+                      </div>
+                      <div class="client-form__row client-form__row--notes">
+                        <label for="notes" class="client-form__label"
+                          >Notes</label
+                        >
+                        <textarea
+                          class="client-form__textarea"
+                          id="notes"
+                          name="notes"
+                          placeholder="Some notes about the client"
+                          rows="5"
+                        >
+This client likes cappuccino</textarea
+                        >
                       </div>
                     </div>
 

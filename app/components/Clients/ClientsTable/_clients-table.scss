@@ -23,8 +23,8 @@
     overflow-x: auto;
 
     font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
     margin-bottom: 2.8rem;
 
     &::-webkit-scrollbar {
@@ -75,28 +75,26 @@
   }
 
   &__table th {
-    font-weight: 600;
-    //font-size: 1.6rem;
-    //line-height: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 
   &__table th,
   &__table td {
     text-align: left;
-    padding: 1.5rem 0.6rem;
+    padding: 1.5rem 1rem;
   }
 
   td:first-child,
   th:first-child {
-    padding: 1.5rem 0.6rem 1.5rem 1.4rem;
+    padding: 1.5rem 1rem 1.5rem 1.4rem;
     border-radius: 1.4rem 0 0 1.4rem;
   }
 
   td:last-child,
   th:last-child {
-    padding: 0.7rem 2.4rem 0.7rem 0.6rem;
+    padding: 0.7rem 2.4rem 0.7rem 1rem;
     border-radius: 0 1.4rem 1.4rem 0;
   }
 
@@ -109,7 +107,7 @@
     min-width: 11.2rem;
   }
   &__table .phone {
-    min-width: 12.2rem;
+    min-width: 14.5rem;
   }
 
   &__table .quantity {
@@ -149,6 +147,12 @@
     text-align: center;
   }
 
+  &__table .notes {
+    min-width: 20rem;
+    max-width: 30rem;
+    white-space: normal;
+  }
+
   .actions {
     display: flex;
     justify-content: space-around;
@@ -162,8 +166,8 @@
     background-color: $contentMain;
     color: $backgroundMain;
     font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     padding: 0.6rem 3rem 0.6rem 1rem;
     border: none;
     border-radius: 0.8rem;
@@ -185,6 +189,23 @@
     }
   }
   &__card-button:hover {
+    opacity: 0.6;
+  }
+
+  &__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.6rem;
+    min-height: 2.6rem;
+    background: transparent;
+    border: none;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  &__action-button:hover {
     opacity: 0.6;
   }
 
@@ -251,17 +272,17 @@
       .clients-table__table {
         margin-bottom: 2rem;
       }
-      .clients-table__table th {
+      /*   .clients-table__table th {
         font-weight: 500;
         font-size: 1.6rem;
         line-height: 2rem;
-      }
+      } */
 
       .clients-table__table th,
       .clients-table__table td {
         //text-align: left;
-        font-size: 1.6rem;
-        line-height: 2rem;
+        //font-size: 1.6rem;
+        //line-height: 2rem;
         padding: 1.5rem 2rem;
       }
 
@@ -314,17 +335,18 @@
     &__table .time {
       min-width: 9.2rem;
     }
-    &__table {
+
+    /*  &__table {
       //font-weight: 500;
       font-size: 1.6rem;
       line-height: 2rem;
-    }
+    } */
 
-    &__table th {
+    /*    &__table th {
       font-weight: 500;
-      font-size: 1.6rem;
-      line-height: 2rem;
-    }
+      //font-size: 1.6rem;
+      //line-height: 2rem;
+    } */
     &__table th,
     &__table td {
       text-align: left;

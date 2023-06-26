@@ -134,9 +134,9 @@
 
     &__inputs-wrapper {
       max-width: 55.4rem;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1.4rem;
+      //display: grid;
+      //grid-template-columns: repeat(2, 1fr);
+      //grid-gap: 1.4rem;
 
       &--editable {
         max-width: 32rem;
@@ -177,20 +177,20 @@
       margin-bottom: 2rem;
     }
 
-    &__inner {
+    /*  &__inner {
       display: flex;
       justify-content: flex-start;
       align-items: center;
     }
-
+ */
     &__inputs-wrapper {
       &--editable {
         max-width: 55.2rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 3.6rem;
-        margin-bottom: 0;
-        margin-right: 3.6rem;
+        //display: grid;
+        //grid-template-columns: repeat(2, 1fr);
+        //grid-gap: 3.6rem;
+        //margin-bottom: 0;
+        //margin-right: 3.6rem;
 
         .client-form__input {
           font-size: 1.6rem;
@@ -201,23 +201,23 @@
           display: none;
         }
 
-        .client-form__row {
+        /*  .client-form__row {
           margin-bottom: 0;
-        }
+        } */
 
-        .client-form__row.client-form__row--editname {
+        /*  .client-form__row.client-form__row--editname {
           margin-bottom: 0;
-        }
+        } */
 
-        .client-form__btns-wrapper {
+        /*   .client-form__btns-wrapper {
           align-self: flex-end;
-        }
+        } */
       }
     }
 
     &__btns-wrapper {
       &--editable {
-        align-self: flex-end;
+        //align-self: flex-end;
         .form-button {
           padding-top: 1.3rem;
           padding-bottom: 1.2rem;
