@@ -263,6 +263,21 @@
   &__textarea {
     width: 100%;
     resize: none;
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $contentLight;
+      border-radius: 2rem;
+      //margin-block: 0.5em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $contentDop;
+      border-radius: 2rem;
+    }
   }
 
   &__button {
