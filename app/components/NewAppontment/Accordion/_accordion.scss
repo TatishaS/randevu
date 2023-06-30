@@ -5,39 +5,40 @@
   }
 
   &__item.accordion__item-active {
-    .accordion__item-trigger {
+    /*   .accordion__item-trigger {
       margin-bottom: 1rem;
-    }
+    } */
     .accordion__item-content {
-      display: block;
-      transition: all 0.6s ease;
-      animation: fade 0.3s ease;
+      //display: block;
+      max-height: 1200px;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+      //animation: fade 0.3s ease;
     }
 
     .trigger__inner {
       background-color: $contentMain;
-      transition: all 0.4s ease;
+      transition: all 0.5s ease;
     }
 
     .trigger__text {
       color: $backgroundMain;
-      transition: all 0.4s ease;
+      transition: all 0.5s ease;
     }
     .trigger__img {
       svg {
         fill: $backgroundMain;
         stroke: $backgroundMain;
         transform: rotate(90deg);
-        transition: 0.4s all ease;
+        transition: 0.5s all ease;
       }
     }
   }
-  &__item.accordion__item--date.accordion__item-active,
+  /*  &__item.accordion__item--date.accordion__item-active,
   &__item.accordion__item--time.accordion__item-active {
     .accordion__item-trigger {
       margin-bottom: 2rem;
     }
-  }
+  } */
 
   &__item-trigger {
     display: flex;
@@ -92,14 +93,22 @@
     }
   }
 
+  &__content-wrapper {
+    //margin-bottom: 2rem;
+    padding-top: 1rem;
+    //padding-bottom: 2rem;
+  }
+
   &__item-content {
     width: calc(100% - 5rem);
     margin-left: auto;
     padding-right: 0.4rem;
-    padding-bottom: 2rem;
-    display: none;
-    animation: fade 0.3s ease;
-    transition: all 0.6s ease;
+    //padding-bottom: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    //display: none;
+    //animation: fade 0.3s ease;
+    transition: all 0.5s ease;
 
     .content__text {
       margin-top: 25px;
@@ -375,7 +384,7 @@
     height: 2.2rem;
     margin-left: 1rem;
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0, 1, 0, 1);
   }
 
   &__option-input:checked + label {
@@ -437,16 +446,14 @@
   .accordion {
     padding: 0 3rem 0 0;
 
-    /*  &__item {
+    &__item {
       margin-bottom: 2.8rem;
-    } */
-
-    &__item.accordion__item-active {
-      margin-bottom: 0;
-      .accordion__item-trigger {
-        margin-bottom: 2.8rem;
-      }
     }
+
+    /*   &__item.accordion__item-active {
+      margin-bottom: 0;
+
+    } */
 
     &__item-trigger {
       .trigger__num {
@@ -458,9 +465,15 @@
       width: calc(100% - 5.8rem);
       margin-left: auto;
       padding-right: 1rem;
-      padding-bottom: 2.8rem;
-      display: none;
+      //padding-bottom: 2.8rem;
+      //max-height: 1200px;
+      //display: none;
       animation: fade 0.3s ease;
+    }
+
+    &__content-wrapper {
+      padding-top: 2.8rem;
+      //padding-bottom: 2.8rem;
     }
 
     &__options {

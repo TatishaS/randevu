@@ -679,42 +679,112 @@
                   class="info-form__row-wrapper info-form__row-wrapper--interval"
                 >
                   <div class="info-form__row info-form__row--interval">
-                    <input
-                      type="text"
-                      class="info-form__input info-form__input--interval"
-                      id="day-from"
-                      name="day-from"
-                      placeholder="Mon"
-                      autocomplete="off"
-                    />
+                    <span class="info-form__dayselect day-select">
+                      <select
+                        class="select2-day-select"
+                        id="start-day"
+                        inputmode="none"
+                        data-placeholder="Mon"
+                      >
+                        <option></option>
+                        <option value="Monday">Mon</option>
+                        <option value="Tuesday">Tue</option>
+                        <option value="Wednesday">Wed</option>
+                        <option value="Thursday">Thu</option>
+                        <option value="Friday">Fri</option>
+                        <option value="Saturday">Sat</option>
+                        <option value="Sunday">Sun</option>
+                      </select>
+                    </span>
                     <div class="info-form__field-separator"></div>
-                    <input
-                      type="text"
-                      class="info-form__input info-form__input--interval"
-                      id="day-to"
-                      name="day-to"
-                      placeholder="Sun"
-                      autocomplete="off"
-                    />
+                    <span class="info-form__dayselect day-select">
+                      <select
+                        class="select2-day-select"
+                        id="end-day"
+                        inputmode="none"
+                        data-placeholder="Sun"
+                      >
+                        <option></option>
+                        <option value="Monday">Mon</option>
+                        <option value="Tuesday">Tue</option>
+                        <option value="Wednesday">Wed</option>
+                        <option value="Thursday">Thu</option>
+                        <option value="Friday">Fri</option>
+                        <option value="Saturday">Sat</option>
+                        <option value="Sunday">Sun</option>
+                      </select>
+                    </span>
                   </div>
                   <div class="info-form__row info-form__row--interval">
-                    <input
-                      type="text"
-                      class="info-form__input info-form__input--interval"
-                      id="time-from"
-                      name="time-from"
-                      placeholder="9:00 AM"
-                      autocomplete="off"
-                    />
+                    <span class="info-form__dayselect day-select">
+                      <select
+                        class="select2-day-select"
+                        id="start-time"
+                        inputmode="none"
+                        data-placeholder="9:00"
+                      >
+                        <option></option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                      </select>
+                    </span>
                     <div class="info-form__field-separator"></div>
-                    <input
-                      type="text"
-                      class="info-form__input info-form__input--interval"
-                      id="time-to"
-                      name="time-to"
-                      placeholder="9:00 PM"
-                      autocomplete="off"
-                    />
+                    <span class="info-form__dayselect day-select">
+                      <select
+                        class="select2-day-select"
+                        id="end-time"
+                        inputmode="none"
+                        data-placeholder="18:00"
+                      >
+                        <option></option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                      </select>
+                    </span>
                   </div>
                 </div>
                 <div class="info-form__row">

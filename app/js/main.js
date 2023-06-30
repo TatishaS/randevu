@@ -13,6 +13,10 @@ window.addEventListener('DOMContentLoaded', function () {
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'time-select__dropdown',
   });
+  $('.select2-day-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'day-select__dropdown',
+  });
 
   /* Form select (class 'service-select') */
 

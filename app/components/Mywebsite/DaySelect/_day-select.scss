@@ -1,27 +1,28 @@
-.time-select {
+.day-select {
   position: relative;
   display: flex;
 
-  width: 14.6rem;
-  margin-left: auto;
+  width: 11.8rem;
+  //margin-left: auto;
 
-  &:not(:last-child) {
+  /* &:not(:last-child) {
     margin-bottom: 1rem;
-  }
+  } */
 
   /* select2 styles */
   /* 
-  & {
-    border: 0.1rem solid $backgroundExtraLight;
-    border-radius: 1.4rem;
-  } */
+    & {
+      border: 0.1rem solid $backgroundExtraLight;
+      border-radius: 1.4rem;
+    } */
 
   & .select2 {
     width: 100% !important;
     font-size: 1.4rem;
     line-height: 1.6rem;
+    font-weight: 500;
     color: $contentSecondary;
-    text-transform: uppercase;
+
     background: $backgroundMain;
     //border-radius: 1.4rem;
     //overflow: hidden;
@@ -30,7 +31,7 @@
   }
 
   & .select2-selection {
-    padding: 0.9rem 3rem 0.9rem 1.2rem;
+    padding: 0.8rem 3rem 0.9rem 1.2rem;
     height: auto;
     border: 0.1rem solid $backgroundExtraLight;
     border-radius: 1.4rem;
@@ -59,7 +60,7 @@
 
     top: 50%;
     transform: translateY(-50%);
-    right: 2.5rem;
+    right: 1.5rem;
   }
 
   &
@@ -96,7 +97,7 @@
 }
 
 @media (min-width: $breakpoint768) {
-  .time-select {
+  .day-select {
     &:not(:last-child) {
       margin-bottom: 0;
     }
