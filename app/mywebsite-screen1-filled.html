@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My website</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/main.min.js"></script>
+  </head>
+  <body>
+    <!-- begin header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- begin Navbar -->
+          <nav class="nav">
+            <div class="header__account account">
+              <a href="#" class="account__link">
+                <div class="account__img-wrapper">
+                  <img class="account__img" src="./images/account-photo.jpg" />
+                  <!-- <span class="account__letters">CB</span> -->
+                </div>
+                <p class="account__name">Churchill Barbershop</p>
+              </a>
+            </div>
+            <div class="header__search">
+              <form class="header__search-form search">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search"
+                  autocomplete="off"
+                />
+                <button
+                  class="search__button icon-button icon-button--black icon-button--search"
+                  type="submit"
+                >
+                  <img
+                    alt="Search"
+                    class="icon-button__img"
+                    src="./images/icon-search.svg"
+                    width="26"
+                    height="26"
+                  />
+                </button>
+              </form>
+            </div>
+            <button class="header__button button">New appointment</button>
+
+            <div class="header__notification">
+              <a
+                class="header__notification-link icon-button icon-button--bell"
+              >
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-bell.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+                <span class="icon-button__quantity"> 3 </span></a
+              >
+            </div>
+
+            <div class="header__language language-select">
+              <button class="language-select__button">
+                <img
+                  class="language-select__button-img"
+                  src="./images/icon-world.svg"
+                />
+                <span class="language-select__language-selected">EN</span>
+              </button>
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">
+                    <a>Germany</a>
+                  </li>
+                  <li class="language-select__list-item"><a>Turkey</a></li>
+                  <li class="language-select__list-item">England<a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
+          </nav>
+          <!-- end Navbar -->
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <main class="mywebsite template">
+      <div class="template__container container">
+        <div class="template__inner">
+          <aside class="sidebar">
+            <div class="sidebar__inner">
+              <ul class="sidebar__list">
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button active">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-dashboard"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-service"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-employees"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-clients"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--websites">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-websites"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--settings">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="sidebar__listitem sidebar__listitem--more">
+                  <a class="sidebar__link sidebar-button sidebar-button--more">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-more"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="sidebar__footer">
+                <!--  <button class="sidebar__btn-logout icontext-button">
+                  Logout
+                </button> -->
+                <a href="" class="sidebar__logo-link">
+                  <img
+                    src="./images/logo-sidebar.svg"
+                    alt="Randevu logo"
+                    class="sidebar__logo-img"
+                    width="76"
+                    height="17"
+                  />
+                </a>
+              </div>
+            </div>
+          </aside>
+          <aside class="rightside-menu rightside-menu--close">
+            <div class="rightside-menu__inner">
+              <div class="rightside-menu__top">
+                <div class="rightside-menu__header">
+                  <div class="rightside-menu__account account">
+                    <a href="#" class="account__link">
+                      <div class="account__img-wrapper">
+                        <img
+                          class="account__img"
+                          src="./images/account-photo.jpg"
+                        />
+                        <!-- <span class="account__letters">CB</span> -->
+                      </div>
+                      <p class="account__name">Churchill Barbershop</p>
+                    </a>
+                  </div>
+                  <button class="rightside-menu__btn-close">
+                    <!--                     <svg width="14" height="14" class="rightside-menu__icon">
+                      <use xlink:href="./images/sprite.svg#icon-close"></use>
+                    </svg> -->
+                  </button>
+                </div>
+                <div class="rightside-menu__search">
+                  <form class="header__search-form search search--mobile">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="search__button icon-button icon-button--black icon-button--search"
+                      type="submit"
+                    >
+                      <img
+                        alt="Search"
+                        class="icon-button__img"
+                        src="./images/icon-search.svg"
+                        width="26"
+                        height="26"
+                      />
+                    </button>
+                  </form>
+                </div>
+
+                <ul class="rightside-menu__list">
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-websites"
+                        ></use>
+                      </svg> </a
+                    ><span>My websites</span>
+                  </li>
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-settings"
+                        ></use>
+                      </svg> </a
+                    ><span>Settings</span>
+                  </li>
+                </ul>
+                <div class="rightside-menu__language language-select">
+                  <button class="language-select__button">
+                    <img
+                      class="language-select__button-img"
+                      src="./images/icon-world.svg"
+                    />
+                    <span class="language-select__language-selected">EN</span>
+                  </button>
+
+                  <div class="language-select__list-wrapper">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">
+                        <a>Germany</a>
+                      </li>
+                      <li class="language-select__list-item"><a>Turkey</a></li>
+                      <li class="language-select__list-item">England<a></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rightside-menu__bottom">
+                <button
+                  class="rightside-menu__btn-logout sidebar__btn-logout icontext-button"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="template__content-wrapper">
+            <div class="template__page-top">
+              <div class="template__title-wrapper">
+                <h2 class="template__page-title">My website</h2>
+              </div>
+            </div>
+
+            <section class="template__info-block">
+              <form class="template__info-form info-form">
+                <h3 class="info-form__title">About</h3>
+
+                <div class="info-form__row">
+                  <label for="salon-name" class="info-form__label"
+                    >Salon name</label
+                  >
+                  <ul class="info-form__language-options">
+                    <li class="info-form__language-option">
+                      <input
+                        class="visually-hidden info-form__language-input"
+                        type="radio"
+                        name="salonname-language"
+                        value="English"
+                        id="salonname-English"
+                        checked
+                      />
+                      <label
+                        class="info-form__language-label"
+                        for="salonname-English"
+                        >EN</label
+                      >
+                    </li>
+                    <li class="info-form__language-option">
+                      <input
+                        class="visually-hidden info-form__language-input"
+                        type="radio"
+                        name="salonname-language"
+                        value="Deutsch"
+                        id="salonname-Deutsch"
+                      />
+                      <label
+                        class="info-form__language-label"
+                        for="salonname-Deutsch"
+                        >DE</label
+                      >
+                    </li>
+                    <li class="info-form__language-option">
+                      <input
+                        class="visually-hidden info-form__language-input"
+                        type="radio"
+                        name="salonname-language"
+                        value="Turkish"
+                        id="salonname-Turkish"
+                        disabled
+                      />
+                      <label
+                        class="info-form__language-label"
+                        for="salonname-Turkish"
+                        >TR</label
+                      >
+                    </li>
+                  </ul>
+                  <input
+                    type="text"
+                    class="info-form__input"
+                    id="salon-name"
+                    name="salon-name"
+                    placeholder="Name"
+                    autocomplete="off"
+                    value="Churchill Barbershop"
+                  />
+                </div>
+                <div class="info-form__row">
+                  <span class="info-form__label info-form__label--image"
+                    >Add your logo</span
+                  >
+                  <label for="logo-upload" class="info-form__photo-label">
+                    <span class="info-form__file-wrapper">
+                      <span
+                        class="info-form__file-preview loaded"
+                        style="background-image: url(./images/salon-logo.png)"
+                      >
+                        <!--                         <span class="info-form__file-add-btn">
+                          <img
+                            src="./images/icon-plus-circle.svg"
+                            alt="Upload image"
+                          />
+                        </span> -->
+                        <span class="info-form__file-delete-btn">
+                          <img
+                            src="./images/icon-trash-white.svg"
+                            alt="Delete photo"
+                          />
+                        </span>
+                      </span>
+                    </span>
+                  </label>
+                  <input
+                    class="info-form__file-input visually-hidden"
+                    type="file"
+                    name="logo"
+                    id="logo-upload"
+                  />
+                </div>
+                <div class="info-form__row">
+                  <span class="info-form__label info-form__label--image"
+                    >Add main photo</span
+                  >
+                  <label for="main-photo-upload" class="info-form__photo-label">
+                    <span class="info-form__file-wrapper">
+                      <span
+                        class="info-form__file-preview loaded"
+                        style="
+                          background-image: url(./images/category-beard.jpg);
+                        "
+                      >
+                        <!--                         <span class="info-form__file-add-btn">
+                          <img
+                            src="./images/icon-plus-circle.svg"
+                            alt="Upload image"
+                          />
+                        </span> -->
+                        <span class="info-form__file-delete-btn">
+                          <img
+                            src="./images/icon-trash-white.svg"
+                            alt="Delete photo"
+                          />
+                        </span>
+                      </span>
+                    </span>
+                  </label>
+                  <input
+                    class="info-form__file-input visually-hidden"
+                    type="file"
+                    name="main-photo"
+                    id="main-photo-upload"
+                  />
+                </div>
+                <div class="info-form__row info-form__row--description">
+                  <h3 class="info-form__title">About</h3>
+                  <ul class="info-form__language-options">
+                    <li class="info-form__language-option">
+                      <input
+                        class="visually-hidden info-form__language-input"
+                        type="radio"
+                        name="language"
+                        value="English"
+                        id="English"
+                        checked
+                      />
+                      <label class="info-form__language-label" for="English"
+                        >EN</label
+                      >
+                    </li>
+                    <li class="info-form__language-option">
+                      <input
+                        class="visually-hidden info-form__language-input"
+                        type="radio"
+                        name="language"
+                        value="Deutsch"
+                        id="Deutsch"
+                      />
+                      <label class="info-form__language-label" for="Deutsch"
+                        >DE</label
+                      >
+                    </li>
+                    <li class="info-form__language-option">
+                      <input
+                        class="visually-hidden info-form__language-input"
+                        type="radio"
+                        name="language"
+                        value="Turkish"
+                        id="Turkish"
+                        disabled
+                      />
+                      <label class="info-form__language-label" for="Turkish"
+                        >TR</label
+                      >
+                    </li>
+                  </ul>
+                  <textarea
+                    class="info-form__textarea"
+                    id="description"
+                    name="description"
+                    placeholder="Description"
+                    rows="8"
+                  >
+Welcome to Churchill Barbershop Gentlemen's Territory. The philosophy of our establishment is based on the best traditions of English barbershops, where Charles Dickens, Oscar Wilde and even Winston Churchill once visited.
+At Churchill, we create a space where you can complement your style and relax in a British Gentlemen's Club atmosphere.</textarea
+                  >
+                </div>
+                <h3 class="info-form__title">Gallery</h3>
+                <div class="info-form__row info-form__row--gallery">
+                  <span class="info-form__label">
+                    Add photo gallery (max - 6, min - 3)
+                  </span>
+                  <ul class="info-form__gallery-list">
+                    <li class="info-form__gallery-item">
+                      <label
+                        for="photo1-upload"
+                        class="info-form__photo-label info-form__photo-label--gallery"
+                      >
+                        <span class="info-form__file-wrapper">
+                          <span
+                            class="info-form__file-preview loaded"
+                            style="
+                              background-image: url(./images/category-beard.jpg);
+                            "
+                          >
+                            <!-- <span class="info-form__file-add-btn">
+                              <img
+                                src="./images/icon-plus-circle.svg"
+                                alt="Upload image"
+                              />
+                            </span> -->
+                            <span class="info-form__file-delete-btn">
+                              <img
+                                src="./images/icon-trash-white.svg"
+                                alt="Delete photo"
+                              />
+                            </span>
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        class="info-form__file-input visually-hidden"
+                        type="file"
+                        name="photo1"
+                        id="photo1-upload"
+                      />
+                    </li>
+                    <li class="info-form__gallery-item">
+                      <label
+                        for="photo2-upload"
+                        class="info-form__photo-label info-form__photo-label--gallery"
+                      >
+                        <span class="info-form__file-wrapper">
+                          <span
+                            class="info-form__file-preview loaded"
+                            style="
+                              background-image: url(./images/category-styling.jpg);
+                            "
+                          >
+                            <!-- <span class="info-form__file-add-btn">
+                              <img
+                                src="./images/icon-plus-circle.svg"
+                                alt="Upload image"
+                              />
+                            </span> -->
+                            <span class="info-form__file-delete-btn">
+                              <img
+                                src="./images/icon-trash-white.svg"
+                                alt="Delete photo"
+                              />
+                            </span>
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        class="info-form__file-input visually-hidden"
+                        type="file"
+                        name="photo2"
+                        id="photo2-upload"
+                      />
+                    </li>
+                    <li class="info-form__gallery-item">
+                      <label
+                        for="photo3-upload"
+                        class="info-form__photo-label info-form__photo-label--gallery"
+                      >
+                        <span class="info-form__file-wrapper">
+                          <span
+                            class="info-form__file-preview loaded"
+                            style="
+                              background-image: url(./images/category-haircut.jpg);
+                            "
+                          >
+                            <!-- <span class="info-form__file-add-btn">
+                              <img
+                                src="./images/icon-plus-circle.svg"
+                                alt="Upload image"
+                              />
+                            </span> -->
+                            <span class="info-form__file-delete-btn">
+                              <img
+                                src="./images/icon-trash-white.svg"
+                                alt="Delete photo"
+                              />
+                            </span>
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        class="info-form__file-input visually-hidden"
+                        type="file"
+                        name="photo3"
+                        id="photo3-upload"
+                      />
+                    </li>
+                    <li class="info-form__gallery-item">
+                      <label
+                        for="photo4-upload"
+                        class="info-form__photo-label info-form__photo-label--gallery"
+                      >
+                        <span class="info-form__file-wrapper">
+                          <span
+                            class="info-form__file-preview loaded"
+                            style="
+                              background-image: url(./images/category-beard.jpg);
+                            "
+                          >
+                            <!--                             <span class="info-form__file-add-btn">
+                              <img
+                                src="./images/icon-plus-circle.svg"
+                                alt="Upload image"
+                              />
+                            </span> -->
+                            <span class="info-form__file-delete-btn">
+                              <img
+                                src="./images/icon-trash-white.svg"
+                                alt="Delete photo"
+                              />
+                            </span>
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        class="info-form__file-input visually-hidden"
+                        type="file"
+                        name="photo4"
+                        id="photo4-upload"
+                      />
+                    </li>
+                    <li class="info-form__gallery-item">
+                      <label
+                        for="photo5-upload"
+                        class="info-form__photo-label info-form__photo-label--gallery"
+                      >
+                        <span class="info-form__file-wrapper">
+                          <span
+                            class="info-form__file-preview loaded"
+                            style="
+                              background-image: url(./images/category-beard.jpg);
+                            "
+                          >
+                            <!--                             <span class="info-form__file-add-btn">
+                              <img
+                                src="./images/icon-plus-circle.svg"
+                                alt="Upload image"
+                              />
+                            </span> -->
+                            <span class="info-form__file-delete-btn">
+                              <img
+                                src="./images/icon-trash-white.svg"
+                                alt="Delete photo"
+                              />
+                            </span>
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        class="info-form__file-input visually-hidden"
+                        type="file"
+                        name="photo5"
+                        id="photo5-upload"
+                      />
+                    </li>
+                    <li class="info-form__gallery-item focused">
+                      <label
+                        for="photo6-upload"
+                        class="info-form__photo-label info-form__photo-label--gallery"
+                      >
+                        <span class="info-form__file-wrapper">
+                          <span class="info-form__file-preview">
+                            <span class="info-form__file-add-btn">
+                              <img
+                                src="./images/icon-plus-circle.svg"
+                                alt="Upload image"
+                              />
+                            </span>
+                            <!--  <span class="info-form__file-delete-btn">
+                            <img
+                              src="./images/icon-trash-white.svg"
+                              alt="Delete photo"
+                            />
+  </span> -->
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        class="info-form__file-input visually-hidden"
+                        type="file"
+                        name="photo6"
+                        id="photo6-upload"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="info-form__title">Contact</h3>
+                <div class="info-form__inputs-wrapper">
+                  <div class="info-form__row info-form__row--country">
+                    <label for="country" class="info-form__label"
+                      >Country</label
+                    >
+                    <input
+                      type="text"
+                      class="info-form__input"
+                      id="country"
+                      name="country"
+                      placeholder="Country"
+                      value="Lorem ipsum"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="info-form__row info-form__row--city">
+                    <label for="city" class="info-form__label">City</label>
+                    <input
+                      type="text"
+                      class="info-form__input"
+                      id="city"
+                      name="city"
+                      placeholder="City"
+                      value="Lorem ipsum"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="info-form__row info-form__row--street">
+                    <label for="street" class="info-form__label">Street</label>
+                    <input
+                      type="text"
+                      class="info-form__input"
+                      id="street"
+                      name="street"
+                      placeholder="Street"
+                      value="156 ipsum"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="info-form__row-wrapper">
+                    <div class="info-form__row info-form__row--building">
+                      <label for="building" class="info-form__label"
+                        >Building</label
+                      >
+                      <input
+                        type="text"
+                        class="info-form__input info-form__input--building"
+                        id="building"
+                        name="building"
+                        placeholder="Building"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="info-form__row info-form__row--floor">
+                      <label for="floor" class="info-form__label">Floor</label>
+                      <input
+                        type="text"
+                        class="info-form__input info-form__input--floor"
+                        id="floor"
+                        name="floor"
+                        placeholder="Floor"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="info-form__map-wrapper">
+                  <iframe
+                    class="info-form__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24079.410790738093!2d28.94629518260718!3d41.02686725382045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9d8a8006a09%3A0xc02daa80995cfe53!2sTraditional%20Turkish%20Barber!5e0!3m2!1sru!2sru!4v1687957952732!5m2!1sru!2sru"
+                    width="377"
+                    height="200"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div class="info-form__btns-wrapper">
+                  <button class="info-form__button update disabled">
+                    Update map
+                  </button>
+                </div>
+                <h3 class="info-form__title">Hours of operation</h3>
+                <div
+                  class="info-form__row-wrapper info-form__row-wrapper--interval"
+                >
+                  <div class="info-form__row info-form__row--interval">
+                    <input
+                      type="text"
+                      class="info-form__input info-form__input--interval"
+                      id="day-from"
+                      name="day-from"
+                      placeholder="Mon"
+                      value="Mon"
+                      autocomplete="off"
+                    />
+                    <div class="info-form__field-separator"></div>
+                    <input
+                      type="text"
+                      class="info-form__input info-form__input--interval"
+                      id="day-to"
+                      name="day-to"
+                      placeholder="Sun"
+                      value="Sun"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="info-form__row info-form__row--interval">
+                    <input
+                      type="text"
+                      class="info-form__input info-form__input--interval"
+                      id="time-from"
+                      name="time-from"
+                      placeholder="9:00 AM"
+                      value="9:00 AM"
+                      autocomplete="off"
+                    />
+                    <div class="info-form__field-separator"></div>
+                    <input
+                      type="text"
+                      class="info-form__input info-form__input--interval"
+                      id="time-to"
+                      name="time-to"
+                      placeholder="9:00 PM"
+                      value="9:00 PM"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="info-form__row">
+                  <label for="phone" class="info-form__label"
+                    >Phone number</label
+                  >
+                  <input
+                    type="tel"
+                    class="info-form__input"
+                    id="phone"
+                    name="phone"
+                    placeholder="+3_ ___ ___ ___ __"
+                    value="+3805632369"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="info-form__row">
+                  <label for="instagram" class="info-form__label"
+                    >Instagram (link)</label
+                  >
+                  <input
+                    type="text"
+                    class="info-form__input"
+                    id="instagram"
+                    name="instagram"
+                    placeholder="Instagram"
+                    value="Lorem ipsum"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="info-form__row">
+                  <label for="facebook" class="info-form__label"
+                    >Facebook (link)</label
+                  >
+                  <input
+                    type="text"
+                    class="info-form__input"
+                    id="facebook"
+                    name="facebook"
+                    placeholder="Facebook"
+                    value="Lorem ipsum"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="info-form__row info-form__row--whatsapp">
+                  <label for="whatsapp" class="info-form__label"
+                    >Whatsapp</label
+                  >
+                  <input
+                    type="text"
+                    class="info-form__input"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="Whatsapp"
+                    value="+3805632369"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="info-form__btns-wrapper">
+                  <button
+                    class="info-form__button form-button save save--gradient"
+                  >
+                    <svg width="26" height="26">
+                      <use xlink:href="./images/sprite.svg#icon-save"></use>
+                    </svg>
+                    Save
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay"></div>
+  </body>
+</html>

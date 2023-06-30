@@ -27,7 +27,8 @@
     padding: 0.9rem 1.4rem;
     border: 0.1rem solid $contentMain;
   }
-  &.save.disabled {
+  &.save.disabled,
+  &.save.save--gradient.disabled {
     background-color: $contentLight;
     color: $contentDop;
     border: none;
@@ -35,5 +36,8 @@
     svg {
       fill: $contentDop;
     }
+  }
+  &.save.save--gradient.disabled {
+    background: $contentLight;
   }
 }

@@ -69,6 +69,10 @@
 @import '../components/Clients/ClientstableRow/clientstable-row';
 @import '../components/Clients/ClientForm/client-form';
 
+/* My website */
+
+@import '../components/Mywebsite/InfoForm/_info-form.scss';
+
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
 @import 'blocks/signin';

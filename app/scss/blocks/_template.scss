@@ -11,6 +11,10 @@
     margin-bottom: 2.8rem;
   }
 
+  &__content-wrapper {
+    min-height: 65vh;
+  }
+
   /*   &__top-btn {
     display: flex;
     align-items: center;
@@ -125,6 +129,12 @@
       padding-left: 2rem;
     }
   }
+
+  &.mywebsite {
+    .template__page-top {
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 @media (min-width: $breakpoint768) {
@@ -236,7 +246,8 @@
       padding-left: 11rem;
     }
 
-    &.newappointment {
+    &.newappointment,
+    &.mywebsite {
       .template__content-wrapper {
         border-radius: 1.4rem;
       }

@@ -1,0 +1,430 @@
+.info-form {
+  width: 100%;
+  padding-bottom: 10.8rem;
+
+  &__title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.8rem;
+  }
+
+  &__row {
+    width: 100%;
+    margin-bottom: 2.8rem;
+    &--description,
+    &--gallery,
+    &--whatsapp {
+      margin-bottom: 4rem;
+    }
+
+    &--building,
+    &--floor {
+      width: 13.3rem;
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+
+    &--interval {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  &__row-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.8rem;
+    &--interval {
+      display: block;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1.4rem;
+    //cursor: pointer;
+    /*  &--image {
+      margin-bottom: 2rem;
+    } */
+  }
+
+  /* FILE UPLOAD INPUT */
+
+  &__photo-label {
+    display: inline-block;
+    //margin-bottom: 2rem;
+
+    &--gallery {
+      /*  .info-form__file-preview {
+        margin-bottom: 0;
+      } */
+      margin-bottom: 1.4rem;
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  input[type='file'] {
+    display: none;
+    //font-size: 12px;
+    //margin: 0 auto;
+  }
+
+  &__file-preview {
+    position: relative;
+    border-radius: 1rem;
+    border: 0.1rem solid $backgroundExtraLight;
+    width: 11rem;
+    height: 11rem;
+    background-color: $backgroundMain;
+    overflow: hidden;
+
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__file-preview.loaded {
+    background-image: url(../images/category-photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &::after {
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 5;
+    }
+  }
+
+  &__file-add-btn,
+  &__file-delete-btn {
+    /*     position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+    cursor: pointer; */
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    img {
+      width: 2.6rem;
+      height: 2.6rem;
+      margin: auto;
+    }
+  }
+
+  &__file-delete-btn {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 0;
+    z-index: 10;
+  }
+
+  &__gallery-item.focused {
+    .info-form__file-preview {
+      border: 0.1rem solid $contentMain;
+    }
+  }
+
+  &__gallery-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__language-options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__language-option:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__language-input {
+    display: none;
+  }
+
+  &__language-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+    border: 0.1rem solid $contentMain;
+    border-radius: 1.4rem;
+    color: $contentMain;
+    background-color: $backgroundMain;
+
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    /*   &:hover {
+      opacity: 0.6;
+    } */
+  }
+
+  &__language-input:checked + label {
+    color: $backgroundMain;
+    background-color: $contentMain;
+  }
+
+  &__language-input:disabled + label {
+    color: $contentMain;
+    background-color: $backgroundMain;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: $accentMain;
+      top: -0.2rem;
+      right: -0.2rem;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    //width: 100%;
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    outline: none;
+    padding: 1.4rem 2rem;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $contentSecondary;
+    }
+  }
+
+  &__input {
+    width: 27.6rem;
+    &--building,
+    &--floor {
+      width: 100%;
+    }
+    &--interval {
+      text-align: center;
+      width: 10rem;
+    }
+  }
+
+  &__input.focused,
+  &__textarea.focused {
+    border: 0.1rem solid $accentMain;
+  }
+
+  &__textarea {
+    width: 100%;
+    resize: none;
+  }
+
+  &__button {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: $contentMain;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__button:hover {
+    opacity: 0.6;
+  }
+
+  &__btn-wrapper {
+    margin-bottom: 4rem;
+  }
+
+  &__button.update {
+    background-color: $accentMain;
+    color: $backgroundMain;
+  }
+
+  &__btns-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__button {
+    margin-right: 2rem;
+    svg {
+      margin-right: 1rem;
+    }
+  }
+  /* 
+  &__button.save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accentMain;
+    color: $backgroundMain;
+    border: none;
+    padding: 1rem 1.4rem;
+    svg {
+      display: inline-block;
+      fill: $backgroundMain;
+    }
+    border: none;
+  } */
+
+  /*  &__button.save.disabled {
+    background-color: $contentLight;
+    color: $contentDop;
+    border: none;
+
+    svg {
+      fill: $contentDop;
+    }
+  } */
+  &__button.update.disabled {
+    background-color: $backgroundMain;
+    color: $contentDop;
+    border: 0.1rem solid $contentLight;
+
+    svg {
+      fill: $contentDop;
+    }
+  }
+
+  &__map-wrapper {
+    margin-bottom: 2.8rem;
+  }
+
+  &__map {
+    width: 100%;
+    height: 20rem;
+    border-radius: 1.4rem;
+    //filter: grayscale(20%);
+  }
+
+  &__field-separator {
+    display: block;
+    width: 1.6rem;
+    height: 0.2rem;
+
+    background-color: $contentMain;
+    margin: auto 0.6rem;
+  }
+}
+
+/* @media (min-width: 400px) {
+  .info-form {
+    &__file-preview {
+      width: 11rem;
+      height: 11rem;
+    }
+  }
+} */
+
+@media (min-width: $breakpoint768) {
+  .info-form {
+    &__title {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+
+    &__row {
+      &--description,
+      &--gallery {
+        width: 39rem;
+      }
+
+      &--interval {
+        width: auto;
+        margin-bottom: 0;
+      }
+      &--interval:first-child {
+        margin-right: 2.8rem;
+      }
+    }
+
+    &__inputs-wrapper {
+      width: 56.2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0 1rem;
+    }
+
+    &__row-wrapper {
+      &--interval {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+
+    &__map {
+      height: 26rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .info-form {
+    &__inputs-wrapper {
+      width: 100%;
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0;
+    }
+
+    &__map {
+      height: 40rem;
+    }
+  }
+}
