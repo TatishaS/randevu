@@ -70,14 +70,6 @@ window.addEventListener('DOMContentLoaded', function () {
     $('.select2-search__field').attr('readonly', true);
     $('.select2-search__field').attr('inputmode', 'none');
   });
-
-  /*   $('.select2-form-multipleselect').on(
-    'select2:opening select2:closing',
-    function (event) {
-      var $searchfield = $(this).parent().find('.select2-search__field');
-      $searchfield.prop('disabled', true);
-    }
-  ); */
 });
 
 /* Rightside menu */
@@ -89,6 +81,8 @@ function rightsideMenu() {
   );
 
   const overlay = document.querySelector('.overlay');
+
+  if (!moreButton) return;
 
   moreButton.addEventListener('click', event => {
     event.preventDefault();
@@ -115,6 +109,8 @@ function showSearchInput() {
   const searchInput = document.querySelector('.search__input');
   const searchBtn = document.querySelector('.search__button');
 
+  if (!searchInput) return;
+
   searchBtn.addEventListener('click', e => {
     e.preventDefault();
     searchInput.classList.toggle('active');
@@ -125,7 +121,6 @@ function showSearchInput() {
 /* Make red border for input date while choosing date */
 function highlightDateInput() {
   const inputDate = document.querySelector('.edit-form__input-date');
-  //let dropdown;
   let dropdownIsActive = false;
 
   if (!inputDate) return;
@@ -191,12 +186,10 @@ function applyCropToImg() {
       croppable = true;
     },
   });
-  console.log('Cropper instance created');
 
   button.addEventListener('click', () => {
     let croppedCanvas;
     let roundedCanvas;
-    console.log('Crop click');
 
     if (!croppable) {
       return;
@@ -280,13 +273,6 @@ function openCropPhotoModal() {
       console.log('Cropper instance destroyed');
     });
   });
-
-  /*   el.addEventListener('click', e => {
-    e.preventDefault();
-    modalCrop.classList.remove('active');
-    overlay.classList.remove('overlay--show');
-    sidebar.style.zIndex = '70';
-  }); */
 }
 
 /* Modal confirm creating service */
@@ -378,70 +364,6 @@ function handleNotesPopup() {
   });
 }
 
-/* Choices selects */
-/* const multiServiceSelect = () => {
-  const elements = document.querySelectorAll('.choices-form-select');
-
-  elements.forEach(el => {
-    const choices = new Choices(el, {
-      allowHTML: true,
-      searchEnabled: false,
-      itemSelectText: '',
-      position: 'bottom',
-    });
-  });
-}; */
-
-const multiTimeSelect = () => {
-  const elements = document.querySelectorAll('.choices-time-select');
-
-  elements.forEach(el => {
-    const choices = new Choices(el, {
-      allowHTML: true,
-      searchEnabled: true,
-      itemSelectText: '',
-      position: 'bottom',
-      renderChoiceLimit: 3,
-      searchResultLimit: 3,
-    });
-  });
-};
-
-/* const multiChoicesSelect = () => {
-  const elements = document.querySelectorAll('.choices-form-multipleselect');
-
-  elements.forEach(el => {
-    const choices = new Choices(el, {
-      allowHTML: true,
-      searchEnabled: false,
-      itemSelectText: '',
-      position: 'bottom',
-      removeItemButton: true,
-    });
-
-    el.addEventListener(
-      'change',
-      function (event) {
-        choices.hideDropdown();
-      },
-      false
-    );
-  });
-}; */
-
-const multiNameSelect = () => {
-  const elements = document.querySelectorAll('.choices-dashboardform-select');
-
-  elements.forEach(el => {
-    const choices = new Choices(el, {
-      allowHTML: true,
-      searchEnabled: false,
-      itemSelectText: '',
-      position: 'bottom',
-    });
-  });
-};
-
 /* Dropdowns */
 
 const multiDropdown = () => {
@@ -518,7 +440,7 @@ const datePickerLegend = () => {
   </div>
   </div>
   `;
-  //console.log(calendar);
+
   if (!calendar) return;
 
   legend.innerHTML = html;
@@ -636,36 +558,10 @@ const handleSelectCategory = () => {
 
 /* New appointment left accordion */
 function handleAccordion() {
-  /*   const items = document.querySelectorAll('.accordion__item-trigger');
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const parent = item.parentNode;
-      if (parent.classList.contains('accordion__item-active')) {
-        parent.classList.remove('accordion__item-active');
-      } else {
-        document
-          .querySelectorAll('.accordion__item')
-          .forEach(child => child.classList.remove('accordion__item-active'));
-        parent.classList.add('accordion__item-active');
-        inlineTimePicker();
-      }
-    });
-  }); */
   const optionInputs = document.querySelectorAll('.accordion__option-input');
   const triggers = document.querySelectorAll('.accordion__item-trigger');
   triggers.forEach(trigger => {
     trigger.addEventListener('click', event => {
-      // const parent = item.parentNode;
-      // if (parent.classList.contains("accordion__item-active")) {
-      //   parent.classList.remove("accordion__item-active");
-      // } else {
-      //   document
-      //     .querySelectorAll(".accordion__item")
-      //     .forEach((child) => child.classList.remove("accordion__item-active"));
-      //   parent.classList.add("accordion__item-active");
-      //   inlineTimePicker();
-      // }
-
       const accordionItem = event.currentTarget.closest('.accordion__item');
       if (!accordionItem) return;
       if (accordionItem.classList.contains('accordion__item-active')) {
@@ -683,17 +579,6 @@ function handleAccordion() {
   });
   optionInputs.forEach(radioInput => {
     radioInput.addEventListener('change', event => {
-      // const parent = item.parentNode;
-      // if (parent.classList.contains("accordion__item-active")) {
-      //   parent.classList.remove("accordion__item-active");
-      // } else {
-      //   document
-      //     .querySelectorAll(".accordion__item")
-      //     .forEach((child) => child.classList.remove("accordion__item-active"));
-      //   parent.classList.add("accordion__item-active");
-      //   inlineTimePicker();
-      // }
-
       const accordionItem = event.target.closest('.accordion__item');
       if (!accordionItem) return;
       if (accordionItem.classList.contains('accordion__item-active')) {
@@ -708,21 +593,14 @@ openConfirmModal();
 openCropPhotoModal();
 showSearchInput();
 highlightDateInput();
-multiTimeSelect();
 multiDropdown();
 multiServiceDropdown();
 multiLanguageDropdown();
 datePicker();
 datePickerLegend();
 handleSelectCategory();
-multiNameSelect();
 handleCreateServiceModal();
 handleServicesPopup();
 handleNotesPopup();
 handleAccordion();
 inlineDatePicker();
-
-//multiChoicesSelect();
-//multiServiceSelect();
-//applyCropToImg();
-//categorySelect();
