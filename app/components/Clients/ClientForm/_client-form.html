@@ -1,0 +1,65 @@
+<form class="client-form">
+  <div class="client-form__inputs-wrapper">
+    <div class="client-form__row client-form__row--name">
+      <label for="name" class="client-form__label">Name Surname</label>
+      <input
+        type="text"
+        class="client-form__input client-form__input--name"
+        id="name"
+        name="name"
+        placeholder="Client's name & surname"
+        autocomplete="off"
+      />
+    </div>
+    <!--                   <div class="client-form__row">
+        <label for="email" class="client-form__label">Email</label>
+        <input
+          type="email"
+          class="client-form__input client-form__input--email"
+          id="email"
+          name="email"
+          placeholder="Client's email"
+          autocomplete="off"
+        />
+      </div> -->
+    <div class="client-form__row">
+      <label for="phone" class="client-form__label">Phone</label>
+      <input
+        type="text"
+        class="client-form__input client-form__input--phone"
+        id="phone"
+        name="phone"
+        placeholder="Client's phone number"
+        autocomplete="off"
+      />
+    </div>
+    <div class="client-form__row client-form__row--notes">
+      <label for="notes" class="client-form__label">Notes</label>
+      <textarea
+        class="client-form__textarea"
+        id="notes"
+        name="notes"
+        placeholder="Some notes about the client"
+        rows="5"
+      ></textarea>
+    </div>
+  </div>
+  <!--  <div class="client-form__row">
+      <textarea
+    
+      class="client-form__textarea"
+      id="description"
+      name="description"
+      placeholder="Description" rows="8"
+    ></textarea>
+    </div> -->
+
+  <div class="client-form__btns-wrapper">
+    <button class="client-form__button form-button save save--gradient">
+      <svg width="26" height="26">
+        <use xlink:href="./images/sprite.svg#icon-save"></use>
+      </svg>
+      Save
+    </button>
+  </div>
+</form>

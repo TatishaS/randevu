@@ -1,0 +1,495 @@
+<form class="info-form">
+  <h3 class="info-form__title">About</h3>
+
+  <div class="info-form__row">
+    <label for="salon-name" class="info-form__label">Salon name</label>
+    <ul class="info-form__language-options">
+      <li class="info-form__language-option">
+        <input
+          class="visually-hidden info-form__language-input"
+          type="radio"
+          name="salonname-language"
+          value="English"
+          id="salonname-English"
+          checked
+        />
+        <label class="info-form__language-label" for="salonname-English"
+          >EN</label
+        >
+      </li>
+      <li class="info-form__language-option">
+        <input
+          class="visually-hidden info-form__language-input"
+          type="radio"
+          name="salonname-language"
+          value="Deutsch"
+          id="salonname-Deutsch"
+        />
+        <label class="info-form__language-label" for="salonname-Deutsch"
+          >DE</label
+        >
+      </li>
+      <li class="info-form__language-option">
+        <input
+          class="visually-hidden info-form__language-input"
+          type="radio"
+          name="salonname-language"
+          value="Turkish"
+          id="salonname-Turkish"
+          disabled
+        />
+        <label class="info-form__language-label" for="salonname-Turkish"
+          >TR</label
+        >
+      </li>
+    </ul>
+    <input
+      type="text"
+      class="info-form__input"
+      id="salon-name"
+      name="salon-name"
+      placeholder="The name of your salon"
+      autocomplete="off"
+    />
+  </div>
+  <div class="info-form__row">
+    <span class="info-form__label info-form__label--image">Add your logo</span>
+    <label for="logo-upload" class="info-form__photo-label">
+      <span class="info-form__file-wrapper">
+        <span class="info-form__file-preview">
+          <span class="info-form__file-add-btn">
+            <img src="./images/icon-plus-circle.svg" alt="Upload image" />
+          </span>
+          <!--  <span class="info-form__file-delete-btn">
+              <img
+                src="./images/icon-trash-white.svg"
+                alt="Delete photo"
+              />
+</span> -->
+        </span>
+      </span>
+    </label>
+    <input
+      class="info-form__file-input visually-hidden"
+      type="file"
+      name="logo"
+      id="logo-upload"
+    />
+  </div>
+  <div class="info-form__row">
+    <span class="info-form__label info-form__label--image">Add main photo</span>
+    <label for="main-photo-upload" class="info-form__photo-label">
+      <span class="info-form__file-wrapper">
+        <span class="info-form__file-preview">
+          <span class="info-form__file-add-btn">
+            <img src="./images/icon-plus-circle.svg" alt="Upload image" />
+          </span>
+          <!--  <span class="info-form__file-delete-btn">
+              <img
+                src="./images/icon-trash-white.svg"
+                alt="Delete photo"
+              />
+</span> -->
+        </span>
+      </span>
+    </label>
+    <input
+      class="info-form__file-input visually-hidden"
+      type="file"
+      name="main-photo"
+      id="main-photo-upload"
+    />
+  </div>
+  <div class="info-form__row info-form__row--description">
+    <h3 class="info-form__title">About</h3>
+    <ul class="info-form__language-options">
+      <li class="info-form__language-option">
+        <input
+          class="visually-hidden info-form__language-input"
+          type="radio"
+          name="language"
+          value="English"
+          id="English"
+          checked
+        />
+        <label class="info-form__language-label" for="English">EN</label>
+      </li>
+      <li class="info-form__language-option">
+        <input
+          class="visually-hidden info-form__language-input"
+          type="radio"
+          name="language"
+          value="Deutsch"
+          id="Deutsch"
+        />
+        <label class="info-form__language-label" for="Deutsch">DE</label>
+      </li>
+      <li class="info-form__language-option">
+        <input
+          class="visually-hidden info-form__language-input"
+          type="radio"
+          name="language"
+          value="Turkish"
+          id="Turkish"
+          disabled
+        />
+        <label class="info-form__language-label" for="Turkish">TR</label>
+      </li>
+    </ul>
+    <textarea
+      class="info-form__textarea"
+      id="description"
+      name="description"
+      placeholder="Tell everyone a little about your salon"
+      rows="9"
+    ></textarea>
+  </div>
+  <h3 class="info-form__title">Gallery</h3>
+  <div class="info-form__row info-form__row--gallery">
+    <span class="info-form__label"> Add photo gallery (max - 6, min - 3) </span>
+    <ul class="info-form__gallery-list">
+      <li class="info-form__gallery-item">
+        <label
+          for="photo1-upload"
+          class="info-form__photo-label info-form__photo-label--gallery"
+        >
+          <span class="info-form__file-wrapper">
+            <span class="info-form__file-preview">
+              <span class="info-form__file-add-btn">
+                <img src="./images/icon-plus-circle.svg" alt="Upload image" />
+              </span>
+              <!--  <span class="info-form__file-delete-btn">
+                <img
+                  src="./images/icon-trash-white.svg"
+                  alt="Delete photo"
+                />
+</span> -->
+            </span>
+          </span>
+        </label>
+        <input
+          class="info-form__file-input visually-hidden"
+          type="file"
+          name="photo1"
+          id="photo1-upload"
+        />
+      </li>
+      <li class="info-form__gallery-item">
+        <label
+          for="photo2-upload"
+          class="info-form__photo-label info-form__photo-label--gallery"
+        >
+          <span class="info-form__file-wrapper">
+            <span class="info-form__file-preview">
+              <span class="info-form__file-add-btn">
+                <img src="./images/icon-plus-circle.svg" alt="Upload image" />
+              </span>
+              <!--  <span class="info-form__file-delete-btn">
+                <img
+                  src="./images/icon-trash-white.svg"
+                  alt="Delete photo"
+                />
+</span> -->
+            </span>
+          </span>
+        </label>
+        <input
+          class="info-form__file-input visually-hidden"
+          type="file"
+          name="photo2"
+          id="photo2-upload"
+        />
+      </li>
+      <li class="info-form__gallery-item">
+        <label
+          for="photo3-upload"
+          class="info-form__photo-label info-form__photo-label--gallery"
+        >
+          <span class="info-form__file-wrapper">
+            <span class="info-form__file-preview">
+              <span class="info-form__file-add-btn">
+                <img src="./images/icon-plus-circle.svg" alt="Upload image" />
+              </span>
+              <!--  <span class="info-form__file-delete-btn">
+                <img
+                  src="./images/icon-trash-white.svg"
+                  alt="Delete photo"
+                />
+</span> -->
+            </span>
+          </span>
+        </label>
+        <input
+          class="info-form__file-input visually-hidden"
+          type="file"
+          name="photo3"
+          id="photo3-upload"
+        />
+      </li>
+      <li class="info-form__gallery-item">
+        <label
+          for="photo4-upload"
+          class="info-form__photo-label info-form__photo-label--gallery"
+        >
+          <span class="info-form__file-wrapper">
+            <span class="info-form__file-preview">
+              <span class="info-form__file-add-btn">
+                <img src="./images/icon-plus-circle.svg" alt="Upload image" />
+              </span>
+              <!--  <span class="info-form__file-delete-btn">
+                <img
+                  src="./images/icon-trash-white.svg"
+                  alt="Delete photo"
+                />
+</span> -->
+            </span>
+          </span>
+        </label>
+        <input
+          class="info-form__file-input visually-hidden"
+          type="file"
+          name="photo4"
+          id="photo4-upload"
+        />
+      </li>
+    </ul>
+  </div>
+  <h3 class="info-form__title">Contact</h3>
+  <div class="info-form__inputs-wrapper">
+    <div class="info-form__row info-form__row--country">
+      <label for="country" class="info-form__label">Country</label>
+      <input
+        type="text"
+        class="info-form__input info-form__input--country"
+        id="country"
+        name="country"
+        placeholder="Your country"
+        autocomplete="off"
+      />
+    </div>
+    <div class="info-form__row info-form__row--city">
+      <label for="city" class="info-form__label">City</label>
+      <input
+        type="text"
+        class="info-form__input info-form__input--city"
+        id="city"
+        name="city"
+        placeholder="Your city"
+        autocomplete="off"
+      />
+    </div>
+    <div class="info-form__row info-form__row--street">
+      <label for="street" class="info-form__label">Street</label>
+      <input
+        type="text"
+        class="info-form__input info-form__input--street"
+        id="street"
+        name="street"
+        placeholder="Your street"
+        autocomplete="off"
+      />
+    </div>
+    <div class="info-form__row-wrapper">
+      <div class="info-form__row info-form__row--building">
+        <label for="building" class="info-form__label">Building</label>
+        <input
+          type="text"
+          class="info-form__input info-form__input--building"
+          id="building"
+          name="building"
+          placeholder="21A"
+          autocomplete="off"
+        />
+      </div>
+      <div class="info-form__row info-form__row--floor">
+        <label for="floor" class="info-form__label">Floor</label>
+        <input
+          type="text"
+          class="info-form__input info-form__input--floor"
+          id="floor"
+          name="floor"
+          placeholder="2"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="info-form__map-wrapper">
+    <iframe
+      class="info-form__map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24079.410790738093!2d28.94629518260718!3d41.02686725382045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9d8a8006a09%3A0xc02daa80995cfe53!2sTraditional%20Turkish%20Barber!5e0!3m2!1sru!2sru!4v1687957952732!5m2!1sru!2sru"
+      width="377"
+      height="200"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+  <div class="info-form__btns-wrapper">
+    <button class="info-form__button update disabled">Update map</button>
+  </div>
+  <h3 class="info-form__title">Hours of operation</h3>
+  <div class="info-form__row-wrapper info-form__row-wrapper--interval">
+    <div class="info-form__row info-form__row--interval">
+      <span class="info-form__dayselect day-select">
+        <select
+          class="select2-day-select"
+          id="start-day"
+          inputmode="none"
+          data-placeholder="Mon"
+        >
+          <option></option>
+          <option value="Monday">Mon</option>
+          <option value="Tuesday">Tue</option>
+          <option value="Wednesday">Wed</option>
+          <option value="Thursday">Thu</option>
+          <option value="Friday">Fri</option>
+          <option value="Saturday">Sat</option>
+          <option value="Sunday">Sun</option>
+        </select>
+      </span>
+      <div class="info-form__field-separator"></div>
+      <span class="info-form__dayselect day-select">
+        <select
+          class="select2-day-select"
+          id="end-day"
+          inputmode="none"
+          data-placeholder="Sun"
+        >
+          <option></option>
+          <option value="Monday">Mon</option>
+          <option value="Tuesday">Tue</option>
+          <option value="Wednesday">Wed</option>
+          <option value="Thursday">Thu</option>
+          <option value="Friday">Fri</option>
+          <option value="Saturday">Sat</option>
+          <option value="Sunday">Sun</option>
+        </select>
+      </span>
+    </div>
+    <div class="info-form__row info-form__row--interval">
+      <span class="info-form__dayselect day-select">
+        <select
+          class="select2-day-select"
+          id="start-time"
+          inputmode="none"
+          data-placeholder="9:00"
+        >
+          <option></option>
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+          <option value="15:00">15:00</option>
+          <option value="15:30">15:30</option>
+          <option value="16:00">16:00</option>
+          <option value="16:30">16:30</option>
+          <option value="17:00">17:00</option>
+          <option value="17:30">17:30</option>
+          <option value="18:00">18:00</option>
+          <option value="18:30">18:30</option>
+          <option value="19:00">19:00</option>
+          <option value="19:30">19:30</option>
+          <option value="20:00">20:00</option>
+          <option value="20:30">20:30</option>
+        </select>
+      </span>
+      <div class="info-form__field-separator"></div>
+      <span class="info-form__dayselect day-select">
+        <select
+          class="select2-day-select"
+          id="end-time"
+          inputmode="none"
+          data-placeholder="18:00"
+        >
+          <option></option>
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+          <option value="15:00">15:00</option>
+          <option value="15:30">15:30</option>
+          <option value="16:00">16:00</option>
+          <option value="16:30">16:30</option>
+          <option value="17:00">17:00</option>
+          <option value="17:30">17:30</option>
+          <option value="18:00">18:00</option>
+          <option value="18:30">18:30</option>
+          <option value="19:00">19:00</option>
+          <option value="19:30">19:30</option>
+          <option value="20:00">20:00</option>
+          <option value="20:30">20:30</option>
+        </select>
+      </span>
+    </div>
+  </div>
+  <div class="info-form__row">
+    <label for="phone" class="info-form__label">Phone number</label>
+    <input
+      type="tel"
+      class="info-form__input"
+      id="phone"
+      name="phone"
+      placeholder="+90 ___ ___ ___ __"
+      autocomplete="off"
+    />
+  </div>
+  <div class="info-form__row">
+    <label for="instagram" class="info-form__label">Instagram (link)</label>
+    <input
+      type="text"
+      class="info-form__input"
+      id="instagram"
+      name="instagram"
+      placeholder="https://instagram.com/your_account"
+      autocomplete="off"
+    />
+  </div>
+  <div class="info-form__row">
+    <label for="facebook" class="info-form__label">Facebook (link)</label>
+    <input
+      type="text"
+      class="info-form__input"
+      id="facebook"
+      name="facebook"
+      placeholder="https://facebook.com/your_account"
+      autocomplete="off"
+    />
+  </div>
+  <div class="info-form__row info-form__row--whatsapp">
+    <label for="whatsapp" class="info-form__label">Whatsapp</label>
+    <input
+      type="text"
+      class="info-form__input"
+      id="whatsapp"
+      name="whatsapp"
+      placeholder="https://wa.me/your_number"
+      autocomplete="off"
+    />
+  </div>
+  <div class="info-form__btns-wrapper">
+    <button class="info-form__button form-button save save--gradient disabled">
+      <svg width="26" height="26">
+        <use xlink:href="./images/sprite.svg#icon-save"></use>
+      </svg>
+      Save
+    </button>
+  </div>
+</form>
