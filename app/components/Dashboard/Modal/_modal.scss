@@ -26,6 +26,10 @@
   &.active {
     display: block;
   }
+  &.onboarding-card.active {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__close {
     position: absolute;

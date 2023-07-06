@@ -12,7 +12,7 @@
   }
 
   &__content-wrapper {
-    min-height: 65vh;
+    min-height: 80vh;
   }
 
   /*   &__top-btn {
@@ -219,6 +219,12 @@
         margin-bottom: 2.8rem;
       }
     }
+
+    &.settings {
+      .template__page-top {
+        margin-bottom: 4rem;
+      }
+    }
   }
 }
 
@@ -247,7 +253,8 @@
     }
 
     &.newappointment,
-    &.mywebsite {
+    &.mywebsite,
+    &.settings {
       .template__content-wrapper {
         border-radius: 1.4rem;
       }

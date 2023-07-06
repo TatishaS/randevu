@@ -22,8 +22,10 @@ $backgroundMain: #fcfcfc;
 $backgroundSecondary: #f7f7f7;
 $accentMain: #e86475;
 $accentFocused: #dd4f61;
+$accentCanceled: #d95050;
 $domLight: #f5e9ea;
 $accentLight: #f4c6c6;
+$accentDone: #30a62e;
 
 // Gradients background
 $gradientMain: linear-gradient(
@@ -47,7 +49,6 @@ $outlineFocus: 0 0 0 0.3rem rgba(222, 79, 98, 0.5);
 
 // Burger Menu
 $burgerBreakpoint: $breakpoint768;
-$burgerActiveColor: blue;
 $burgerColor: #000;
 
 // Fonts

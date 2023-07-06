@@ -1,0 +1,48 @@
+.settings-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $backgroundMain;
+  color: $contentMain;
+  font-weight: 600;
+  padding: 1rem 1.4rem;
+  border-radius: 1.4rem;
+
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  opacity: 1;
+  transition: all 0.3s;
+  border: 0.1rem solid $contentMain;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &.active {
+    background-color: $contentMain;
+    color: $backgroundMain;
+    border: none;
+  }
+}
+
+@media (min-width: 400px) {
+  .settings-button {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .wide-button {
+    width: auto;
+    padding: 1.4rem 2rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    &.active {
+      padding: 1.5rem 2rem;
+    }
+  }
+}

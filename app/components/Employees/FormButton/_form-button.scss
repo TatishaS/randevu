@@ -22,13 +22,29 @@
     }
   }
 
+  &.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $contentMain;
+    color: $backgroundMain;
+    border: none;
+    padding: 1rem 1.4rem;
+    svg {
+      display: inline-block;
+      fill: $backgroundMain;
+    }
+    border: none;
+  }
+
   &.delete {
     background-color: transparent;
     padding: 0.9rem 1.4rem;
     border: 0.1rem solid $contentMain;
   }
   &.save.disabled,
-  &.save.save--gradient.disabled {
+  &.save.save--gradient.disabled,
+  &.copy.disabled {
     background-color: $contentLight;
     color: $contentDop;
     border: none;

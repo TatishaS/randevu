@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Onboarding</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="js/main.min.js"></script>
+  </head>
+  <body>
+    <!-- begin header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <!-- begin Navbar -->
+          <nav class="nav">
+            <div class="header__account account">
+              <a href="#" class="account__link">
+                <div class="account__img-wrapper">
+                  <img class="account__img" src="./images/account-photo.jpg" />
+                  <!-- <span class="account__letters">CB</span> -->
+                </div>
+                <p class="account__name">Churchill Barbershop</p>
+              </a>
+            </div>
+            <div class="header__search">
+              <form class="header__search-form search">
+                <input type="text" class="search__input" placeholder="Search" />
+                <button
+                  class="search__button icon-button icon-button--black icon-button--search"
+                  type="submit"
+                >
+                  <img
+                    alt="Search"
+                    class="icon-button__img"
+                    src="./images/icon-search.svg"
+                    width="26"
+                    height="26"
+                  />
+                </button>
+              </form>
+            </div>
+            <button class="header__button button">New appointment</button>
+
+            <div class="header__notification">
+              <a
+                class="header__notification-link icon-button icon-button--bell"
+              >
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-bell.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+                <span class="icon-button__quantity"> 3 </span></a
+              >
+            </div>
+            <div class="header__language language-select">
+              <button class="language-select__button">
+                <img
+                  class="language-select__button-img"
+                  src="./images/icon-world.svg"
+                />
+                <span class="language-select__language-selected">EN</span>
+              </button>
+              <div class="language-select__list-wrapper">
+                <ul class="language-select__list">
+                  <li class="language-select__list-item active">
+                    <a>Germany</a>
+                  </li>
+                  <li class="language-select__list-item"><a>Turkey</a></li>
+                  <li class="language-select__list-item">England<a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__logout--tablet">
+              <a class="header__logout-link icon-button icon-button--logout">
+                <img
+                  class="icon-button__img"
+                  src="./images/icon-logout.svg"
+                  alt="Notifications"
+                  width="26"
+                  height="26"
+                />
+              </a>
+            </div>
+          </nav>
+          <!-- end Navbar -->
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <main class="dashboard dashboard--step1">
+      <div class="dashboard__container container">
+        <div class="dashboard__inner">
+          <aside class="sidebar">
+            <div class="sidebar__inner">
+              <ul class="sidebar__list">
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button active">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-dashboard"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-service"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use
+                        xlink:href="./images/sprite.svg#icon-employees"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-clients"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--websites">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-websites"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__listitem sidebar__listitem--settings">
+                  <a href="" class="sidebar__link sidebar-button">
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="sidebar__listitem sidebar__listitem--more">
+                  <a
+                    href=""
+                    class="sidebar__link sidebar-button sidebar-button--more"
+                  >
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#icon-more"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="sidebar__footer">
+                <!--  <button class="sidebar__btn-logout icontext-button">
+                  Logout
+                </button> -->
+                <a href="" class="sidebar__logo-link">
+                  <img
+                    src="./images/logo-sidebar.svg"
+                    alt="Randevu logo"
+                    class="sidebar__logo-img"
+                    width="76"
+                    height="17"
+                  />
+                </a>
+              </div>
+            </div>
+          </aside>
+          <aside class="rightside-menu rightside-menu--close">
+            <div class="rightside-menu__inner">
+              <div class="rightside-menu__top">
+                <div class="rightside-menu__header">
+                  <div class="rightside-menu__account account">
+                    <a href="#" class="account__link">
+                      <div class="account__img-wrapper">
+                        <img
+                          class="account__img"
+                          src="./images/account-photo.jpg"
+                        />
+                        <!-- <span class="account__letters">CB</span> -->
+                      </div>
+                      <p class="account__name">Churchill Barbershop</p>
+                    </a>
+                  </div>
+                  <button class="rightside-menu__btn-close">
+                    <!--                     <svg width="14" height="14" class="rightside-menu__icon">
+                      <use xlink:href="./images/sprite.svg#icon-close"></use>
+                    </svg> -->
+                  </button>
+                </div>
+                <div class="rightside-menu__search">
+                  <form class="header__search-form search search--mobile">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="search__button icon-button icon-button--black icon-button--search"
+                      type="submit"
+                    >
+                      <img
+                        alt="Search"
+                        class="icon-button__img"
+                        src="./images/icon-search.svg"
+                        width="26"
+                        height="26"
+                      />
+                    </button>
+                  </form>
+                </div>
+
+                <ul class="rightside-menu__list">
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-websites"
+                        ></use>
+                      </svg> </a
+                    ><span>My websites</span>
+                  </li>
+                  <li class="rightside-menu__listitem">
+                    <a
+                      href=""
+                      class="rightside-menu__iconbutton sidebar__link sidebar-button"
+                    >
+                      <svg width="40" height="40">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-settings"
+                        ></use>
+                      </svg> </a
+                    ><span>Settings</span>
+                  </li>
+                </ul>
+                <div class="rightside-menu__language language-select">
+                  <button class="language-select__button">
+                    <img
+                      class="language-select__button-img"
+                      src="./images/icon-world.svg"
+                    />
+                    <span class="language-select__language-selected">EN</span>
+                  </button>
+                  <div class="language-select__list-wrapper">
+                    <ul class="language-select__list">
+                      <li class="language-select__list-item active">
+                        <a>Germany</a>
+                      </li>
+                      <li class="language-select__list-item"><a>Turkey</a></li>
+                      <li class="language-select__list-item">England<a></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rightside-menu__bottom">
+                <button
+                  class="rightside-menu__btn-logout sidebar__btn-logout icontext-button"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <section class="dashboard-table">
+            <div class="dashboard-table__wrapper">
+              <div class="dashboard-table__top">
+                <h1 class="dashboard-table__title page-title">Dashboard</h1>
+                <div class="dashboard-table__filters">
+                  <form class="dashboard-table__filters-form">
+                    <div
+                      class="dashboard-table__select-dropdown table-select table-select--status"
+                    >
+                      <label
+                        for="status"
+                        class="dashboard-table__select-label visually-hidden"
+                        >Status</label
+                      >
+                      <select
+                        class="select2-form-select"
+                        id="status"
+                        inputmode="none"
+                      >
+                        <option selected value="all">All</option>
+                        <option value="cancelled">Cancelled</option>
+                        <option value="waiting">Waiting</option>
+                        <option value="in-progress">In progress</option>
+                        <option value="unread">Unread</option>
+                        <option value="done">Done</option>
+                      </select>
+                    </div>
+                    <div
+                      class="dashboard-table__select-dropdown table-select table-select--display"
+                    >
+                      <label
+                        for="display"
+                        class="dashboard-table__select-label visually-hidden"
+                        >Display</label
+                      >
+                      <select
+                        class="select2-form-select"
+                        id="display"
+                        inputmode="none"
+                      >
+                        <option selected value="today">Today</option>
+                        <option value="all">All</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <table class="dashboard-table__table">
+                <thead class="dashboard-table__thead">
+                  <tr>
+                    <th class="number">№</th>
+                    <th class="name">Employee's name</th>
+                    <th class="name">Client's name</th>
+
+                    <th>Phone</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Time</th>
+
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="dashboard-table__row table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span
+                        class="dashboard-table__label label label-inprogress"
+                      >
+                        In progress
+                      </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard-table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row table-row new">
+                    <td class="number">15</td>
+                    <td class="name">Enrique Iglesias Junior</td>
+                    <td class="name">Anna Kournikova</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-new">New</span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row canceled table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-canceled"> Cancelled </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done">Done</span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row new table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-new"> New </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done"> Done </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row focused table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done"> Done </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done"> Done </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-canceled"> Cancelled </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="dashboard-table__row table-row">
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done"> Done </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    class="dashboard-table__row table-row dashboard-table__tablet-row"
+                  >
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-waiting"> Waiting </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    class="dashboard-table__row table-row dashboard-table__tablet-row"
+                  >
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done"> Done </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    class="dashboard-table__row table-row dashboard-table__tablet-row"
+                  >
+                    <td class="number">15</td>
+                    <td class="name">Laake Doooe</td>
+                    <td class="name">Marry Ellis</td>
+                    <td>+34842797474</td>
+                    <td class="service">Manicure</td>
+                    <td>21/12/21</td>
+                    <td>13:30</td>
+                    <td>
+                      <span class="label label-done"> Done </span>
+                    </td>
+                    <td class="fit">
+                      <span class="actions">
+                        <button class="dashboard-table__action-button">
+                          <img
+                            class="dashboard__table__action-icon"
+                            src="./images/icon-edit.svg"
+                            alt="edit row"
+                            width="26"
+                            height="26"
+                          />
+                        </button>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="dashboard-table__pagination pagination">
+                <a class="pagination__arrow pagination__arrow disabled">
+                  <img
+                    class="pagination__icon-arrow pagination__icon-arrow--left"
+                    src="./images/icon-arrow-right.svg"
+                    alt="arrow icon"
+                  />
+                </a>
+
+                <ul class="pagination__list">
+                  <li class="pagination__list-item">
+                    <a class="pagination__list-num active"> 1 </a>
+                  </li>
+                  <li class="pagination__list-item">
+                    <a class="pagination__list-num"> 2 </a>
+                  </li>
+                  <li class="pagination__list-item">
+                    <a class="pagination__list-num"> 3 </a>
+                  </li>
+                  <li class="pagination__list-item">
+                    <a class="pagination__list-num"> 4 </a>
+                  </li>
+                  <li class="pagination__list-item">
+                    <a class="pagination__list-num dots"> ...</a>
+                  </li>
+                  <li class="pagination__list-item">
+                    <a class="pagination__list-num"> 7</a>
+                  </li>
+                </ul>
+
+                <a class="pagination__arrow">
+                  <img
+                    class="pagination__icon-arrow"
+                    src="./images/icon-arrow-right.svg"
+                    alt="arrow icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <div class="overlay overlay--show"></div>
+    <div class="modal onboarding-card active">
+      <div class="modal__close onboarding-card__close"></div>
+      <div class="onboarding-card__inner">
+        <div class="onboarding-card__content onboarding-card__content--four">
+          <h3 class="onboarding-card__title">A few next steps</h3>
+          <h6 class="onboarding-card__subtitle">4 of 4</h6>
+          <p class="onboarding-card__text">
+            Please come up&nbsp;with a&nbsp;name for your website.
+          </p>
+          <p class="onboarding-card__text">
+            We&nbsp;suggest using the name of&nbsp;your salon.
+          </p>
+          <p class="onboarding-card__text">
+            However, please keep in&nbsp;mind that some names may not
+            be&nbsp;unique and could already be&nbsp;in&nbsp;use.
+          </p>
+          <p class="onboarding-card__text">
+            So, use your imagination and creativity!
+          </p>
+
+          <form class="onboarding-card__form">
+            <div class="onboarding-card__row onboarding-card__row--domain">
+              <label for="domain" class="onboarding-card__form-label"
+                >Your current domain</label
+              >
+              <input
+                type="text"
+                class="onboarding-card__input onboarding-card__input--domain"
+                id="domain"
+                name="domain"
+                placeholder="mysite.randevu.beauty"
+                autocomplete="off"
+              />
+              <span class="onboarding-card__input-message"></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="onboarding-card__btns">
+          <button class="onboarding-card__btn back">Back</button>
+          <button class="onboarding-card__btn next">Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

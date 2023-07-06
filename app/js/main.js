@@ -300,6 +300,33 @@ function handleCreateServiceModal() {
   });
 }
 
+/* Modal onboarding */
+function handleOnboardingModal() {
+  const modal = document.querySelector('.onboarding-card');
+  const overlay = document.querySelector('.overlay');
+  const saveBtn = document.querySelector('.save');
+  const sidebar = document.querySelector('.sidebar');
+  const modalConfirmCloseBtn = document.querySelector(
+    '.onboarding-card__close'
+  );
+
+  if (!modal) return;
+
+  if (
+    modal.classList.contains('active') &&
+    overlay.classList.contains('overlay--show')
+  ) {
+    sidebar.style.zIndex = '40';
+  }
+
+  modalConfirmCloseBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.remove('active');
+    overlay.classList.remove('overlay--show');
+    sidebar.style.zIndex = '70';
+  });
+}
+
 /* Popup with full services list */
 
 function handleServicesPopup() {
@@ -604,3 +631,4 @@ handleServicesPopup();
 handleNotesPopup();
 handleAccordion();
 inlineDatePicker();
+handleOnboardingModal();

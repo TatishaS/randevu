@@ -1,0 +1,253 @@
+.onboarding-card {
+  border: 0.1rem solid $backgroundExtraLight;
+  background-color: $backgroundSecondary;
+  padding: 2.8rem;
+  width: 60.8rem;
+  min-height: 54rem;
+  //height: 54rem;
+  //max-height: 90vh;
+
+  &__title,
+  &__subtitle {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    text-align: center;
+  }
+
+  &__inner {
+    //height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-top: 4.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 4.8rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: center;
+  }
+
+  &__text:last-of-type {
+    margin-bottom: 2.4rem;
+  }
+
+  &__row {
+    width: 100%;
+    margin-bottom: 1.4rem;
+    display: flex;
+    justify-content: center;
+    &--interval {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+    &--select,
+    &--domain {
+      display: block;
+      width: 27.6rem;
+    }
+    &--select:not:last-of-type {
+      margin-bottom: 2.4rem;
+    }
+    &--domain {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7.5rem;
+  }
+
+  &__form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__row-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.8rem;
+    &--interval {
+      display: block;
+    }
+  }
+
+  &__input {
+    width: 28.5rem;
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    outline: none;
+
+    padding: 1.4rem 2rem;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $contentSecondary;
+    }
+  }
+
+  &__input.focused {
+    border: 0.1rem solid $contentMain;
+  }
+  &__input.error {
+    border: 0.1rem solid $accentCanceled;
+  }
+  &__input.success {
+    border: 0.1rem solid $accentDone;
+  }
+
+  &__input-message {
+    opacity: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin-top: 0.8rem;
+  }
+  &__input-message.error {
+    opacity: 1;
+    color: $accentCanceled;
+  }
+
+  &__input-message.success {
+    opacity: 1;
+    color: $accentDone;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--congratulations {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    //width: 100%;
+    min-width: 9.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 1.5rem 3.6rem;
+    border: none;
+    border-radius: 1.4rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    opacity: 0.6;
+  }
+
+  &__btn.back {
+    color: $accentMain;
+    background-color: $backgroundMain;
+    border: 0.1rem solid $accentMain;
+  }
+  &__btn.next,
+  &__btn.ok {
+    color: $backgroundMain;
+    background-color: $accentMain;
+    border: none;
+  }
+
+  &__btn.next {
+    margin-left: auto;
+  }
+  &__btn.ok {
+    min-width: 11rem;
+  }
+
+  &__img-wrapper {
+    margin-top: 2.4rem;
+    margin-bottom: 5rem;
+  }
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__content {
+    &--five {
+      .onboarding-card__title {
+        margin-bottom: 0;
+      }
+      .onboarding-card__subtitle {
+        margin-bottom: 3.6rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .onboarding-card {
+    &__text {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      padding: 0 4.2rem;
+    }
+
+    &__content {
+      &--four {
+        .onboarding-card__text {
+          padding: 0 1.6rem;
+        }
+      }
+    }
+
+    &__content {
+      &--five {
+        .onboarding-card__text {
+          padding: 0 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .onboarding-card {
+    &__row {
+      &--interval {
+        width: auto;
+        margin-bottom: 0;
+      }
+      &--interval:first-child {
+        margin-right: 2.8rem;
+      }
+    }
+    &__row-wrapper {
+      &--interval {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+}

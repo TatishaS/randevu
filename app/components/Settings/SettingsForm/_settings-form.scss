@@ -1,0 +1,157 @@
+.settings-form {
+  width: 100%;
+  padding-bottom: 10.8rem;
+
+  &__row {
+    width: 100%;
+    margin-bottom: 1.4rem;
+
+    &--language,
+    &--currency {
+      width: 27.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__input {
+    width: 100%;
+    background: $backgroundMain;
+    border: 0.1rem solid $backgroundExtraLight;
+    border-radius: 1.4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $contentMain;
+    outline: none;
+
+    padding: 1.4rem 2rem;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $contentSecondary;
+    }
+
+    &--domain {
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__input.focused {
+    border: 0.1rem solid $accentMain;
+  }
+
+  &__button {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: $contentMain;
+    padding: 1.4rem 1rem;
+    border: none;
+    border-radius: 1.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__button:hover {
+    opacity: 0.6;
+  }
+
+  &__btns-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &--top {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__inputs-wrapper {
+    margin-bottom: 2.8rem;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__checkbox-listitem {
+    margin-bottom: 2rem;
+  }
+
+  &__tick-label {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 3rem;
+  }
+  &__tick-checkbox {
+    display: none;
+  }
+
+  &__tick-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: $backgroundMain;
+    border: 0.1rem solid $contentLight;
+    border-radius: 0.5rem;
+  }
+
+  &__tick-checkbox:checked + label::before {
+    background-color: $contentMain;
+    border: none;
+  }
+
+  &__tick-checkbox:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.4rem;
+    width: 1rem;
+    height: 0.8rem;
+    background-image: url('../../../images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &__tick-checkbox:disabled + label {
+    color: $contentSecondary;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .settings-form {
+    max-width: 40rem;
+    padding-bottom: 14rem;
+
+    &__btns-wrapper {
+      &--top {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

@@ -14,6 +14,28 @@
   &__container {
     padding: 0 2rem;
   }
+
+  &.service-block--settings {
+    .service-block__btn:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+    .service-block__top {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .service-block {
+    &.service-block--settings {
+      .service-block__btn:not(:last-child) {
+        margin-right: 1.4rem;
+      }
+    }
+  }
 }
 
 @media (min-width: $breakpoint768) {

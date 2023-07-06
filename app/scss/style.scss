@@ -74,6 +74,15 @@
 @import '../components/Mywebsite/InfoForm/_info-form.scss';
 @import '../components/Mywebsite/DaySelect/day-select';
 
+/* Settings */
+
+@import '../components/Settings/SettingsButton/settings-button';
+@import '../components/Settings/SettingsForm/settings-form';
+
+/* Onboarding */
+
+@import '../components/Onboarding/OnboardingCard/onboarding-card';
+
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
 @import 'blocks/signin';
