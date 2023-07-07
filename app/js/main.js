@@ -13,10 +13,19 @@ window.addEventListener('DOMContentLoaded', function () {
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'time-select__dropdown',
   });
+
+   /* Day select (class 'day-select') */
   $('.select2-day-select').select2({
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'day-select__dropdown',
   });
+
+    /* Form select (class 'settings-select') */
+
+    $('.select2-settings-select').select2({
+      minimumResultsForSearch: Infinity,
+      dropdownCssClass: 'settings-select__dropdown',
+    });
 
   /* Form select (class 'service-select') */
 

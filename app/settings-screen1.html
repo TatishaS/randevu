@@ -302,15 +302,11 @@
               class="template__service-block service-block service-block--settings"
             >
               <div class="service-block__top">
-                <button class="service-block__btn settings-button active">
+                <a class="service-block__btn settings-button active">
                   Domain
-                </button>
-                <button class="service-block__btn settings-button">
-                  Language
-                </button>
-                <button class="service-block__btn settings-button">
-                  Currency
-                </button>
+                </a>
+                <a class="service-block__btn settings-button"> Language </a>
+                <a class="service-block__btn settings-button"> Currency </a>
               </div>
               <form class="service-block__form settings-form">
                 <div class="settings-form__inputs-wrapper">
@@ -321,7 +317,7 @@
                     <div class="settings-form__input-wrapper">
                       <input
                         type="text"
-                        class="settings-form__input settings-form__input--domain error"
+                        class="settings-form__input settings-form__input--domain"
                         id="domain"
                         name="domain"
                         placeholder="mysite.randevu.beauty"
@@ -335,15 +331,16 @@
                         Copy
                       </button>
                     </div>
-                    <span class="settings-form__input-message error"
+                    <!--                     <span class="settings-form__input-message error"
                       >Name is unavailable. Try another.</span
-                    >
+                    > -->
                   </div>
                 </div>
 
                 <div class="settings-form__btns-wrapper">
                   <button
                     class="settings-form__button form-button save save--gradient"
+                    type="submit"
                   >
                     <svg width="26" height="26">
                       <use xlink:href="./images/sprite.svg#icon-save"></use>

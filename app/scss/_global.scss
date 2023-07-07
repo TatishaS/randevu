@@ -106,6 +106,7 @@ body {
  */
 .select2-container--default .time-select__dropdown.select2-dropdown,
 .select2-container--default .day-select__dropdown.select2-dropdown,
+.select2-container--default .settings-select__dropdown.select2-dropdown,
 .select2-container--default .form-select__dropdown.select2-dropdown,
 .select2-container--default .form-multiselect__dropdown.select2-dropdown,
 .select2-container--default .list-select__dropdown.select2-dropdown,
@@ -123,6 +124,8 @@ body {
 .select2-container--default
   .day-select__dropdown.select2-dropdown.select2-dropdown--below,
 .select2-container--default
+  .settings-select__dropdown.select2-dropdown.select2-dropdown--below,
+.select2-container--default
   .form-select__dropdown.select2-dropdown.select2-dropdown--below,
 .select2-container--default
   .form-multiselect__dropdown.select2-dropdown.select2-dropdown--below,
@@ -138,6 +141,8 @@ body {
   .time-select__dropdown.select2-dropdown.select2-dropdown--above,
 .select2-container--default
   .day-select__dropdown.select2-dropdown.select2-dropdown--above,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown.select2-dropdown--above,
 .select2-container--default
   .form-select__dropdown.select2-dropdown.select2-dropdown--above,
 .select2-container--default
@@ -157,15 +162,25 @@ body {
   .time-select__dropdown.select2-dropdown
   .select2-results__option,
 .select2-container--default
-  .day-select__dropdown.select2-dropdown
-  .select2-results__option,
-.select2-container--default
   .form-select__dropdown.select2-dropdown
   .select2-results__option,
 .select2-container--default
   .form-multiselect__dropdown.select2-dropdown
   .select2-results__option {
   font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  padding: 1.5rem 4rem 1.5rem 2rem;
+  border-bottom: 0.1rem solid $contentLight;
+}
+
+.select2-container--default
+  .day-select__dropdown.select2-dropdown
+  .select2-results__option,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
+  .select2-results__option {
+  font-size: 1.6rem;
   line-height: 1.6rem;
   font-weight: 400;
   padding: 1.5rem 4rem 1.5rem 2rem;
@@ -199,6 +214,9 @@ body {
   .day-select__dropdown.select2-dropdown
   .select2-results__option.select2-results__option--disabled,
 .select2-container--default
+  .settings-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--disabled,
+.select2-container--default
   .form-select__dropdown.select2-dropdown
   .select2-results__option.select2-results__option--disabled,
 .select2-container--default
@@ -218,6 +236,9 @@ body {
   .select2-results__option.select2-results__option--highlighted,
 .select2-container--default
   .day-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--highlighted,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
   .select2-results__option.select2-results__option--highlighted,
 .select2-container--default
   .form-select__dropdown.select2-dropdown
@@ -252,6 +273,12 @@ body {
   .select2-results__option.select2-results__option--selected.select2-results__option--highlighted,
 .select2-container--default
   .form-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--selected,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--selected.select2-results__option--highlighted,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
   .select2-results__option.select2-results__option--selected,
 .select2-container--default
   .form-multiselect__dropdown.select2-dropdown
@@ -294,6 +321,12 @@ body {
   .select2-results__option.select2-results__option--selected.select2-results__option--highlighted,
 .select2-container--default
   .form-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--selected,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
+  .select2-results__option.select2-results__option--selected.select2-results__option--highlighted,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
   .select2-results__option.select2-results__option--selected {
   &::after {
     right: 2rem;

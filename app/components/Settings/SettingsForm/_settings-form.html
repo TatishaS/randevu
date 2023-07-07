@@ -1,0 +1,41 @@
+<form class="settings-form">
+  <div class="settings-form__inputs-wrapper">
+    <div class="settings-form__row settings-form__row--domain">
+      <label for="domain" class="settings-form__label"
+        >Your current domain</label
+      >
+      <div class="settings-form__input-wrapper">
+        <input
+          type="text"
+          class="settings-form__input settings-form__input--domain"
+          id="domain"
+          name="domain"
+          placeholder="mysite.randevu.beauty"
+          autocomplete="off"
+        />
+
+        <button class="settings-form__button form-button copy">
+          <svg width="26" height="26">
+            <use xlink:href="./images/sprite.svg#icon-copy"></use>
+          </svg>
+          Copy
+        </button>
+      </div>
+      <!--                     <span class="settings-form__input-message error"
+          >Name is unavailable. Try another.</span
+        > -->
+    </div>
+  </div>
+
+  <div class="settings-form__btns-wrapper">
+    <button
+      class="settings-form__button form-button save save--gradient"
+      type="submit"
+    >
+      <svg width="26" height="26">
+        <use xlink:href="./images/sprite.svg#icon-save"></use>
+      </svg>
+      Save
+    </button>
+  </div>
+</form>

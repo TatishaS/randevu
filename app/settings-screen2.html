@@ -302,15 +302,11 @@
               class="template__service-block service-block service-block--settings"
             >
               <div class="service-block__top">
-                <button class="service-block__btn settings-button">
-                  Domain
-                </button>
-                <button class="service-block__btn settings-button active">
+                <a class="service-block__btn settings-button"> Domain </a>
+                <a class="service-block__btn settings-button active">
                   Language
-                </button>
-                <button class="service-block__btn settings-button">
-                  Currency
-                </button>
+                </a>
+                <a class="service-block__btn settings-button"> Currency </a>
               </div>
               <form class="service-block__form settings-form">
                 <div class="settings-form__inputs-wrapper">
@@ -318,9 +314,9 @@
                     <label for="language-default" class="settings-form__label"
                       >Default language</label
                     >
-                    <div class="settings-form__select service-select">
+                    <div class="settings-form__select settings-select">
                       <select
-                        class="select2-form-select"
+                        class="select2-settings-select"
                         id="language-default"
                         inputmode="none"
                         data-placeholder="Select language"
@@ -384,6 +380,7 @@
                 <div class="settings-form__btns-wrapper">
                   <button
                     class="settings-form__button form-button save save--gradient"
+                    type="submit"
                   >
                     <svg width="26" height="26">
                       <use xlink:href="./images/sprite.svg#icon-save"></use>

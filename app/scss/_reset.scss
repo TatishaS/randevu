@@ -63,12 +63,16 @@ a {
   color: $contentMain;
 }
 
+/* Disable inputs autofill */
+
 input::-webkit-contacts-auto-fill-button,
 input::-webkit-credentials-auto-fill-button {
   visibility: hidden;
   position: absolute;
   right: 0;
 }
+
+/* Disable elements lightblue highlighting */
 
 input,
 textarea,
@@ -78,4 +82,27 @@ label,
 div,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Disable zoom in form fields in iOS*/
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  select,
+  select:focus,
+  textarea,
+  textarea:focus,
+  input,
+  input:focus {
+    font-size: 16px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  select,
+  select:focus,
+  textarea,
+  textarea:focus,
+  input,
+  input:focus {
+    font-size: 16px;
+  }
 }
