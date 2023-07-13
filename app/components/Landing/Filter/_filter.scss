@@ -1,0 +1,80 @@
+.filter {
+  width: 100%;
+  margin-bottom: 2.8rem;
+  &__gender-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__gender-option {
+    width: 50%;
+  }
+  &__gender-option:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__gender-input {
+    display: none;
+  }
+
+  &__gender-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 1.3rem;
+    border: 0.1rem solid $contentSecondary;
+    border-radius: 1.4rem;
+    color: $contentSecondary;
+    background-color: $backgroundMain;
+
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__gender-input:checked + label {
+    color: $backgroundMain;
+    background-color: $contentMain;
+  }
+
+  &__gender-input:disabled + label {
+    color: $contentMain;
+    background-color: $backgroundMain;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: $accentMain;
+      top: -0.2rem;
+      right: -0.2rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .filter {
+    &__gender-options {
+      justify-content: center;
+    }
+
+    &__gender-option {
+      width: auto;
+    }
+
+    &__gender-label {
+      min-width: 16rem;
+    }
+  }
+}

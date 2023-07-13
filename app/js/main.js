@@ -106,7 +106,6 @@ window.addEventListener('DOMContentLoaded', function () {
     if (!event.params.originalEvent) {
       return;
     }
-    console.log('remove choice');
     event.params.originalEvent.stopPropagation();
   });
 
@@ -131,13 +130,11 @@ function rightsideMenu() {
 
   moreButton.addEventListener('click', event => {
     event.preventDefault();
-    console.log('открыть');
     rightsideMenu.classList.toggle('rightside-menu--close');
     overlay.classList.toggle('overlay--show');
   });
   rightsideMenuBtnClose.addEventListener('click', event => {
     event.preventDefault();
-    console.log('закрыть');
     rightsideMenu.classList.add('rightside-menu--close');
     overlay.classList.remove('overlay--show');
   });
@@ -182,7 +179,6 @@ function highlightDateInput() {
       const datePicker = dropdown.querySelector('.datepicker-grid');
 
       datePicker.addEventListener('click', () => {
-        console.log('Клик');
         inputDate.classList.remove('active');
       });
     }
@@ -297,7 +293,6 @@ function openLandingModal() {
   if (confirmBtn) {
     confirmBtn.addEventListener('click', e => {
       e.preventDefault();
-      console.log('Клик');
       modal.classList.add('active');
       overlay.classList.add('overlay--show');
     });
@@ -602,10 +597,8 @@ const timePicker = new AppointmentPicker(inlinePicker, {
 });
 
 const inlineTimePicker = () => {
-  console.log(timePicker);
   if (!timePicker) return;
   timePicker.open();
-  console.log('Тайм пикер');
 
   document.body.addEventListener(
     'close.appo.picker',
@@ -700,7 +693,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
   let formStepsNum = 0;
   const stepsQuantity = formSteps.length;
-  console.log(stepsQuantity);
 
   optionInputs.forEach(radioInput => {
     radioInput.addEventListener('change', event => {
@@ -716,7 +708,6 @@ window.addEventListener('DOMContentLoaded', function () {
   datePickerElement.addEventListener(
     'changeDate',
     function (event) {
-      console.log('Выбрали дату');
       if (formStepsNum < stepsQuantity - 1) {
         formStepsNum++;
         updateFormSteps();
@@ -729,7 +720,6 @@ window.addEventListener('DOMContentLoaded', function () {
   document.body.addEventListener(
     'change.appo.picker',
     function (event) {
-      console.log('Выбрали время');
       if (formStepsNum < stepsQuantity - 1) {
         formStepsNum++;
         updateFormSteps();

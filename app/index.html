@@ -222,35 +222,39 @@
       </section>
       <section class="booking">
         <div class="container container--landing">
-          <form class="booking-form">
+          
             <h2 class="booking-form__title section-title">Book an appointment</h2>
-            <ul class="booking-form__gender-options">
-              <li class="booking-form__gender-option">
-                <input
-                  class="visually-hidden booking-form__gender-input"
-                  type="radio"
-                  name="gender"
-                  value="man"
-                  id="man"
-                />
-                <label class="booking-form__gender-label" for="man"
-                  >Man</label
-                >
-              </li>
-              <li class="booking-form__gender-option">
-                <input
-                  class="visually-hidden booking-form__gender-input"
-                  type="radio"
-                  name="gender"
-                  value="woman"
-                  id="woman"
-                  checked
-                />
-                <label class="booking-form__gender-label" for="woman"
-                  >Woman</label
-                >
-              </li>
-            </ul>
+            <form class="booking__filter filter">
+              <ul class="filter__gender-options">
+                <li class="filter__gender-option">
+                  <input
+                    class="visually-hidden filter__gender-input"
+                    type="radio"
+                    name="gender"
+                    value="man"
+                    id="man"
+                  />
+                  <label class="filter__gender-label" for="man"
+                    >Man</label
+                  >
+                </li>
+                <li class="filter__gender-option">
+                  <input
+                    class="visually-hidden filter__gender-input"
+                    type="radio"
+                    name="gender"
+                    value="woman"
+                    id="woman"
+                    checked
+                  />
+                  <label class="filter__gender-label" for="woman"
+                    >Woman</label
+                  >
+                </li>
+              </ul>
+            </form>
+
+            <form class="booking-form">
             <div class="booking-form__step active">
               <div class="booking-form__btn-arrows disabled">
                 <button class="booking-form__btn-prev">
@@ -952,6 +956,12 @@
                               >
                             </div>
                           </div>
+                          <div class="confirmation__price-row">
+                            <span class="confirmation__price-label">Price:</span>
+                            <div class="confirmation__price-wrapper">
+                              <span class="confirmation__price-input">$40</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
             </div>
@@ -1344,7 +1354,7 @@
                               alt="Employee photo"
                               class="form-card__labelimg"
                               width="90"
-                              height="89
+                              height="89" />
                             <span class="form-card__label-info">
                               <span class="form-card__label-title">
                                 Miroslava Ivanova
@@ -1432,6 +1442,12 @@
                               >
                             </div>
                           </div>
+                          <div class="confirmation__price-row">
+                            <span class="confirmation__price-label">Price:</span>
+                            <div class="confirmation__price-wrapper">
+                              <span class="confirmation__price-input">$40</span>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
@@ -1503,6 +1519,12 @@
                             <span class="confirmation__field-input"
                               >16, Aug</span
                             >
+                          </div>
+                        </div>
+                        <div class="confirmation__price-row">
+                          <span class="confirmation__price-label">Price:</span>
+                          <div class="confirmation__price-wrapper">
+                            <span class="confirmation__price-input">$40</span>
                           </div>
                         </div>
                       </div>
@@ -1597,6 +1619,12 @@
                             <span class="confirmation__field-input">11:30</span>
                           </div>
                         </div>
+                        <div class="confirmation__price-row">
+                          <span class="confirmation__price-label">Price:</span>
+                          <div class="confirmation__price-wrapper">
+                            <span class="confirmation__price-input">$40</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
           </div>
@@ -1670,12 +1698,12 @@
                               <span class="confirmation__field-input">11:30</span>
                             </div>
                           </div>
-<!--                           <div class="confirmation__price-row">
+                          <div class="confirmation__price-row">
                             <span class="confirmation__price-label">Price:</span>
                             <div class="confirmation__price-wrapper">
                               <span class="confirmation__price-input">$40</span>
                             </div>
-                          </div> -->
+                          </div>
                         </div>
                         <div class="confirmation__contacts-wrapper">
                           <div class="confirmation__contact-row">
