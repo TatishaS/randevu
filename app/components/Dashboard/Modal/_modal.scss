@@ -23,6 +23,27 @@
     padding: 2.4rem 2.4rem;
   }
 
+  &.modal__landing {
+    width: 34rem;
+    min-height: 30rem;
+    padding: 2.4rem 4.4rem;
+
+    .modal__img-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .modal__img {
+      margin-top: 6rem;
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+
+    .modal__msg {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+  }
+
   &.active {
     display: block;
   }
@@ -191,6 +212,11 @@
     &.modal__crop {
       width: 53.2rem;
       padding: 4.1rem 4.5rem;
+    }
+
+    &.modal__landing {
+      width: 40rem;
+      padding: 2.4rem 7.4rem;
     }
 
     &__crop-wrapper {

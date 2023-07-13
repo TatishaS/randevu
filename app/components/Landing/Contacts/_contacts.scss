@@ -1,0 +1,138 @@
+.contacts {
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__info-block {
+    margin-bottom: 2.8rem;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    margin-bottom: 2.8rem;
+    padding-left: 4rem;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 3rem;
+      height: 3rem;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 3.2rem;
+  }
+
+  &__item--address::before {
+    background-image: url('../../../images/icon-location.svg');
+  }
+
+  &__item--time::before {
+    background-image: url('../../../images/icon-clock.svg');
+  }
+
+  &__item--phone::before {
+    background-image: url('../../../images/icon-phone.svg');
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__social-listitem:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__social-listlink {
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__map-wrapper {
+    margin-bottom: 4rem;
+  }
+
+  &__map {
+    width: 100%;
+    height: 26.3rem;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .contacts {
+    /*  &__wrapper {
+      display: flex;
+      justify-content: center;
+    } */
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.6rem;
+    }
+
+    &__info-block {
+      width: 30rem;
+      margin-bottom: 0;
+      margin-right: 3rem;
+    }
+
+    &__item:last-child {
+      margin-bottom: 4rem;
+    }
+
+    &__map-block {
+      width: 35rem;
+      margin: 0 auto;
+      //flex-grow: 1;
+    }
+
+    &__map-wrapper {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .contacts {
+    &__inner {
+      //grid-template-columns: 38rem 64rem;
+
+      align-items: center;
+    }
+
+    &__info-block {
+      width: 38rem;
+      margin-right: 4rem;
+    }
+
+    &__map-block {
+      width: 64rem;
+    }
+
+    &__map {
+      width: 100%;
+      height: 36rem;
+    }
+  }
+}

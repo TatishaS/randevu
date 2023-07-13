@@ -81,8 +81,16 @@
 @import '../components/Settings/SettingsSelect/settings-select';
 
 /* Onboarding */
-
 @import '../components/Onboarding/OnboardingCard/onboarding-card';
+
+/* Landing */
+@import '../components/Landing/Intro/intro';
+@import '../components/Landing/Gallery/gallery';
+@import '../components/Landing/BookingForm/booking-form';
+@import '../components/Landing/StepHeader/step-header';
+@import '../components/Landing/FormCard/form-card';
+@import '../components/Landing/Confirmation/confirmation';
+@import '../components/Landing/Contacts/contacts';
 
 // Подключение дополнительных уникальных стилей страниц
 @import 'blocks/header';
@@ -91,8 +99,7 @@
 @import 'blocks/template';
 @import 'blocks/appointment';
 @import 'blocks/clients';
-
-//@import "blocks/footer";
+@import 'blocks/footer';
 
 // Libs
 //@import "./libs/swiper";

@@ -29,6 +29,7 @@
     "cropperjs": "^1.5.13",
     "esm": "^3.2.25",
     "jquery": "^3.7.0",
-    "slim-select": "^2.5.0"
+    "slim-select": "^2.5.0",
+    "swiper": "^10.0.4"
   }
 }

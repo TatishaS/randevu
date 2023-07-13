@@ -1,0 +1,34 @@
+.step-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2.8rem;
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $backgroundMain;
+    background-color: $contentMain;
+    margin-right: 1.4rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: $contentMain;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .step-header {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,522 @@
+.booking-form {
+  padding-bottom: 7.8rem;
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__btn-arrows {
+    opacity: 1;
+    margin-bottom: 2.8rem;
+  }
+
+  &__btn-arrows.disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__btn-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__gender-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__gender-option {
+    width: 50%;
+  }
+  &__gender-option:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__gender-input {
+    display: none;
+  }
+
+  &__gender-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 1.3rem;
+    border: 0.1rem solid $contentSecondary;
+    border-radius: 1.4rem;
+    color: $contentSecondary;
+    background-color: $backgroundMain;
+
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__gender-input:checked + label {
+    color: $backgroundMain;
+    background-color: $contentMain;
+  }
+
+  &__gender-input:disabled + label {
+    color: $contentMain;
+    background-color: $backgroundMain;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: $accentMain;
+      top: -0.2rem;
+      right: -0.2rem;
+    }
+  }
+
+  &__step {
+    display: none;
+    opacity: 0;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+
+  &__step.active {
+    display: block;
+    opacity: 1;
+    animation: fadeInFromNone 0.6s ease-in-out;
+  }
+
+  @keyframes fadeInFromNone {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+
+    1% {
+      display: block;
+      opacity: 0;
+    }
+
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  /*   &__step-content {
+    width: calc(100% - 5rem);
+    margin-left: auto;
+    padding-right: 0.4rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+ */
+  /* Category radio inputs */
+
+  &__options {
+    max-height: 78rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.8rem;
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      //height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $contentLight;
+      border-radius: 10rem;
+      //margin-block: 0.5em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $contentDop;
+      border-radius: 10rem;
+    }
+  }
+
+  &__option:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+
+  /* Custom scrollbar for Firefox */
+
+  @supports (scrollbar-color: black grey) {
+    &__options {
+      scrollbar-color: $contentDop $contentLight;
+    }
+  }
+
+  /* Date picker */
+
+  /*   &__item.accordion__item--date,
+  &__item.accordion__item--time {
+    .accordion__item-content {
+      width: 100%;
+    }
+  } */
+
+  &__inline-date {
+    padding-bottom: 2.8rem;
+  }
+  &__input-time {
+    display: none;
+  }
+
+  & .datepicker-input {
+    -webkit-border-radius: 1.4rem;
+    border-radius: 1.4rem;
+  }
+
+  & .datepicker-inline {
+    width: 33rem;
+    left: 0 !important;
+  }
+
+  & .datepicker-inline.active {
+    border: none;
+    background-color: $backgroundMain;
+    border-radius: 1.2rem;
+  }
+
+  & .datepicker-picker {
+    border: none;
+    background-color: $backgroundMain;
+    border-radius: 1.2rem;
+    box-shadow: none;
+    padding: 1rem;
+
+    font-weight: 600;
+  }
+
+  & .datepicker-grid {
+    margin-bottom: 1rem;
+  }
+
+  & .datepicker-controls {
+    align-items: center;
+    margin-bottom: 1rem;
+    button {
+      background-image: none;
+      background-color: $backgroundMain;
+      /*  display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+    button.view-switch {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      order: -1;
+      padding-left: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  & .datepicker-view {
+    width: 100%;
+  }
+
+  & .days-of-week {
+    margin-bottom: 1rem;
+  }
+
+  & .dow {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    max-width: 4rem;
+  }
+  & .dow:not(:last-child) {
+    margin-right: 1rem;
+  }
+  & .datepicker-cell.day {
+    /*   max-width: 3.9rem;
+    height: 4rem; */
+    max-width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.6rem;
+    background-color: #e0f1d8;
+    margin-bottom: 1rem;
+  }
+
+  & .datepicker-cell.day:not(:nth-child(7n)) {
+    margin-right: 1rem;
+  }
+  & .datepicker-cell.day.focused {
+    background-image: $gradientMain;
+    color: $backgroundMain;
+  }
+
+  & .datepicker-cell.day.disabled {
+    background-color: #f4c6c6;
+    color: $contentMain;
+    opacity: 1;
+  }
+
+  & .datepicker-footer {
+    display: none;
+  }
+
+  & .legend-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $contentMain;
+  }
+
+  & .legend-button:last-child {
+    margin-right: 0;
+  }
+
+  & .legend-color {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.6rem;
+    border: none;
+    margin-right: 0.9rem;
+  }
+
+  & .legend-color.free {
+    background-color: #e0f1d8;
+  }
+
+  & .legend-color.busy {
+    background-color: #f4c6c6;
+  }
+
+  /*   & .edit-form__datepicker-arrow {
+    fill: $contentMain;
+  }
+
+  & .edit-form__datepicker-arrow.disabled {
+    fill: #afacac;
+  }
+ */
+  &__inline-date .legend-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Time appointment picker*/
+
+  &__time-block {
+    padding-bottom: 2.8rem;
+  }
+
+  &__time-header {
+    margin-bottom: 2.8rem;
+  }
+
+  &__timeheader-date {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+  }
+
+  & .appo-picker.is-open {
+    position: static;
+    width: 30rem;
+    //top: 6rem;
+    max-width: 30rem;
+    margin-right: auto;
+    padding: 0;
+    border-radius: 1.2rem;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+  }
+
+  & .appo-picker-title {
+    display: none;
+  }
+
+  & .appo-picker-list {
+    max-width: initial;
+  }
+
+  & .appo-picker-list-item {
+    height: 4rem;
+    border-radius: 0.6rem;
+    //margin: 0 0.9rem 0.9rem 0;
+    margin-bottom: 1rem;
+
+    input[type='button'] {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+
+      font-weight: 500;
+      color: $contentMain;
+      padding: 0.7rem 1rem;
+      margin: 0 0.9rem 0.1rem 0;
+
+      background-color: #e0f1d8;
+    }
+
+    input[type='button'].is-selected {
+      box-shadow: none;
+      color: $backgroundMain;
+      background: $gradientMain;
+    }
+  }
+
+  & .appo-picker-list-item.disabled {
+    input[type='button'] {
+      background-color: $accentLight;
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .booking-form {
+    padding-bottom: 10rem;
+    &__options {
+      max-height: 38.4rem;
+      overflow-y: scroll;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.4rem;
+    }
+
+    &__option:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    /* Date picker */
+
+    &__inline-date {
+      margin: 0 auto;
+    }
+
+    & .datepicker-controls {
+      padding-right: 20.6rem;
+      margin-bottom: 2.8rem;
+    }
+    & .datepicker-inline {
+      width: 60rem;
+      //margin-left: 0.8rem;
+      margin: 0 auto;
+    }
+
+    & .datepicker-main {
+      display: flex;
+      justify-content: flex-start;
+    }
+    & .datepicker-view {
+      width: 34rem;
+    }
+
+    & .datepicker-picker {
+      padding: 0 2.4rem 0.4rem 2.4rem;
+    }
+
+    &__inline-date .legend-wrapper {
+      max-width: 20rem;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      padding-left: 5.6rem;
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+
+    & .legend-button {
+      margin-right: 0;
+      margin-bottom: 1.4rem;
+    }
+
+    & .legend-button.busy {
+      margin-bottom: 0;
+    }
+
+    & .legend-color {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    & .datepicker-cell.day {
+      max-width: 3.9rem;
+      height: 3.9rem;
+      font-size: 1.8rem;
+      border-radius: 0.6rem;
+      background-color: #e0f1d8;
+      margin-bottom: 1rem;
+    }
+
+    /* Time appointment picker*/
+
+    &__time-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 2.8rem;
+    }
+
+    & .appo-picker.is-open {
+      width: 37.4rem;
+      max-width: 37.4rem;
+      margin-left: 0.8rem;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    & .appo-picker-list-item {
+      input[type='button'] {
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint1200) {
+  .booking-form {
+    &__gender-options {
+      justify-content: center;
+    }
+    &__options {
+      max-height: 25.8rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__gender-option {
+      width: auto;
+    }
+
+    &__gender-label {
+      min-width: 16rem;
+    }
+  }
+}

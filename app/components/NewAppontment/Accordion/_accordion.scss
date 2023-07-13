@@ -137,7 +137,7 @@
   }
 
   & .datepicker-inline {
-    width: 33rem;
+    width: 31rem;
     left: 0 !important;
   }
 
@@ -152,7 +152,7 @@
     background-color: $backgroundMain;
     border-radius: 1.2rem;
     box-shadow: none;
-    padding: 1rem;
+    padding: 1rem 0;
 
     font-weight: 600;
   }
@@ -431,12 +431,24 @@
   }
 }
 
+@media (min-width: 375px) {
+  .accordion {
+    & .datepicker-inline {
+      width: 33rem;
+    }
+
+    & .datepicker-picker {
+      padding: 1rem;
+    }
+  }
+}
+
 @media (min-width: 410px) {
   .accordion {
     &__item.accordion__item--date,
     &__item.accordion__item--time {
       .accordion__item-content {
-        width: calc(100% - 5rem);
+        width: calc(100% - 4rem);
       }
     }
   }

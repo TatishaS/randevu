@@ -1,0 +1,70 @@
+.form-card {
+  &__option-input {
+    display: none;
+  }
+  &__option-label {
+    min-height: 10.4rem; // убрать позже
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 1.2rem;
+    border: 0.1rem solid $contentLight;
+    border-radius: 1.4rem;
+    color: $contentMain;
+    background-color: $backgroundMain;
+
+    opacity: 1;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &.form-card__option-label--category {
+      text-transform: uppercase;
+    }
+  }
+  &__label-checkimg {
+    //display: block;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-left: 1rem;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0, 1, 0, 1);
+  }
+
+  &__option-input:checked + label {
+    color: $backgroundMain;
+    background-color: $contentMain;
+    .form-card__label-checkimg {
+      opacity: 1;
+    }
+  }
+
+  &__label-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__labelimg {
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+
+  &__label-title {
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  &__label-text {
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}

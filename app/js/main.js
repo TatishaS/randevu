@@ -1,5 +1,41 @@
 'use strict';
 
+/* Landing swiper slider */
+
+let swiper = new Swiper('.gallery__swiper-slider', {
+  // Optional parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  pagination: {
+    el: '.swiper-pagination--gallery',
+    clickable: true,
+  },
+
+  breakpoints: {
+    767.98: {
+      slidesPerView: 2.2,
+      centeredSlides: true,
+      spaceBetween: 20,
+    },
+    1199.98: {
+      slidesPerView: 3.5,
+      centeredSlides: true,
+      spaceBetween: 20,
+    },
+  },
+});
+
 /* Select2 jQuery */
 window.addEventListener('DOMContentLoaded', function () {
   /* Hide selected values from multiple dropdown */
@@ -14,18 +50,18 @@ window.addEventListener('DOMContentLoaded', function () {
     dropdownCssClass: 'time-select__dropdown',
   });
 
-   /* Day select (class 'day-select') */
+  /* Day select (class 'day-select') */
   $('.select2-day-select').select2({
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'day-select__dropdown',
   });
 
-    /* Form select (class 'settings-select') */
+  /* Form select (class 'settings-select') */
 
-    $('.select2-settings-select').select2({
-      minimumResultsForSearch: Infinity,
-      dropdownCssClass: 'settings-select__dropdown',
-    });
+  $('.select2-settings-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'settings-select__dropdown',
+  });
 
   /* Form select (class 'service-select') */
 
@@ -248,6 +284,32 @@ function openConfirmModal() {
     sidebar.style.zIndex = '70';
   });
 }
+
+/* Окно сообщения об успешном бронировании*/
+function openLandingModal() {
+  const modal = document.querySelector('.modal__landing');
+  const overlay = document.querySelector('.overlay');
+  const confirmBtn = document.querySelector('.intro__btn');
+  const modalConfirmCloseBtn = document.querySelector('.modal__confirm-close');
+
+  if (!modal) return;
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', e => {
+      e.preventDefault();
+      console.log('Клик');
+      modal.classList.add('active');
+      overlay.classList.add('overlay--show');
+    });
+  }
+
+  modalConfirmCloseBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.remove('active');
+    overlay.classList.remove('overlay--show');
+  });
+}
+
 function openCropPhotoModal() {
   const modalCrop = document.querySelector('.modal__crop');
   const overlay = document.querySelector('.overlay');
@@ -535,13 +597,15 @@ const timePicker = new AppointmentPicker(inlinePicker, {
   minTime: 8,
   maxTime: 21,
   startTime: 8,
-  endTime: 16,
+  endTime: 20,
   disabled: ['8:00', '12:30', '14:30'],
 });
 
 const inlineTimePicker = () => {
+  console.log(timePicker);
   if (!timePicker) return;
   timePicker.open();
+  console.log('Тайм пикер');
 
   document.body.addEventListener(
     'close.appo.picker',
@@ -624,6 +688,77 @@ function handleAccordion() {
   });
 }
 
+/* Landing Steps Form */
+window.addEventListener('DOMContentLoaded', function () {
+  const prevBtns = document.querySelectorAll('.booking-form__btn-prev');
+  const formSteps = document.querySelectorAll('.booking-form__step');
+  const optionInputs = document.querySelectorAll('.form-card__option-input');
+
+  const datePickerElement = document.getElementById('inline-datepicker');
+
+  if (!datePickerElement) return;
+
+  let formStepsNum = 0;
+  const stepsQuantity = formSteps.length;
+  console.log(stepsQuantity);
+
+  optionInputs.forEach(radioInput => {
+    radioInput.addEventListener('change', event => {
+      //const step = event.target.closest('.booking-form__step');
+      //if (!step) return;
+      if (formStepsNum < stepsQuantity - 1) {
+        formStepsNum++;
+        updateFormSteps();
+      }
+    });
+  });
+
+  datePickerElement.addEventListener(
+    'changeDate',
+    function (event) {
+      console.log('Выбрали дату');
+      if (formStepsNum < stepsQuantity - 1) {
+        formStepsNum++;
+        updateFormSteps();
+      }
+    },
+    false
+  );
+
+  /*Move to next step after time selection */
+  document.body.addEventListener(
+    'change.appo.picker',
+    function (event) {
+      console.log('Выбрали время');
+      if (formStepsNum < stepsQuantity - 1) {
+        formStepsNum++;
+        updateFormSteps();
+      }
+    },
+    false
+  );
+
+  prevBtns.forEach(btn => {
+    btn.addEventListener('click', event => {
+      event.preventDefault();
+      if (formStepsNum > 0) {
+        formStepsNum--;
+        updateFormSteps();
+      }
+    });
+  });
+
+  function updateFormSteps() {
+    formSteps.forEach(formStep => {
+      formStep.classList.contains('active') &&
+        formStep.classList.remove('active');
+    });
+
+    formSteps[formStepsNum].classList.add('active');
+  }
+  inlineTimePicker();
+});
+
 rightsideMenu();
 openConfirmModal();
 openCropPhotoModal();
@@ -641,3 +776,4 @@ handleNotesPopup();
 handleAccordion();
 inlineDatePicker();
 handleOnboardingModal();
+openLandingModal();

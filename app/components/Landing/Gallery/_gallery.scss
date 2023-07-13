@@ -1,0 +1,41 @@
+.gallery {
+  padding-bottom: 12rem;
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__slider-container {
+    position: relative;
+  }
+
+  & .swiper-slider {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  &__item-wrapper {
+    border-radius: 1.4rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slider-img {
+    width: 100%;
+    height: 33.5rem;
+
+    object-fit: cover;
+  }
+
+  &__slider-btns {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint768) {
+  .gallery {
+    padding-bottom: 16rem;
+    &__slider-btns {
+      display: block;
+    }
+  }
+}
