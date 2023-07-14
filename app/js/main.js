@@ -29,9 +29,8 @@ let swiper = new Swiper('.gallery__swiper-slider', {
       spaceBetween: 20,
     },
     1199.98: {
-      slidesPerView: 3.5,
-      centeredSlides: true,
-      spaceBetween: 20,
+      slidesPerView: 3,
+      centeredSlides: false,
     },
   },
 });
