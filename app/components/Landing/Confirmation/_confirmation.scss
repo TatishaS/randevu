@@ -138,9 +138,6 @@
     font-weight: 400;
     line-height: 1.6rem;
     color: $contentSecondary;
-    cursor: pointer;
-    user-select: none;
-    padding-left: 3rem;
     a {
       display: inline-block;
       color: $contentSecondary;
@@ -148,41 +145,6 @@
       line-height: 1.8rem;
       border-bottom: 0.1rem solid $contentSecondary;
     }
-  }
-
-  &__tick-checkbox {
-    display: none;
-  }
-
-  &__tick-checkbox + label::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 1.2rem;
-    transform: translateY(-50%);
-    width: 2rem;
-    height: 2rem;
-    background-color: $backgroundMain;
-    border: 0.1rem solid $contentLight;
-    border-radius: 0.5rem;
-  }
-
-  &__tick-checkbox:checked + label::before {
-    background-color: $contentMain;
-    border: none;
-  }
-
-  &__tick-checkbox:checked + label::after {
-    content: '';
-    position: absolute;
-    top: 1.2rem;
-    transform: translateY(-50%);
-    left: 0.5rem;
-    width: 1rem;
-    height: 0.8rem;
-    background-image: url('../../../images/icon-check.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 
   &__button {
