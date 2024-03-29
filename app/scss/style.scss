@@ -104,3 +104,117 @@
 
 // Libs
 //@import "./libs/swiper";
+
+/* Updated styles*/
+
+/* DAY SELECT */
+
+.select2-container--default
+  .day-select__dropdown.select2-dropdown
+  .select2-results__option,
+.select2-container--default
+  .settings-select__dropdown.select2-dropdown
+  .select2-results__option {
+  padding: 1.5rem 3rem 1.5rem 2rem;
+}
+
+.day-select
+  .select2-container
+  .select2-selection--single
+  .select2-selection__rendered {
+  padding-right: 10px;
+}
+
+/* Cropper  modal */
+.modal .cropper-crop-box {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.modal .modal__cropimg-wrapper img {
+  max-width: 100%;
+  width: 23.4rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* Phone input with flag - iti */
+
+.iti {
+  width: 100%;
+}
+
+/* Price input */
+
+.service-form__input.service-form__input--price[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.service-form__input.service-form__input--price::-webkit-outer-spin-button,
+.service-form__input.service-form__input--price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.service-form__input,
+.service-form__textarea {
+  font-size: 1.6rem;
+  //padding: 1.3rem 2rem;
+}
+
+.service-form__input::placeholder,
+.service-form__textarea::placeholder {
+  font-size: 1.6rem;
+}
+
+.info-form__input,
+.info-form__textarea {
+  font-size: 1.6rem;
+}
+
+.info-form__input::placeholder,
+.info-form__textarea::placeholder {
+  font-size: 1.6rem;
+}
+
+/* Timetable breaks and buttons */
+
+@media (min-width: 1199.98px) {
+  .timetable__select-group {
+    flex-wrap: nowrap;
+  }
+  .timetable__select-group .time-select {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+
+  .timetable__select-group .timetable__btn {
+    margin-left: 0;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+}
+
+/* Calendar styles for passed day class */
+
+.passed,
+.passed.disabled {
+  background-color: #f7f7f7;
+  color: #7c7778;
+}
+
+/* Domain input in My settings */
+.settings-form__result {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding-left: 2rem;
+  margin-top: 1rem;
+  color: #7c7778;
+}
+
+.settings-form__result span {
+  font-weight: 500;
+  color: #201c1d;
+}
