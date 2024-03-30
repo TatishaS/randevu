@@ -320,8 +320,12 @@
                         class="settings-form__input settings-form__input--domain"
                         id="domain"
                         name="domain"
-                        placeholder="mysite.randevu.beauty"
+                        placeholder="mysite"
                         autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        value="mysite"
                       />
 
                       <button class="settings-form__button form-button copy">
@@ -331,7 +335,10 @@
                         Copy
                       </button>
                     </div>
-                    <!--                     <span class="settings-form__input-message error"
+                    <p class="settings-form__result">
+                      <span>mysite</span>.randevu.beauty
+                    </p>
+                    <!-- <span class="settings-form__input-message error"
                       >Name is unavailable. Try another.</span
                     > -->
                   </div>
