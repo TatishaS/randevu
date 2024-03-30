@@ -85,7 +85,7 @@ a {
 }
 
 /* Disable zoom in form fields in iOS*/
-/* @media screen and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
   select,
   select:focus,
   textarea,
@@ -94,9 +94,9 @@ a {
   input:focus {
     font-size: 16px;
   }
-} */
+}
 
-/* @media (hover: none) and (pointer: coarse) {
+@media (hover: none) and (pointer: coarse) {
   select,
   select:focus,
   textarea,
@@ -105,7 +105,7 @@ a {
   input:focus {
     font-size: 16px;
   }
-} */
+}
 
 /* Delete arrows in input type="number */
 
