@@ -155,3 +155,56 @@
 .service-form__file-preview {
   border-radius: 50%;
 }
+
+/* Client site -  map in Contacts block */
+
+.contacts__info-block {
+  margin-bottom: 2.8rem;
+}
+
+.contacts__map-wrapper {
+  margin-bottom: 4rem;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 26.3rem;
+  border-radius: 1.4rem;
+}
+
+@media (min-width: 767.98px) {
+  .contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.6rem;
+  }
+  .contacts__info-block {
+    width: 30rem;
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+  .contacts__map-block {
+    width: 35rem;
+    margin: 0 auto;
+  }
+  .contacts__map-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .contacts__inner {
+    align-items: center;
+  }
+  .contacts__info-block {
+    width: 38rem;
+    margin-right: 4rem;
+  }
+  .contacts__map-block {
+    width: 64rem;
+  }
+  .contacts__map {
+    width: 100%;
+    height: 36rem;
+  }
+}

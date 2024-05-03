@@ -262,3 +262,95 @@
 .service-form__file-preview {
   border-radius: 50%;
 }
+
+/* Client site -  map in Contacts block */
+
+.contacts__info-block {
+  margin-bottom: 2.8rem;
+}
+
+.contacts__map-wrapper {
+  margin-bottom: 4rem;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 26.3rem;
+  border-radius: 1.4rem;
+}
+
+@media (min-width: 767.98px) {
+  .contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.6rem;
+  }
+  .contacts__info-block {
+    width: 30rem;
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+  .contacts__map-block {
+    width: 35rem;
+    margin: 0 auto;
+  }
+  .contacts__map-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .contacts__inner {
+    align-items: center;
+  }
+  .contacts__info-block {
+    width: 38rem;
+    margin-right: 4rem;
+  }
+  .contacts__map-block {
+    width: 64rem;
+  }
+  .contacts__map {
+    width: 100%;
+    height: 36rem;
+  }
+}
+
+/* NEW STYLES FROM 02/05/2024 */
+/* Dashboard editform */
+.dashboard__content-wrapper {
+  padding-bottom: 35rem;
+}
+
+.edit-form {
+  padding-bottom: 3.6rem;
+}
+
+.edit-form__btn-wrapper {
+  margin-bottom: 3.6rem;
+}
+
+.edit-form__button.cancel {
+  padding: 1.9rem 2rem 1.9rem 4.6rem;
+}
+
+@media (min-width: 767.98px) {
+  .dashboard__content-wrapper {
+    padding-bottom: 20rem;
+  }
+
+  .edit-form {
+    padding-bottom: 3.6rem;
+  }
+
+  .edit-form__btn-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .dashboard__content-wrapper {
+    min-height: 80vh;
+    padding-bottom: 3.6rem;
+  }
+}
