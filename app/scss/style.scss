@@ -127,8 +127,8 @@
 
 /* Cropper  modal */
 .modal .cropper-crop-box {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   aspect-ratio: 1;
 }
 
